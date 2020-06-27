@@ -1,0 +1,39 @@
+import * as Service from "../../services/{{camelCase name}}.service";
+
+const TYPES = {
+    SET_{{constantCase name}}: "SET_{{constantCase name}}",
+    SET_LOADING: "{{constantCase name}}_LOADING",
+    SET_ERROR: "{{constantCase name}}_ERROR"
+};
+
+const INITIAL_STATE = {
+    {{camelCase name}}: {},
+    error: "",
+    loading: false
+};
+
+export const {{camelCase name}}Reducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case TYPES.SET_{{constantCase name}}:
+            return { ...state, {{camelCase name}}: action.payload };
+        case TYPES.SET_LOADING:
+            return { ...state, loading: action.payload };
+        case TYPES.SET_ERROR:
+            return { ...state, error: action.payload };
+        default:
+            return state;
+    }
+};
+
+export const {{camelCase name}}Actions = {
+  get{{pascalCase name}}: () => async (dispatch) => {
+    dispatch({ type: TYPES.SET_LOADING, payload: true });
+    try {
+      const {{camelCase name}} = await Service.get{{pascalCase name}}();
+      dispatch({ type: TYPES.SET_{{constantCase name}}, payload: {{camelCase name}} });
+    } catch (error) {
+      dispatch({ type: TYPES.SET_ERROR, payload: error });
+    }
+    dispatch({ type: TYPES.SET_LOADING, payload: false });
+  },
+};
