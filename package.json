@@ -1,0 +1,32 @@
+{
+  "name": "cra-template-estartando-devs-react",
+  "author": "Estartando Devs",
+  "version": "1.0.2",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template"
+  ],
+  "description": "The base template for Create React App.",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/estartando-devs/cra-template-estartando-devs",
+    "directory": "packages/cra-template"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "workspaces": [
+    "estartando-devs/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/estartando-devs/cra-template-estartando-devs/issues"
+  },
+  "homepage": "https://github.com/estartando-devs/cra-template-estartando-devs/wiki",
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
