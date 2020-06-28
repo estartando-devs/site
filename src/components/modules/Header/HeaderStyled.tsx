@@ -16,7 +16,7 @@ const HeaderContainer = styled.header`
     background-repeat: no-repeat;
 
     ${media.greaterThan("small")`
-        height: 1024px;
+        height: 100vh;
     `}
 `;
 
