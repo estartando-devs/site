@@ -1,7 +1,10 @@
 import React from "react";
+import { SectionSlide } from "../../components/features";
 
 const Home = () => {
-  return <div id="scrollDestiny">site devs</div>;
-};
+  return (
+    <SectionSlide />
+  );
+}
 
 export default Home;
