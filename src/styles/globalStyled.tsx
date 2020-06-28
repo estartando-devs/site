@@ -15,5 +15,6 @@ export const GlobalStyles = createGlobalStyle`
   
   html {
     font-size: ${(props) => props.theme.typography.htmlFontSize}px;
+    scroll-behavior: smooth;
   }
 `;
