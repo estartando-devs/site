@@ -14,7 +14,7 @@ const SectionSlide = () => {
   // };
 
   return (
-    <S.SectionSlideContainer>
+    <S.SectionSlideContainer id="SectionSlide">
       <SlideItems position={position} setNext={nextSlide} />
     </S.SectionSlideContainer>
   );
