@@ -2,7 +2,7 @@ import React from "react";
 import Typographies from "./TypographyStyled";
 
 interface ITypography {
-  children?: ChildNode;
+  children?: string;
   variant: "h1" | "h2" | "body1";
   color?: string;
   weight?: string;

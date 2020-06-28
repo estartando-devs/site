@@ -20,7 +20,7 @@ const Theme: DefaultTheme = {
     },
     background: {
       paper: "#666666",
-      default: "#3B3B3B",
+      default: "#161616",
     },
     action: {
       disabledBackground: "rgba(0, 0, 0, 0.12)",
@@ -67,14 +67,14 @@ const Theme: DefaultTheme = {
     h1: {
       fontFamily: "Ubuntu Mono",
       fontWeight: 300,
-      fontSize: "6rem",
+      fontSize: "2rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
     h2: {
       fontFamily: "Ubuntu Mono",
       fontWeight: 300,
-      fontSize: "4rem",
+      fontSize: "1.8rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
