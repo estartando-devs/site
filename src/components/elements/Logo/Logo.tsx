@@ -8,6 +8,8 @@ interface LogoProps {
   height: string;
   padding: string;
   margin: string;
+  position: string;
+  animation: any;
 }
 
 const LogoDefaultProps: LogoProps = {
@@ -15,6 +17,8 @@ const LogoDefaultProps: LogoProps = {
   height: "auto",
   padding: "0",
   margin: "0",
+  position: "relative",
+  animation: S.rotateRule,
 };
 
 const Logo = ({
@@ -22,6 +26,8 @@ const Logo = ({
   height,
   padding,
   margin,
+  position,
+  animation,
 }: LogoProps) => (
   <Link to="/">
     <S.LogoContainer
@@ -30,6 +36,8 @@ const Logo = ({
       height={height}
       padding={padding}
       margin={margin}
+      position={position}
+      animation={animation}
     />
   </Link>
 );
