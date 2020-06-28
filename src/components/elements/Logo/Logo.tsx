@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./LogoStyled";
-import LogoImage from "./assets/logo.png";
+import LogoImage from "./assets/logo.svg";
 
 interface LogoProps {
   width: string;
@@ -23,16 +23,16 @@ const Logo = ({
   padding,
   margin,
 }: LogoProps) => (
-    <Link to="/">
-      <S.LogoContainer
-        src={LogoImage}
-        width={width}
-        height={height}
-        padding={padding}
-        margin={margin}
-      />
-    </Link>
-  );
+  <Link to="/">
+    <S.LogoContainer
+      src={LogoImage}
+      width={width}
+      height={height}
+      padding={padding}
+      margin={margin}
+    />
+  </Link>
+);
 
 Logo.defaultProps = LogoDefaultProps;
 
