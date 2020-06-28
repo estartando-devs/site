@@ -8,7 +8,7 @@ interface ISectionContainer {
 const SectionContainer = styled.div.attrs((props: ISectionContainer) => ({
   style: { backgroundColor: props.bgColor },
 }))<ISectionContainer>`
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     position: relative;
     display: flex;

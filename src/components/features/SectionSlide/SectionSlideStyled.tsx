@@ -3,14 +3,15 @@ import { Typography } from "../../elements";
 
 const SectionSlideContainer = styled.div`
     display: flex;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     background-color: ${(props) => props.theme.palette.background.default};
 `;
 
 const SectionContainer = styled.div`
-    height: 100%;
     width: 100%;
+    min-height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
