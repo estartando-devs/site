@@ -71,6 +71,20 @@ const Theme: DefaultTheme = {
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
+    h2: {
+      fontFamily: "Ubuntu Mono",
+      fontWeight: 300,
+      fontSize: "4rem",
+      lineHeight: 1.167,
+      letterSpacing: "-0.01562em",
+    },
+    body1: {
+      fontFamily: "Ubuntu Mono",
+      fontWeight: 300,
+      fontSize: "1rem",
+      lineHeight: 1.167,
+      letterSpacing: "-0.01562em",
+    },
   },
   shape: {
     borderRadius: "5px",
