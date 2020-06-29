@@ -79,7 +79,7 @@ const Theme: DefaultTheme = {
       letterSpacing: "-0.01562em",
     },
     body1: {
-      fontFamily: "Ubuntu Mono",
+      fontFamily: "Open Sans",
       fontWeight: 300,
       fontSize: "1rem",
       lineHeight: 1.167,
