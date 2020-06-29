@@ -9,13 +9,17 @@ const SectionSlide = () => {
     setPosition(position + 1);
   };
 
-  // const previousSlide = () => {
-  //   setPosition(position - 1);
-  // };
+  const previousSlide = () => {
+    setPosition(position - 1);
+  };
 
   return (
     <S.SectionSlideContainer id="SectionSlide">
-      <SlideItems position={position} setNext={nextSlide} />
+      <SlideItems
+        position={position}
+        setNext={nextSlide}
+        onPrevious={previousSlide}
+      />
     </S.SectionSlideContainer>
   );
 };
