@@ -19,7 +19,7 @@ const Theme: DefaultTheme = {
       disabled: "#fbfbfb",
     },
     background: {
-      paper: "#666666",
+      paper: "#323232",
       default: "#161616",
     },
     action: {
