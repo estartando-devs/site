@@ -9,7 +9,7 @@ const Theme: DefaultTheme = {
     type: "dark",
     primary: {
       light: "#81E7A8",
-      main: "#161616",
+      main: "#81CAA8",
       dark: "#488184",
       contrastText: "#F0F0F0",
     },

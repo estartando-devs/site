@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SlideContainer } from "../../SlideItemsStyled";
-import { Typography } from "../../../../../elements";
+import { Typography, Button as ButtonElement } from "../../../../../elements";
 
 interface ISelectiveProcessTitle {
   isBold?: boolean;
@@ -53,6 +53,11 @@ const SelectiveProcessText = styled(Typography).attrs({
   margin: 20px 0;
 `;
 
+const Button = styled(ButtonElement)`
+  background-color: ${(props) => props.theme.palette.background.default};
+  border: none;
+`;
+
 export {
   SelectiveProcessContainer,
   SelectiveProcessContent,
@@ -61,4 +66,5 @@ export {
   SelectiveProcessTitle,
   SelectiveProcessSubTitle,
   SelectiveProcessText,
+  Button,
 };

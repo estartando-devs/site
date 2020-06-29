@@ -3,7 +3,6 @@ import * as S from "./SelectiveProcessStyled";
 import { IItem } from "../../SlideItems";
 import { iconBack, slideBtn2 } from "../../../assets";
 import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
-import { Button } from "../../../../../elements";
 
 const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
   <S.SelectiveProcessContainer bgColor="#D3D3D3" position={position}>
@@ -34,11 +33,11 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
         Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam
         melhor com o nosso perfil.
       </S.SelectiveProcessText>
-      <Button
+      <S.Button
         onClick={() => window.open("https://estartandodevs.com.br", "_blank")}
       >
         Faça Parte!
-      </Button>
+      </S.Button>
     </S.SelectiveProcessContent>
     <ButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
   </S.SelectiveProcessContainer>
