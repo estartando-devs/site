@@ -1,7 +1,10 @@
 import React from "react";
+import { Schedule } from "../../components/modules";
 
 const Home = () => {
-  return <div id="scrollDestiny">site devs</div>;
+  return (
+    <Schedule />
+  )
 };
 
 export default Home;

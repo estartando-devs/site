@@ -19,8 +19,8 @@ const Theme: DefaultTheme = {
       disabled: "#fbfbfb",
     },
     background: {
-      paper: "#666666",
-      default: "#3B3B3B",
+      paper: "#323232",
+      default: "#161616",
     },
     action: {
       disabledBackground: "rgba(0, 0, 0, 0.12)",
