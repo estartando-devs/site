@@ -4,19 +4,20 @@ import { nossaMetodologia } from "../../../../shared/img";
 import { slideBtn, slideBtn2, slideBtn3, slideBtn4 } from "../assets";
 
 interface IItem {
-  onNext: () => void
+  onNext: () => void;
+  position?: number;
 }
 
-const FirstItem = ({ onNext }: IItem) => (
-  <S.SectionContainer bgColor="#161616">
+const FirstItem = ({ onNext, position }: IItem) => (
+  <S.SectionContainer bgColor="#161616" position={position} >
     <S.SectionTitle>Conheça o projeto e nossa metodologia</S.SectionTitle>
     <S.SectionImage src={nossaMetodologia} alt="Nossa Metodologia" />
     <S.ButtonSlide src={slideBtn} alt="clique e conheça" onClick={() => onNext()} />
   </S.SectionContainer>
 );
 
-const SecondItem = ({ onNext }: IItem) => (
-  <S.SectionContainer bgColor="#00BFA6">
+const SecondItem = ({ onNext, position }: IItem) => (
+  <S.SectionContainer bgColor="#00BFA6" position={position}>
     <S.SectionTitle color="#3C3C3C">
       Nosso MÉTODO
     </S.SectionTitle>
@@ -27,15 +28,15 @@ const SecondItem = ({ onNext }: IItem) => (
   </S.SectionContainer>
 );
 
-const ThirdItem = ({ onNext }: IItem) => (
-  <S.SectionContainer bgColor="#161616">
+const ThirdItem = ({ onNext, position }: IItem) => (
+  <S.SectionContainer bgColor="#161616" position={position}>
     <S.SectionTitle>Terceiro Slide</S.SectionTitle>
     <S.ButtonSlide src={slideBtn3} alt="clique e conheça" onClick={() => onNext()} />
   </S.SectionContainer>
 );
 
-const FourthItem = ({ onNext }: IItem) => (
-  <S.SectionContainer bgColor="#F7F7F7">
+const FourthItem = ({ onNext, position }: IItem) => (
+  <S.SectionContainer bgColor="#F7F7F7" position={position}>
     <S.SectionTitle>Quarto Slide</S.SectionTitle>
     <S.ButtonSlide src={slideBtn4} alt="clique e conheça" onClick={() => onNext()} />
   </S.SectionContainer>
@@ -56,7 +57,14 @@ const SlideItems = ({ position, setNext }: ISlideItems) => {
 
   if (position > items.length - 1) return items[items.length - 1];
 
-  return items[position];
+  return (
+    <>
+      <FirstItem onNext={setNext} position={position} />
+      <SecondItem onNext={setNext} position={position} />
+      <ThirdItem onNext={setNext} position={position} />
+      <FourthItem onNext={setNext} position={position} />
+    </>
+  );
 };
 
 export default SlideItems;

@@ -7,6 +7,11 @@ const SectionSlideContainer = styled.div`
     height: 100%;
     width: 100%;
     background-color: ${(props) => props.theme.palette.background.default};
+    position: relative;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    overflow: hidden;
 `;
 
 const SectionContainer = styled.div`
