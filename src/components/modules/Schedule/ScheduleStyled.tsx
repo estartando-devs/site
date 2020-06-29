@@ -28,10 +28,10 @@ export const ScheduleTitle = styled.h2`
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
-  color: #81CAA8;
-  span{
-  color: transparent;
-  -webkit-text-stroke: 2px #81CAA8;
+  color: #81caa8;
+  span {
+    color: transparent;
+    -webkit-text-stroke: 2px #81caa8;
   }
 `;
 
@@ -41,7 +41,7 @@ export const ScheduleDescription = styled.p`
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  color: #D3D3D3;
+  color: #d3d3d3;
 `;
 
 export const SubscriptionLink = styled.span`
@@ -49,6 +49,4 @@ export const SubscriptionLink = styled.span`
   padding-left: 8px;
 `;
 
-export const Image = styled.img`
-
-`;
+export const Image = styled.img``;
