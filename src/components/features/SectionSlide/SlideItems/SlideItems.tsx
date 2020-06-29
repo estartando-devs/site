@@ -18,6 +18,7 @@ const SlideItems = ({ position, setNext, setPrevious }: ISlideItems) => {
     <Slides.FirstSlide onNext={setNext} />,
     <Slides.SecondSlide onNext={setNext} />,
     <Slides.ThirdSlide onNext={setNext} />,
+    <Slides.FourthSlide onNext={setNext} />,
   ];
 
   if (position > items.length - 1) return items[items.length - 1];
@@ -31,6 +32,11 @@ const SlideItems = ({ position, setNext, setPrevious }: ISlideItems) => {
         position={position}
       />
       <Slides.ThirdSlide
+        onPrevious={setPrevious}
+        onNext={setNext}
+        position={position}
+      />
+      <Slides.FourthSlide
         onPrevious={setPrevious}
         onNext={setPrevious}
         position={position}
