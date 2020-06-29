@@ -18,7 +18,7 @@ const SectionSlide = () => {
       <SlideItems
         position={position}
         setNext={nextSlide}
-        onPrevious={previousSlide}
+        setPrevious={previousSlide}
       />
     </S.SectionSlideContainer>
   );

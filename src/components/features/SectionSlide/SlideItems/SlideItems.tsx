@@ -9,14 +9,15 @@ export interface IItem {
 
 interface ISlideItems {
   position: number;
-  onPrevious?: () => void;
+  setPrevious?: () => void;
   setNext?: () => void;
 }
 
-const SlideItems = ({ position, setNext, onPrevious }: ISlideItems) => {
+const SlideItems = ({ position, setNext, setPrevious }: ISlideItems) => {
   const items: JSX.Element[] = [
     <Slides.FirstSlide onNext={setNext} />,
     <Slides.SecondSlide onNext={setNext} />,
+    <Slides.ThirdSlide onNext={setNext} />,
   ];
 
   if (position > items.length - 1) return items[items.length - 1];
@@ -25,8 +26,13 @@ const SlideItems = ({ position, setNext, onPrevious }: ISlideItems) => {
     <>
       <Slides.FirstSlide onNext={setNext} position={position} />
       <Slides.SecondSlide
-        onPrevious={onPrevious}
-        onNext={onPrevious}
+        onPrevious={setPrevious}
+        onNext={setNext}
+        position={position}
+      />
+      <Slides.ThirdSlide
+        onPrevious={setPrevious}
+        onNext={setPrevious}
         position={position}
       />
     </>

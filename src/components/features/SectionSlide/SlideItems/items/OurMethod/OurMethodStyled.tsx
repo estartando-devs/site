@@ -6,10 +6,6 @@ interface IOMTitle {
   isBold?: boolean;
 }
 
-interface IOMText {
-  color?: string;
-}
-
 interface IOMTagsBox {
   justifyContent?: string;
 }
@@ -36,7 +32,7 @@ const OMTitle = styled(Typography).attrs({
 const OMText = styled(Typography).attrs({
   variant: "body1",
   color: "#3C3C3C",
-})<IOMText>`
+})`
   line-height: 22px;
   margin: 20px 0;
 `;
