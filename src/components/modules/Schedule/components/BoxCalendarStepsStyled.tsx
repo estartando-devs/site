@@ -5,7 +5,7 @@ export const CalendarStepsWrapper = styled.div`
   display: grid;
   grid-auto-rows: min-content;
   gap: 32px;
-  padding: 32px 20px;
+  padding: 32px 20px 120px;
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
@@ -62,4 +62,8 @@ export const CalendarStepDescription = styled.span`
   color: #f0f0f0;
   font-family: Ubuntu Mono;
   text-align: center;
+  ${media.greaterThan("medium")`
+    display: flex;
+    flex-direction: column;
+  `}
 `;

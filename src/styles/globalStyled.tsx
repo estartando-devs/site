@@ -25,6 +25,30 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.palette.background.paper};
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.palette.primary.main};
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => props.theme.palette.primary.dark};
   }
 
 `;
