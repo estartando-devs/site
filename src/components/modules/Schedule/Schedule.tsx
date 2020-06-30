@@ -15,30 +15,50 @@ const Schedule: React.FC<ScheduleProps> = () => (
       <S.InformationAside>
         <S.ScheduleTitle>
           Inscrições
-          <br />
-          <span>2020</span>
+          <span> 2020</span>
         </S.ScheduleTitle>
 
         <S.ScheduleDescription>
           Um novo formato para um novo tempo.
         </S.ScheduleDescription>
 
+        <S.InformationText>
+          A pandemia trouxe desafios.  E para nossa equipe, desafios são para nos fazer evoluir.
+          Com objetivo de reduzir os impactos da pandemia, desenvolvemos uma nova modalidade para a
+          nossa formação.
+          Aulas online, conteúdo mais objetivo e duração express.
+          Para você que precisa....
+          Vem fazer parte dessa história.
+        </S.InformationText>
+
         <S.SubscriptionLink>
           Saiba mais aqui.
         </S.SubscriptionLink>
+
+        <a href="/inscricao">
+          <Button
+            variant="outlined"
+            onClick={() => {}}
+            size="medium"
+          >
+
+            Quero fazer parte
+          </Button>
+        </a>
       </S.InformationAside>
 
       <S.Image src={getImage("mockuops")} alt="mockuops" />
     </S.ScheduleContainerHeader>
 
-
-    <Button
-      variant="outlined"
-      onClick={() => {}}
-      size="medium"
-    >
-      Quero fazer parte
-    </Button>
+    <a href="/inscricao">
+      <S.SubscriptionButton
+        variant="outlined"
+        onClick={() => {}}
+        size="medium"
+      >
+        Quero fazer parte
+      </S.SubscriptionButton>
+    </a>
 
     <BoxCalendarSteps />
   </S.ScheduleContainer>
