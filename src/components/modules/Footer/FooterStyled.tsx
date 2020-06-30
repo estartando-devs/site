@@ -9,6 +9,7 @@ const FooterContainer = styled.div`
   background: ${(props) => props.theme.palette.background.paper};
   ${media.greaterThan("medium")`
     padding: 0 200px;
+    background: ${(props) => props.theme.palette.background.default};
   `}
 `;
 
