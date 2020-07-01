@@ -49,10 +49,7 @@ const StepsContainer = styled.div`
   justify-content: flex-end;
   width: 100%;
   position: relative;
-
-  &:nth-child(1) {
-    padding-top: 50px;
-  }
+  padding-top: 50px;
 `;
 
 const VerticalLine = styled.div`
