@@ -1,8 +1,8 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import { SlideContainer, ButtonNext } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
 import { waves } from "../../../assets";
-import media from "styled-media-query";
 
 interface IOMTitle {
   isBold?: boolean;
