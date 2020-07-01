@@ -24,14 +24,16 @@ const OurMethod = ({ onPrevious, onNext, position }: IItem) => (
         desenvolvimento das softs-skills mais desejadas pelo mercado da
         tecnologia:
       </S.OMText>
-      <S.OMTagsBox>
-        <S.OMTag>Colaboração</S.OMTag>
-        <S.OMTag>Comunicação</S.OMTag>
-      </S.OMTagsBox>
-      <S.OMTagsBox justifyContent="space-around">
-        <S.OMTag>Flexibilidade</S.OMTag>
-        <S.OMTag>Criatividade</S.OMTag>
-      </S.OMTagsBox>
+      <S.OMTagsContainer>
+        <S.OMTagsBox>
+          <S.OMTag>Colaboração</S.OMTag>
+          <S.OMTag>Comunicação</S.OMTag>
+        </S.OMTagsBox>
+        <S.OMTagsBox justifyContent="space-around">
+          <S.OMTag>Flexibilidade</S.OMTag>
+          <S.OMTag>Criatividade</S.OMTag>
+        </S.OMTagsBox>
+      </S.OMTagsContainer>
     </S.OMContent>
     <S.OMButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
   </S.OMContainer>

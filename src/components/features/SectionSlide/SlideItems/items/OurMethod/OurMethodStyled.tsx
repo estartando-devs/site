@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { SlideContainer, ButtonNext } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
+import { waves } from "../../../assets";
+import media from "styled-media-query";
 
 interface IOMTitle {
   isBold?: boolean;
@@ -13,6 +15,13 @@ interface IOMTagsBox {
 const OMContainer = styled(SlideContainer)`
   justify-content: flex-start;
   padding: 0 90px 0 45px;
+
+  ${media.lessThan("medium")`
+    background-image: url(${waves});
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  `}
 `;
 
 const OMContent = styled.div`
@@ -37,14 +46,24 @@ const OMText = styled(Typography).attrs({
   margin: 20px 0;
 `;
 
+const OMTagsContainer = styled.div`
+  ${media.lessThan("medium")`
+    padding-top: 114px;
+  `};
+`;
+
 const OMTagsBox = styled.div<IOMTagsBox>`
   display: flex;
   justify-content: ${(props) => props.justifyContent || "space-between"};
 `;
 
 const OMTag = styled(OMText)`
-  color: #020202;
   margin: 5px 10px;
+  font-weight: 600;
+
+  ${media.lessThan("medium")`
+    color: #00bfa6;
+  `};
 `;
 
 const OMButtonNext = styled(ButtonNext)``;
@@ -54,6 +73,7 @@ export {
   OMContent,
   OMTitle,
   OMText,
+  OMTagsContainer,
   OMTagsBox,
   OMTag,
   OMButtonNext,

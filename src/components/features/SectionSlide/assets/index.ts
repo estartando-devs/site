@@ -6,6 +6,7 @@ import iconBack from "./icon-back.svg";
 import iconBackWhite from "./icon-back-white.svg";
 import studentImage from "./student.png";
 import dotStepTitle1 from "./dot-step-title1.svg";
+import waves from "./waves.svg";
 
 export {
   slideBtn,
@@ -16,4 +17,5 @@ export {
   iconBackWhite,
   studentImage,
   dotStepTitle1,
+  waves,
 };
