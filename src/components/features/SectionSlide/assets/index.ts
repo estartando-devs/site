@@ -5,6 +5,7 @@ import slideBtn4 from "./slide-button4.svg";
 import iconBack from "./icon-back.svg";
 import iconBackWhite from "./icon-back-white.svg";
 import studentImage from "./student.png";
+import dotStepTitle1 from "./dot-step-title1.svg";
 
 export {
   slideBtn,
@@ -14,4 +15,5 @@ export {
   iconBack,
   iconBackWhite,
   studentImage,
+  dotStepTitle1,
 };

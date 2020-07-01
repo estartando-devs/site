@@ -1,8 +1,31 @@
 import React from "react";
 import * as S from "./SelectiveProcessStyled";
 import { IItem } from "../../SlideItems";
-import { iconBack, slideBtn2 } from "../../../assets";
+import { iconBack, slideBtn2, dotStepTitle1 } from "../../../assets";
 import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
+import { selectiveProcessMock } from "../../../../../../_mocks";
+
+interface ISideStep {
+  position: number;
+  title: string;
+  description: string;
+}
+
+const SideStep = ({ position, title, description }: ISideStep) => {
+  const isRight = (position + 1) % 2 === 1 || false; // 1 even, 0 odd
+
+  return (
+    <S.SideStepContainer>
+      <S.StepContent>
+        <S.StepTitleBox>
+          <S.StepTitleDot right={isRight} src={dotStepTitle1} alt="" />
+          <S.StepTitle right={isRight}>{title}</S.StepTitle>
+        </S.StepTitleBox>
+        <S.StepDescription>{description}</S.StepDescription>
+      </S.StepContent>
+    </S.SideStepContainer>
+  );
+};
 
 const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
   <S.SelectiveProcessContainer bgColor="#D3D3D3" position={position}>
@@ -13,31 +36,19 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
       <S.SelectiveProcessText>
         Nosso processo seletivo é dividido em 3 etapas:
       </S.SelectiveProcessText>
-      <S.SelectiveProcessSubTitle>
-        TESTE DE CLASSIFICAÇÃO
-      </S.SelectiveProcessSubTitle>
-      <S.SelectiveProcessText>
-        Uma prova de raciocínio lógico. Simples e objetiva. Funciona como uma
-        classificação de acordo com o número de vagas.
-      </S.SelectiveProcessText>
-      <S.SelectiveProcessSubTitle>HACKATHON</S.SelectiveProcessSubTitle>
-      <S.SelectiveProcessText>
-        Como você trabalha em equipe? Além de conhecermos melhor suas
-        habilidades, você já se prepara para as ferramentas que serão usadas ao
-        longo do curso.
-      </S.SelectiveProcessText>
-      <S.SelectiveProcessSubTitle>
-        BATE-PAPO COM O TIME
-      </S.SelectiveProcessSubTitle>
-      <S.SelectiveProcessText>
-        Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam
-        melhor com o nosso perfil.
-      </S.SelectiveProcessText>
-      <S.Button
-        onClick={() => window.open("https://estartandodevs.com.br", "_blank")}
-      >
-        Faça Parte!
-      </S.Button>
+      <S.StepsContainer>
+        <S.VerticalLine />
+        {selectiveProcessMock.map((step, index) => (
+          <SideStep key={step.title} position={index} {...step} />
+        ))}
+      </S.StepsContainer>
+      <S.ButtonContainer>
+        <S.ButtonBox>
+          <a href="/inscricao">
+            <S.StepButton onClick={() => {}}>Faça Parte!</S.StepButton>
+          </a>
+        </S.ButtonBox>
+      </S.ButtonContainer>
     </S.SelectiveProcessContent>
     <ButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
   </S.SelectiveProcessContainer>
