@@ -17,7 +17,7 @@ export const ScheduleContainerHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 12px 0 12px 12px;
+  padding: 30px 0 12px 12px;
   ${media.greaterThan("medium")`
     justify-content: space-evenly;
   `}

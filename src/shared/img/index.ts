@@ -10,6 +10,13 @@ import encounter from "./encounter.svg";
 import support from "./support.svg";
 import onlineCourse from "./online-course.svg";
 import mockuops from "./mockuops.svg";
+import decorListras from "./decor-listras.svg";
+import imgDev from "./img-dev.png";
+import imgDesign from "./img-design.png";
+import ondas from "./decor-ondas.svg";
+import triangle from "./decor-triangulo.svg";
+import cheksClose from "./decor-x.svg";
+import Points from "./decor-pontos.svg";
 
 interface IImage<T> {
   [id: string]: T;
@@ -28,6 +35,13 @@ const IMAGES: IImage<string> = {
   onlineCourse,
   support,
   mockuops,
+  decorListras,
+  imgDev,
+  imgDesign,
+  ondas,
+  triangle,
+  cheksClose,
+  Points,
 };
 
 export const getImage = (key: string) => IMAGES[key];
