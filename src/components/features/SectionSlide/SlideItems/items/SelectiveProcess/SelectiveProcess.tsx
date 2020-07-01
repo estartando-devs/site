@@ -4,6 +4,7 @@ import { IItem } from "../../SlideItems";
 import { iconBack, slideBtn2, dotStepTitle1 } from "../../../assets";
 import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
 import { selectiveProcessMock } from "../../../../../../_mocks";
+import config from "../../../../../../config/constants";
 
 interface ISideStep {
   position: number;
@@ -44,9 +45,9 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
       </S.StepsContainer>
       <S.ButtonContainer>
         <S.ButtonBox>
-          <a href="/inscricao">
+          <S.ButtonLink target="blank" href={config.INSCRICOES_URL}>
             <S.StepButton onClick={() => {}}>Faça Parte!</S.StepButton>
-          </a>
+          </S.ButtonLink>
         </S.ButtonBox>
       </S.ButtonContainer>
     </S.SelectiveProcessContent>

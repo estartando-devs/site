@@ -133,10 +133,14 @@ const ButtonBox = styled.div`
   justify-content: center;
 `;
 
+const ButtonLink = styled.a`
+  margin-top: -60px;
+  z-index: 2;
+`;
+
 const StepButton = styled(ButtonElement)`
   background-color: ${(props) => props.theme.palette.background.default};
   border: none;
-  margin-top: -60px;
 `;
 
 export {
@@ -155,4 +159,5 @@ export {
   ButtonContainer,
   ButtonBox,
   StepButton,
+  ButtonLink,
 };
