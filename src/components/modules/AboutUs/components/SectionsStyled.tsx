@@ -36,19 +36,19 @@ export const TextContentWrapper = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 29px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   padding: 0 20px;
 `;
 
 export const SectionDescription = styled.p`
   font-size: 20px;
   line-height: 23px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   padding: 8px 20px 40px;
   z-index: 2;
 `;
@@ -58,7 +58,9 @@ export const ImageWrapper = styled.div<imgProps>`
   width: 100%;
   max-width: 360px;
   display: flex;
-  justify-content: ${(props) => (props.rightPosition && "flex-end") || (props.leftPosition && "flex-start")};
+  justify-content: ${(props) =>
+    (props.rightPosition && "flex-end") ||
+    (props.leftPosition && "flex-start")};
   @media (max-width: 768px) {
     overflow: ${(props) => props.rightPosition && "hidden"};
   }
