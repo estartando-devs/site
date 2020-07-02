@@ -13,12 +13,17 @@ const SectionSlide = () => {
     setPosition(position - 1);
   };
 
+  const backToFirst = () => {
+    setPosition(0);
+  };
+
   return (
     <S.SectionSlideContainer id="SectionSlide">
       <SlideItems
         position={position}
         setNext={nextSlide}
         setPrevious={previousSlide}
+        backToFirst={backToFirst}
       />
     </S.SectionSlideContainer>
   );

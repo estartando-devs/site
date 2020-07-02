@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { SlideContainer } from "../../SlideItemsStyled";
 import { Typography, Button as ButtonElement } from "../../../../../elements";
+import media from "../../../../../../styles/breakpoints";
+import { IButtonBox } from "./SelectiveProcess";
 
 interface ISelectiveProcessTitle {
   isBold?: boolean;
@@ -8,20 +10,28 @@ interface ISelectiveProcessTitle {
 
 interface ISidePosition {
   right?: boolean;
+  isMobile?: boolean;
 }
 
 const SelectiveProcessContainer = styled(SlideContainer)`
-  justify-content: flex-start;
-  padding: 0 30px 40px 15px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 `;
 
 const SelectiveProcessContent = styled.div`
   margin: 50px 0 0;
+  padding: 0 30px 40px 15px;
+
+  ${media.greaterThan("medium")`
+    padding: 10px 100px 40px;
+    margin: 0;
+  `}
 `;
 
 const SelectiveProcessTitle = styled(Typography).attrs({
   variant: "h1",
-  color: "#3C3C3C",
+  color: "#272727",
 })<ISelectiveProcessTitle>`
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   line-height: 32px;
@@ -29,6 +39,11 @@ const SelectiveProcessTitle = styled(Typography).attrs({
   font-weight: ${(props) => props.isBold && "600"};
   font-size: ${(props) => (props.isBold ? "2.5rem" : "1.5rem")};
   margin-left: 25px;
+
+  @media (min-width: 768px) {
+    font-size: ${(props) => (props.isBold ? "3rem" : "2rem")};
+    margin: 4px 0;
+  }
 `;
 
 const SelectiveProcessText = styled(Typography).attrs({
@@ -40,6 +55,21 @@ const SelectiveProcessText = styled(Typography).attrs({
   font-size: 0.9rem;
   max-width: 200px;
   margin-left: 25px;
+
+  ${media.greaterThan("medium")`
+    margin-left: 0;
+    max-width: initial;
+  `}
+`;
+
+const SectionHeader = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  ${media.greaterThan("medium")`
+    justify-content: space-between;
+  `}
 `;
 
 const StepsContainer = styled.div`
@@ -50,6 +80,10 @@ const StepsContainer = styled.div`
   width: 100%;
   position: relative;
   padding-top: 50px;
+
+  ${media.greaterThan("medium")`
+    flex-direction: row;
+  `}
 `;
 
 const VerticalLine = styled.div`
@@ -60,6 +94,15 @@ const VerticalLine = styled.div`
   height: 100%;
   width: 4px;
   background-color: #f7f7f7;
+
+  ${media.greaterThan("medium")`
+    height: 4px;
+    width: 100%;
+    left: initial;
+    right: initial;
+    top: 50%;
+    bottom: 50%;
+  `}
 `;
 
 const SideStepContainer = styled.div`
@@ -73,16 +116,38 @@ const SideStepContainer = styled.div`
   &:nth-child(odd) {
     justify-content: flex-start;
   }
+
+  ${media.greaterThan("medium")`
+    min-height: 350px;
+
+    &:nth-child(even) {
+    justify-content: initial;
+      align-items: flex-start;
+    }
+
+    &:nth-child(odd) {
+    justify-content: initial;
+      align-items: flex-end;
+    }
+  `}
 `;
 
 const StepContent = styled.div`
   display: flex;
   width: 50%;
   flex-direction: column;
+  position: relative;
 
   &:first-child() {
     padding-top: 50px;
   }
+
+  ${media.greaterThan("medium")`
+    height: 50%;
+    width: 100%;
+    max-width: 270px;
+    align-items: center;
+  `};
 `;
 
 const StepTitleBox = styled.div`
@@ -97,6 +162,18 @@ const StepTitleDot = styled.img<ISidePosition>`
   left: ${(props) => props.right && "-6px"};
   right: ${(props) => !props.right && "-10px"};
   transform: ${(props) => !props.right && "rotateY(180deg)"};
+  display: ${(props) => (props.isMobile ? "block" : "none")};
+
+  ${media.greaterThan<ISidePosition>("medium")`
+    left: initial;
+    right: initial;
+    display: ${(props) => (props.isMobile ? "none" : "block")};
+
+    bottom: ${(props) => props.right && "25px"};
+    top: ${(props) => !props.right && "-19px"};
+    transform: ${(props) => (props.right ? "rotate(-90deg)" : "rotate(90deg)")};
+
+  `}
 `;
 
 const StepTitle = styled(Typography).attrs({
@@ -108,6 +185,10 @@ const StepTitle = styled(Typography).attrs({
   text-align: center;
   text-transform: uppercase;
   margin: 0 28px;
+
+  ${media.greaterThan<ISidePosition>("medium")`
+    margin-top: ${(props) => !props.right && "15px"};
+  `}
 `;
 
 const StepDescription = styled(Typography).attrs({
@@ -121,10 +202,14 @@ const StepDescription = styled(Typography).attrs({
   font-size: 0.9rem;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div<IButtonBox>`
   display: flex;
-  width: 100%;
   justify-content: flex-start;
+  display: ${(props) => !props.isMobile && "none"};
+
+  ${media.greaterThan<IButtonBox>("medium")`
+    display: ${(props) => (props.isMobile ? "none" : "flex")};
+  `}
 `;
 
 const ButtonBox = styled.div`
@@ -136,6 +221,10 @@ const ButtonBox = styled.div`
 const ButtonLink = styled.a`
   margin-top: -60px;
   z-index: 2;
+
+  ${media.greaterThan("medium")`
+    margin: 0;
+  `}
 `;
 
 const StepButton = styled(ButtonElement)`
@@ -146,6 +235,7 @@ const StepButton = styled(ButtonElement)`
 export {
   SelectiveProcessContainer,
   SelectiveProcessContent,
+  SectionHeader,
   SelectiveProcessTitle,
   SelectiveProcessText,
   StepsContainer,
