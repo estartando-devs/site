@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SlideContainer } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
+import media from "../../../../../../styles/breakpoints";
 
 interface ISPTitle {
   isBold?: boolean;
@@ -8,11 +9,16 @@ interface ISPTitle {
 
 const SPContainer = styled(SlideContainer)`
   justify-content: flex-start;
-  padding: 0 90px 0 45px;
+  padding: 0;
 `;
 
 const SPContent = styled.div`
   margin: 50px 0 0;
+  padding: 0 90px 0 45px;
+
+  ${media.greaterThan("medium")`
+    padding: 20px 264px;
+  `}
 `;
 
 const SPStudentImage = styled.img`
