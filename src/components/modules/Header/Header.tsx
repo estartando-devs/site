@@ -6,8 +6,8 @@ import { AnimatedLogo } from "../../elements";
 const Header = () => {
   return (
     <S.HeaderContainer>
-      <AnimatedLogo width="260px" />
-      <S.ScrollLink href="#scrollDestiny">
+      <S.ScrollLink href="#SectionSlide">
+        <AnimatedLogo width="260px" />
         <S.ScrollImage src={iconScroll} alt="Clique para rolar" />
       </S.ScrollLink>
     </S.HeaderContainer>

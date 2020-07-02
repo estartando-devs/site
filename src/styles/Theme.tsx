@@ -11,7 +11,7 @@ const Theme: DefaultTheme = {
       light: "#81E7A8",
       main: "#81CAA8",
       dark: "#488184",
-      contrastText: "#525252",
+      contrastText: "#F0F0F0",
     },
     text: {
       primary: "#fff",
@@ -19,8 +19,8 @@ const Theme: DefaultTheme = {
       disabled: "#fbfbfb",
     },
     background: {
-      paper: "#666666",
-      default: "#3B3B3B",
+      paper: "#323232",
+      default: "#161616",
     },
     action: {
       disabledBackground: "rgba(0, 0, 0, 0.12)",
@@ -67,7 +67,21 @@ const Theme: DefaultTheme = {
     h1: {
       fontFamily: "Ubuntu Mono",
       fontWeight: 300,
-      fontSize: "6rem",
+      fontSize: "2rem",
+      lineHeight: 1.167,
+      letterSpacing: "-0.01562em",
+    },
+    h2: {
+      fontFamily: "Ubuntu Mono",
+      fontWeight: 300,
+      fontSize: "1.8rem",
+      lineHeight: 1.167,
+      letterSpacing: "-0.01562em",
+    },
+    body1: {
+      fontFamily: "Open Sans",
+      fontWeight: 300,
+      fontSize: "1rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
