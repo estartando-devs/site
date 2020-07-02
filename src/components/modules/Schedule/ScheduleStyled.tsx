@@ -37,7 +37,7 @@ export const InformationAside = styled.div`
 `;
 
 export const ScheduleTitle = styled.h2`
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
@@ -58,7 +58,7 @@ export const ScheduleTitle = styled.h2`
 `;
 
 export const ScheduleDescription = styled.p`
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -74,10 +74,10 @@ export const InformationText = styled.p`
   ${media.lessThan("medium")`
     display: none;
   `}
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-size: 20px;
   line-height: 23px;
-  color: #D3D3D3;
+  color: #d3d3d3;
   margin-bottom: 24px;
 `;
 

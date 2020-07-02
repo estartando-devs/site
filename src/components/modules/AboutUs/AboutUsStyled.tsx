@@ -10,12 +10,12 @@ const AboutUsContainer = styled.div`
   padding: 52px 0px 0px;
   position: relative;
   background: linear-gradient(
-    180deg, #D3D3D3
-    0%, #D3D3D3
-    18.3%, #81CAA8
-    40.1%, #81CAA8
-    52.6%, #00BFA6
-    62.5%
+    180deg,
+    #d3d3d3 0%,
+    #d3d3d3 18.3%,
+    #81caa8 40.1%,
+    #81caa8 52.6%,
+    #00bfa6 62.5%
   );
   ${media.greaterThan("medium")`
     align-items: center;
@@ -40,11 +40,11 @@ export const BackgroundElementDecorListras = styled.div`
 `;
 
 export const AboutUsTitle = styled.h2`
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   z-index: 2;
   padding: 0 20px;
   display: flex;
@@ -52,7 +52,7 @@ export const AboutUsTitle = styled.h2`
 
   span {
     color: transparent;
-    -webkit-text-stroke: 2px #3C3C3C;
+    -webkit-text-stroke: 2px #3c3c3c;
     margin-top: 20px;
   }
   ${media.lessThan("medium")`
@@ -66,10 +66,10 @@ export const AboutUsTitle = styled.h2`
 
 export const InformationText = styled.p`
   max-width: 912px;
-  font-family: Ubuntu;
+  font-family: Ubuntu Mono;
   font-size: 20px;
   line-height: 23px;
-  color: #3C3C3C;
+  color: #3c3c3c;
   padding: 24px 20px;
   z-index: 2;
   ${media.greaterThan("medium")`
