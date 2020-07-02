@@ -34,6 +34,10 @@ export const InformationAside = styled.div`
       display: none;
     }
   `}
+
+  ${media.between("medium", "large")`
+    padding-right: 28vw;
+  `}
 `;
 
 export const ScheduleTitle = styled.h2`
@@ -64,9 +68,12 @@ export const ScheduleDescription = styled.p`
   font-size: 18px;
   line-height: 21px;
   color: #d3d3d3;
+  padding-left: 8px;
+
   ${media.greaterThan("medium")`
     font-size: 31px;
     margin-bottom: 24px;
+    padding-left: 0;
   `}
 `;
 
@@ -79,6 +86,7 @@ export const InformationText = styled.p`
   line-height: 23px;
   color: #d3d3d3;
   margin-bottom: 24px;
+  max-width: 800px;
 `;
 
 export const SubscriptionButton = styled(Button)`
@@ -99,5 +107,6 @@ export const Image = styled.img`
   ${media.greaterThan("medium")`
     position: absolute;
     right: 0;
+    height: 350px;
   `}
 `;

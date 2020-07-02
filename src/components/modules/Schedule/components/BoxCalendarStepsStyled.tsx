@@ -36,6 +36,7 @@ export const CalendarStep = styled.div`
 
 export const CalendarStepImageWrapper = styled.div`
   width: 120px;
+  min-height: 120px;
   height: 120px;
   border-radius: 50%;
   background: #161616;
