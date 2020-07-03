@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 
 export const SocialShareContainer = styled.section`
   display: flex;
@@ -19,6 +20,9 @@ export const SocialButtons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${media.lessThan("medium")`
+    flex-direction: column;
+  `}
 `;
 
 export const ShareLink = styled.a`
@@ -26,6 +30,9 @@ export const ShareLink = styled.a`
 `;
 
 export const SocialIcon = styled.img`
-  width: 85px;
+  width: 36px;
   height: auto;
+  ${media.greaterThan("medium")`
+    width: 48px;
+  `}
 `;
