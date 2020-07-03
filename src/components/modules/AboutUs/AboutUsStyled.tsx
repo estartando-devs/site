@@ -2,21 +2,19 @@ import styled from "styled-components";
 import media from "styled-media-query";
 import { getImage } from "../../../shared/img";
 
-const AboutUsContainer = styled.div`
+interface IAbouteUsContainer {
+  bgGreen: boolean;
+}
+
+const AboutUsContainer = styled.div<IAbouteUsContainer>`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
   padding: 52px 0px 0px;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    #d3d3d3 0%,
-    #d3d3d3 18.3%,
-    #81caa8 40.1%,
-    #81caa8 52.6%,
-    #00bfa6 62.5%
-  );
+  transition: background-color linear 0.7s;
+  background-color: ${(props) => (props.bgGreen ? "#00bfa6" : "#d3d3d3")};
   ${media.greaterThan("medium")`
     align-items: center;
   `}
