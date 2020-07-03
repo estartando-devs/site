@@ -29,6 +29,10 @@ const OMContent = styled.div`
     justify-content: flex-end;
     flex-direction: row;
     align-items: flex-start;
+    padding: 64px 40px 0;
+  `}
+
+  ${media.greaterThan("large")`
     padding: 64px 94px 0;
   `}
 `;
@@ -76,7 +80,7 @@ const SideImage = styled.img`
 
   ${media.greaterThan("medium")`
     display: block;
-    width: 400px;
+    width: 350px;
   `}
 
   ${media.greaterThan("large")`
