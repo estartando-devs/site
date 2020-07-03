@@ -2,7 +2,11 @@ import styled from "styled-components";
 import media from "styled-media-query";
 import { Button } from "../../elements";
 
-export const ScheduleContainer = styled.div`
+interface IScheduleContainer {
+  blur?: boolean;
+}
+
+export const ScheduleContainer = styled.div<IScheduleContainer>`
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -10,16 +14,18 @@ export const ScheduleContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all ease 0.2s;
+  filter: blur(${(props) => (props.blur ? "5px" : "0px")});
 `;
 
 export const ScheduleContainerHeader = styled.div`
-  margin-bottom: 70px;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 30px 0 12px 12px;
+  margin: 170px 0 70px 12px;
   ${media.greaterThan("medium")`
     justify-content: space-evenly;
+    margin-bottom: 170px;
   `}
 `;
 
@@ -41,7 +47,7 @@ export const InformationAside = styled.div`
 `;
 
 export const ScheduleTitle = styled.h2`
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
@@ -62,9 +68,9 @@ export const ScheduleTitle = styled.h2`
 `;
 
 export const ScheduleDescription = styled.p`
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #d3d3d3;
@@ -75,6 +81,18 @@ export const ScheduleDescription = styled.p`
     margin-bottom: 24px;
     padding-left: 0;
   `}
+`;
+
+export const ModalText = styled.p`
+  ${media.lessThan("medium")`
+    /* display: none; */
+  `}
+  font-family: Ubuntu Mono;
+  font-size: 20px;
+  line-height: 23px;
+  color: #d3d3d3;
+  margin-bottom: 24px;
+  max-width: 800px;
 `;
 
 export const InformationText = styled.p`
@@ -90,6 +108,8 @@ export const InformationText = styled.p`
 `;
 
 export const SubscriptionButton = styled(Button)`
+  margin-bottom: 100px;
+
   ${media.greaterThan("medium")`
     display: none;
   `}
@@ -99,6 +119,10 @@ export const SubscriptionLink = styled.span`
   ${media.greaterThan("medium")`
     display: none;
   `}
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
   text-decoration: underline;
   padding-left: 8px;
 `;

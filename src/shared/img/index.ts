@@ -17,6 +17,7 @@ import ondas from "./decor-ondas.svg";
 import triangle from "./decor-triangulo.svg";
 import cheksClose from "./decor-x.svg";
 import Points from "./decor-pontos.svg";
+import close from "./close.svg";
 
 interface IImage<T> {
   [id: string]: T;
@@ -42,6 +43,7 @@ const IMAGES: IImage<string> = {
   triangle,
   cheksClose,
   Points,
+  close,
 };
 
 export const getImage = (key: string) => IMAGES[key];
