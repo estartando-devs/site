@@ -29,9 +29,10 @@ const Schedule: React.FC<ScheduleProps> = () => {
           A pandemia trouxe desafios. E para nossa equipe, desafios são para nos
           fazer evoluir. Com objetivo de reduzir os impactos da pandemia,
           desenvolvemos uma nova modalidade para a nossa formação. Aulas online,
-          conteúdo mais objetivo e duração express. Vem fazer parte dessa
-          história.
+          conteúdo mais objetivo e duração express.
         </S.ModalText>
+
+        <S.ModalText>Vem fazer parte dessa história.</S.ModalText>
       </Modal>
       <S.ScheduleContainer blur={openModal} ref={ContainerRef}>
         <S.ScheduleContainerHeader>
@@ -50,6 +51,8 @@ const Schedule: React.FC<ScheduleProps> = () => {
               nos fazer evoluir. Com objetivo de reduzir os impactos da
               pandemia, desenvolvemos uma nova modalidade para a nossa formação.
               Aulas online, conteúdo mais objetivo e duração express. Para você
+            </S.InformationText>
+            <S.InformationText>
               Vem fazer parte dessa história.
             </S.InformationText>
 

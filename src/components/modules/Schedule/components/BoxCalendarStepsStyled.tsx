@@ -13,6 +13,7 @@ export const CalendarStepsWrapper = styled.div`
 
   ${media.greaterThan("medium")`
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 170px;
   `}
 `;
 
