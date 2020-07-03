@@ -65,14 +65,14 @@ const Theme: DefaultTheme = {
     fontWeightMedium: 500,
     fontWeightBold: 700,
     h1: {
-      fontFamily: "Ubuntu Mono",
+      fontFamily: "Ubuntu",
       fontWeight: 300,
       fontSize: "2rem",
       lineHeight: 1.167,
       letterSpacing: "-0.01562em",
     },
     h2: {
-      fontFamily: "Ubuntu Mono",
+      fontFamily: "Ubuntu",
       fontWeight: 300,
       fontSize: "1.8rem",
       lineHeight: 1.167,

@@ -1,5 +1,6 @@
 /* PLOP_INJECT_IMPORT */
-import { Supporters } from './Supporters';
+import { Supporters } from "./Supporters";
+import { Modal } from "./Modal";
 import { AboutUs } from "./AboutUs";
 import { Footer } from "./Footer";
 import { Schedule } from "./Schedule";
@@ -8,7 +9,8 @@ import { Layout } from "./Layout";
 
 export {
   /* PLOP_INJECT_EXPORT */
-	Supporters,
+  Supporters,
+  Modal,
   AboutUs,
   Footer,
   Schedule,

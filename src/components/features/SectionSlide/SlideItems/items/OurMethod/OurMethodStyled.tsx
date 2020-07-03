@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { SlideContainer, ButtonNext } from "../../SlideItemsStyled";
+import { SlideContainer, ButtonNext, SlideTitle } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
-import { waves } from "../../../assets";
 
-interface IOMTitle {
-  isBold?: boolean;
+interface IOMText {
+  children: any | string;
 }
 
 interface IOMTagsBox {
@@ -13,17 +12,10 @@ interface IOMTagsBox {
 }
 
 const OMContainer = styled(SlideContainer)`
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   height: 100%;
   padding: 0;
-
-  ${media.lessThan("medium")`
-    background-image: url(${waves});
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-  `};
 `;
 
 const OMContent = styled.div`
@@ -35,54 +27,29 @@ const OMContent = styled.div`
   `}
 `;
 
-const OMTitle = styled(Typography).attrs({
-  variant: "h1",
-  color: "#3C3C3C",
-})<IOMTitle>`
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  line-height: 41px;
-  text-transform: uppercase;
-  font-weight: ${(props) => props.isBold && "600"};
-`;
+const OMTitle = SlideTitle;
 
 const OMText = styled(Typography).attrs({
   variant: "body1",
   color: "#3C3C3C",
-})`
+  weight: "normal",
+})<IOMText>`
   line-height: 22px;
   margin: 20px 0;
 `;
 
-const OMTagsContainer = styled.div`
-  ${media.lessThan("medium")`
-    padding-top: 114px;
-  `};
-`;
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
+  object-position: top;
 
-const OMTagsBox = styled.div<IOMTagsBox>`
-  display: flex;
-  justify-content: ${(props) => props.justifyContent || "space-between"};
-`;
-
-const OMTag = styled(OMText)`
-  margin: 5px 10px;
-  font-weight: 600;
-  color: #3c3c3c;
-
-  ${media.lessThan("medium")`
-    color: #00bfa6;
-  `};
+  ${media.greaterThan("medium")`
+    max-height: 260px;
+  `}
 `;
 
 const OMButtonNext = styled(ButtonNext)``;
 
-export {
-  OMContainer,
-  OMContent,
-  OMTitle,
-  OMText,
-  OMTagsContainer,
-  OMTagsBox,
-  OMTag,
-  OMButtonNext,
-};
+export { OMContainer, OMContent, OMTitle, OMText, OMButtonNext, Image };
