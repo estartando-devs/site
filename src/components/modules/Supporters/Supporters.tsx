@@ -9,16 +9,14 @@ interface ISupporterShare {
 }
 
 const LinkToSupporter = ({ icon, name, url }: ISupporterShare) => (
-  <a href={url} target="_blank" rel="noreferrer">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     <S.SupporterBrandLogo src={icon} alt={name} />
   </a>
 );
 
 const Supporters = () => (
   <S.SupporterShareContainer>
-    <S.Title>
-      Apoio:
-    </S.Title>
+    <S.Title>Apoio:</S.Title>
     <S.SupporterButtons>
       {SupportersBrands.map((socialIcon) => (
         <LinkToSupporter key={socialIcon.name} {...socialIcon} />
