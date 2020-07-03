@@ -6,6 +6,9 @@ export const SocialShareContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${media.greaterThan("medium")`
+    align-items: flex-end;
+  `}
 `;
 
 export const Title = styled.p`
