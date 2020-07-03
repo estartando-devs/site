@@ -9,7 +9,7 @@ interface ISupporterShare {
 }
 
 const LinkToSupporter = ({ icon, name, url }: ISupporterShare) => (
-  <a href={url} target="_blank" rel="noreferrer">
+  <a href={url} target="_blank" rel="noopener noreferrer">
     <S.SupporterBrandLogo src={icon} alt={name} />
   </a>
 );
