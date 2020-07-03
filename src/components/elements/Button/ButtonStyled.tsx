@@ -23,7 +23,8 @@ const VARIANT = {
     border-color: ${(props) => props.theme.palette.primary.main};
     color: ${(props) => props.theme.palette.primary.contrastText};
     &:hover {
-      background-color: ${(props) => shade(0.15, props.theme.palette.primary.main)};
+      background-color: ${(props) =>
+        shade(0.15, props.theme.palette.primary.main)};
       border-color: ${(props) => shade(0.15, props.theme.palette.primary.main)};
     }
     &:active {
@@ -63,14 +64,16 @@ const ButtonContainer = styled.button<IButton>`
   align-items: center;
   outline: none;
   border: solid 2px;
-  height: 40px;
+  height: 48px;
   transition-property: background-color, border-color;
-  transition:  .1s;
+  transition: 0.1s;
   cursor: ${(props) => (props.isLoading ? "wait" : "pointer")};
   box-shadow: ${(props) => props.theme.shadows[0]};
   padding: ${(props) => props.theme.shape?.padding.small};
   border-radius: ${(props) => props.theme.shape?.borderRadius};
+  font-family: Ubuntu Mono;
   font-weight: ${(props) => props.theme.typography.fontWeightBold};
+  font-size: 20px;
   ${(props) => props.variant && VARIANT[props.variant]};
   ${(props) => props.disabled && DISABLED};
   ${(props) => props.size && SIZE[props.size]}
