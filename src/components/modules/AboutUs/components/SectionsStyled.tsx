@@ -36,21 +36,24 @@ export const TextContentWrapper = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  font-family: Ubuntu Mono;
-  font-style: normal;
+  font-family: Ubuntu;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 32px;
   line-height: 29px;
   color: #3c3c3c;
   padding: 0 20px;
 `;
 
 export const SectionDescription = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   line-height: 23px;
   color: #3c3c3c;
   padding: 8px 20px 40px;
   z-index: 2;
+  ${media.greaterThan("medium")`
+    margin-bottom: 100px;
+    font-size: 20px;
+  `}
 `;
 
 export const ImageWrapper = styled.div<imgProps>`

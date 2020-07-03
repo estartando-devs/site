@@ -40,7 +40,7 @@ export const BackgroundElementDecorListras = styled.div`
 `;
 
 export const AboutUsTitle = styled.h2`
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-weight: bold;
   font-size: 32px;
   line-height: 37px;
@@ -54,10 +54,10 @@ export const AboutUsTitle = styled.h2`
     color: transparent;
     -webkit-text-stroke: 2px #3c3c3c;
     margin-top: 20px;
+    ${media.lessThan("medium")`
+      margin-top: 0;
+    `}
   }
-  ${media.lessThan("medium")`
-
-  `}
   ${media.greaterThan("medium")`
     font-size: 48px;
     margin-bottom: 16px;
@@ -66,14 +66,14 @@ export const AboutUsTitle = styled.h2`
 
 export const InformationText = styled.p`
   max-width: 912px;
-  font-family: Ubuntu Mono;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 23px;
   color: #3c3c3c;
   padding: 24px 20px;
   z-index: 2;
   ${media.greaterThan("medium")`
     margin-bottom: 100px;
+    font-size: 20px;
   `}
 `;
 
