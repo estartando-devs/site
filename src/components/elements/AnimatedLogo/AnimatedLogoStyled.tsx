@@ -8,14 +8,14 @@ const keyframeAnimation = keyframes`
 `;
 
 export const AnimatedLogoSvg = styled.svg`
+  width: 535px;
+  height: auto;
   ${media.lessThan("medium")`
     width: 440px;
-    height: auto;
   `}
 
   ${media.lessThan("small")`
     width: 280px;
-    height: auto;
   `}
 
   path {
