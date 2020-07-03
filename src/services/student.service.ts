@@ -1,9 +1,10 @@
 export const getStudent = () => {
   return new Promise(async (resolve, reject) => {
-      try{
-        resolve();
-      } catch(error){
-          reject(error)
-      }
+    try {
+      resolve();
+    } catch (error) {
+      console.log(error);
+      reject(error);
+    }
   });
 };
