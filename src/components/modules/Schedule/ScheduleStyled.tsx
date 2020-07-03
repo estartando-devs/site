@@ -22,7 +22,7 @@ export const ScheduleContainerHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 170px 0 70px 12px;
+  padding: 170px 0 70px 12px;
   ${media.greaterThan("medium")`
     justify-content: space-evenly;
     margin-bottom: 170px;

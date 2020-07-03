@@ -12,10 +12,6 @@ interface ISideStep {
   description: string;
 }
 
-export interface IButtonBox {
-  isMobile: boolean;
-}
-
 const SideStep = ({ position, title, description }: ISideStep) => {
   const isRight = (position + 1) % 2 === 1 || false; // 1 even, 0 odd
 
@@ -38,8 +34,8 @@ const SideStep = ({ position, title, description }: ISideStep) => {
   );
 };
 
-const ButtonBox = ({ isMobile }: IButtonBox) => (
-  <S.ButtonContainer isMobile={isMobile}>
+const ButtonBox = () => (
+  <S.ButtonContainer>
     <S.ButtonBox>
       <S.ButtonLink target="blank" href={config.INSCRICOES_URL}>
         <S.StepButton onClick={() => {}}>Faça Parte!</S.StepButton>
@@ -55,12 +51,13 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
       <S.SectionHeader>
         <div>
           <S.SelectiveProcessTitle>PROCESSO</S.SelectiveProcessTitle>
-          <S.SelectiveProcessTitle isBold>SELETIVO</S.SelectiveProcessTitle>
+          <S.SelectiveProcessTitle>
+            <b>SELETIVO</b>
+          </S.SelectiveProcessTitle>
           <S.SelectiveProcessText>
             Nosso processo seletivo é dividido em 3 etapas:
           </S.SelectiveProcessText>
         </div>
-        <ButtonBox isMobile={false} />
       </S.SectionHeader>
       <S.StepsContainer>
         <S.VerticalLine />
@@ -68,7 +65,7 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
           <SideStep key={step.title} position={index} {...step} />
         ))}
       </S.StepsContainer>
-      <ButtonBox isMobile />
+      <ButtonBox />
     </S.SelectiveProcessContent>
     <ButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
   </S.SelectiveProcessContainer>

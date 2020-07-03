@@ -1,7 +1,14 @@
 import styled from "styled-components";
+import { Typography } from "../../../elements";
+import media from "../../../../styles/breakpoints";
 
 interface ISectionContainer {
   bgColor?: String;
+}
+
+interface ISlideTitle {
+  children: any | string;
+  color?: string;
 }
 
 const SlideContainer = styled.div.attrs((props: ISectionContainer) => ({
@@ -20,6 +27,32 @@ const SlideContainer = styled.div.attrs((props: ISectionContainer) => ({
   overflow: hidden;
   transition: 0.5s;
   transform: ${(props) => `translateX(${props.position * -100}%)`};
+  flex: 1;
+  position: relative;
+`;
+
+const SlideTitle = styled(Typography).attrs({
+  variant: "h1",
+})<ISlideTitle>`
+  color: ${(props) => props.color || "#3C3C3C"};
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  line-height: 41px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+
+  & > b {
+    font-weight: bold;
+    font-size: 2.25rem;
+  }
+
+  ${media.greaterThan("medium")`
+    font-size: 2.25rem;
+
+    & > b {
+      font-size: 3rem;
+      line-height: 55px;
+    }
+  `}
 `;
 
 const ButtonNext = styled.img`
@@ -34,4 +67,4 @@ const ButtonPrevious = styled.img`
   left: 17px;
 `;
 
-export { SlideContainer, ButtonNext, ButtonPrevious };
+export { SlideContainer, SlideTitle, ButtonNext, ButtonPrevious };
