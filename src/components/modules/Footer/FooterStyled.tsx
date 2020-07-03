@@ -8,8 +8,12 @@ const FooterContainer = styled.div`
   height: 121px;
   background: ${(props) => props.theme.palette.background.paper};
   ${media.greaterThan("medium")`
-    padding: 0 200px;
+    padding: 0 30px;
     background: ${(props) => props.theme.palette.background.default};
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 30px;
   `}
 `;
 
