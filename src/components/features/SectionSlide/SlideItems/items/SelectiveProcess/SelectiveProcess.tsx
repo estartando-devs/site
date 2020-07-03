@@ -55,7 +55,9 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
       <S.SectionHeader>
         <div>
           <S.SelectiveProcessTitle>PROCESSO</S.SelectiveProcessTitle>
-          <S.SelectiveProcessTitle isBold>SELETIVO</S.SelectiveProcessTitle>
+          <S.SelectiveProcessTitle>
+            <b>SELETIVO</b>
+          </S.SelectiveProcessTitle>
           <S.SelectiveProcessText>
             Nosso processo seletivo é dividido em 3 etapas:
           </S.SelectiveProcessText>

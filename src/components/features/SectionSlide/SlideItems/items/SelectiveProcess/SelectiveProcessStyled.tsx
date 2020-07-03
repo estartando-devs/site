@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SlideContainer } from "../../SlideItemsStyled";
+import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography, Button as ButtonElement } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
 import { IButtonBox } from "./SelectiveProcess";
@@ -29,21 +29,10 @@ const SelectiveProcessContent = styled.div`
   `}
 `;
 
-const SelectiveProcessTitle = styled(Typography).attrs({
-  variant: "h1",
+const SelectiveProcessTitle = styled(SlideTitle).attrs({
   color: "#272727",
-})<ISelectiveProcessTitle>`
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  line-height: 32px;
-  text-transform: uppercase;
-  font-weight: ${(props) => props.isBold && "600"};
-  font-size: ${(props) => (props.isBold ? "2.5rem" : "1.5rem")};
+})`
   margin-left: 25px;
-
-  @media (min-width: 768px) {
-    font-size: ${(props) => (props.isBold ? "3rem" : "2rem")};
-    margin: 4px 0;
-  }
 `;
 
 const SelectiveProcessText = styled(Typography).attrs({
@@ -194,12 +183,13 @@ const StepTitle = styled(Typography).attrs({
 const StepDescription = styled(Typography).attrs({
   variant: "body1",
   color: "#3C3C3C",
+  weight: "normal",
 })`
   line-height: 19px;
   padding: 10px 6px;
   margin: 0;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
 `;
 
 const ButtonContainer = styled.div<IButtonBox>`
