@@ -11,7 +11,7 @@ const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
 
   useEffect(() => {
     setView(inView);
-  }, [inView]);
+  }, [inView, setView]);
 
   return (
     <S.SectionDev ref={ref}>
