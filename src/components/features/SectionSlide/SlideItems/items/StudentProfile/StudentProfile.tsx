@@ -25,7 +25,7 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
         </S.SPText>
         <S.SPText>
           Se você tem de
-          <b>18 a 29 anos</b>e<b>mora no Rio de Janeiro</b>, você pode se
+          <b> 18 a 29 anos</b> e <b>mora no Rio de Janeiro</b>, você pode se
           inscrever!
         </S.SPText>
         <S.SPText>
