@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Typography } from "../../../elements";
+import media from "../../../../styles/breakpoints";
 
 interface ISectionContainer {
   bgColor?: String;
@@ -33,17 +34,27 @@ const SlideContainer = styled.div.attrs((props: ISectionContainer) => ({
 const SlideTitle = styled(Typography).attrs({
   variant: "h1",
 })<ISlideTitle>`
-  color: ${(props) => props.color || "#3C3C3C"},
+  color: ${(props) => props.color || "#3C3C3C"};
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   line-height: 41px;
   text-transform: uppercase;
   font-size: 1.5rem;
 
-  b {
+  & > b {
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 2.25rem;
   }
+
+  ${media.greaterThan("medium")`
+    font-size: 2.25rem;
+
+    & > b {
+      font-size: 3rem;
+      line-height: 55px;
+    }
+  `}
 `;
+
 const ButtonNext = styled.img`
   position: absolute;
   height: 100%;

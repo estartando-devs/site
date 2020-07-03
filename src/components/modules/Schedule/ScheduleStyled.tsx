@@ -22,7 +22,7 @@ export const ScheduleContainerHeader = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 170px 0 70px 12px;
+  padding: 170px 0 70px 12px;
   ${media.greaterThan("medium")`
     justify-content: space-evenly;
     margin-bottom: 170px;
@@ -116,21 +116,26 @@ export const SubscriptionButton = styled(Button)`
 `;
 
 export const SubscriptionLink = styled.span`
-  ${media.greaterThan("medium")`
-    display: none;
-  `}
+  display: none;
+  ${media.lessThan("medium")`
+  display: initial;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   text-decoration: underline;
   padding-left: 8px;
+  `}
 `;
 
 export const Image = styled.img`
+  width: 40%;
+  height: auto;
+  margin-left: 20px;
   ${media.greaterThan("medium")`
     position: absolute;
     right: 0;
+    width: auto;
     height: 350px;
-  `}
+  `};
 `;

@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography, Button as ButtonElement } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
-import { IButtonBox } from "./SelectiveProcess";
 
 interface ISelectiveProcessTitle {
   isBold?: boolean;
@@ -32,16 +31,19 @@ const SelectiveProcessContent = styled.div`
 const SelectiveProcessTitle = styled(SlideTitle).attrs({
   color: "#272727",
 })`
-  margin-left: 25px;
+  ${media.lessThan("medium")`
+    margin-left: 25px;
+  `}
 `;
 
 const SelectiveProcessText = styled(Typography).attrs({
   variant: "body1",
   color: "#3C3C3C",
+  weight: "normal",
 })`
   line-height: 19px;
   margin: 20px 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   max-width: 200px;
   margin-left: 25px;
 
@@ -192,20 +194,23 @@ const StepDescription = styled(Typography).attrs({
   font-size: 1rem;
 `;
 
-const ButtonContainer = styled.div<IButtonBox>`
+const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  display: ${(props) => !props.isMobile && "none"};
 
-  ${media.greaterThan<IButtonBox>("medium")`
-    display: ${(props) => (props.isMobile ? "none" : "flex")};
+  ${media.greaterThan("medium")`
+    justify-content: flex-end;
   `}
 `;
 
 const ButtonBox = styled.div`
-  width: 50%;
   display: flex;
   justify-content: center;
+
+  ${media.greaterThan("medium")`
+    width: 100%;
+    justify-content: flex-end;
+  `}
 `;
 
 const ButtonLink = styled.a`
@@ -213,7 +218,7 @@ const ButtonLink = styled.a`
   z-index: 2;
 
   ${media.greaterThan("medium")`
-    margin: 0;
+    margin-top: -100px;
   `}
 `;
 

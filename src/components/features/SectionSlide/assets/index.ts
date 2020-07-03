@@ -7,6 +7,7 @@ import iconBackWhite from "./icon-back-white.svg";
 import studentImage from "./student.png";
 import dotStepTitle1 from "./dot-step-title1.svg";
 import waves from "./waves.svg";
+import nossoMetodo from "./nossometodo.png";
 
 export {
   slideBtn,
@@ -18,4 +19,5 @@ export {
   studentImage,
   dotStepTitle1,
   waves,
+  nossoMetodo,
 };

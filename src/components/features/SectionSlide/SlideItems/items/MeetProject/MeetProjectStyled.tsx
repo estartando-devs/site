@@ -21,6 +21,7 @@ const MPTitle = styled(Typography).attrs({
   ${media.greaterThan("medium")`
     max-width: 457px;
     font-size: 3rem;
+    line-height: 55px;
   `}
 `;
 
