@@ -18,16 +18,18 @@ export const SectionDev = styled(SectionWrapper)`
   ${media.greaterThan("medium")`
     width: 100%;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
   `}
 `;
 
 export const SectionDesign = styled(SectionWrapper)`
   ${media.greaterThan("medium")`
-    padding-left: 200px;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+  `}
+  ${media.greaterThan("large")`
+    padding-left: 100px;
   `}
 `;
 
@@ -61,11 +63,22 @@ export const ImageWrapper = styled.div<imgProps>`
   width: 100%;
   max-width: 360px;
   display: flex;
-  justify-content: ${(props) =>
-    (props.rightPosition && "flex-end") ||
-    (props.leftPosition && "flex-start")};
+  justify-content: ${(props) => (props.rightPosition && "flex-end") || (props.leftPosition && "flex-start")};
+  align-self: ${(props) => (props.rightPosition && "flex-end")};
   @media (max-width: 768px) {
     overflow: ${(props) => props.rightPosition && "hidden"};
+  }
+
+  @media (max-width: 430px) {
+    max-width:100%;
+  }
+
+  @media (min-width: 910px) {
+    ${(props) => props.leftPosition && {
+    position: "absolute",
+    right: "0",
+    bottom: "0",
+  }}
   }
 `;
 
@@ -77,37 +90,20 @@ export const SectionImage = styled.img<imgProps>`
 `;
 
 export const DevImage = styled(SectionImage)`
-  width: 291px;
-  right: -40px;
+  width: 360px;
   bottom: 0;
+  ${media.lessThan("small")`
+    right: -70px;
+    width: 100%;
+  `}
 `;
 
 export const DesignImage = styled(SectionImage)`
-  ${media.lessThan("medium")`
-    left: -40px;
-    bottom: 0;
+  width: 360px;
+  ${media.lessThan("small")`
+    width: 100%;
+    left: 0px;
   `}
-  top: 0;
-  width: 100%;
-`;
-
-export const Triangle = styled.img`
-  position: absolute;
-  width: 277px;
-  height: 198px;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-`;
-
-export const Waves = styled.img`
-  ${media.greaterThan("medium")`
-    top: -70px;
-  `}
-  position: absolute;
-  top: -15px;
-  right: 0;
-  z-index: 2;
 `;
 
 export const CheksClose = styled.img`
@@ -115,19 +111,4 @@ export const CheksClose = styled.img`
   bottom: -37px;
   left: 30px;
   z-index: 2;
-`;
-
-export const Points = styled.img`
-  width: 227px;
-  height: 237px;
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  z-index: 1;
-  ${media.greaterThan("medium")`
-    top: -45px;
-    right: -100px;
-    width: 336px;
-    height: 245px;
-  `}
 `;

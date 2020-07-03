@@ -27,9 +27,7 @@ const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
       </S.TextContentWrapper>
 
       <S.ImageWrapper rightPosition>
-        <S.Points src={getImage("Points")} />
         <S.DevImage src={getImage("imgDev")} alt="imagem desenvolvedor" />
-        <S.Triangle src={getImage("triangle")} />
       </S.ImageWrapper>
     </S.SectionDev>
   );

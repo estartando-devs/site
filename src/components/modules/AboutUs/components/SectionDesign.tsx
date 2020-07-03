@@ -18,7 +18,6 @@ const SectionDesign = () => (
 
     <S.ImageWrapper leftPosition>
       <S.DesignImage src={getImage("imgDesign")} alt="imagem design" />
-      <S.Waves src={getImage("ondas")} />
       <S.CheksClose src={getImage("cheksClose")} />
     </S.ImageWrapper>
   </S.SectionDesign>
