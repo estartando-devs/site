@@ -11,15 +11,14 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
       <S.SPStudentImage src={studentImage} alt="Perfil do aluno" />
       <S.SPTitleBox>
         <S.SPTitle>PERFIL DO</S.SPTitle>
-        <S.SPTitle isBold>ALUNO</S.SPTitle>
+        <S.SPTitle>
+          <b>ALUNO</b>
+        </S.SPTitle>
       </S.SPTitleBox>
       <S.SPText>
         Buscamos pessoas que gostem de desafios, sejam determinadas e
-        responsáveis.
-      </S.SPText>
-      <S.SPText>
-        Nossa formação é totalmente gratuita. A única coisa que cobramos é
-        DEDICAÇÃO.
+        responsáveis. Nossa formação é totalmente gratuita. A única coisa que
+        cobramos é DEDICAÇÃO.
       </S.SPText>
       <S.SPText>
         Se você tem de 18 a 29 anos e mora no Rio de Janeiro, você pode se

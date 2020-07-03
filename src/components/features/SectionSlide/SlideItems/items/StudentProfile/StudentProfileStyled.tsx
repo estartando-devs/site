@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SlideContainer } from "../../SlideItemsStyled";
+import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
 
@@ -30,23 +30,15 @@ const SPTitleBox = styled.div`
   margin: -70px 0 50px;
 `;
 
-const SPTitle = styled(Typography).attrs({
-  variant: "h1",
-  color: "#FFF",
-})<ISPTitle>`
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-  line-height: 28px;
-  text-transform: uppercase;
-  font-weight: ${(props) => props.isBold && "600"};
-  font-size: ${(props) => (props.isBold ? "2.5rem" : "1.5rem")};
-`;
+const SPTitle = styled(SlideTitle).attrs({ color: "#FFF" })``;
 
 const SPText = styled(Typography).attrs({
   variant: "body1",
-  // color: "#3C3C3C",
+  color: "#d3d3d3",
 })`
   line-height: 19px;
   margin: 20px 0;
+  font-weight: normal;
 `;
 
 export { SPContainer, SPContent, SPStudentImage, SPTitleBox, SPTitle, SPText };
