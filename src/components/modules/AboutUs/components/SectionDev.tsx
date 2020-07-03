@@ -4,7 +4,7 @@ import * as S from "./SectionsStyled";
 import { getImage } from "../../../../shared/img";
 
 const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0,
   });

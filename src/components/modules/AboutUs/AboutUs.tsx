@@ -9,7 +9,7 @@ const AboutUs = () => {
   const [viewAbout, setViewAbout] = useState(false);
   const [viewCourses, setViewCourses] = useState(false);
 
-  const [ref, inView, entry] = useInView({
+  const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0,
   });

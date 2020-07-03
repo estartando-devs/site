@@ -14,8 +14,14 @@ const Schedule: React.FC<ScheduleProps> = () => {
 
   useEffect(() => {
     const body = document.querySelector("body");
-    if (body) body.style.overflow = openModal ? "hidden" : "initial";
-    ContainerRef.current?.scrollIntoView();
+    if (body) {
+      if (openModal) {
+        body.style.overflow = "hidden";
+        ContainerRef.current?.scrollIntoView();
+      } else {
+        body.style.overflow = "initial";
+      }
+    }
   }, [openModal]);
 
   const onCloseModal = () => setOpenModal(false);
