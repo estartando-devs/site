@@ -16,9 +16,7 @@ const LinkToSupporter = ({ icon, name, url }: ISupporterShare) => (
 
 const Supporters = () => (
   <S.SupporterShareContainer>
-    <S.Title>
-      Apoio:
-    </S.Title>
+    <S.Title>Apoio:</S.Title>
     <S.SupporterButtons>
       {SupportersBrands.map((socialIcon) => (
         <LinkToSupporter key={socialIcon.name} {...socialIcon} />
