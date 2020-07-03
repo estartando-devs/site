@@ -39,6 +39,7 @@ const SelectiveProcessTitle = styled(SlideTitle).attrs({
 const SelectiveProcessText = styled(Typography).attrs({
   variant: "body1",
   color: "#3C3C3C",
+  weight: "normal",
 })`
   line-height: 19px;
   margin: 20px 0;
