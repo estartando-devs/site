@@ -20,6 +20,10 @@ export const SectionDev = styled(SectionWrapper)`
     flex-direction: row-reverse;
     justify-content: space-between;
   `}
+
+  ${media.greaterThan("large")`
+    justify-content: center;
+  `}
 `;
 
 export const SectionDesign = styled(SectionWrapper)`
@@ -29,7 +33,8 @@ export const SectionDesign = styled(SectionWrapper)`
     justify-content: space-between;
   `}
   ${media.greaterThan("large")`
-    padding-left: 100px;
+    justify-content: center;
+    margin-top: 100px;
   `}
 `;
 
@@ -73,13 +78,13 @@ export const ImageWrapper = styled.div<imgProps>`
     max-width:100%;
   }
 
-  @media (min-width: 910px) {
+  /* @media (max-width: 910px) {
     ${(props) => props.leftPosition && {
     position: "absolute",
     right: "0",
     bottom: "0",
   }}
-  }
+  } */
 `;
 
 export const SectionImage = styled.img<imgProps>`
@@ -95,6 +100,9 @@ export const DevImage = styled(SectionImage)`
   ${media.lessThan("small")`
     right: -70px;
     width: 100%;
+  `}
+  ${media.greaterThan("large")`
+    padding-right: 30px;
   `}
 `;
 
