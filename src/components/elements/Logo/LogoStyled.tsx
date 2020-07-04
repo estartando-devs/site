@@ -2,10 +2,10 @@ import styled from "styled-components";
 import media from "styled-media-query";
 
 interface LogoProps {
-  width: string,
-  height: string,
-  padding: string,
-  margin: string
+  width: string;
+  height: string;
+  padding: string;
+  margin: string;
 }
 
 export const LogoContainer = styled.img<LogoProps>`
@@ -15,6 +15,6 @@ export const LogoContainer = styled.img<LogoProps>`
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
   ${media.lessThan("medium")`
-    width: 86px;
+    width: 130px;
   `}
 `;

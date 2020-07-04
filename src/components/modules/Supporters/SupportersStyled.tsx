@@ -2,32 +2,34 @@ import styled, { css } from "styled-components";
 import media from "styled-media-query";
 
 interface BrandLogo {
-  alt?: string,
+  alt?: string;
 }
 
 const BrandsStyles = (value: string) => {
   switch (value) {
     case "marios":
       return css`
-        max-width: 111px;
+        height: 45px;
+        /* max-width: 111px; */
         ${media.lessThan("medium")`
-          width: 68px;
+          /* width: 68px; */
 
         `}
         ${media.lessThan("small")`
-          width: 48px;
+          /* width: 48px; */
 
         `}
       `;
     case "fundacao":
       return css`
-        max-width: 204px;
+        height: 60px;
+        /* max-width: 204px; */
         ${media.lessThan("medium")`
-          width: 96px;
+          /* width: 96px; */
 
         `}
         ${media.lessThan("small")`
-          width: 76px;
+          /* width: 76px; */
         `}
       `;
     default:
@@ -39,14 +41,13 @@ export const SupporterShareContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: max-content;
   height: 100%;
 `;
 
 export const SupporterButtons = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: max-content;
   ${media.greaterThan("medium")`
@@ -55,22 +56,19 @@ export const SupporterButtons = styled.div`
 `;
 
 export const SupporterBrandLogo = styled.img<BrandLogo>`
+  margin: 0 10px;
   ${(props) => props.alt && BrandsStyles(props.alt)};
 `;
 
 export const Title = styled.p`
+  color: ${(props) => props.theme.palette.text.secondary};
+  line-height: 19px;
+  text-align: center;
+  max-width: 280px;
   font-family: Ubuntu;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 11px;
-  color: #9D9D9D;
-  ${media.greaterThan("medium")`
-    font-family: Ubuntu;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 23px;
-    color: #FFFFFF;
-  `}
+  font-size: 14px;
+  margin: 15px;
+  color: #d3d3d3;
 `;
 
 const SupportersContainer = styled.div`
