@@ -9,7 +9,6 @@ interface IScheduleContainer {
 export const ScheduleContainer = styled.div<IScheduleContainer>`
   width: 100%;
   height: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,10 +20,11 @@ export const ScheduleContainer = styled.div<IScheduleContainer>`
 export const ScheduleContainerHeader = styled.div`
   display: flex;
   width: 100%;
+  overflow: hidden;
   justify-content: space-between;
   padding: 170px 0 70px 12px;
   ${media.greaterThan("medium")`
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 170px;
   `}
 `;
@@ -42,8 +42,20 @@ export const InformationAside = styled.div`
   `}
 
   ${media.between("medium", "large")`
-    padding-right: 28vw;
+    /* padding-right: 28vw; */
   `}
+`;
+
+export const Image = styled.img`
+  margin: 0 20px;
+  width: auto;
+  height: 350px;
+  ${media.lessThan("medium")`
+    margin: 0 -50px 0 20px;
+    height: auto;
+    width: 50%;
+    min-width: 200px;
+  `};
 `;
 
 export const ScheduleTitle = styled.h2`
@@ -78,7 +90,7 @@ export const ScheduleDescription = styled.p`
 
   ${media.greaterThan("medium")`
     font-size: 31px;
-    margin-bottom: 24px;
+    margin:16px 0 36px;
     padding-left: 0;
   `}
 `;
@@ -87,9 +99,9 @@ export const ModalText = styled.p`
   ${media.lessThan("medium")`
     /* display: none; */
   `}
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 26px;
   color: #d3d3d3;
   margin-bottom: 24px;
   max-width: 800px;
@@ -99,9 +111,9 @@ export const InformationText = styled.p`
   ${media.lessThan("medium")`
     display: none;
   `}
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 26px;
   color: #d3d3d3;
   margin-bottom: 24px;
   max-width: 800px;
@@ -126,16 +138,4 @@ export const SubscriptionLink = styled.span`
   text-decoration: underline;
   padding-left: 8px;
   `}
-`;
-
-export const Image = styled.img`
-  width: 40%;
-  height: auto;
-  margin-left: 20px;
-  ${media.greaterThan("medium")`
-    position: absolute;
-    right: 0;
-    width: auto;
-    height: 350px;
-  `};
 `;

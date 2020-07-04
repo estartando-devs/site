@@ -37,6 +37,7 @@ export const CalendarStep = styled.div`
   align-items: center;
   height: 170px;
   justify-content: space-between;
+  margin-bottom: 30px;
 `;
 
 export const CalendarStepImageWrapper = styled.div`

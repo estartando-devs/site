@@ -7,7 +7,9 @@ import { Supporters } from "../Supporters";
 const Footer = () => (
   <S.FooterContainer>
     <Supporters />
-    <Logo />
+    <S.ContainerLogo>
+      <Logo />
+    </S.ContainerLogo>
     <SocialShareButtons />
   </S.FooterContainer>
 );

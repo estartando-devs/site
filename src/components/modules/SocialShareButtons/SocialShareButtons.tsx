@@ -16,11 +16,14 @@ const ShareBtn = ({ icon, name, url }: ISocialShare) => (
 
 const SocialShareButtons = () => (
   <S.SocialShareContainer>
-    <S.SocialButtons>
-      {SocialShareIcons.map((socialIcon) => (
-        <ShareBtn key={socialIcon.name} {...socialIcon} />
-      ))}
-    </S.SocialButtons>
+    <S.SocialShareContent>
+      <S.Title>Segue a gente</S.Title>
+      <S.SocialButtons>
+        {SocialShareIcons.map((socialIcon) => (
+          <ShareBtn key={socialIcon.name} {...socialIcon} />
+        ))}
+      </S.SocialButtons>
+    </S.SocialShareContent>
   </S.SocialShareContainer>
 );
 

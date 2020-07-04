@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 
-const FooterContainer = styled.div`
+export const FooterContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column-reverse;
   align-items: center;
-  height: 121px;
   background: ${(props) => props.theme.palette.background.paper};
   ${media.greaterThan("medium")`
-    padding: 0 30px;
+    flex-direction: row;
+    padding: 30px;
     background: ${(props) => props.theme.palette.background.default};
     justify-content: space-between;
     display: grid;
@@ -18,4 +19,6 @@ const FooterContainer = styled.div`
   `}
 `;
 
-export { FooterContainer };
+export const ContainerLogo = styled.div`
+  margin: 20px 0;
+`;
