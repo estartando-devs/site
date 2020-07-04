@@ -55,7 +55,7 @@ export const ImageWrapper = styled.div<imgProps>`
   width: 100%;
   display: flex;
   @media (max-width: 768px) {
-    justify-content: ${(props) => (props.leftPosition && "flex-start")};
+    justify-content: ${(props) => props.leftPosition && "flex-start"};
   }
 
   ${media.greaterThan("medium")`
@@ -71,6 +71,7 @@ export const DesignImage = styled.img<imgProps>`
   height: auto;
   z-index: 2;
   position: relative;
+  width: auto;
   ${media.lessThan("small")`
     width: 100%;
     left: 0px;
@@ -80,13 +81,11 @@ export const DesignImage = styled.img<imgProps>`
   `}
   ${media.greaterThan("medium")`
     top: -110px;
-    max-width: 400px;
     height: 431px;
   `}
 
   ${media.greaterThan("large")`
     top: -186px;
-    width: 596px;
     height: 518px;
   `}
 `;
