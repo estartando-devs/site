@@ -9,7 +9,6 @@ interface IAbouteUsContainer {
 const AboutUsContainer = styled.div<IAbouteUsContainer>`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   width: 100%;
   padding: 52px 0px 0px;
   position: relative;

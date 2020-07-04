@@ -1,6 +1,6 @@
 import React from "react";
-import * as S from "./SectionsStyled";
-import { getImage } from "../../../../shared/img";
+import * as S from "./SectionDesignStyled";
+import { getImage } from "../../../../../shared/img";
 
 const SectionDesign = () => (
   <S.SectionDesign>
@@ -18,7 +18,6 @@ const SectionDesign = () => (
 
     <S.ImageWrapper leftPosition>
       <S.DesignImage src={getImage("imgDesign")} alt="imagem design" />
-      <S.CheksClose src={getImage("cheksClose")} />
     </S.ImageWrapper>
   </S.SectionDesign>
 );
