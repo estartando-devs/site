@@ -1,6 +1,6 @@
 {
   "name": "inscricao",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@types/jest": "^26.0.0",
