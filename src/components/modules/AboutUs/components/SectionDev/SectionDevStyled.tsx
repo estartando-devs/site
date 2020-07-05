@@ -49,15 +49,14 @@ export const SectionDescription = styled.p`
 export const ImageWrapper = styled.div<imgProps>`
   position: relative;
   width: 100%;
-  display: flex;
   @media (max-width: 768px) {
-    justify-content: ${(props) => (props.rightPosition && "flex-end")};
-    align-self: ${(props) => (props.rightPosition && "flex-end")};
+    justify-content: ${(props) => props.rightPosition && "flex-end"};
+    align-self: ${(props) => props.rightPosition && "flex-end"};
     overflow: ${(props) => props.rightPosition && "hidden"};
   }
 
   @media (max-width: 430px) {
-    max-width:100%;
+    max-width: 100%;
   }
 
   ${media.lessThan("large")`
@@ -66,20 +65,27 @@ export const ImageWrapper = styled.div<imgProps>`
 `;
 
 export const DevImage = styled.img<imgProps>`
-  height: auto;
   z-index: 2;
   position: relative;
-  width: 100%;
-  bottom: 0;
-  ${media.lessThan("small")`
-    right: -70px;
-    width: 100%;
-  `}
-  ${media.greaterThan("medium")`
-    padding-right: 30px;
-    top: -50px;
-  `}
   ${media.greaterThan("large")`
-    width: 500px;
+    top: -186px;
+    width: auto;
+    height: 518px;
+  `}
+
+  ${media.greaterThan("medium")`
+    top: -110px;
+    width: auto;
+    height: 431px;
+  `}
+
+  ${media.lessThan("medium")`
+    width: 380px;
+    height: auto;
+  `}
+
+  ${media.lessThan("small")`
+    width: 100%;
+    height: auto;
   `}
 `;

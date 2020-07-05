@@ -27,6 +27,10 @@ export const ScheduleContainerHeader = styled.div`
     justify-content: center;
     margin-bottom: 170px;
   `}
+  ${media.lessThan("small")`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  `}
 `;
 
 export const InformationAside = styled.div`

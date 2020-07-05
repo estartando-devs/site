@@ -53,7 +53,6 @@ export const SectionDescription = styled.p`
 export const ImageWrapper = styled.div<imgProps>`
   position: relative;
   width: 100%;
-  display: flex;
   @media (max-width: 768px) {
     justify-content: ${(props) => props.leftPosition && "flex-start"};
   }
@@ -68,26 +67,34 @@ export const ImageWrapper = styled.div<imgProps>`
 `;
 
 export const DesignImage = styled.img<imgProps>`
-  height: auto;
   z-index: 2;
   position: relative;
-  width: auto;
-  ${media.lessThan("small")`
-    width: 100%;
-    left: 0px;
-  `}
-  ${media.lessThan("medium")`
-    max-width: 380px;
-  `}
-  ${media.greaterThan("medium")`
-    top: -110px;
-    height: 431px;
-  `}
-
   ${media.greaterThan("large")`
     top: -186px;
+    width: auto;
     height: 518px;
   `}
+
+  ${media.greaterThan("medium")`
+    top: -110px;
+    width: auto;
+    height: 451px;
+  `}
+
+  ${media.lessThan("medium")`
+    width: 380px;
+    height: auto;
+  `}
+
+  ${media.lessThan("small")`
+    width: 100%;
+    height: auto;
+    left: 0px;
+  `}
+
+
+
+
 `;
 
 export const CheksClose = styled.img`
