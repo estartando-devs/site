@@ -59,6 +59,7 @@ const ButtonNext = styled.img`
   position: absolute;
   height: 100%;
   right: 0;
+  cursor: pointer;
 `;
 
 const ButtonPrevious = styled.img`
