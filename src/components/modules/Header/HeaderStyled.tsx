@@ -1,37 +1,34 @@
 import styled from "styled-components";
+import media from "../../../styles/breakpoints";
+import { backgroundHeader } from "../../../shared/img";
 
 const HeaderContainer = styled.header`
   width: 100%;
-  display: flex;
-  background-color: ${(props) => props.theme.palette.background.default};
-  min-height: 88px;
-`;
-
-const SideContent = styled.div`
-  flex: 1;
+  height: ${window.innerHeight}px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  background-image: url(${backgroundHeader});
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  ${media.greaterThan("small")`
+        height: 100vh;
+    `}
 `;
 
-const TitleContainer = styled(SideContent)`
-  z-index: 2;
-  background-color: ${(props) => props.theme.palette.primary.main};
+const ScrollLink = styled.a`
+  position: absolute;
+  cursor: pointer;
+  bottom: 30px;
 `;
 
-const HeaderTitle = styled.h1`
-  color: ${(props) => props.theme.palette.primary.contrastText};
-  font-size: 1.8rem;
-  text-align: center;
-  font-family: "Ubuntu Mono", monospace;
-  margin-left: -30px;
+const ScrollImage = styled.img`
+  width: 32px;
+  height: auto;
 `;
 
-const Separator = styled.span`
-  background-color: #81caa8;
-  width: 60px;
-  margin-top: -75px;
-  transform: rotate(140deg);
-`;
-
-export { HeaderContainer, SideContent, TitleContainer, HeaderTitle, Separator };
+export { HeaderContainer, ScrollLink, ScrollImage };

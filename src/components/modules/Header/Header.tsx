@@ -1,19 +1,15 @@
 import React from "react";
 import * as S from "./HeaderStyled";
-import { Logo } from "../../elements";
+import { iconScroll } from "../../../shared/img";
+import { AnimatedLogo } from "../../elements";
 
-const Header = () => {
-  return (
-    <S.HeaderContainer>
-      <S.SideContent>
-        <Logo width="125px" />
-      </S.SideContent>
-      <S.Separator />
-      <S.TitleContainer>
-        <S.HeaderTitle>Inscrições 2020</S.HeaderTitle>
-      </S.TitleContainer>
-    </S.HeaderContainer>
-  );
-};
+const Header = () => (
+  <S.HeaderContainer>
+    <AnimatedLogo />
+    <S.ScrollLink href="#SectionSlide">
+      <S.ScrollImage src={iconScroll} alt="Clique para rolar" />
+    </S.ScrollLink>
+  </S.HeaderContainer>
+);
 
 export default Header;

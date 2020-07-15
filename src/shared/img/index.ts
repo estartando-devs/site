@@ -1,25 +1,58 @@
-interface IImage<TValue> {
-  [id: string]: TValue;
+import iconFacebook from "./icon-facebook.svg";
+import iconInstagram from "./icon-instagram.svg";
+import logoDevs from "./logo-devs.svg";
+import nossaMetodologia from "./nossa-metodologia.svg";
+import backgroundHeader from "./background-header.jpg";
+import iconScroll from "./scroll.svg";
+import subscribe from "./subscribe.svg";
+import checklist from "./checklist.svg";
+import encounter from "./encounter.svg";
+import support from "./support.svg";
+import onlineCourse from "./online-course.svg";
+import mockuops from "./mockuops.png";
+import decorListras from "./decor-listras.svg";
+import imgDev from "./img-dev.png";
+import imgDesign from "./img-design.png";
+import ondas from "./decor-ondas.svg";
+import triangle from "./decor-triangulo.svg";
+import cheksClose from "./decor-x.svg";
+import Points from "./decor-pontos.svg";
+import close from "./close.svg";
+
+interface IImage<T> {
+  [id: string]: T;
 }
 
-const images: IImage<string> = {
-  cursoDesenvolvimento: require("./curso-desenvolvimento.svg"),
-  cursoDesign: require("./curso-design.svg"),
-  finalNao: require("./final-nao.svg"),
-  finalSim: require("./final-sim.svg"),
-  iconFacebook: require("./icon-facebook.svg"),
-  iconInstagram: require("./icon-instagram.svg"),
-  inscricaoCancelada: require("./inscricao-cancelada.svg"),
-  inscricaoConfirmada: require("./inscricao-confirmada.svg"),
-  perfilFormado: require("./perfil-formado.svg"),
-  step1: require("./step-1-white.svg"),
-  step2: require("./step-2-white.svg"),
-  step2Disabled: require("./step-2-grey.svg"),
-  step3: require("./step-3-white.svg"),
-  step3Disabled: require("./step-3-grey.svg"),
-  step4: require("./step-4-white.svg"),
-  step4Disabled: require("./step-4-grey.svg"),
-  students: require("./students.svg"),
+const IMAGES: IImage<string> = {
+  iconFacebook,
+  iconInstagram,
+  logoDevs,
+  nossaMetodologia,
+  backgroundHeader,
+  iconScroll,
+  subscribe,
+  checklist,
+  encounter,
+  onlineCourse,
+  support,
+  mockuops,
+  decorListras,
+  imgDev,
+  imgDesign,
+  ondas,
+  triangle,
+  cheksClose,
+  Points,
+  close,
 };
 
-export default images;
+export const getImage = (key: string) => IMAGES[key];
+
+export {
+  iconFacebook,
+  iconInstagram,
+  logoDevs,
+  nossaMetodologia,
+  backgroundHeader,
+  iconScroll,
+};

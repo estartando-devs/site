@@ -1,7 +1,7 @@
 /* PLOP_INJECT_IMPORT */
-import { FormManager } from './FormManager';
+import { SectionSlide } from "./SectionSlide";
 
 export {
   /* PLOP_INJECT_EXPORT */
-	FormManager,
+  SectionSlide,
 };

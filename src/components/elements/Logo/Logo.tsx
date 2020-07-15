@@ -22,17 +22,19 @@ const Logo = ({
   height,
   padding,
   margin,
+  ...rest
 }: LogoProps) => (
-    <Link to="/">
-      <S.LogoContainer
-        src={LogoImage}
-        width={width}
-        height={height}
-        padding={padding}
-        margin={margin}
-      />
-    </Link>
-  );
+  <Link to="/">
+    <S.LogoContainer
+      src={LogoImage}
+      width={width}
+      height={height}
+      padding={padding}
+      margin={margin}
+      {...rest}
+    />
+  </Link>
+);
 
 Logo.defaultProps = LogoDefaultProps;
 
