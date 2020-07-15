@@ -25,8 +25,8 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
         </S.SPText>
         <S.SPText>
           Se você tem de
-          <b> 18 a 29 anos</b> e <b>mora no Rio de Janeiro</b>, você pode se
-          inscrever!
+          <b> 18 a 29 anos</b> e morar <s>no Rio de Janeiro</s>
+          <b> em qualquer lugar </b>, você pode se inscrever!
         </S.SPText>
         <S.SPText>
           É legal que você saiba usar mouse e teclado e pesquisar na internet, e
