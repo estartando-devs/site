@@ -41,7 +41,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
         <S.ModalText>Vem fazer parte dessa história.</S.ModalText>
       </Modal>
       <S.ScheduleContainer blur={openModal} ref={ContainerRef}>
-        <S.ScheduleContainerHeader>
+        {/* <S.ScheduleContainerHeader>
           <S.InformationAside>
             <S.ScheduleTitle>
               Inscrições
@@ -83,7 +83,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
           >
             Quero fazer parte!
           </S.SubscriptionButton>
-        </a>
+        </a> */}
 
         <BoxCalendarSteps />
       </S.ScheduleContainer>
