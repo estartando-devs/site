@@ -1,4 +1,5 @@
 /* PLOP_INJECT_IMPORT */
+import { TestBanner } from './TestBanner';
 import { Supporters } from "./Supporters";
 import { Modal } from "./Modal";
 import { AboutUs } from "./AboutUs";
@@ -9,6 +10,7 @@ import { Layout } from "./Layout";
 
 export {
   /* PLOP_INJECT_EXPORT */
+	TestBanner,
   Supporters,
   Modal,
   AboutUs,
