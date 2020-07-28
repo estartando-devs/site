@@ -20,17 +20,11 @@ const Button: React.FC<IButton> = ({
     isLoading={isLoading}
     {...rest}
   >
-    {
-    isLoading
-      ? (
-        <ReactLoading
-          type="spokes"
-          height="20px"
-          width="20px"
-        />
-      )
-      : children
-    }
+    {isLoading ? (
+      <ReactLoading type="spokes" height="20px" width="20px" />
+    ) : (
+      children
+    )}
   </S.ButtonContainer>
 );
 
