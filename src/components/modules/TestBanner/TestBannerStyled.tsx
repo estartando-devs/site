@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Typography } from "../../elements";
 import media from "../../../styles/breakpoints";
 
@@ -7,7 +7,7 @@ interface IAccordion {
 }
 
 const TestBannerContainer = styled.div<IAccordion>`
-  padding: ${(props) => (props.open ? "50px 100px" : " 5px 100px")};
+  padding: 15px 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -47,9 +47,16 @@ const TestBannerFullContent = styled.div<IAccordion>`
   max-width: 768px;
   display: flex;
   flex-direction: column;
-  transition: 0.5s all linear;
-  padding-top: 15px;
-  display: ${(props) => !props.open && "none"};
+  transition: all 0.2s ease-in-out;
+  height: auto;
+  max-height: 160px;
+  ${(props) =>
+    !props.open &&
+    css`
+      max-height: 0px;
+      padding-top: 0px;
+      overflow: hidden;
+    `};
 `;
 
 const TestDescription = styled(Typography).attrs({
