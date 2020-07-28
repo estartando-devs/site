@@ -24,12 +24,12 @@ const TestBanner = () => {
       </S.BannerAccordion>
       <S.TestBannerFullContent open={openFull}>
         <S.TestDescription variant="body1">
-          Olá candidato, a nossa prova é hoje dia 28/07. Você poderá acessar
-          apartir de 19:30 e deverá entregar até 20:30
+          Olá! A nossa prova é hoje, dia 28/07. Você poderá acessar a partir de
+          19:30h, e deverá ser finalizada até 20:30h.
         </S.TestDescription>
         <a target="_blank" rel="noopener noreferrer" href={testUrl}>
           <Button onClick={() => {}} size="medium" variant="secondary">
-            Fazer Prova!
+            Fazer a prova!
           </Button>
         </a>
       </S.TestBannerFullContent>
