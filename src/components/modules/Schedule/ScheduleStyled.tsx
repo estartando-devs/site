@@ -25,7 +25,7 @@ export const ScheduleContainerHeader = styled.div`
   padding: 170px 0 70px 12px;
   ${media.greaterThan("medium")`
     justify-content: center;
-    margin-bottom: 170px;
+    margin-bottom: 70px;
   `}
   ${media.lessThan("small")`
     display: grid;

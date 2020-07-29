@@ -8,14 +8,26 @@ interface IModal {
   onClose: Function;
 }
 
-const Modal: React.FC<IModal> = ({ children, open, onClose }) => {
+const Modal: React.FC<IModal> = ({
+  children,
+  open,
+  onClose,
+  ...otherStyles
+}) => {
   const handleClick = () => {
     onClose();
   };
+
+  if (open) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <S.ModalContainer show={open}>
       <S.CloseButton onClick={handleClick} src={getImage("close")} />
-      <S.ModalContent>{children}</S.ModalContent>
+      <S.ModalContent {...otherStyles}>{children}</S.ModalContent>
     </S.ModalContainer>
   );
 };

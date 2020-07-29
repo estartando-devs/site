@@ -12,7 +12,13 @@ const TypographyDefaultProps: ITypography = {
   variant: "body1",
 };
 
-const Typography = ({ children, variant, color, weight, ...otherStyles }: ITypography) => {
+const Typography = ({
+  children,
+  variant,
+  color,
+  weight,
+  ...otherStyles
+}: ITypography) => {
   const Element = Typographies[variant];
 
   return (
