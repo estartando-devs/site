@@ -17,6 +17,13 @@ const Modal: React.FC<IModal> = ({
   const handleClick = () => {
     onClose();
   };
+
+  if (open) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
   return (
     <S.ModalContainer show={open}>
       <S.CloseButton onClick={handleClick} src={getImage("close")} />

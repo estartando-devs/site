@@ -22,7 +22,7 @@ const ApprovedList = () => {
 
   const handleOpenModal = async (course: string) => {
     await setCourseName(`Aprovados ${getCourseName(course)}`);
-    await setApprovedList(getApprovedList(course));
+    await setApprovedList(getApprovedList(course).sort());
     setOpenModal(true);
   };
 

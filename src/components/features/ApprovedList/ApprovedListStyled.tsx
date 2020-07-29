@@ -53,12 +53,12 @@ const ListTitle = styled(Typography).attrs({
 })`
   text-align: center;
   text-decoration: underline;
+  text-decoration-color: #6c63ff;
   text-underline-position: under;
   padding-bottom: 15px;
 
   ${media.lessThan("medium")`
     font-size: 1.2rem;
-    text-decoration-color: #6c63ff;
   `}
 `;
 

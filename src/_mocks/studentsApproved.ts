@@ -16,7 +16,7 @@ export const devsApproved: string[] = [
   "Jó Sales de Medeiros Júnior",
   "Lara Giuliana Lima dos Santos",
   "Rodrigo Queiroz Yamagushi",
-  "eduardo de oliveira moreira",
+  "Eduardo de Oliveira Moreira",
   "Luiz Eduardo Bronzeado Pessoa",
   "João Paulo Faria de Carvalho",
   "Thais Wemberlaine Dias Machado Rocha",
