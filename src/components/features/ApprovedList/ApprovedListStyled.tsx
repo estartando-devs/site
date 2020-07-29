@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Typography, Button } from "../../elements";
 import media from "../../../styles/breakpoints";
 import { Modal as ModalComponent } from "../../modules";
+
+interface IListTitle {
+  course: string;
+}
 
 const Modal = styled(ModalComponent)`
   max-width: 500px;
@@ -48,18 +52,36 @@ const ButtonsContainer = styled.div`
   `}
 `;
 
+const setCourseColor = (courseName: string) => {
+  switch (courseName) {
+    case "Desenvolvimento Web":
+      return css`
+        text-decoration-color: ${(props) => props.theme.palette.primary?.main};
+      `;
+    case "Design UI/UX":
+      return css`
+        text-decoration-color: ${(props) => props.theme.palette?.design?.main};
+      `;
+    default:
+      return css``;
+  }
+};
+
 const ListTitle = styled(Typography).attrs({
   variant: "h2",
-})`
+  weight: "400",
+})<IListTitle>`
   text-align: center;
   text-decoration: underline;
-  text-decoration-color: #6c63ff;
+  /* text-decoration-color: #6c63ff; */
   text-underline-position: under;
   padding-bottom: 15px;
 
   ${media.lessThan("medium")`
     font-size: 1.2rem;
   `}
+
+  ${(props) => setCourseColor(props.course)}
 `;
 
 const ListContainer = styled.div`

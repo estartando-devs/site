@@ -16,12 +16,12 @@ export const getCourseName = (course: string) => coursesName[course];
 const ApprovedList = () => {
   const [openModal, setOpenModal] = useState(false);
   const [approvedList, setApprovedList] = useState<string[]>([]);
-  const [courseName, setCourseName] = useState<string>("Aprovados");
+  const [courseName, setCourseName] = useState<string>("dev");
 
   const onCloseModal = () => setOpenModal(false);
 
   const handleOpenModal = async (course: string) => {
-    await setCourseName(`Aprovados ${getCourseName(course)}`);
+    await setCourseName(`${getCourseName(course)}`);
     await setApprovedList(getApprovedList(course).sort());
     setOpenModal(true);
   };
@@ -30,7 +30,9 @@ const ApprovedList = () => {
     <>
       <S.Modal open={openModal} onClose={onCloseModal}>
         <>
-          <S.ListTitle>{courseName}</S.ListTitle>
+          <S.ListTitle course={courseName}>
+            {courseName && `Aprovados ${courseName}`}
+          </S.ListTitle>
           <S.ListContainer>
             {approvedList.map((student) => (
               <S.ApprovedItem key={student}>{student}</S.ApprovedItem>
@@ -38,7 +40,7 @@ const ApprovedList = () => {
           </S.ListContainer>
         </>
       </S.Modal>
-      <S.ApprovedListContainer>
+      <S.ApprovedListContainer id="Resultado">
         <S.ApprovedTitle>Lista de aprovados na primeira etapa:</S.ApprovedTitle>
         <S.ButtonsContainer>
           <S.DevButton onClick={() => handleOpenModal("dev")}>
