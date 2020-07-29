@@ -45,6 +45,20 @@ const VARIANT = {
       color: ${(props) => props.theme.palette.primary.main};
     }
   `,
+  secondary: css`
+    background-color: #fff;
+    border-color: #fff;
+    color: ${(props) => props.theme.palette.primary.main};
+
+    &:hover {
+      border-color: shade(0.15, "#fff");
+      color: ${(props) => shade(0.15, props.theme.palette.primary.main)};
+    }
+    &:active {
+      border-color: #fff;
+      color: ${(props) => props.theme.palette.primary.main};
+    }
+  `,
 };
 
 const DISABLED = css`
