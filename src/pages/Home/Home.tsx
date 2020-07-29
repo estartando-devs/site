@@ -1,12 +1,14 @@
 import React from "react";
-import { Schedule, AboutUs } from "../../components/modules";
-import { SectionSlide } from "../../components/features";
+import { Schedule, AboutUs, BannerApproved } from "../../components/modules";
+import { SectionSlide, ApprovedList } from "../../components/features";
 
 const Home = () => (
   <>
+    <BannerApproved />
     <SectionSlide />
     <AboutUs />
     <Schedule />
+    <ApprovedList />
   </>
 );
 

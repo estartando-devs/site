@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import media from "styled-media-query";
+
+interface ICalendarStep {
+  disabled: boolean;
+}
 
 export const CalendarStepsWrapper = styled.div`
   display: grid;
@@ -13,7 +17,7 @@ export const CalendarStepsWrapper = styled.div`
 
   ${media.greaterThan("medium")`
     grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
-    margin-bottom: 170px;
+    margin-bottom: 70px;
   `}
 `;
 
@@ -31,13 +35,19 @@ export const CalendarStepsTitle = styled.h2`
   line-height: 25px;
 `;
 
-export const CalendarStep = styled.div`
+export const CalendarStep = styled.div<ICalendarStep>`
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 170px;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      filter: opacity(0.4) saturate(0) brightness(0.7);
+    `}
 `;
 
 export const CalendarStepImageWrapper = styled.div`

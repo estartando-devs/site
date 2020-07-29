@@ -33,6 +33,7 @@ export const ModalContent = styled.div`
 `;
 
 export const CloseButton = styled.img`
+  cursor: pointer;
   width: 30px;
   height: 30px;
   /* background-color: ${(props) => props.theme.palette.primary.main}; */

@@ -6,7 +6,7 @@ export interface IButton {
   /**
    * expected one of  'default' | 'outlined'
    */
-  variant?: "default" | "outlined" | "secondary";
+  variant?: "default" | "outlined" | "secondary" | "design";
   /**
    * one of 'large' | 'medium' | 'small'
    */
