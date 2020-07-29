@@ -59,6 +59,22 @@ const VARIANT = {
       color: ${(props) => props.theme.palette.primary.main};
     }
   `,
+  design: css`
+    background-color: ${(props) => props.theme.palette?.design?.main || "#FFF"};
+    border-color: ${(props) => props.theme.palette?.design?.main || "#FFF"};
+    color: ${(props) => props.theme.palette?.design?.contrastText};
+
+    &:hover {
+      border-color: ${(props) =>
+        shade(0.15, props.theme.palette?.design?.main || "#FFF")};
+      color: ${(props) =>
+        shade(0.15, props.theme.palette?.design?.contrastText || "#FFF")};
+    }
+    &:active {
+      border-color: ${(props) => props.theme.palette?.design?.main};
+      color: ${(props) => props.theme.palette?.design?.contrastText};
+    }
+  `,
 };
 
 const DISABLED = css`
@@ -85,7 +101,7 @@ const ButtonContainer = styled.button<IButton>`
   box-shadow: ${(props) => props.theme.shadows[0]};
   padding: ${(props) => props.theme.shape?.padding.small};
   border-radius: ${(props) => props.theme.shape?.borderRadius};
-  font-family: Ubuntu Mono;
+  font-family: Ubuntu;
   font-weight: ${(props) => props.theme.typography.fontWeightBold};
   font-size: 20px;
   ${(props) => props.variant && VARIANT[props.variant]};

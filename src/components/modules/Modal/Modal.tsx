@@ -8,14 +8,19 @@ interface IModal {
   onClose: Function;
 }
 
-const Modal: React.FC<IModal> = ({ children, open, onClose }) => {
+const Modal: React.FC<IModal> = ({
+  children,
+  open,
+  onClose,
+  ...otherStyles
+}) => {
   const handleClick = () => {
     onClose();
   };
   return (
     <S.ModalContainer show={open}>
       <S.CloseButton onClick={handleClick} src={getImage("close")} />
-      <S.ModalContent>{children}</S.ModalContent>
+      <S.ModalContent {...otherStyles}>{children}</S.ModalContent>
     </S.ModalContainer>
   );
 };
