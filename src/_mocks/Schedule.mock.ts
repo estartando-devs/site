@@ -21,7 +21,7 @@ export const scheduleMock: ISchedule[] = [
   {
     image: "encounter",
     title: "Hackathon",
-    description: "30 de julho, às 19h30",
+    description: "30 de julho, às 19h",
     disable: false,
   },
   {
