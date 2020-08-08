@@ -41,7 +41,7 @@ const ApprovedList = () => {
         </>
       </S.Modal>
       <S.ApprovedListContainer id="Resultado">
-        <S.ApprovedTitle>Lista de aprovados na primeira etapa:</S.ApprovedTitle>
+        <S.ApprovedTitle>Lista de aprovados:</S.ApprovedTitle>
         <S.ButtonsContainer>
           <S.DevButton onClick={() => handleOpenModal("dev")}>
             Desenvolvimento Web
