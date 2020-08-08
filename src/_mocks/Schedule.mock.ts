@@ -28,7 +28,7 @@ export const scheduleMock: ISchedule[] = [
     image: "support",
     title: "Bate papo com o time",
     description: "Online, entre os dias 3 e 7 de agosto",
-    disable: false,
+    disable: true,
   },
   {
     image: "onlineCourse",
