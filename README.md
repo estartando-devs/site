@@ -3,7 +3,7 @@
   <h2 align="center"></h2>
 </p>
 
-## :large_orange_diamond: status
+<hr>
 
 <div align="center">
   
@@ -54,6 +54,6 @@ yarn start
 <hr>
 
 <p align="center">
-  :copyright: :green_book: Estartando Devs 
+  :copyright: Estartando Devs :green_book:
 </p>
 
