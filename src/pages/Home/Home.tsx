@@ -8,7 +8,7 @@ const Home = () => (
     <SectionSlide />
     <AboutUs />
     <Schedule />
-    <ApprovedList />
+    {/* <ApprovedList /> */}
   </>
 );
 
