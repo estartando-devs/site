@@ -24,9 +24,7 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
           cobramos é DEDICAÇÃO.
         </S.SPText>
         <S.SPText>
-          Se você tem de
-          <b> 18 a 29 anos</b> e morar <s>no Rio de Janeiro</s>
-          <b> em qualquer lugar </b>, você pode se inscrever!
+        Se você é estudante do <b> 3 ano do ensino médio ou já concluiu</b>, você pode se inscrever.
         </S.SPText>
         <S.SPText>
           É legal que você saiba usar mouse e teclado e pesquisar na internet, e
