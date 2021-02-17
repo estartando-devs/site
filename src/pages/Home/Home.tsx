@@ -4,7 +4,7 @@ import { SectionSlide, ApprovedList } from "../../components/features";
 
 const Home = () => (
   <>
-    <BannerApproved />
+    {/* <BannerApproved /> */}
     <SectionSlide />
     <AboutUs />
     <Schedule />
