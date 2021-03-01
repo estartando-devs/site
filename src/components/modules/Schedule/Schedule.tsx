@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as S from "./ScheduleStyled";
 import BoxCalendarSteps from "./components/BoxCalendarSteps";
-import { Button } from "../../elements";
-import { getImage } from "../../../shared/img";
-import config from "../../../config/constants";
+// import { Button } from "../../elements";
+// import { getImage } from "../../../shared/img";
+// import config from "../../../config/constants";
 import { Modal } from "../Modal";
 
 interface ScheduleProps {}
@@ -25,9 +25,9 @@ const Schedule: React.FC<ScheduleProps> = () => {
   }, [openModal]);
 
   const onCloseModal = () => setOpenModal(false);
-  const handleOpenModal = () => {
-    setOpenModal(true);
-  };
+  // const handleOpenModal = () => {
+  //   setOpenModal(true);
+  // };
   return (
     <>
       <Modal open={openModal} onClose={onCloseModal}>
@@ -41,7 +41,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
         <S.ModalText>Vem fazer parte dessa história.</S.ModalText>
       </Modal>
       <S.ScheduleContainer blur={openModal} ref={ContainerRef}>
-        <S.ScheduleContainerHeader>
+        {/* <S.ScheduleContainerHeader>
           <S.InformationAside>
             <S.ScheduleTitle>
               Inscrições
@@ -83,7 +83,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
           >
             Quero fazer parte!
           </S.SubscriptionButton>
-        </a>
+        </a> */}
 
         <BoxCalendarSteps />
       </S.ScheduleContainer>
