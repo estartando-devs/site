@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import * as S from "./TestBannerStyled";
-import { Button } from "../../elements";
 import { testUrl } from "../../../config/constants";
 import { getImage } from "../../../shared/img";
 
@@ -24,13 +23,13 @@ const TestBanner = () => {
       </S.BannerAccordion>
       <S.TestBannerFullContent open={openFull}>
         <S.TestDescription variant="body1">
-          Olá! A nossa prova é hoje, dia 28/07. Você poderá acessar a partir de
+          Olá! A nossa prova é hoje, dia 02/03. Você poderá acessar a partir de
           19:30h, e deverá ser finalizada até 20:30h.
         </S.TestDescription>
         <a target="_blank" rel="noopener noreferrer" href={testUrl}>
-          <Button onClick={() => {}} size="medium" variant="secondary">
+          <S.Button onClick={() => {}} size="medium" variant="secondary">
             Fazer a prova!
-          </Button>
+          </S.Button>
         </a>
       </S.TestBannerFullContent>
     </S.TestBannerContainer>

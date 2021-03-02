@@ -27,5 +27,4 @@ const config: IConfig = STAGES[env];
 
 export default config;
 
-export const testUrl: string =
-  "https://docs.google.com/forms/d/e/1FAIpQLSeGmOEZ-yij5n_CWjRfNOsxY0AwQVvRHQP5X_skXzPcmb6cxQ/viewform?usp=sf_link";
+export const testUrl: string = "https://forms.gle/PJqLTyWp6q5p4WWx8";
