@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Typography } from "../../elements";
+import { Typography, Button as ButtonComponent } from "../../elements";
 import media from "../../../styles/breakpoints";
 
 interface IAccordion {
@@ -13,7 +13,8 @@ const TestBannerContainer = styled.div<IAccordion>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.palette?.primary.main};
+  /* background-color: ${(props) => props.theme.palette?.primary.main}; */
+  background-color: #05ad96;
   transition: 0.5s all linear;
 
   ${media.lessThan("medium")`
@@ -69,6 +70,14 @@ const TestDescription = styled(Typography).attrs({
   transition: 0.5s all linear;
 `;
 
+const Button = styled(ButtonComponent)`
+  color: #05ad96;
+
+  &:hover {
+    color: #05ad96;
+  }
+`;
+
 export {
   TestBannerContainer,
   BannerAccordion,
@@ -76,4 +85,5 @@ export {
   ArrowIcon,
   TestBannerFullContent,
   TestDescription,
+  Button,
 };
