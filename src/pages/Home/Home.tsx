@@ -1,14 +1,14 @@
 import React from "react";
-import { Schedule, AboutUs } from "../../components/modules";
-import { SectionSlide } from "../../components/features";
+import { Schedule, AboutUs, BannerApproved } from "../../components/modules";
+import { ApprovedList, SectionSlide } from "../../components/features";
 
 const Home = () => (
   <>
-    {/* <BannerApproved /> */}
+    <BannerApproved />
     <SectionSlide />
     <AboutUs />
     <Schedule />
-    {/* <ApprovedList /> */}
+    <ApprovedList />
   </>
 );
 
