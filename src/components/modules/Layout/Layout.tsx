@@ -2,7 +2,7 @@ import React from "react";
 import * as S from "./LayoutStyled";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import { TestBanner } from "../TestBanner";
+// import { TestBanner } from "../TestBanner";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => (
   <S.LayoutContainer>
     <S.LayoutContent>
-      <TestBanner />
+      {/* <TestBanner /> */}
       <Header />
       {children}
       <Footer />
