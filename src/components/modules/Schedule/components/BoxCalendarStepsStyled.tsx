@@ -30,7 +30,7 @@ export const CalendarStepsTitle = styled.h2`
   background: linear-gradient(to top, #81caa8 0%, #53c1de 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 32px auto 0;
+  margin: 50px auto 0;
   padding: 0 10px;
   line-height: 25px;
 `;

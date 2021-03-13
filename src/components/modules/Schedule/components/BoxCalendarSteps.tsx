@@ -10,7 +10,10 @@ const BoxCalendarSteps: React.FC<BoxCalendarStepsProps> = () => (
     <S.CalendarStepsTitle>fique atento ao calendário</S.CalendarStepsTitle>
     <S.CalendarStepsWrapper>
       {scheduleMock.map((schedule: ISchedule) => (
-        <S.CalendarStep key={schedule.title} disabled={schedule.disable}>
+        <S.CalendarStep
+          key={schedule.title}
+          disabled={schedule.disable || false}
+        >
           <S.CalendarStepImageWrapper>
             <S.CalendarStepImage
               src={getImage(schedule.image)}
