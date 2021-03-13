@@ -1,6 +1,6 @@
 import React from "react";
-import { Schedule, AboutUs, BannerApproved } from "../../components/modules";
-import { SectionSlide, ApprovedList } from "../../components/features";
+import { Schedule, AboutUs } from "../../components/modules";
+import { SectionSlide } from "../../components/features";
 
 const Home = () => (
   <>
