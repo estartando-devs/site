@@ -223,7 +223,10 @@ const ButtonLink = styled.a`
 `;
 
 const StepButton = styled(ButtonElement)`
-  background-color: ${(props) => props.theme.palette.background.default};
+  :not(&:hover) {
+    background-color: ${(props) => props.theme.palette.background.default};
+    color: ${(props) => props.theme.palette.grey["400"]};
+  }
   border: none;
 `;
 
