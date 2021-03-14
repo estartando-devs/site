@@ -6,7 +6,7 @@ const BannerApproved = () => {
     <S.BannerApprovedContainer>
       <S.BannerContent>
         <S.BannerTitle variant="h2">
-          A lista de aprovados para o Hackathon já está disponível!
+          A lista de aprovados para o curso já está disponível!
         </S.BannerTitle>
         {/* <S.BannerDescription variant="body1">
           Confira a lista e já fique por dentro das próximas etapas que estão

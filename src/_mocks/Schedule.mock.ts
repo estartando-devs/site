@@ -34,7 +34,7 @@ const mock: ISchedule[] = [
   {
     image: "onlineCourse",
     title: "Início das Aulas",
-    description: "16 de março ",
+    description: "23 de março ",
     dateEnd: "2021-03-7",
   },
 ];
