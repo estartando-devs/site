@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as S from "./ScheduleStyled";
-import BoxCalendarSteps from "./components/BoxCalendarSteps";
+// import BoxCalendarSteps from "./components/BoxCalendarSteps";
 // import { Button } from "../../elements";
 // import { getImage } from "../../../shared/img";
 // import config from "../../../config/constants";
@@ -85,7 +85,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
           </S.SubscriptionButton>
         </a> */}
 
-        <BoxCalendarSteps />
+        {/* <BoxCalendarSteps /> */}
       </S.ScheduleContainer>
     </>
   );

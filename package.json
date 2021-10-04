@@ -13,6 +13,7 @@
     "@types/vanilla-masker": "^1.2.0",
     "@types/yup": "^0.29.3",
     "axios": "^0.21.1",
+    "eslint": "^7.32.0",
     "formik": "^2.1.4",
     "plop": "^2.5.3",
     "polished": "^3.6.5",
