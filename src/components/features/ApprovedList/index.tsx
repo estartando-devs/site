@@ -1,3 +1,3 @@
-import  ApprovedList  from './ApprovedList' 
+import ApprovedList from "./ApprovedList";
 
-export { ApprovedList }
+export { ApprovedList };

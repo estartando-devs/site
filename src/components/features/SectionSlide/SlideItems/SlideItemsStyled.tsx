@@ -68,4 +68,9 @@ const ButtonPrevious = styled.img`
   left: 17px;
 `;
 
-export { SlideContainer, SlideTitle, ButtonNext, ButtonPrevious };
+export {
+  SlideContainer,
+  SlideTitle,
+  ButtonNext,
+  ButtonPrevious,
+};

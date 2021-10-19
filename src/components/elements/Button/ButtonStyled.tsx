@@ -23,8 +23,7 @@ const VARIANT = {
     border-color: ${(props) => props.theme.palette.primary.main};
     color: ${(props) => props.theme.palette.primary.contrastText};
     &:hover {
-      background-color: ${(props) =>
-        shade(0.15, props.theme.palette.primary.main)};
+      background-color: ${(props) => shade(0.15, props.theme.palette.primary.main)};
       border-color: ${(props) => shade(0.15, props.theme.palette.primary.main)};
     }
     &:active {
@@ -65,10 +64,8 @@ const VARIANT = {
     color: ${(props) => props.theme.palette?.design?.contrastText};
 
     &:hover {
-      border-color: ${(props) =>
-        shade(0.15, props.theme.palette?.design?.main || "#FFF")};
-      color: ${(props) =>
-        shade(0.15, props.theme.palette?.design?.contrastText || "#FFF")};
+      border-color: ${(props) => shade(0.15, props.theme.palette?.design?.main || "#FFF")};
+      color: ${(props) => shade(0.15, props.theme.palette?.design?.contrastText || "#FFF")};
     }
     &:active {
       border-color: ${(props) => props.theme.palette?.design?.main};

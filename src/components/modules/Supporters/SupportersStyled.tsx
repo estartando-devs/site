@@ -33,7 +33,7 @@ const BrandsStyles = (value: string) => {
         `}
       `;
     default:
-      break;
+      return css``;
   }
 };
 

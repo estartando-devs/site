@@ -1,3 +1,3 @@
-import  TestBanner  from './TestBanner' 
+import TestBanner from "./TestBanner";
 
-export { TestBanner }
+export { TestBanner };

@@ -17,4 +17,4 @@ const LayoutContent = styled.div`
   align-items: center;
 `;
 
-export { LayoutContainer, LayoutContent }
+export { LayoutContainer, LayoutContent };
