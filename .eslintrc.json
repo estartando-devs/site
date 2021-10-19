@@ -23,6 +23,13 @@
         "ExportDeclaration": { "multiline": true, "minProperties": 3 }
       }
     ],
+    "import/no-named-as-default": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/default-props-match-prop-types": "off",
+
+    "no-use-before-define": "off",
+    "import/no-cycle": "off",
     "react/jsx-filename-extension": [
       1,
       {

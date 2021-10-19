@@ -39,9 +39,9 @@ const mock: ISchedule[] = [
   },
 ];
 
-const nextEvent: ISchedule | undefined =
-  mock.find((current) => new Date(current.dateEnd) > new Date()) ||
-  mock[mock.length - 1];
+const nextEvent: ISchedule | undefined = mock
+  .find((current) => new Date(current.dateEnd) > new Date())
+  || mock[mock.length - 1];
 
 export const scheduleMock: ISchedule[] = mock.map((current) => ({
   ...current,

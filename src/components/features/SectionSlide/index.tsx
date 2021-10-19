@@ -1,3 +1,3 @@
-import  SectionSlide  from './SectionSlide' 
+import SectionSlide from "./SectionSlide";
 
-export { SectionSlide }
+export { SectionSlide };

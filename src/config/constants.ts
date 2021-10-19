@@ -1,10 +1,9 @@
-interface IStages {
-  [key: string]: IConfig;
-}
-
 interface IConfig {
   BASE_URL: string;
   INSCRICOES_URL: string;
+}
+interface IStages {
+  [key: string]: IConfig;
 }
 
 const STAGES: IStages = {

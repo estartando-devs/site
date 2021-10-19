@@ -24,7 +24,10 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
           cobramos é DEDICAÇÃO.
         </S.SPText>
         <S.SPText>
-          Se você é estudante do <b> 3° ano do ensino médio ou já concluiu</b>,
+          Se você é estudante do
+          {" "}
+          <b> 3° ano do ensino médio ou já concluiu</b>
+          ,
           você pode se inscrever.
         </S.SPText>
         <S.SPText>

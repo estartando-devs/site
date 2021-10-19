@@ -20,6 +20,7 @@ const SlideItems = ({
   setPrevious,
   backToFirst,
 }: ISlideItems) => {
+  // eslint-disable-next-line
   const items: JSX.Element[] = [
     <Slides.FirstSlide onNext={setNext} />,
     <Slides.SecondSlide onNext={setNext} />,
