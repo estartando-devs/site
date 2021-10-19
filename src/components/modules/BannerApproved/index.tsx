@@ -1,3 +1,3 @@
-import  BannerApproved  from './BannerApproved' 
+import BannerApproved from "./BannerApproved";
 
-export { BannerApproved }
+export { BannerApproved };

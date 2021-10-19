@@ -7,7 +7,7 @@ interface IOMText {
   children: any | string;
 }
 
-interface IOMTagsBox {
+export interface IOMTagsBox {
   justifyContent?: string;
 }
 

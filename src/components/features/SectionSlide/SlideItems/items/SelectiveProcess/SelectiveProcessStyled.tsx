@@ -3,9 +3,9 @@ import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography, Button as ButtonElement } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
 
-interface ISelectiveProcessTitle {
-  isBold?: boolean;
-}
+// interface ISelectiveProcessTitle {
+//   isBold?: boolean;
+// }
 
 interface ISidePosition {
   right?: boolean;

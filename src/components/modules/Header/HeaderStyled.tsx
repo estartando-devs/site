@@ -31,4 +31,6 @@ const ScrollImage = styled.img`
   height: auto;
 `;
 
-export { HeaderContainer, ScrollLink, ScrollImage };
+export {
+  HeaderContainer, ScrollLink, ScrollImage,
+};

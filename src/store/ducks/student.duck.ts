@@ -1,15 +1,5 @@
-import * as Service from "../../services/student.service";
 import { Reducer, Dispatch } from "redux";
-
-enum TYPES {
-  SET_STUDENT= "SET_STUDENT",
-  SET_LOADING= "STUDENT_LOADING",
-  SET_ERROR= "STUDENT_ERROR"
-};
-
-interface IActionsTypes {
-
-}
+import * as Service from "../../services/student.service";
 
 interface IStudent {
   name: string,
@@ -37,27 +27,39 @@ const INITIAL_STATE:IStudentState = {
   student: {
     name: "",
     email: "",
-    birthDate: "" ,
+    birthDate: "",
     tel: "",
     cep: "",
     adress: "",
     isStudent: false,
     course: "",
     testimony: "",
-    availableTime: false
+    availableTime: false,
   },
   error: "",
-  loading: false
+  loading: false,
 };
 
+// eslint-disable-next-line
+enum TYPES {
+  SET_STUDENT= "SET_STUDENT",
+  SET_LOADING= "STUDENT_LOADING",
+  SET_ERROR= "STUDENT_ERROR"
+}
 export const studentReducer: Reducer<IStudentState> = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case TYPES.SET_STUDENT:
-      return { ...state, student: action.payload };
+      return {
+        ...state, student: action.payload,
+      };
     case TYPES.SET_LOADING:
-      return { ...state, loading: action.payload };
+      return {
+        ...state, loading: action.payload,
+      };
     case TYPES.SET_ERROR:
-      return { ...state, error: action.payload };
+      return {
+        ...state, error: action.payload,
+      };
     default:
       return state;
   }
@@ -65,13 +67,21 @@ export const studentReducer: Reducer<IStudentState> = (state = INITIAL_STATE, ac
 
 export const studentActions = {
   getStudent: () => async (dispatch: Dispatch) => {
-    dispatch({ type: TYPES.SET_LOADING, payload: true });
+    dispatch({
+      type: TYPES.SET_LOADING, payload: true,
+    });
     try {
       const student = await Service.getStudent();
-      dispatch({ type: TYPES.SET_STUDENT, payload: student });
+      dispatch({
+        type: TYPES.SET_STUDENT, payload: student,
+      });
     } catch (error) {
-      dispatch({ type: TYPES.SET_ERROR, payload: error });
+      dispatch({
+        type: TYPES.SET_ERROR, payload: error,
+      });
     }
-    dispatch({ type: TYPES.SET_LOADING, payload: false });
+    dispatch({
+      type: TYPES.SET_LOADING, payload: false,
+    });
   },
 };

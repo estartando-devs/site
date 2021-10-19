@@ -51,9 +51,8 @@ const TestBannerFullContent = styled.div<IAccordion>`
   transition: all 0.2s ease-in-out;
   height: auto;
   max-height: 160px;
-  ${(props) =>
-    !props.open &&
-    css`
+  ${(props) => !props.open
+    && css`
       max-height: 0px;
       padding-top: 0px;
       overflow: hidden;

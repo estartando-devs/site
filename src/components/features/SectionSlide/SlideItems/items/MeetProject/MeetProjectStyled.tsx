@@ -33,4 +33,6 @@ const MPImage = styled.img`
 
 const MPButtonNext = styled(ButtonNext)``;
 
-export { MPContainer, MPTitle, MPImage, MPButtonNext };
+export {
+  MPContainer, MPTitle, MPImage, MPButtonNext,
+};

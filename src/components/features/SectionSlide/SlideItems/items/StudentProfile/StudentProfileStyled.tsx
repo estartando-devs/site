@@ -3,9 +3,9 @@ import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
 
-interface ISPTitle {
-  isBold?: boolean;
-}
+// interface ISPTitle {
+//   isBold?: boolean;
+// }
 
 interface ISPText {
   children?: string | any;
