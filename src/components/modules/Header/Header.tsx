@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./HeaderStyled";
-import { iconScroll } from "../../../shared/img";
+import { iconScroll } from "../../../../public/img";
 import { AnimatedLogo } from "../../elements";
 
 const Header = () => (

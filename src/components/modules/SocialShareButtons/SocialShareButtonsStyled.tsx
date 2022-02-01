@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Image from 'next/image'
 
 export const SocialShareContainer = styled.section`
   display: flex;
@@ -39,7 +40,7 @@ export const ShareLink = styled.a`
   /* margin: 0 30px; */
 `;
 
-export const SocialIcon = styled.img`
+export const SocialIcon = styled(Image)`
   width: 72px;
   height: auto;
 `;

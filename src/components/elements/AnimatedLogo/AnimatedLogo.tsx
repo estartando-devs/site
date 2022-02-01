@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unknown-property */
 import React from "react";
-import { Link } from "react-router-dom";
 import * as S from "./AnimatedLogoStyled";
 
 interface AnimatedLogoProps {
@@ -8,7 +7,6 @@ interface AnimatedLogoProps {
 }
 
 const AnimatedLogo: React.FC<AnimatedLogoProps> = () => (
-  <Link to="/">
     <S.AnimatedLogoSvg viewBox="0 0 566 256" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M67 96.5L2 133.5V170.5H21V145L66.5 118.5L113 145L112.812 170.5H132V59L113 70V122.5L67 96.5Z" />
       <path d="M21 179H2V216.5L67 254L131.5 216.5V179H112.5V205L67 232L21 205V179Z" />
@@ -30,7 +28,6 @@ const AnimatedLogo: React.FC<AnimatedLogoProps> = () => (
       <path d="M249 3C249 3 248.719 3 253 3M249 34.5C249 34.5 248.421 34.5 253 34.5M253 3C254.43 3 255.5 3 259 3C262.5 3.00001 266.731 6 267 18C267.269 30 263 34.5 259 34.5C255 34.5 254.435 34.5 253 34.5M253 3V34.5" />
       <path d="M294.001 4.5C294.001 4.5 292.001 2.5 289.001 2.5C286.001 2.5 284.001 4.5 284.001 4.5C279.235 8.41331 281.003 31 284.001 33.5C287 36 289 35.5 289 35.5C289 35.5 291.631 35.6898 294.001 33.5C296.372 31.3102 298.502 8.35644 294.001 4.5Z" />
     </S.AnimatedLogoSvg>
-  </Link>
 );
 
 export default AnimatedLogo;

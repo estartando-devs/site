@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
+import Image from 'next/image'
 
 interface ICalendarStep {
   disabled: boolean;
@@ -63,7 +64,7 @@ export const CalendarStepImageWrapper = styled.div`
   align-items: center;
 `;
 
-export const CalendarStepImage = styled.img``;
+export const CalendarStepImage = styled(Image)``;
 
 export const CalendarStepDescriptionWrapper = styled.div``;
 

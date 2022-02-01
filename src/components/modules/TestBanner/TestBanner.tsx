@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./TestBannerStyled";
 import { testUrl } from "../../../config/constants";
-import { getImage } from "../../../shared/img";
+import { getImage } from "../../../../public/img";
 
 const TestBanner = () => {
   const [openFull, setOpenFull] = useState(false);

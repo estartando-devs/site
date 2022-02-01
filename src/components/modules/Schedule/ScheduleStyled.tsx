@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import media from "styled-media-query";
 import { Button } from "../../elements";
+import Img from 'next/image'
 
 interface IScheduleContainer {
   blur?: boolean;
@@ -50,7 +51,7 @@ export const InformationAside = styled.div`
   `}
 `;
 
-export const Image = styled.img`
+export const Image = styled(Img)`
   margin: 0 20px;
   width: auto;
   height: 350px;

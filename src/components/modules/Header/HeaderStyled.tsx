@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import media from "../../../styles/breakpoints";
-import { backgroundHeader } from "../../../shared/img";
+import { backgroundHeader } from "../../../../public/img";
+import Image from 'next/image'
 
 const HeaderContainer = styled.header`
   width: 100%;
-  height: ${window.innerHeight}px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +27,7 @@ const ScrollLink = styled.a`
   bottom: 30px;
 `;
 
-const ScrollImage = styled.img`
+const ScrollImage = styled(Image)`
   width: 32px;
   height: auto;
 `;

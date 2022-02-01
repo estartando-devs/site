@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import Image from 'next/image'
 
 interface IModalContainer {
   show: boolean;
@@ -32,7 +33,7 @@ export const ModalContent = styled.div`
   animation-name: ${FadeInAnimation};
 `;
 
-export const CloseButton = styled.img`
+export const CloseButton = styled(Image)`
   cursor: pointer;
   width: 30px;
   height: 30px;

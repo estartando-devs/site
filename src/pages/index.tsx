@@ -1,7 +1,15 @@
-/* PLOP_INJECT_IMPORT */
-import { Home } from "./Home";
+import React from "react";
+import { Schedule, AboutUs } from "../components/modules";
+import { SectionSlide } from "../components/features";
 
-export {
-  /* PLOP_INJECT_EXPORT */
-  Home,
-};
+const Home = () => (
+  <>
+    {/* <BannerApproved /> */}
+    <SectionSlide />
+    <AboutUs />
+    <Schedule />
+    {/* <ApprovedList /> */}
+  </>
+);
+
+export default Home;

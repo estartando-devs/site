@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./BoxCalendarStepsStyled";
 import { scheduleMock, ISchedule } from "../../../../_mocks";
-import { getImage } from "../../../../shared/img";
+import { getImage } from "../../../../../public/img";
 
 interface BoxCalendarStepsProps {}
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IButton {
   /**
    *function to be performed at the click of button

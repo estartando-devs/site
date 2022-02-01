@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./SectionDesignStyled";
-import { getImage } from "../../../../../shared/img";
+import { getImage } from "../../../../../../public/img";
 
 const SectionDesign = () => (
   <S.SectionDesign>

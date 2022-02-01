@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Typography } from "../../../elements";
 import media from "../../../../styles/breakpoints";
+import Image from 'next/image'
 
 interface ISectionContainer {
   bgColor?: String;
@@ -55,14 +56,14 @@ const SlideTitle = styled(Typography).attrs({
   `}
 `;
 
-const ButtonNext = styled.img`
+const ButtonNext = styled(Image)`
   position: absolute;
   height: 100%;
   right: 0;
   cursor: pointer;
 `;
 
-const ButtonPrevious = styled.img`
+const ButtonPrevious = styled(Image)`
   position: absolute;
   top: 17px;
   left: 17px;

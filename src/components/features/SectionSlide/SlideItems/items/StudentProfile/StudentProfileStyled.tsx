@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
+import Image from 'next/image'
 
 // interface ISPTitle {
 //   isBold?: boolean;
@@ -46,7 +47,7 @@ const SPImageBox = styled.div`
   `}
 `;
 
-const SPStudentImage = styled.img`
+const SPStudentImage = styled(Image)`
   width: 270px;
   height: auto;
 

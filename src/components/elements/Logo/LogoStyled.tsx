@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Image from 'next/image'
 
 interface LogoProps {
   width: string;
@@ -8,7 +9,7 @@ interface LogoProps {
   margin: string;
 }
 
-export const LogoContainer = styled.img<LogoProps>`
+export const LogoContainer = styled(Image)<LogoProps>`
   display: flex;
   width: ${(props) => props.width};
   height: ${(props) => props.height};

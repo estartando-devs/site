@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./ModalStyled";
-import { getImage } from "../../../shared/img";
+import { getImage } from "../../../../public/img";
 
 interface IModal {
   children: any;

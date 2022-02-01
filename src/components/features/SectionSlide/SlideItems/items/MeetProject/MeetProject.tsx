@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./MeetProjectStyled";
 import { IItem } from "../../SlideItems";
-import { nossaMetodologia } from "../../../../../../shared/img";
+import { nossaMetodologia } from "../../../../../../../public/img";
 import { slideBtn } from "../../../assets";
 
 const MeetProject = ({ onNext, position }: IItem) => (

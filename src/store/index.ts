@@ -36,7 +36,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const middleware = [thunk];
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = typeof window === 'undefined' ? () => {} :   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store: Store<ApplicationState> = createStore(
   persistedReducer,

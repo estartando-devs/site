@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import * as S from "./ScheduleStyled";
 // import BoxCalendarSteps from "./components/BoxCalendarSteps";
 // import { Button } from "../../elements";
-// import { getImage } from "../../../shared/img";
+// import { getImage } from "../../../../public/img";
 // import config from "../../../config/constants";
 import { Modal } from "../Modal";
 

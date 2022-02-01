@@ -2,6 +2,7 @@ import styled from "styled-components";
 import media from "styled-media-query";
 import { SlideContainer, ButtonNext, SlideTitle } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
+import Image from 'next/image'
 
 interface IOMText {
   children: any | string;
@@ -63,7 +64,7 @@ const OMText = styled(Typography).attrs({
   `}
 `;
 
-const WavesImage = styled.img`
+const WavesImage = styled(Image)`
   width: 100%;
   height: auto;
   max-height: 150px;
@@ -75,7 +76,7 @@ const WavesImage = styled.img`
   `}
 `;
 
-const SideImage = styled.img`
+const SideImage = styled(Image)`
   display: none;
 
   ${media.greaterThan("medium")`

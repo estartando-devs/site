@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Typography } from "../../elements";
+import Image from 'next/image'
 
 const SectionSlideContainer = styled.div`
   display: flex;
@@ -33,13 +34,13 @@ const SectionTitle = styled(Typography).attrs({
   line-height: 37px;
 `;
 
-const ButtonSlide = styled.img`
+const ButtonSlide = styled(Image)`
   position: absolute;
   height: 100%;
   right: 0;
 `;
 
-const SectionImage = styled.img`
+const SectionImage = styled(Image)`
   width: 100%;
   height: auto;
   max-width: 300px;

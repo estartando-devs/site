@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { getImage } from "../../../shared/img";
+import { getImage } from "../../../../public/img";
 
 interface IAbouteUsContainer {
   bgGreen: boolean;

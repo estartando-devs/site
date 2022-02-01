@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Image from 'next/image'
 
 interface imgProps {
   rightPosition?: boolean;
@@ -66,7 +67,7 @@ export const ImageWrapper = styled.div<imgProps>`
   `}
 `;
 
-export const DesignImage = styled.img<imgProps>`
+export const DesignImage = styled(Image)<imgProps>`
   z-index: 2;
   position: relative;
   ${media.greaterThan("large")`
@@ -97,7 +98,7 @@ export const DesignImage = styled.img<imgProps>`
 
 `;
 
-export const CheksClose = styled.img`
+export const CheksClose = styled(Image)`
   position: absolute;
   bottom: -37px;
   left: 0px;

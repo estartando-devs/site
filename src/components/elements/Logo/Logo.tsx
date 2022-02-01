@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import * as S from "./LogoStyled";
-import LogoImage from "./assets/logo.png";
+// import LogoImage from "../../../../public/img";
 
 interface LogoProps {
   width: string;
@@ -24,16 +23,15 @@ const Logo = ({
   margin,
   ...rest
 }: LogoProps) => (
-  <Link to="/">
     <S.LogoContainer
-      src={LogoImage}
+      src="https://picsum.photos/id/237/200/300"
+      // src={LogoImage}
       width={width}
       height={height}
       padding={padding}
       margin={margin}
       {...rest}
     />
-  </Link>
 );
 
 Logo.defaultProps = LogoDefaultProps;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import * as S from "./SectionDevStyled";
-import { getImage } from "../../../../../shared/img";
+import { getImage } from "../../../../../../public/img";
 
 const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
   const [ref, inView] = useInView({
