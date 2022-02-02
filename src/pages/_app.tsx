@@ -2,11 +2,8 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import React from "react";
 import { GlobalStyles } from "../styles/globalStyled";
-import { PersistGate } from "redux-persist/integration/react";
-import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import theme from "../styles/Theme";
-import { store, persistor } from "../store";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -44,14 +41,10 @@ function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
           <ThemeProvider theme={theme}>
             <GlobalStyles />
             <Component {...pageProps} />
           </ThemeProvider>
-        </PersistGate>
-      </Provider>
     </>
   );
 }
