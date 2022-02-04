@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./SectionDesignStyled";
-import { getImage } from "../../../../../../public/img";
 
 const SectionDesign = () => (
   <S.SectionDesign>
@@ -16,7 +15,6 @@ const SectionDesign = () => (
     </S.TextContentWrapper>
 
     <S.ImageWrapper leftPosition>
-      <S.DesignImage src={getImage("imgDesign")} alt="imagem design" />
     </S.ImageWrapper>
   </S.SectionDesign>
 );

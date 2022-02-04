@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-import { getImage } from "../../../../public/img";
 
 interface IAbouteUsContainer {
   bgGreen: boolean;
@@ -22,7 +21,6 @@ const AboutUsContainer = styled.div<IAbouteUsContainer>`
 export const BackgroundElementDecorListras = styled.div`
   width: 227px;
   height: 237px;
-  background-image: url(${getImage("decorListras")});
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: right;

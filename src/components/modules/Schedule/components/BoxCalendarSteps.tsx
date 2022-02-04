@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./BoxCalendarStepsStyled";
 import { scheduleMock, ISchedule } from "../../../../_mocks";
-import { getImage } from "../../../../../public/img";
 
 interface BoxCalendarStepsProps {}
 
@@ -14,12 +13,12 @@ const BoxCalendarSteps: React.FC<BoxCalendarStepsProps> = () => (
           key={schedule.title}
           disabled={schedule.disable || false}
         >
-          <S.CalendarStepImageWrapper>
+          {/* <S.CalendarStepImageWrapper>
             <S.CalendarStepImage
               src={getImage(schedule.image)}
               alt={`imagem ${schedule.title}`}
             />
-          </S.CalendarStepImageWrapper>
+          </S.CalendarStepImageWrapper> */}
 
           <S.CalendarStepDescription>
             <b>{`${schedule.title}: `}</b>

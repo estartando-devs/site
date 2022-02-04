@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./SupportersStyled";
-import { SupportersBrands } from "./assets";
 
 interface ISupporterShare {
   icon: any;
@@ -18,9 +17,9 @@ const Supporters = () => (
   <S.SupporterShareContainer>
     <S.Title>Apoio:</S.Title>
     <S.SupporterButtons>
-      {SupportersBrands.map((socialIcon) => (
+      {/* {SupportersBrands.map((socialIcon) => (
         <LinkToSupporter key={socialIcon.name} {...socialIcon} />
-      ))}
+      ))} */}
     </S.SupporterButtons>
   </S.SupporterShareContainer>
 );

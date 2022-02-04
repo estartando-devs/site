@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./SocialShareButtonsStyled";
-import { SocialShareIcons } from "./assets";
 
 interface ISocialShare {
   icon: any;
@@ -18,11 +17,11 @@ const SocialShareButtons = () => (
   <S.SocialShareContainer>
     <S.SocialShareContent>
       <S.Title>Segue a gente</S.Title>
-      <S.SocialButtons>
+      {/* <S.SocialButtons>
         {SocialShareIcons.map((socialIcon) => (
           <ShareBtn key={socialIcon.name} {...socialIcon} />
         ))}
-      </S.SocialButtons>
+      </S.SocialButtons> */}
     </S.SocialShareContent>
   </S.SocialShareContainer>
 );
