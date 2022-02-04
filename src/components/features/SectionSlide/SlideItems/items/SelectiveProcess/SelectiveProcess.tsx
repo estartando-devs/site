@@ -1,8 +1,8 @@
 import React from "react";
 import * as S from "./SelectiveProcessStyled";
 import { IItem } from "../../SlideItems";
-import { iconBack, slideBtn2, dotStepTitle1 } from "../../../assets";
-import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
+// import { iconBack, slideBtn2, dotStepTitle1 } from "../../../assets";
+// import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
 import { selectiveProcessMock } from "../../../../../../_mocks";
 import config from "../../../../../../config/constants";
 
@@ -19,16 +19,16 @@ const SideStep = ({ position, title, description }: ISideStep) => {
     <S.SideStepContainer>
       <S.StepContent>
         <S.StepTitleBox>
-          <S.StepTitleDot isMobile right={isRight} src={dotStepTitle1} alt="" />
+          {/* <S.StepTitleDot isMobile right={isRight} src={dotStepTitle1} alt="" /> */}
           <S.StepTitle right={isRight}>{title}</S.StepTitle>
         </S.StepTitleBox>
         <S.StepDescription>{description}</S.StepDescription>
-        <S.StepTitleDot
+        {/* <S.StepTitleDot
           isMobile={false}
           right={isRight}
           src={dotStepTitle1}
           alt=""
-        />
+        /> */}
       </S.StepContent>
     </S.SideStepContainer>
   );
@@ -46,7 +46,7 @@ const ButtonBox = () => (
 
 const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
   <S.SelectiveProcessContainer bgColor="#D3D3D3" position={position}>
-    <ButtonPrevious src={iconBack} onClick={onPrevious} alt="Voltar" />
+    {/* <ButtonPrevious src={iconBack} onClick={onPrevious} alt="Voltar" /> */}
     <S.SelectiveProcessContent>
       <S.SectionHeader>
         <div>
@@ -67,7 +67,7 @@ const SelectiveProcess = ({ position, onNext, onPrevious }: IItem) => (
       </S.StepsContainer>
       <ButtonBox />
     </S.SelectiveProcessContent>
-    <ButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
+    {/* <ButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} /> */}
   </S.SelectiveProcessContainer>
 );
 

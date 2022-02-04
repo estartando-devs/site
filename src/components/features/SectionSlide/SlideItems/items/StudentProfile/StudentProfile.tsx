@@ -1,15 +1,15 @@
 import React from "react";
 import * as S from "./StudentProfileStyled";
 import { IItem } from "../../SlideItems";
-import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
-import { slideBtn3, iconBackWhite, studentImage } from "../../../assets";
+// import { ButtonPrevious, ButtonNext } from "../../SlideItemsStyled";
+// import { slideBtn3, iconBackWhite, studentImage } from "../../../assets";
 
 const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
   <S.SPContainer bgColor="#161616" position={position}>
-    <ButtonPrevious src={iconBackWhite} onClick={onPrevious} alt="Voltar" />
+    {/* <ButtonPrevious src={iconBackWhite} onClick={onPrevious} alt="Voltar" /> */}
     <S.SPContent>
       <S.SPImageBox>
-        <S.SPStudentImage src={studentImage} alt="Perfil do aluno" />
+        {/* <S.SPStudentImage src={studentImage} alt="Perfil do aluno" /> */}
         <S.SPTitleBox>
           <S.SPTitle>PERFIL DO</S.SPTitle>
           <S.SPTitle>
@@ -40,7 +40,7 @@ const StudentProfile = ({ onPrevious, onNext, position }: IItem) => (
         </S.SPText>
       </S.SPTextBox>
     </S.SPContent>
-    <ButtonNext src={slideBtn3} alt="clique e conheça" onClick={onNext} />
+    {/* <ButtonNext src={slideBtn3} alt="clique e conheça" onClick={onNext} /> */}
   </S.SPContainer>
 );
 

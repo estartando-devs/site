@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./ModalStyled";
-import { getImage } from "../../../../public/img";
 
 interface IModal {
   children: any;
@@ -20,7 +19,6 @@ const Modal: React.FC<IModal> = ({
 
   return (
     <S.ModalContainer show={open}>
-      <S.CloseButton onClick={handleClick} src={getImage("close")} />
       <S.ModalContent {...otherStyles}>{children}</S.ModalContent>
     </S.ModalContainer>
   );
