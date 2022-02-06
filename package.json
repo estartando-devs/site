@@ -39,8 +39,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "generate": "plop"
+    "start": "next start"
   },
   "eslintConfig": {
     "extends": "react-app"
