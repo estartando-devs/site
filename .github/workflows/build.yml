@@ -1,8 +1,6 @@
-name: CD
+name: BUILD
 
-on:
-  push:
-    branches: [ * ]
+on: [pull_request]
 
 jobs:
   build:
