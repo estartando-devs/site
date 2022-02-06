@@ -4,7 +4,7 @@ import { SectionSlide } from "../components/features";
 
 const Home = () => (
   <Layout>
-    <BannerApproved />
+    {/* <BannerApproved /> */}
     <SectionSlide />
     <AboutUs />
     <Schedule />
