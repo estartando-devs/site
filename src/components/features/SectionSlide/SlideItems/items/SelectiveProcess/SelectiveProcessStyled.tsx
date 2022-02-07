@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SlideContainer, SlideTitle } from "../../SlideItemsStyled";
 import { Typography, Button as ButtonElement } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
+import Image from 'next/image'
 
 // interface ISelectiveProcessTitle {
 //   isBold?: boolean;
@@ -148,7 +149,7 @@ const StepTitleBox = styled.div`
   align-items: center;
 `;
 
-const StepTitleDot = styled.img<ISidePosition>`
+const StepTitleDot = styled(Image)<ISidePosition>`
   position: absolute;
   left: ${(props) => props.right && "-6px"};
   right: ${(props) => !props.right && "-10px"};

@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import media from "styled-media-query";
+import Image from 'next/image'
 
 interface BrandLogo {
   alt?: string;
@@ -55,7 +56,7 @@ export const SupporterButtons = styled.div`
   `}
 `;
 
-export const SupporterBrandLogo = styled.img<BrandLogo>`
+export const SupporterBrandLogo = styled(Image)<BrandLogo>`
   margin: 0 10px;
   ${(props) => props.alt && BrandsStyles(props.alt)};
 `;

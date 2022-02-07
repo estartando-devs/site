@@ -9,7 +9,7 @@ declare module "react-step-wizard" {
     instance: (wizard: StepWizardProps) => void;
     isHashEnabled: boolean;
     isLazyMount: boolean;
-    nav: JSX.Element;
+    nav: React.JSX.Element;
 
     onStepChange: ({ previousStep: number, activeStep: number }) => void;
 
@@ -41,7 +41,7 @@ declare module "react-step-wizard" {
     nextStep?: () => void;
     previousStep?: () => void;
     goToStep?: (step: number) => void;
-    status: Array<boolen>;
+    status: Array<boolean>;
   }
 
   export default class StepWizard extends React.PureComponent<

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
-
+import Image from 'next/image'
 interface imgProps {
   rightPosition?: boolean;
   leftPosition?: boolean;
@@ -64,7 +64,7 @@ export const ImageWrapper = styled.div<imgProps>`
   `}
 `;
 
-export const DevImage = styled.img<imgProps>`
+export const DevImage = styled(Image)<imgProps>`
   z-index: 2;
   position: relative;
   ${media.greaterThan("large")`

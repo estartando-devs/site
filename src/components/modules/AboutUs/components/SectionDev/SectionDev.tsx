@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import * as S from "./SectionDevStyled";
-import { getImage } from "../../../../../shared/img";
 
 const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
   const [ref, inView] = useInView({
@@ -27,7 +26,6 @@ const SectionDev: React.FC<{ setView: Function }> = ({ setView }) => {
       </S.TextContentWrapper>
 
       <S.ImageWrapper rightPosition>
-        <S.DevImage src={getImage("imgDev")} alt="imagem desenvolvedor" />
       </S.ImageWrapper>
     </S.SectionDev>
   );

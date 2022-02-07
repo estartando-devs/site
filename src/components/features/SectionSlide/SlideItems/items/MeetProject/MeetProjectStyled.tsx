@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SlideContainer, ButtonNext } from "../../SlideItemsStyled";
 import { Typography } from "../../../../../elements";
 import media from "../../../../../../styles/breakpoints";
+import Image from 'next/image'
 
 const MPContainer = styled(SlideContainer)`
   align-items: center;
@@ -25,7 +26,7 @@ const MPTitle = styled(Typography).attrs({
   `}
 `;
 
-const MPImage = styled.img`
+const MPImage = styled(Image)`
   width: 100%;
   height: auto;
   max-width: 300px;

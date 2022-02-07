@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as S from "./TestBannerStyled";
 import { testUrl } from "../../../config/constants";
-import { getImage } from "../../../shared/img";
 
 const TestBanner = () => {
   const [openFull, setOpenFull] = useState(false);
@@ -15,7 +14,9 @@ const TestBanner = () => {
       <S.BannerAccordion>
         <S.TesteBannerTitle variant="h2">Prova Online</S.TesteBannerTitle>
         <S.ArrowIcon
-          src={getImage("iconArrow")}
+          src="icon-arrow"
+          width={52}
+          height={52}
           alt="Abrir/Fechar"
           onClick={() => toggleAccordion()}
           open={openFull}

@@ -1,12 +1,12 @@
 import React from "react";
 import * as S from "./OurMethodStyled";
-import { slideBtn2, iconBack, waves, nossoMetodo } from "../../../assets";
+// import { slideBtn2, iconBack, waves, nossoMetodo } from "../../../assets";
 import { IItem } from "../../SlideItems";
 import { ButtonPrevious } from "../../SlideItemsStyled";
 
 const OurMethod = ({ onPrevious, onNext, position }: IItem) => (
   <S.OMContainer bgColor="#00BFA6" position={position}>
-    <ButtonPrevious src={iconBack} onClick={onPrevious} alt="Voltar" />
+    {/* <ButtonPrevious src={iconBack} onClick={onPrevious} alt="Voltar" /> */}
     <S.OMContent>
       <S.OMTextBox>
         <S.OMTitle>Nosso</S.OMTitle>
@@ -29,10 +29,10 @@ const OurMethod = ({ onPrevious, onNext, position }: IItem) => (
           <b> colaboração, comunicação, flexibilidade, criatividade</b>
         </S.OMText>
       </S.OMTextBox>
-      <S.SideImage src={nossoMetodo} alt="" />
+      {/* <S.SideImage src={nossoMetodo} alt="" /> */}
     </S.OMContent>
-    <S.WavesImage src={waves} alt="" />
-    <S.OMButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} />
+    {/* <S.WavesImage src={waves} alt="" />
+    <S.OMButtonNext src={slideBtn2} alt="clique e conheça" onClick={onNext} /> */}
   </S.OMContainer>
 );
 

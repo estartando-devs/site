@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { Typography, Button as ButtonComponent } from "../../elements";
 import media from "../../../styles/breakpoints";
+import Image from 'next/image'
 
 interface IAccordion {
   open: boolean;
@@ -36,7 +37,7 @@ const TesteBannerTitle = styled(Typography).attrs({
   color: "#3c3c3c",
 })``;
 
-const ArrowIcon = styled.img<IAccordion>`
+const ArrowIcon = styled(Image)<IAccordion>`
   cursor: pointer;
   transform: ${(props) => props.open && "rotateX(180deg)"};
   transition: 0.5s all linear;
