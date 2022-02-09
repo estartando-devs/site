@@ -14,7 +14,7 @@ env:
   AWS_S3_CONFIG: --acl public-read
 
 jobs:
-  build/deploy:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -35,7 +35,7 @@ jobs:
       - name: Deploy
         run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
   lighthouse-check:
-    needs: [build/deploy]
+    needs: [build-deploy]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
