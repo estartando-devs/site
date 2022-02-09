@@ -35,6 +35,7 @@ jobs:
       - name: Deploy
         run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
   deploy:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
