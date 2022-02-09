@@ -16,11 +16,11 @@ jobs:
         uses: foo-software/lighthouse-check-status-action@master
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          prCommentEnabled: true
+          prCommentSaveOld: true
           minAccessibilityScore: "90"
           minBestPracticesScore: "50"
           minPerformanceScore: "50"
           minProgressiveWebAppScore: "50"
           minSeoScore: "50"
-          gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          prCommentEnabled: true
-          prCommentSaveOld: true
