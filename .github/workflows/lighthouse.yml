@@ -21,7 +21,6 @@ jobs:
           minPerformanceScore: "50"
           minProgressiveWebAppScore: "50"
           minSeoScore: "50"
-        with:
           gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
           prCommentEnabled: true
           prCommentSaveOld: true
