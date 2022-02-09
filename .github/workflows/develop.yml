@@ -24,4 +24,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: sa-east-1
       - name: Deploy app
-        run: aws s3 sync ./out s3://estartandodevs-site
+        run: aws s3 sync ./out s3://estartandodevs-site --acl public-read
