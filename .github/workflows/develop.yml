@@ -1,9 +1,11 @@
-name: CD
+name: Deploy DEV
 on:
+  workflow_dispatch:
   push:
     branches: [develop]
   pull_request:
     branches: [develop]
+
 jobs:
   build:
     runs-on: ubuntu-latest
