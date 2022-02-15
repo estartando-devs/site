@@ -1,14 +1,9 @@
 import React from "react";
-import { Schedule, AboutUs, Layout } from "../components/modules";
-import { SectionSlide } from "../components/features";
+import { Layout, Header, Footer } from "../components/";
 
 const Home = () => (
   <Layout>
-    {/* <BannerApproved /> */}
-    <SectionSlide />
-    <AboutUs />
-    <Schedule />
-    {/* <ApprovedList /> */}
+    Home works!
   </Layout>
 );
 
