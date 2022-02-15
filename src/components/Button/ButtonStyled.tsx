@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { shade } from "polished";
-import { IButton } from "../../../models";
+import { IButton } from "./IButton";
 
 const SIZE = {
   small: css`
