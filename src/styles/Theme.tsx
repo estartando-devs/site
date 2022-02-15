@@ -1,66 +1,28 @@
 import { DefaultTheme } from "styled-components";
 
-const Theme: DefaultTheme = {
+
+const theme: DefaultTheme = {
   shadows: [
-    "0px 3px 4px rgba(0, 0, 0, 0.1)",
-    "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    "-1px -1px 3px rgba(123, 122, 122, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.8)",
   ],
   palette: {
-    type: "dark",
     primary: {
-      light: "#81E7A8",
       main: "#81CAA8",
-      dark: "#488184",
-      contrastText: "#3C3C3C",
+    },
+    gray: {
+      0: '#121212',
+      1: '#1E1E1E',
+      2: '#606062',
     },
     design: {
-      light: "#6C63FF",
-      main: "#6C63FF",
-      dark: "#6C63FF",
-      contrastText: "#FAFAFA",
-    },
-    text: {
-      primary: "#fff",
-      secondary: "#fcfcfc",
-      disabled: "#fbfbfb",
+    purple: '#6C63FF',
+    orange: '#FF6A2B',
+    green: '#00BFA6',
+    white: '#FFFFFF',
     },
     background: {
-      paper: "#323232",
-      default: "#161616",
+      default: "#1E1E1E",
     },
-    action: {
-      disabledBackground: "rgba(0, 0, 0, 0.12)",
-    },
-    grey: {
-      50: "#fafafa",
-      100: "#f5f5f5",
-      200: "#eeeeee",
-      300: "#e0e0e0",
-      400: "#bdbdbd",
-      500: "#9e9e9e",
-      600: "#757575",
-      700: "#616161",
-      800: "#424242",
-      900: "#212121",
-      A100: "#d5d5d5",
-      A200: "#aaaaaa",
-      A400: "#303030",
-      A700: "#616161",
-    },
-    error: {
-      main: "#E56467",
-    },
-    warning: {
-      main: "#ff9800",
-    },
-    success: {
-      main: "#81c784",
-    },
-  },
-  margin: {
-    small: "8px",
-    regular: "12px",
-    large: "16px",
   },
   typography: {
     htmlFontSize: 16,
@@ -92,12 +54,6 @@ const Theme: DefaultTheme = {
       letterSpacing: "-0.01562em",
     },
   },
-  shape: {
-    borderRadius: "5px",
-    padding: {
-      small: "8px",
-    },
-  },
 };
 
-export default Theme;
+export default theme;

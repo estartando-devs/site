@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import media from "../../styles/breakpoints";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -13,10 +12,6 @@ export const HeaderContainer = styled.header`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  ${media.greaterThan("small")`
-    height: 100vh;
-  `}
 `;
 
 export const ScrollLink = styled.a`
