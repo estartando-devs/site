@@ -25,4 +25,4 @@ const Button = ({
   </S.ButtonContainer>
 );
 
-export default Button;
+export { Button };
