@@ -48,6 +48,7 @@
     "start": "next start",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.ts'",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
     "commit": "cz"
   },
   "eslintConfig": {
