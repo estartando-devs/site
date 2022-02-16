@@ -2,8 +2,7 @@ import { LogoProps } from "./types";
 
 const IconLogo = ({ width = "165", height = "241" }: LogoProps) => (
   <svg
-    width={width}
-    height={height}
+    viewBox={`0 0 ${width} ${height}`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
