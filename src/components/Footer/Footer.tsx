@@ -1,11 +1,10 @@
-import React from "react";
-import * as S from "./FooterStyled";
-import { SocialShareButtons } from "../";
+import React from 'react';
+import * as S from './FooterStyled';
+import { SocialShareButtons } from '../';
 
 const Footer = () => (
   <S.FooterContainer>
-    <S.ContainerLogo>
-    </S.ContainerLogo>
+    <S.ContainerLogo></S.ContainerLogo>
     <SocialShareButtons />
   </S.FooterContainer>
 );

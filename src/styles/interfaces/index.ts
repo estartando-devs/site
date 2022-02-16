@@ -1,1 +1,1 @@
-export type { ITypography } from "./Typography";
+export type { ITypography } from './Typography';

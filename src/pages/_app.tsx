@@ -1,9 +1,9 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import React from "react";
-import { GlobalStyles } from "../styles/global";
-import { ThemeProvider } from "styled-components";
-import theme from "../styles/themes";
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import React from 'react';
+import { GlobalStyles } from '../styles/global';
+import { ThemeProvider } from 'styled-components';
+import theme from '../styles/themes';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -41,10 +41,10 @@ function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-          <ThemeProvider theme={theme}>
-            <GlobalStyles />
-            <Component {...pageProps} />
-          </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

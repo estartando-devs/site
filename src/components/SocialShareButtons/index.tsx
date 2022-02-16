@@ -1,3 +1,3 @@
-import SocialShareButtons from "./SocialShareButtons";
+import SocialShareButtons from './SocialShareButtons';
 
 export { SocialShareButtons };
