@@ -1,5 +1,5 @@
-import React from "react";
-import * as S from "./SocialShareButtonsStyled";
+import React from 'react';
+import * as S from './SocialShareButtonsStyled';
 
 interface ISocialShare {
   icon: any;

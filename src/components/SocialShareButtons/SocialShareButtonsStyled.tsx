@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Image from 'next/image'
+import styled from 'styled-components';
+import Image from 'next/image';
 
 export const SocialShareContainer = styled.section`
   display: flex;

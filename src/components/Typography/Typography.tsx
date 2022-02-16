@@ -1,15 +1,15 @@
-import React from "react";
-import Typographies from "./TypographyStyled";
+import React from 'react';
+import Typographies from './TypographyStyled';
 
 interface ITypography {
   children?: string;
-  variant: "h1" | "h2" | "body1";
+  variant: 'h1' | 'h2' | 'body1';
   color?: string;
   weight?: string;
 }
 
 const TypographyDefaultProps: ITypography = {
-  variant: "body1",
+  variant: 'body1',
 };
 
 const Typography = ({

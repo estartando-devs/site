@@ -1,5 +1,5 @@
-import React from "react";
-import * as S from "./LayoutStyled";
+import React from 'react';
+import * as S from './LayoutStyled';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -7,9 +7,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <S.LayoutContainer>
-    <S.LayoutContent>
-      {children}
-    </S.LayoutContent>
+    <S.LayoutContent>{children}</S.LayoutContent>
   </S.LayoutContainer>
 );
 
