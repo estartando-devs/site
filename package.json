@@ -46,6 +46,7 @@
     "build": "next build",
     "build:exp": "next build && next export",
     "start": "next start",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
     "lint": "eslint src",
     "lint:css": "stylelint './src/**/*.ts'",
     "commit": "cz"
