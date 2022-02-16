@@ -1,15 +1,14 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  *{
+  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
   }
 
   body {
     background-color: ${(props) => props.theme.palette.background.default};
-    color: ${(props) => props.theme.palette.text.primary};
     font-family: ${(props) => props.theme.typography.fontFamily};
   }
 
@@ -38,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.palette.background.paper};
+    background: ${(props) => props.theme.palette.background.default};
   }
 
   /* Handle */
@@ -48,7 +47,7 @@ export const GlobalStyles = createGlobalStyle`
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: ${(props) => props.theme.palette.primary.dark};
+    background: ${(props) => props.theme.palette.primary.main};
   }
 
 `;

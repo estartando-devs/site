@@ -1,11 +1,11 @@
-import React from "react";
-import ReactLoading from "react-loading";
-import { IButton } from "./IButton";
-import * as S from "./ButtonStyled";
+import React from 'react';
+import ReactLoading from 'react-loading';
+import { IButton } from './IButton';
+import * as S from './ButtonStyled';
 
 const Button = ({
-  variant = "default",
-  size = "small",
+  variant = 'default',
+  size = 'small',
   disabled,
   isLoading = false,
   children,
@@ -25,4 +25,4 @@ const Button = ({
   </S.ButtonContainer>
 );
 
-export default Button;
+export { Button };

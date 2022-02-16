@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import media from "../../styles/breakpoints";
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -8,19 +7,15 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url("/img/background-header.jpg");
+  background-image: url('/img/background-header.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  ${media.greaterThan("small")`
-    height: 100vh;
-  `}
 `;
 
 export const ScrollLink = styled.a`
-  position: absolute;
+  position: absuolte;
   cursor: pointer;
   bottom: 30px;
 `;

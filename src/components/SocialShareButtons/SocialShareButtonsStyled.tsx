@@ -1,15 +1,11 @@
-import styled from "styled-components";
-import media from "styled-media-query";
-import Image from 'next/image'
+import styled from 'styled-components';
+import Image from 'next/image';
 
 export const SocialShareContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ${media.greaterThan("medium")`
-    align-items: flex-end;
-  `}
 `;
 
 export const SocialShareContent = styled.section`
@@ -20,7 +16,6 @@ export const SocialShareContent = styled.section`
 `;
 
 export const Title = styled.p`
-  color: ${(props) => props.theme.palette.text.secondary};
   line-height: 19px;
   text-align: center;
   max-width: 280px;

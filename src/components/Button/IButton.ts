@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react"
+import { ButtonHTMLAttributes } from 'react';
 export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * expected one of  'default' | 'outlined'

@@ -1,6 +1,6 @@
-import React from "react";
-import * as S from "./HeaderStyled";
-import Image from "next/image";
+import React from 'react';
+import * as S from './HeaderStyled';
+import Image from 'next/image';
 
 const Header = () => (
   <S.HeaderContainer>
