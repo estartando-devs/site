@@ -66,4 +66,4 @@ jobs:
         uses: alk831/lighthouse-ci@refactor-lighthouse-thresholds
         with:
           repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          urls: 'https://www.estartandodevs.com.br/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/, '
+          urls: 'https://www.estartandodevs.com.br/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
