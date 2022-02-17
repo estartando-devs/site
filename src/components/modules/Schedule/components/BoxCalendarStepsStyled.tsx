@@ -43,9 +43,8 @@ export const CalendarStep = styled.div<ICalendarStep>`
   justify-content: space-between;
   margin-bottom: 30px;
 
-  ${(props) =>
-    props.disabled &&
-    css`
+  ${(props) => props.disabled
+    && css`
       filter: opacity(0.4) saturate(0) brightness(0.7);
     `}
 `;
