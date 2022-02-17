@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: '14.x'
       - name: Install yarn
         run: npm install -g yarn
       - name: Install Dependencies
@@ -47,13 +47,23 @@ jobs:
           gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
           prCommentEnabled: true
           prCommentSaveOld: true
-          urls: "http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/"
+          urls: 'https://www.estartandodevs.com.br/,http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
       - name: Verify Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-          minAccessibilityScore: "90"
-          minBestPracticesScore: "50"
-          minPerformanceScore: "50"
-          minProgressiveWebAppScore: "10"
-          minSeoScore: "50"
+          minAccessibilityScore: '90'
+          minBestPracticesScore: '50'
+          minPerformanceScore: '50'
+          minProgressiveWebAppScore: '10'
+          minSeoScore: '50'
+  lighthouse-ci:
+    needs: [build-deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Run Lighthouse
+        uses: alk831/lighthouse-ci@refactor-lighthouse-thresholds
+        with:
+          repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+          urls: 'https://www.estartandodevs.com.br/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/, '
