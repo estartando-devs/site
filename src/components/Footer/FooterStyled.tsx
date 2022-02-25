@@ -3,11 +3,8 @@ import styled from 'styled-components';
 export const FooterContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column-reverse;
-  align-items: center;
+  justify-content: center;
+  gap: 24px;
 `;
 
-export const ContainerLogo = styled.div`
-  margin: 20px 0;
-`;
+export const FooterContent = styled.div``;
