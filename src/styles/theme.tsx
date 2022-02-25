@@ -48,7 +48,7 @@ const theme: DefaultTheme = {
     },
     body1: {
       fontFamily: 'Open Sans',
-      fontWeight: 'bold',
+      fontWeight: 600,
       fontSize: convertPxToRem(24),
       lineHeight: convertPxToRem(33),
     },

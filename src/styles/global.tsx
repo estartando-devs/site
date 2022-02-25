@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  #root, html, body {
+  #__next, html, body {
     min-height: 100%;
     width: 100%;
   }
