@@ -1,7 +1,11 @@
 import React from 'react';
-import { Layout, Header, Footer } from '../components/';
-import { Card } from '../components/Card';
+import { Layout, Footer } from '../components/';
 
-const Home = () => <Card>Home works!</Card>;
+const Home = () => (
+  <>
+    <Layout>Home works!</Layout>
+    <Footer />
+  </>
+);
 
 export default Home;
