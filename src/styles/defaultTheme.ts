@@ -23,6 +23,9 @@ declare module 'styled-components' {
         default: string;
       };
     };
+    radius: {
+      default: number;
+    };
     typography: ITypography;
   }
 }

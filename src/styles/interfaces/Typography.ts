@@ -1,36 +1,29 @@
-interface IVariant {
+type VariantProps = {
   fontFamily?: string;
-  fontWeight?: number;
+  fontWeight?: number | string;
   fontSize?: number | string;
-  lineHeight?: number;
+  lineHeight?: number | string;
   letterSpacing?: string;
-}
+};
 
-interface Buttontheme extends IVariant {
+interface Buttontheme extends VariantProps {
   textTransform?: string;
 }
 
 export interface ITypography {
-  fontFamily?: string;
   htmlFontSize?: number | string;
-  pxToRem?: () => void;
-  round?: () => void;
-  fontSize?: number;
-  fontWeightLight?: number;
-  fontWeightRegular?: number;
-  fontWeightMedium?: number;
-  fontWeightBold?: number;
-  h1?: IVariant;
-  h2?: IVariant;
-  h3?: IVariant;
-  h4?: IVariant;
-  h5?: IVariant;
-  h6?: IVariant;
-  subtitle1?: IVariant;
-  subtitle2?: IVariant;
-  body1?: IVariant;
-  body2?: IVariant;
+  fontFamily?: string;
+  h1?: VariantProps;
+  h2?: VariantProps;
+  h3?: VariantProps;
+  h4?: VariantProps;
+  h5?: VariantProps;
+  h6?: VariantProps;
+  subtitle1?: VariantProps;
+  subtitle2?: VariantProps;
+  body1?: VariantProps;
+  body2?: VariantProps;
   button?: Buttontheme;
-  caption?: IVariant;
+  caption?: VariantProps;
   overline?: Buttontheme;
 }
