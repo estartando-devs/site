@@ -5,21 +5,20 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'name',
-        message: 'What is your component name?'
-      }
+        message: 'What is your component name?',
+      },
     ],
     actions: [
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/index.tsx',
-        templateFile: 'templates/Component.tsx.hbs'
+        templateFile: 'templates/Component.tsx.hbs',
       },
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/styles.ts',
-        templateFile: 'templates/styles.ts.hbs'
+        templateFile: 'templates/styles.ts.hbs',
       },
-
-    ]
-  })
-}
+    ],
+  });
+};
