@@ -57,6 +57,12 @@ const theme: DefaultTheme = {
       fontSize: convertPxToRem(18),
       lineHeight: convertPxToRem(25),
     },
+    body3: {
+      fontFamily: 'Open Sans',
+      fontWeight: 600,
+      fontSize: convertPxToRem(16),
+      lineHeight: convertPxToRem(25),
+    },
   },
 };
 

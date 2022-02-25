@@ -23,6 +23,7 @@ export interface ITypography {
   subtitle2?: VariantProps;
   body1?: VariantProps;
   body2?: VariantProps;
+  body3?: VariantProps;
   button?: Buttontheme;
   caption?: VariantProps;
   overline?: Buttontheme;
