@@ -1,12 +1,8 @@
-import { ReactNode } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 import * as S from './styles';
 
-export type CardProps = {
-  children: ReactNode;
-  title: string;
-  className: string;
-};
+export type CardProps = HTMLAttributes<HTMLDivElement>;
 
-export const Card = ({ children, ...props }: CardProps) => (
+export const Card = ({ children, ...props }: PropsWithChildren<CardProps>) => (
   <S.Wrapper {...props}>{children}</S.Wrapper>
 );
