@@ -1,6 +1,6 @@
-import { LogoProps } from "./types";
+import { LogoProps } from './types';
 
-const IconLogo = ({ width = "165", height = "241" }: LogoProps) => (
+const IconLogo = ({ width = '165', height = '241' }: LogoProps) => (
   <svg
     viewBox={`0 0 ${width} ${height}`}
     fill="none"
