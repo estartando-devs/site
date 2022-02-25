@@ -3,6 +3,8 @@ import { DefaultTheme } from 'styled-components';
 const theme: DefaultTheme = {
   shadows: [
     '-1px -1px 3px rgba(123, 122, 122, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.8)',
+    '-1px -1px 3px rgba(0, 0, 0, 0.3)',
+    '-1px -1px 3px rgba(123, 122, 122, 0.3))',
   ],
   palette: {
     primary: {
