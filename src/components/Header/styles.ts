@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerHeader = styled.header`
   display: flex;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   height: 100vh;
   background-image: linear-gradient(
       0deg,
@@ -17,7 +17,7 @@ export const ContainerHeader = styled.header`
   background-size: cover;
   padding: 0 120px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 576px) {
     padding: 0 16px;
   }
 `;
@@ -25,17 +25,18 @@ export const ContainerHeader = styled.header`
 export const SectionHeader = styled.section`
   display: flex;
   gap: 48px;
-  align-items: flex-start;
 
-  @media (max-width: 425px) {
+  @media (max-width: 576px) {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 `;
 
 export const ContainerImage = styled.picture`
   margin-top: 20px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 576px) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +51,7 @@ export const ContainerHeading = styled.section`
 
   h1 {
     margin-bottom: 16px;
-    @media (max-width: 425px) {
+    @media (max-width: 576px) {
       margin: 0;
     }
   }
@@ -60,7 +61,7 @@ export const ContainerButton = styled.div`
   margin-top: 48px;
   max-width: 241px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 576px) {
     max-width: 100%;
   }
 `;
