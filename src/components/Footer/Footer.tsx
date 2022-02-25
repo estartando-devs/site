@@ -10,6 +10,7 @@ const Footer = () => (
       width={65}
       height={94}
       alt="Logo estartando devs"
+      title="Logo estartando devs."
     />
     <S.FooterContent>
       <S.FooterTitle variant="body1" weight="700">
