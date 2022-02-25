@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { convertPxToRem } from '../../utils/convertPxToRem';
 
 export const ContainerHeader = styled.header`
   display: flex;
@@ -52,14 +51,7 @@ export const ContainerHeading = styled.section`
   h1 {
     margin-bottom: 16px;
     @media (max-width: 425px) {
-      font-size: ${convertPxToRem(32)};
       margin: 0;
-    }
-  }
-
-  p {
-    @media (max-width: 425px) {
-      font-size: ${convertPxToRem(16)};
     }
   }
 `;
@@ -67,4 +59,8 @@ export const ContainerHeading = styled.section`
 export const ContainerButton = styled.div`
   margin-top: 48px;
   max-width: 241px;
+
+  @media (max-width: 425px) {
+    max-width: 100%;
+  }
 `;
