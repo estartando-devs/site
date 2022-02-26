@@ -1,11 +1,11 @@
 import React from 'react';
-import { Layout, Footer } from '../components/';
+import { Layout, Footer, Header } from '../components';
 
 const Home = () => (
-  <>
-    <Layout>Home works!</Layout>
+  <Layout>
+    <Header />
     <Footer />
-  </>
+  </Layout>
 );
 
 export default Home;
