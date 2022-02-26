@@ -2,6 +2,17 @@ import { DefaultTheme } from 'styled-components';
 import { convertPxToRem } from '../utils/convertPxToRem';
 
 const theme: DefaultTheme = {
+  media: {
+    mobile_portrait: '320px',
+    mobile_default: '360px',
+    mobile_landscape: '480px',
+    tablet_portrait: '600px',
+    tablet: '768px',
+    tablet_landscape: '801px',
+    laptops_landscape: '1024px',
+    desktop_hd: '1280px',
+    desktop_fullhd: '1600px',
+  },
   shadows: [
     '-1px -1px 3px rgba(123, 122, 122, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.8)',
     '-1px -1px 3px rgba(0, 0, 0, 0.3)',
