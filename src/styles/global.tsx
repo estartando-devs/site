@@ -17,6 +17,11 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
 
   #__next, html, body {
     min-height: 100%;

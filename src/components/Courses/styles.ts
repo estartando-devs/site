@@ -12,9 +12,9 @@ const CourseContainer = styled.section`
   margin-top: 100px;
 `;
 
-const TitleContainer = styled.div`
-  background-color: ${({ bgColor }: StyleProps) => bgColor};
-  max-width: ${({ width }: StyleProps) => width};
+const TitleContainer = styled.div<StyleProps>`
+  background-color: ${({ bgColor }) => bgColor};
+  max-width: ${({ width }) => width};
   height: 23px;
   position: relative;
 
@@ -22,8 +22,8 @@ const TitleContainer = styled.div`
     position: absolute;
     top: -13px;
     left: 10px;
-    @media (max-width: 352px) {
-      font-size: 17px;
+    @media (max-width: 600px) {
+      top: -10px;
     }
   }
 `;
@@ -31,18 +31,15 @@ const TitleContainer = styled.div`
 const IntroText = styled.p`
   font-size: 16px;
   margin-top: 30px;
-  color: white;
+  color: ${({ theme }) => theme.palette.design.white};
   font-weight: 100;
   line-height: 2;
-  @media (max-width: 352px) {
-    font-size: 14px;
-  }
 `;
 
 const modulesText = styled.p`
   font-size: 18px;
   font-weight: 500;
-  color: white;
+  color: ${({ theme }) => theme.palette.design.white};
 `;
 
 const ModulesTextContainer = styled.div`
@@ -59,9 +56,8 @@ const ListModulesContainer = styled.div`
   margin: 10px 0 15px 0;
 
   > p {
-    color: white;
+    color: ${({ theme }) => theme.palette.design.white};
     line-height: 2;
-    font-size: 14px;
   }
 `;
 
