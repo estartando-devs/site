@@ -13,13 +13,8 @@ const OurResults = () => (
       </S.OurResultsContainerTitleResults>
     </S.OurResultsContainerTitle>
     <S.OurResultsContainerContent>
-      {ourResultsMock?.map((result, index) => (
-        <OurResultsIcon
-          key={index}
-          image={result.image}
-          title={result.title}
-          value={result.value}
-        />
+      {ourResultsMock?.map(({ image, title, value }, index) => (
+        <OurResultsIcon key={index} image={image} title={title} value={value} />
       ))}
     </S.OurResultsContainerContent>
   </S.OurResultsContainer>
