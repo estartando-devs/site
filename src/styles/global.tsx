@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
 
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
