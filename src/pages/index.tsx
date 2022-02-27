@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Footer, Header, Courses } from '../components';
+import { Layout, Footer, Header, OurResults, Courses } from '../components';
 
 const Home = () => (
   <Layout>
@@ -7,6 +7,7 @@ const Home = () => (
     <Courses course="frontEnd" />
     <Courses course="backEnd" />
     <Courses course="design" />
+    <OurResults />
     <Footer />
   </Layout>
 );
