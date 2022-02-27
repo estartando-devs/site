@@ -1,12 +1,13 @@
 import { OurResultsIcon } from '../OurResultsIcon';
 import { ourResultsMock } from '../../mocks';
+import { Typography } from '../Typography';
 
 import * as S from './styles';
 
 const OurResults = () => (
   <S.OurResultsContainer>
     <S.OurResultsContainerTitle>
-      <S.OurResultsContainerTitleOur>Nossos</S.OurResultsContainerTitleOur>
+      <Typography variant="h2">Nossos</Typography>
       <S.OurResultsContainerTitleResults>
         Resultados
       </S.OurResultsContainerTitleResults>

@@ -4,8 +4,8 @@ import { Typography } from '../Typography';
 export const OurResultsContainer = styled.section`
   background-image: linear-gradient(
       0deg,
-      rgba(30, 30, 30, 0.5),
-      rgba(30, 30, 30, 0.5)
+      ${({ theme: { palette } }) => palette.design.black_transparent},
+      ${({ theme: { palette } }) => palette.design.black_transparent}
     ),
     url('https://res.cloudinary.com/estartando-devs/image/upload/v1645815667/images/nossos-resultados-bg');
   background-repeat: no-repeat;
@@ -35,12 +35,6 @@ export const OurResultsContainerTitle = styled.div`
   }
 `;
 
-export const OurResultsContainerTitleOur = styled(Typography)`
-  font-size: 36px;
-  font-weight: 700px;
-  line-height: 49.03px;
-`;
-
 export const OurResultsContainerTitleResults = styled(Typography)`
   font-size: 48px;
   font-weight: 700px;
@@ -49,6 +43,11 @@ export const OurResultsContainerTitleResults = styled(Typography)`
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: ${({ theme: { palette } }) =>
     palette.design.white};
+
+  @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
+    -webkit-text-stroke-width: 1.5px;
+    font-size: 32px;
+  }
 `;
 
 export const OurResultsContainerContent = styled.div`

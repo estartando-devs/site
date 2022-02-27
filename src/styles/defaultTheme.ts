@@ -25,6 +25,7 @@ declare module 'styled-components' {
         2: string;
       };
       design: {
+        black_transparent: string;
         purple: string;
         orange: string;
         green: string;

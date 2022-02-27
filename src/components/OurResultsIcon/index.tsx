@@ -1,24 +1,30 @@
 import Image from 'next/image';
+import { PropsWithChildren } from 'react';
+import { Typography } from '../Typography';
 
 import * as S from './styles';
 
-interface OurResultsIconProp {
+type OurResultsIconProp = {
   image: string;
   title: string;
   value: string;
-}
+};
 
-const OurResultsIcon = (prop: OurResultsIconProp) => (
+const OurResultsIcon = ({
+  image,
+  title,
+  value,
+}: PropsWithChildren<OurResultsIconProp>) => (
   <S.OurResultsIconContainer>
     <Image
-      src={`icons/${prop?.image}`}
+      src={`icons/${image}`}
       width={60}
       height={60}
-      alt={`Icone ${prop.title}`}
+      alt={`Icone ${title}`}
       title="Logo estartando devs."
     />
-    <S.OurResultsIconContainerValue>{`${prop?.value}`}</S.OurResultsIconContainerValue>
-    <S.OurResultsIconContainerTitle>{`${prop?.title}`}</S.OurResultsIconContainerTitle>
+    <S.OurResultsIconContainerValue>{`${value}`}</S.OurResultsIconContainerValue>
+    <Typography weight="700" variant="body1">{`${title}`}</Typography>
   </S.OurResultsIconContainer>
 );
 

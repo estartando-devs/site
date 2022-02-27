@@ -18,9 +18,3 @@ export const OurResultsIconContainerValue = styled(Typography)`
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ffffff;
 `;
-
-export const OurResultsIconContainerTitle = styled(Typography)`
-  font-size: 24px;
-  font-weight: 700px;
-  line-height: 32.68px;
-`;
