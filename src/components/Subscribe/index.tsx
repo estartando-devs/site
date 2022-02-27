@@ -10,8 +10,8 @@ const Subscribe = () => (
         src="/images/inscricao-check"
         width={294}
         height={364}
-        alt="Logo estartando devs"
-        title="Logo estartando devs."
+        alt="Calendário inscricao"
+        title="Calendário inscricao"
       />
     </S.ContainerSubscribeImage>
     <S.ContainerSubscribeContent>
@@ -31,8 +31,8 @@ const Subscribe = () => (
         src="/images/inscricao-calendar"
         width={294}
         height={364}
-        alt="Logo estartando devs"
-        title="Logo estartando devs."
+        alt="Calendário inscricao"
+        title="Calendário inscricao"
       />
     </S.ContainerSubscribeImage>
   </S.ContainerSubscribe>
