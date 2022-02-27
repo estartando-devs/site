@@ -1,8 +1,8 @@
-export interface OurResultsMock {
+type OurResultsMock = {
   image: string;
   title: string;
   value: string;
-}
+};
 
 export const ourResultsMock: OurResultsMock[] = [
   {
