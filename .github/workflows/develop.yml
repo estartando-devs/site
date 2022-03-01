@@ -53,9 +53,10 @@ jobs:
         with:
           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
           minAccessibilityScore: '90'
-          minBestPracticesScore: '50'
-          minPerformanceScore: '50'
-          minSeoScore: '50'
+          minBestPracticesScore: '80'
+          minPerformanceScore: '80'
+          minSeoScore: '90'
+          progressiveWebApp: '10'
   lighthouse-ci:
     needs: [build-deploy]
     runs-on: ubuntu-latest
