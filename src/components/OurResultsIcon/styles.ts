@@ -14,7 +14,7 @@ export const OurResultsIconContainerValue = styled(Typography)`
   font-size: 36px;
   font-weight: 700px;
   line-height: 49.03px;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ffffff;
 `;

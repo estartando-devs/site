@@ -13,10 +13,8 @@ const LinkWrapper = ({
   href,
   ...props
 }: PropsWithChildren<LinkProps>) => (
-  <S.ContainerLink color={color}>
-    <Link href={href} {...props}>
-      {children}
-    </Link>
+  <S.ContainerLink color={color} {...props}>
+    <Link href={href}>{children}</Link>
   </S.ContainerLink>
 );
 

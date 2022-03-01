@@ -21,7 +21,7 @@ const OurResultsIcon = ({
       width={60}
       height={60}
       alt={`Icone ${title}`}
-      title="Logo estartando devs."
+      title={`Icone ${title}`}
     />
     <S.OurResultsIconContainerValue>{`${value}`}</S.OurResultsIconContainerValue>
     <Typography weight="700" variant="body1">{`${title}`}</Typography>

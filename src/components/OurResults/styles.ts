@@ -10,7 +10,7 @@ export const OurResultsContainer = styled.section`
     url('https://res.cloudinary.com/estartando-devs/image/upload/v1645815667/images/nossos-resultados-bg');
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 529px;
+  min-height: 100vh;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@ export const OurResultsContainer = styled.section`
   padding: 0 120px;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    padding: 120px 120px;
+    padding: 48px 16px;
   }
 `;
 

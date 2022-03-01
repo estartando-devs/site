@@ -8,3 +8,4 @@ export { OurResultsIcon } from './OurResultsIcon';
 export { Courses } from './Courses';
 export { WhatWeTeach } from './WhatWeTeach';
 export { Logo } from './Logo';
+export { Subscribe } from './Subscribe';

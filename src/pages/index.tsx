@@ -6,6 +6,7 @@ import {
   OurResults,
   Courses,
   WhatWeTeach,
+  Subscribe,
 } from '../components';
 
 const Home = () => (
@@ -16,6 +17,7 @@ const Home = () => (
     <Courses course="backEnd" />
     <Courses course="design" />
     <OurResults />
+    <Subscribe />
     <Footer />
   </Layout>
 );
