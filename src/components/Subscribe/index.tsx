@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import config from '../../config/constants';
 import { Typography } from '../Typography';
 
 import * as S from './styles';
 
-const Subscribe = () => (
+export const Subscribe = () => (
   <S.ContainerSubscribe>
     <S.ContainerSubscribeImage>
       <Image
@@ -18,12 +20,17 @@ const Subscribe = () => (
       <S.ContainerSubscribeContentText>
         {`Inscreva-se!`}
       </S.ContainerSubscribeContentText>
-      <S.ContainerSubscribeContentButton>
-        {`Faça parte!`}
+      <S.ContainerSubscribeContentButton
+        color="purple"
+        href={config.INSCRICOES_URL}
+      >
+        <a target="_blank">{`Faça parte!`}</a>
       </S.ContainerSubscribeContentButton>
       <S.ContainerSubscribeContentDoubts>
         <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
-        <S.ContainerSubscribeContentDoubtsLink>{`perguntas mais frequentes`}</S.ContainerSubscribeContentDoubtsLink>
+        <S.ContainerSubscribeContentDoubtsLink>
+          <Link href="/perguntas-frequentes">{`perguntas mais frequentes`}</Link>
+        </S.ContainerSubscribeContentDoubtsLink>
       </S.ContainerSubscribeContentDoubts>
     </S.ContainerSubscribeContent>
     <S.ContainerSubscribeImage>
@@ -37,5 +44,3 @@ const Subscribe = () => (
     </S.ContainerSubscribeImage>
   </S.ContainerSubscribe>
 );
-
-export { Subscribe };

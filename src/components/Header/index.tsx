@@ -2,6 +2,7 @@ import { Logo } from '../Logo';
 import { LinkWrapper } from '../LinkWrapper';
 import { Typography } from '../Typography';
 import * as S from './styles';
+import config from '../../config/constants';
 
 const Header = () => (
   <S.ContainerHeader>
@@ -15,7 +16,9 @@ const Header = () => (
           Transformando o mundo através da tecnologia
         </Typography>
         <S.ContainerButton>
-          <LinkWrapper href="/">Faça parte!</LinkWrapper>
+          <LinkWrapper href={config.INSCRICOES_URL}>
+            <a target="_blank">Faça parte!</a>
+          </LinkWrapper>
         </S.ContainerButton>
       </S.ContainerHeading>
     </S.SectionHeader>

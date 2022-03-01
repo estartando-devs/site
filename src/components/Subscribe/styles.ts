@@ -5,7 +5,7 @@ import { Typography } from '../Typography';
 
 export const ContainerSubscribe = styled.section`
   width: 100%;
-  height: 424px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -14,7 +14,6 @@ export const ContainerSubscribe = styled.section`
 
   @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
     flex-direction: column;
-    height: 900px;
     padding: 0;
   }
 `;
@@ -45,10 +44,7 @@ export const ContainerSubscribeContentText = styled(Typography).attrs({
   variant: 'h2',
 })``;
 
-export const ContainerSubscribeContentButton = styled(LinkWrapper).attrs({
-  color: 'purple',
-  href: '',
-})`
+export const ContainerSubscribeContentButton = styled(LinkWrapper)`
   margin: 70px 0 30px 0;
   max-width: 242px;
 `;
@@ -68,4 +64,7 @@ export const ContainerSubscribeContentDoubtsLink = styled(Typography).attrs({
 })`
   border-bottom: 1px solid ${({ theme: { palette } }) => palette.design.purple};
   cursor: pointer;
+  a {
+    color: ${({ theme }) => theme.palette.design.white};
+  }
 `;
