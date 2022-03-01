@@ -45,7 +45,7 @@ export const getServerSideProps: GetServerSideProps<
   };
 };
 
-export default function PerguntasFrequentes(props) {
+export default function PerguntasFrequentes(props: CommonQuestionsProps) {
   return (
     <Layout>
       <Head>
