@@ -28,11 +28,11 @@ export const CommonQestionsSectionTitle = styled(Typography)`
 `;
 
 export const QestionsContent = styled.aside`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: flex-end;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    display: flex;
+    justify-content: flex-start;
     img {
       display: none !important;
     }
@@ -47,10 +47,12 @@ export const CommonQestionsIlustration = styled(Image)`
 `;
 
 export const QuestionsWrapper = styled.div`
+  width: 50%;
   display: grid;
   gap: 3.75rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     gap: 2.75rem;
+    width: 100%;
   }
 `;
 

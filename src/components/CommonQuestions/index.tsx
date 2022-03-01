@@ -24,13 +24,6 @@ export const CommonQuestions = ({ title, questions }: CommonQuestionsProps) => (
       dangerouslySetInnerHTML={{ __html: title }}
     />
     <S.QestionsContent>
-      <S.CommonQestionsIlustration
-        src="/images/perguntas-frequentes"
-        width={688}
-        height={908}
-        quality={30}
-        alt="Ilustração sobre peerguntas frequentes"
-      />
       <S.QuestionsWrapper>
         {questions.map(({ key, question, answer }) => (
           <S.Question key={key}>
