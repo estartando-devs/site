@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@styled-icons/boxicons-logos": "^10.38.0",
+    "@styled-icons/heroicons-outline": "^10.36.0",
     "axios": "^0.25.0",
     "commitizen": "^4.2.4",
     "next": "^12.1.0",
