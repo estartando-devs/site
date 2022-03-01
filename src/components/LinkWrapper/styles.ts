@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import { convertPxToRem } from '../../utils/convertPxToRem';
 
 type ColorProps = {
   color?: 'primary' | 'purple';
@@ -13,7 +12,7 @@ export const ContainerLink = styled.div<ColorProps>`
   align-items: center;
   justify-content: center;
 
-  font-size: ${convertPxToRem(17)};
+  font-size: 1.065rem;
   font-weight: bold;
 
   ${({ color, theme }) => css`
@@ -28,7 +27,7 @@ export const ContainerLink = styled.div<ColorProps>`
   a {
     width: 100%;
     text-align: center;
-    padding: ${convertPxToRem(14)} 0;
+    padding: 0.875rem 0;
     color: ${({ theme }) => theme.palette.design.white};
     text-decoration: none;
   }

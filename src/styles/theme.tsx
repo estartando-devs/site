@@ -1,5 +1,4 @@
 import { DefaultTheme } from 'styled-components';
-import { convertPxToRem } from '../utils/convertPxToRem';
 
 const theme: DefaultTheme = {
   media: {
@@ -48,32 +47,32 @@ const theme: DefaultTheme = {
     h1: {
       fontFamily: 'Ubuntu',
       fontWeight: 500,
-      fontSize: convertPxToRem(64),
-      lineHeight: convertPxToRem(88),
+      fontSize: '4rem',
+      lineHeight: '5.5rem',
       letterSpacing: '0.2px',
     },
     h2: {
       fontFamily: 'Ubuntu',
       fontWeight: 'bold',
-      fontSize: convertPxToRem(36),
-      lineHeight: convertPxToRem(41),
+      fontSize: '2.25rem',
+      lineHeight: '2.6rem',
     },
     body1: {
       fontFamily: 'Open Sans',
       fontWeight: 600,
-      fontSize: convertPxToRem(24),
-      lineHeight: convertPxToRem(33),
+      fontSize: '1.5rem',
+      lineHeight: '2rem',
     },
     body2: {
       fontFamily: 'Open Sans',
-      fontSize: convertPxToRem(18),
-      lineHeight: convertPxToRem(25),
+      fontSize: '1.125rem',
+      lineHeight: '1.56rem',
     },
     body3: {
       fontFamily: 'Open Sans',
       fontWeight: 600,
-      fontSize: convertPxToRem(16),
-      lineHeight: convertPxToRem(25),
+      fontSize: '1rem',
+      lineHeight: '1.56rem',
     },
   },
 };
