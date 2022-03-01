@@ -7,15 +7,13 @@ import * as S from './styles';
 
 export const Subscribe = () => (
   <S.ContainerSubscribe>
-    <S.ContainerSubscribeImage>
-      <Image
-        src="/images/inscricao-check"
-        width={294}
-        height={364}
-        alt="Calendário inscricao"
-        title="Calendário inscricao"
-      />
-    </S.ContainerSubscribeImage>
+    <Image
+      src="/images/inscricao-check"
+      width={294}
+      height={364}
+      alt="Calendário inscricao"
+      title="Calendário inscricao"
+    />
     <S.ContainerSubscribeContent>
       <S.ContainerSubscribeContentText>
         {`Inscreva-se!`}
@@ -33,14 +31,12 @@ export const Subscribe = () => (
         </S.ContainerSubscribeContentDoubtsLink>
       </S.ContainerSubscribeContentDoubts>
     </S.ContainerSubscribeContent>
-    <S.ContainerSubscribeImage>
-      <Image
-        src="/images/inscricao-calendar"
-        width={294}
-        height={364}
-        alt="Calendário inscricao"
-        title="Calendário inscricao"
-      />
-    </S.ContainerSubscribeImage>
+    <Image
+      src="/images/inscricao-calendar"
+      width={294}
+      height={364}
+      alt="Calendário inscricao"
+      title="Calendário inscricao"
+    />
   </S.ContainerSubscribe>
 );

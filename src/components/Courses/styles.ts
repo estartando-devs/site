@@ -10,6 +10,10 @@ const CourseContainer = styled.section`
   max-width: 1000px;
   padding: 0 5px 0 60px;
   margin-top: 100px;
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    padding: 2rem 2rem 2.7rem;
+    margin-top: 3rem;
+  }
 `;
 
 const TitleContainer = styled.div<StyleProps>`
@@ -49,6 +53,9 @@ const ModulesTextContainer = styled.div`
 
   > img {
     cursor: pointer;
+  }
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    margin-top: 1.3rem;
   }
 `;
 

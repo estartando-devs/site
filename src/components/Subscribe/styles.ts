@@ -5,7 +5,7 @@ import { Typography } from '../Typography';
 
 export const ContainerSubscribe = styled.section`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -14,22 +14,7 @@ export const ContainerSubscribe = styled.section`
 
   @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
     flex-direction: column;
-    padding: 0;
-  }
-`;
-
-export const ContainerSubscribeImage = styled.div`
-  min-width: 200px;
-  width: 294px;
-  height: 364px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
-    flex-direction: column;
-    height: 1200px;
-    width: 100px;
+    padding: 48px 16px;
   }
 `;
 
