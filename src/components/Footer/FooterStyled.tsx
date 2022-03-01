@@ -8,7 +8,7 @@ export const FooterContainer = styled.div`
   gap: 24px;
   border-top: 1px solid ${({ theme }) => theme.palette.gray[2]};
   padding: 80px 0;
-  @media (max-width: 768px) {
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     padding: 40px 0;
   }
 `;

@@ -22,7 +22,7 @@ const TitleContainer = styled.div<StyleProps>`
     position: absolute;
     top: -13px;
     left: 10px;
-    @media (max-width: 600px) {
+    @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
       top: -10px;
     }
   }
