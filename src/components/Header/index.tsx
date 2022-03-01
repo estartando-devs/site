@@ -13,6 +13,7 @@ const Header = () => (
           height={132}
           alt="Logo estartando devs"
           title="Logo estartando devs."
+          priority
         />
       </S.ContainerImage>
       <S.ContainerHeading>
