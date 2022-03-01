@@ -1,17 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 import { SocialShareButtons } from './SocialShareButtons';
 import * as S from './FooterStyled';
+import { Logo } from '../Logo';
 
 const Footer = () => (
   <S.FooterContainer>
-    <Image
-      src="/images/logo"
-      width={65}
-      height={94}
-      alt="Logo estartando devs"
-      title="Logo estartando devs."
-    />
+    <Logo width={65} height={94} />
     <S.FooterContent>
       <S.FooterTitle variant="body1" weight="700">
         Estartando Devs

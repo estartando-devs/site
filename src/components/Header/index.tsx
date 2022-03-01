@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Logo } from '../Logo';
 import { LinkWrapper } from '../LinkWrapper';
 import { Typography } from '../Typography';
 import * as S from './styles';
@@ -7,14 +7,7 @@ const Header = () => (
   <S.ContainerHeader>
     <S.SectionHeader>
       <S.ContainerImage>
-        <Image
-          src="/images/logo"
-          width={91}
-          height={132}
-          alt="Logo estartando devs"
-          title="Logo estartando devs."
-          priority
-        />
+        <Logo width={91} height={132} priority />
       </S.ContainerImage>
       <S.ContainerHeading>
         <Typography variant="h1">Estartando Devs</Typography>
