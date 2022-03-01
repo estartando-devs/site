@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
-import { convertPxToRem } from '../../utils/convertPxToRem';
 import Image from 'next/image';
 
 export const CommonQuestionsSection = styled.section`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 72px 120px 102px;
-  gap: 41px;
+  padding: 4.5rem 7.5rem 6.4rem;
+  gap: 3rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    padding: 32px 16px;
+    padding: 2.7rem 2rem;
   }
 `;
 
 export const CommonQestionsSectionTitle = styled(Typography)`
   span {
-    font-size: ${convertPxToRem(48)};
-    line-height: ${convertPxToRem(55)};
+    font-size: 3rem;
+    line-height: 3.5rem;
     color: ${({
       theme: {
         palette: {
@@ -49,16 +48,16 @@ export const CommonQestionsIlustration = styled(Image)`
 
 export const QuestionsWrapper = styled.div`
   display: grid;
-  gap: 64px;
+  gap: 3.75rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    gap: 32px;
+    gap: 2.75rem;
   }
 `;
 
 export const Question = styled.div`
   display: grid;
-  gap: 24px;
+  gap: 2rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    gap: 16px;
+    gap: 1rem;
   }
 `;

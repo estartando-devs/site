@@ -1,4 +1,4 @@
-import { Typography } from '..';
+import { Logo, Typography } from '..';
 import * as S from './styles';
 
 export type Question = {
@@ -14,6 +14,10 @@ export type CommonQuestionsProps = {
 
 export const CommonQuestions = ({ title, questions }: CommonQuestionsProps) => (
   <S.CommonQuestionsSection>
+    <header>
+      <Logo width={48} height={68} priority quality={30} />
+    </header>
+
     <S.CommonQestionsSectionTitle
       variant="h2"
       color="white"
