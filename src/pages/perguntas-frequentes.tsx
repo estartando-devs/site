@@ -7,35 +7,27 @@ import {
   CommonQuestionsProps,
   CommonQuestions,
 } from '../components';
+import { getSiteData } from '../services';
+
+type CommonQuestions = Omit<CommonQuestionsProps, 'title'>;
 
 export const getServerSideProps: GetServerSideProps<
   CommonQuestionsProps
 > = async ({ res }) => {
+  const {
+    title,
+    data: { questions },
+  } = await getSiteData<CommonQuestions>({
+    path: 'perguntas-frequentes',
+  });
+
   const props: CommonQuestionsProps = {
-    title: 'Perguntas <br/><span>frequentes</span>',
-    questions: [
-      {
-        key: 'question1',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-      {
-        key: 'question2',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-      {
-        key: 'question3',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-    ],
+    title,
+    questions:
+      questions.map((content, key) => ({
+        ...content,
+        key: `question-${key}`,
+      })) || [],
   };
 
   res.setHeader('Cache-Control', `public, s-maxage=2000`);
