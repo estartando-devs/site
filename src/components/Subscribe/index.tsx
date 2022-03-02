@@ -16,7 +16,7 @@ export const Subscribe = () => (
     />
     <S.ContainerSubscribeContent>
       <S.ContainerSubscribeContentText>
-        {`Inscreva-se!`}
+        Inscreva-se!
       </S.ContainerSubscribeContentText>
       <S.ContainerSubscribeContentButton
         color="purple"
@@ -35,6 +35,7 @@ export const Subscribe = () => (
       src="/images/inscricao-calendar"
       width={294}
       height={364}
+      objectFit="contain"
       alt="Calendário inscricao"
       title="Calendário inscricao"
     />

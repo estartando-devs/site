@@ -7,12 +7,12 @@ type ImageProps = {
 
 const Logo = ({ width, height, ...props }: ImageProps) => (
   <Image
-    {...props}
     src="/images/logo"
     width={width}
     height={height}
     alt="Logo estartando devs"
     title="Logo estartando devs."
+    {...props}
   />
 );
 
