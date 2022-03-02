@@ -1,5 +1,5 @@
-import { descriptionProfileMock } from '../../_mocks/DescriptionProfile.mock';
-import * as S from './StudentProfileStyled';
+import { descriptionProfileMock } from '../../mocks/DescriptionProfile.mock';
+import * as S from './styles';
 
 export const StudentProfile = () => {
   return (
