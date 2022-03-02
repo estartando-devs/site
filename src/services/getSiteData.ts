@@ -16,7 +16,9 @@ export const getSiteData = async <T>({
     'https://us-central1-estartando-devs-platform.cloudfunctions.net/platform/siteData'
   ).then((data) => data.json());
 
-  const data = siteData.find((_siteData) => _siteData?.path === path);
+  const data = siteData.find(
+    (_siteData: SiteData<T>) => _siteData?.path === path
+  );
 
   return data;
 };
