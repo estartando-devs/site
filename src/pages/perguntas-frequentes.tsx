@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import {
@@ -11,13 +11,12 @@ import { getSiteData } from '../services';
 
 type CommonQuestions = Omit<CommonQuestionsProps, 'title'>;
 
-export const getServerSideProps: GetServerSideProps<
+export const getStaticProps: GetStaticProps<
   CommonQuestionsProps
-> = async ({ res }) => {
+> = async () => {
   const response = await getSiteData<CommonQuestions>({
     path: 'perguntas-frequentes',
   });
-  console.log('response', response);
 
   const {
     title,
@@ -36,10 +35,9 @@ export const getServerSideProps: GetServerSideProps<
       })) || [],
   };
 
-  res.setHeader('Cache-Control', `public, s-maxage=2000`);
-
   return {
     props,
+    revalidate: 300,
   };
 };
 
