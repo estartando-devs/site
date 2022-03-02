@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import {
@@ -7,41 +7,37 @@ import {
   CommonQuestionsProps,
   CommonQuestions,
 } from '../components';
+import { getSiteData } from '../services';
 
-export const getServerSideProps: GetServerSideProps<
+type CommonQuestions = Omit<CommonQuestionsProps, 'title'>;
+
+export const getStaticProps: GetStaticProps<
   CommonQuestionsProps
-> = async ({ res }) => {
-  const props: CommonQuestionsProps = {
+> = async () => {
+  const response = await getSiteData<CommonQuestions>({
+    path: 'perguntas-frequentes',
+  });
+
+  const {
+    title,
+    data: { questions },
+  } = response ?? {
     title: 'Perguntas <br/><span>frequentes</span>',
-    questions: [
-      {
-        key: 'question1',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-      {
-        key: 'question2',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-      {
-        key: 'question3',
-        question:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam?',
-        answer:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus, a sed mauris lectus vitae. Interdum scelerisque lorem commodo orci.',
-      },
-    ],
+    data: { questions: [] },
   };
 
-  res.setHeader('Cache-Control', `public, s-maxage=2000`);
+  const props: CommonQuestionsProps = {
+    title,
+    questions:
+      questions.map((content, key) => ({
+        ...content,
+        key: `question-${key}`,
+      })) || [],
+  };
 
   return {
     props,
+    revalidate: 300,
   };
 };
 
