@@ -7,6 +7,7 @@ import {
   Courses,
   WhatWeTeach,
   Subscribe,
+  StudentProfile,
 } from '../components';
 
 const Home = () => (
@@ -18,6 +19,7 @@ const Home = () => (
     <Courses course="design" />
     <OurResults />
     <Subscribe />
+    <StudentProfile />
     <Footer />
   </Layout>
 );
