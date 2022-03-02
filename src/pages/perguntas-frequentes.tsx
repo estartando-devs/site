@@ -14,12 +14,18 @@ type CommonQuestions = Omit<CommonQuestionsProps, 'title'>;
 export const getServerSideProps: GetServerSideProps<
   CommonQuestionsProps
 > = async ({ res }) => {
+  const response = await getSiteData<CommonQuestions>({
+    path: 'perguntas-frequentes',
+  });
+  console.log('response', response);
+
   const {
     title,
     data: { questions },
-  } = await getSiteData<CommonQuestions>({
-    path: 'perguntas-frequentes',
-  });
+  } = response ?? {
+    title: 'Perguntas <br/><span>frequentes</span>',
+    data: { questions: [] },
+  };
 
   const props: CommonQuestionsProps = {
     title,
