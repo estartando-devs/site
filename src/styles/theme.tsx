@@ -63,6 +63,12 @@ const theme: DefaultTheme = {
       fontSize: convertPxToRem(16),
       lineHeight: convertPxToRem(25),
     },
+    subtitle1: {
+      fontFamily: 'Ubuntu',
+      fontWeight: 800,
+      fontSize: convertPxToRem(48),
+      lineHeight: convertPxToRem(25),
+    },
   },
 };
 
