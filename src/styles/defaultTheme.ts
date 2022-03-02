@@ -3,6 +3,17 @@ import { ITypography } from './interfaces';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    media: {
+      mobile_portrait: string;
+      mobile_default: string;
+      mobile_landscape: string;
+      tablet_portrait: string;
+      tablet: string;
+      tablet_landscape: string;
+      laptops_landscape: string;
+      desktop_hd: string;
+      desktop_fullhd: string;
+    };
     shadows: string[];
     palette: {
       primary: {
@@ -14,6 +25,7 @@ declare module 'styled-components' {
         2: string;
       };
       design: {
+        black_transparent: string;
         purple: string;
         orange: string;
         green: string;

@@ -1,7 +1,17 @@
 import { DefaultTheme } from 'styled-components';
-import { convertPxToRem } from '../utils/convertPxToRem';
 
 const theme: DefaultTheme = {
+  media: {
+    mobile_portrait: '320px',
+    mobile_default: '360px',
+    mobile_landscape: '480px',
+    tablet_portrait: '600px',
+    tablet: '768px',
+    tablet_landscape: '801px',
+    laptops_landscape: '1024px',
+    desktop_hd: '1280px',
+    desktop_fullhd: '1600px',
+  },
   shadows: [
     '-1px -1px 3px rgba(123, 122, 122, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.8)',
     '-1px -1px 3px rgba(0, 0, 0, 0.3)',
@@ -18,6 +28,7 @@ const theme: DefaultTheme = {
       2: '#606062',
     },
     design: {
+      black_transparent: 'rgba(30, 30, 30, 0.5)',
       purple: '#6C63FF',
       orange: '#FF6A2B',
       green: '#00BFA6',
@@ -36,32 +47,32 @@ const theme: DefaultTheme = {
     h1: {
       fontFamily: 'Ubuntu',
       fontWeight: 500,
-      fontSize: convertPxToRem(64),
-      lineHeight: convertPxToRem(88),
+      fontSize: '4rem',
+      lineHeight: '5.5rem',
       letterSpacing: '0.2px',
     },
     h2: {
       fontFamily: 'Ubuntu',
       fontWeight: 'bold',
-      fontSize: convertPxToRem(36),
-      lineHeight: convertPxToRem(41),
+      fontSize: '2.25rem',
+      lineHeight: '2.6rem',
     },
     body1: {
       fontFamily: 'Open Sans',
-      fontWeight: 'bold',
-      fontSize: convertPxToRem(24),
-      lineHeight: convertPxToRem(33),
+      fontWeight: 600,
+      fontSize: '1.5rem',
+      lineHeight: '2rem',
     },
     body2: {
       fontFamily: 'Open Sans',
-      fontSize: convertPxToRem(18),
-      lineHeight: convertPxToRem(25),
+      fontSize: '1.125rem',
+      lineHeight: '1.56rem',
     },
     body3: {
       fontFamily: 'Open Sans',
       fontWeight: 600,
-      fontSize: convertPxToRem(16),
-      lineHeight: convertPxToRem(25),
+      fontSize: '1rem',
+      lineHeight: '1.56rem',
     },
     subtitle1: {
       fontFamily: 'Ubuntu',
