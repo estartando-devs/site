@@ -27,7 +27,9 @@ export const ContainerSubscribeContent = styled.div`
 
 export const ContainerSubscribeContentText = styled(Typography).attrs({
   variant: 'h2',
-})``;
+})`
+  font-size: 3rem;
+`;
 
 export const ContainerSubscribeContentButton = styled(LinkWrapper)`
   margin: 70px 0 30px 0;
