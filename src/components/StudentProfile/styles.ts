@@ -4,34 +4,30 @@ import { Typography } from '..';
 export const Container = styled.main`
   display: flex;
   align-items: center;
-
   padding-left: 7.5rem;
   height: 100vh;
   width: 100%;
-  background-image: url(https://res.cloudinary.com/estartando-devs/images/perfil-aluno-bg);
+  background-image: url(https://res.cloudinary.com/estartando-devs/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1645818507/images/perfil-aluno-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
-  background-color: aliceblue;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    background: none;
     flex-direction: column;
     padding-left: 0px;
-    margin-top: 7.5rem;
+    height: 35rem;
+    background-position: 85%;
   }
 `;
 
 export const TextBox = styled.div`
-  width: 585px;
-  height: 532px;
+  width: 36rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: stretch;
-
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    width: 25rem;
+    width: 95%;
+    justify-content: center;
   }
 `;
 
@@ -39,20 +35,15 @@ export const TitleProfile = styled(Typography).attrs({
   variant: 'h2',
   weight: '600',
 })`
-  margin: 20px 0;
+  margin: 1.25rem 0;
   color: ${({ theme }) => theme.palette.design.white};
 
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    text-align: center;
-  }
-`;
-
-export const SubtitleProfile = styled(Typography).attrs({
-  variant: 'subtitle1',
-})`
-  margin-bottom: 80px;
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    text-align: center;
+  strong {
+    color: ${({ theme }) => theme.palette.design.green};
+    font-family: 'Ubuntu';
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 `;
 
@@ -60,13 +51,17 @@ export const DescriptionProfile = styled(Typography).attrs({
   variant: 'body1',
 })`
   font-weight: normal;
-  line-height: 27px;
-  margin-bottom: 50px;
+  line-height: 1.7rem;
   strong {
     color: ${({ theme }) => theme.palette.primary.main};
-  }
-`;
 
-export const FeaturedText = styled.p`
-  color: ${({ theme }) => theme.palette.design.green};
+    @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    font-weight: normal;
+    font-size: 1.4rem;
+  }
 `;
