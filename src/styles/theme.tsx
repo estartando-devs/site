@@ -74,12 +74,6 @@ const theme: DefaultTheme = {
       fontSize: '1rem',
       lineHeight: '1.56rem',
     },
-    subtitle1: {
-      fontFamily: 'Ubuntu',
-      fontWeight: 800,
-      fontSize: '3rem',
-      lineHeight: '1.57rem',
-    },
   },
 };
 
