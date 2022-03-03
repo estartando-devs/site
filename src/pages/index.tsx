@@ -1,4 +1,5 @@
 import React from 'react';
+import { studentProfileSection } from '../mocks/DescriptionProfile.mock';
 import {
   Layout,
   Footer,
@@ -7,6 +8,7 @@ import {
   Courses,
   WhatWeTeach,
   Subscribe,
+  StudentProfile,
 } from '../components';
 
 const Home = () => (
@@ -18,6 +20,7 @@ const Home = () => (
     <Courses course="design" />
     <OurResults />
     <Subscribe />
+    <StudentProfile {...studentProfileSection} />
     <Footer />
   </Layout>
 );

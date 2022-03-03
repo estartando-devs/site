@@ -11,3 +11,4 @@ export { WhatWeTeach } from './WhatWeTeach';
 export { Logo } from './Logo';
 export { Subscribe } from './Subscribe';
 export { Typography } from './Typography';
+export { StudentProfile } from './StudentProfile';
