@@ -1,20 +1,22 @@
-import { descriptionProfileMock } from '../../mocks/DescriptionProfile.mock';
+import { studentProfileSection } from '../../mocks/DescriptionProfile.mock';
 import * as S from './styles';
 
-export const StudentProfile = () => {
+const { description, title } = studentProfileSection;
+
+type StudentProfileProps = {
+  description: string;
+  title: string;
+  backgroundImageUrl: string;
+};
+
+export const StudentProfile = ({ description, title }: StudentProfileProps) => {
   return (
     <S.Container>
       <S.TextBox>
-        <div>
-          <S.TitleProfile>Qual o perfil de aluno que</S.TitleProfile>
-          <S.SubtitleProfile>buscamos?</S.SubtitleProfile>
-        </div>
-        {descriptionProfileMock.map(({ description }, index) => (
-          <S.DescriptionProfile
-            dangerouslySetInnerHTML={{ __html: description }}
-            key={index}
-          />
-        ))}
+        <S.TitleProfile dangerouslySetInnerHTML={{ __html: title }} />
+        <S.DescriptionProfile
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </S.TextBox>
     </S.Container>
   );
