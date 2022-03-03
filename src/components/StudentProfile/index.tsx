@@ -1,12 +1,8 @@
-import { studentProfileSection } from '../../mocks/DescriptionProfile.mock';
 import * as S from './styles';
-
-const { description, title } = studentProfileSection;
 
 type StudentProfileProps = {
   description: string;
   title: string;
-  backgroundImageUrl: string;
 };
 
 export const StudentProfile = ({ description, title }: StudentProfileProps) => {
