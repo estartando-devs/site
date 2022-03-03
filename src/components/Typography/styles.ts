@@ -56,23 +56,12 @@ const body3 = styled.p<VariantProps>`
   color: ${({ color, theme }) => color || theme.palette.design.white};
 `;
 
-const subtitle1 = styled.p<VariantProps>`
-  ${({ theme: { typography }, weight }) => css`
-    font-size: ${typography.subtitle1?.fontSize};
-    font-family: ${typography.subtitle1?.fontFamily};
-    font-weight: ${weight || typography.subtitle1?.fontWeight};
-    line-height: ${typography.subtitle1?.lineHeight};
-  `}
-  color: ${({ color, theme }) => color || theme.palette.design.green};
-`;
-
 const Typographies = {
   h1,
   h2,
   body1,
   body2,
   body3,
-  subtitle1,
 };
 
 export default Typographies;
