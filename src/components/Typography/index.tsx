@@ -2,7 +2,7 @@ import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import Typographies from './styles';
 
 type TypographyProps = {
-  variant: 'h1' | 'h2' | 'body1' | 'body2' | 'body3' | 'subtitle1';
+  variant: 'h1' | 'h2' | 'body1' | 'body2' | 'body3';
   color?: string;
   weight?: string;
 } & HTMLAttributes<HTMLHeadingElement>;
