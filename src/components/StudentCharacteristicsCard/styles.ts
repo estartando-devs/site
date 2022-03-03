@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CardContainer = styled.section`
-  margin: 27px 30px 0 30px;
+  margin: 27px 30px 0 0;
   max-width: 320px;
   min-width: 208px;
   height: 100px;
