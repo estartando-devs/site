@@ -30,19 +30,20 @@ const ContentHowWeDo = styled.section`
   gap: 25px;
 `;
 
-const MoveCard = styled.div`
-  margin-left: 130px;
-  @media (max-width: 445px) {
-    margin-left: 0;
-  }
-`;
-
 const CardListContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 30%;
   max-width: 100%;
+
+  section:nth-child(2n + 1) {
+    margin-left: 130px;
+
+    @media (max-width: 445px) {
+      margin-left: 0;
+    }
+  }
 `;
 
 const TextHowWeDo = styled.p`
@@ -70,7 +71,6 @@ export {
   TitleHowWeDo,
   SubTitleHowWeDo,
   CardListContainer,
-  MoveCard,
   TextBold,
   TextHowWeDo,
 };

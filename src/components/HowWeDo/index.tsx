@@ -36,13 +36,11 @@ export const HowWeDo = () => {
         {characteristicsList.map(({ ...allProps }, index) => {
           if (index % 2 === 0) {
             return (
-              <S.MoveCard>
-                <StudentCharacteristicsCard
-                  key={index}
-                  variation="right"
-                  {...allProps}
-                />
-              </S.MoveCard>
+              <StudentCharacteristicsCard
+                key={index}
+                variation="right"
+                {...allProps}
+              />
             );
           }
           return (
