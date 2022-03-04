@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Typography } from '..';
+import { Typography } from '../Typography';
 
 export const CardContainer = styled.div<{ variation: 'right' | 'left' }>`
   width: 20rem;
