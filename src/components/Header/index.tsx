@@ -1,19 +1,14 @@
-import Image from 'next/image';
+import { Logo } from '../Logo';
 import { LinkWrapper } from '../LinkWrapper';
 import { Typography } from '../Typography';
 import * as S from './styles';
+import config from '../../config/constants';
 
 const Header = () => (
   <S.ContainerHeader>
     <S.SectionHeader>
       <S.ContainerImage>
-        <Image
-          src="/images/logo"
-          width={91}
-          height={132}
-          alt="Logo estartando devs"
-          title="Logo estartando devs."
-        />
+        <Logo width={91} height={132} priority />
       </S.ContainerImage>
       <S.ContainerHeading>
         <Typography variant="h1">Estartando Devs</Typography>
@@ -21,7 +16,9 @@ const Header = () => (
           Transformando o mundo através da tecnologia
         </Typography>
         <S.ContainerButton>
-          <LinkWrapper href="/">Faça parte!</LinkWrapper>
+          <LinkWrapper href={config.INSCRICOES_URL}>
+            <a target="_blank">Faça parte!</a>
+          </LinkWrapper>
         </S.ContainerButton>
       </S.ContainerHeading>
     </S.SectionHeader>

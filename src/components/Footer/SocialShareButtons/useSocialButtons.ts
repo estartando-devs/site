@@ -1,53 +1,66 @@
 import { useMemo } from 'react';
+import {
+  DiscordAlt,
+  InstagramAlt,
+  LinkedinSquare,
+} from '@styled-icons/boxicons-logos';
+import { useTheme } from 'styled-components';
 
-type SocialImageProps = {
-  src: string;
+type SocialIconProps = {
   width: string | number;
   height: string | number;
   alt: string;
+  color: string;
 };
 
 type SocialLink = {
-  imageProps: SocialImageProps;
+  iconProps: SocialIconProps;
   title: string;
   href: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  icon?: any;
 };
 
 export const useSocialButtons = () => {
+  const theme = useTheme();
+
   const socialLinks: Array<SocialLink> = useMemo(
     () => [
       {
-        imageProps: {
-          src: '/icons/instagram.svg',
+        iconProps: {
           width: 24,
           height: 24,
           alt: 'Logo instagram',
+          color: theme.palette.design.white,
         },
         title: 'Seguir nosso perfil no instagram.',
         href: 'https://www.instagram.com/estartandodevs/',
+        icon: InstagramAlt,
       },
       {
-        imageProps: {
-          src: '/icons/linkedin.svg',
+        iconProps: {
           width: 24,
           height: 24,
           alt: 'Logo linkedin',
+          color: theme.palette.design.white,
         },
         title: 'Acessar página no linkedin.',
         href: 'https://br.linkedin.com/company/estartando-devs',
+        icon: LinkedinSquare,
       },
       {
-        imageProps: {
-          src: '/icons/discord.svg',
+        iconProps: {
           width: 24,
           height: 24,
           alt: 'Logo discord',
+          color: theme.palette.design.white,
         },
         title: 'Acessar comunidade no discord.',
         href: '#',
+        icon: DiscordAlt,
       },
     ],
-    []
+    [theme]
   );
 
   return {

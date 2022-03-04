@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const HowWeDoContainer = styled.section`
-  width: 100%;
+  max-width: 100%;
   margin: 4rem 2rem 4rem 2rem;
   display: flex;
 

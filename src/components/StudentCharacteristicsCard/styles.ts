@@ -47,11 +47,10 @@ const FormatContainerRight = styled.div`
   position: absolute;
   top: -0.3125rem;
   right: 0.125rem;
-  box-shadow: 0.1875rem -0.1875rem  0.1875rem -0.3125rem white;
+  box-shadow: 0.1875rem -0.1875rem 0.1875rem -0.3125rem white;
   border-top-left-radius: 1.375rem;
   border-top-right-radius: 0.3125rem;
   transform: rotateZ(-17deg);
-}
 `;
 
 export {
