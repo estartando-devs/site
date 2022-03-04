@@ -8,3 +8,5 @@ export type { ISelectiveProcessItem } from './SelectiveProcess.mock';
 export { listTextHowWeDo } from './listTextHowWeDo.mock';
 export { characteristicsList } from './studentCharacteristics.mock';
 export { COURSE_DATA } from './course.mock';
+export { whatWeTeachMock } from './WhatWeTeach.mock';
+export { studentProfileSection } from './DescriptionProfile.mock';
