@@ -1,34 +1,36 @@
 import styled from 'styled-components';
+import { Typography } from '..';
 
-const CardContainer = styled.section`
-  margin: 1.6rem 1.8rem 0 0;
-  max-width: 20rem;
-  min-width: 13rem;
+export const CardContainer = styled.div<{ variation: 'right' | 'left' }>`
+  width: 20rem;
   height: 6.2rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem -0.3rem rgb(0 0 0 / 98%),
-    ${({ theme }) =>
-      `-0.1rem -0.1rem 0.3rem -0.3rem ${theme.palette.design.white}`};
-  padding: 0.3rem 0.9rem;
+  padding: 0 0.9rem;
   position: relative;
   border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
   background-color: ${({ theme }) => theme.palette.gray[1]};
+  box-shadow: 0.3rem 0.3rem 0.5rem -0.3rem rgb(0 0 0 / 98%),
+    ${({ theme }) =>
+      `-0.1rem -0.1rem 0.3rem -0.3rem ${theme.palette.design.white}`};
+  align-self: ${({ variation }) =>
+    variation === 'right' ? 'flex-end' : 'flex-start'};
 `;
 
-const TextCharacteristics = styled.p`
-  color: ${({ theme }) => theme.palette.design.white};
+export const TextCharacteristics = styled(Typography).attrs({
+  variant: 'body2',
+})`
   font-weight: 400;
-  font-size: 0.8rem;
 `;
 
-const Division = styled.div`
+export const Division = styled.div`
   background-color: ${({ theme }) => theme.palette.gray[3]};
   height: 60%;
   width: 0.06rem;
 `;
-const FormatContainerLeft = styled.div`
+
+export const FormatContainerLeft = styled.div`
   width: 2.625rem;
   height: 0.812rem;
   background-color: ${({ theme }) => theme.palette.gray[1]};
@@ -42,7 +44,7 @@ const FormatContainerLeft = styled.div`
   transform: rotateZ(16deg);
 `;
 
-const FormatContainerRight = styled.div`
+export const FormatContainerRight = styled.div`
   width: 2.625rem;
   height: 0.81rem;
   background-color: ${({ theme }) => theme.palette.gray[1]};
@@ -55,11 +57,3 @@ const FormatContainerRight = styled.div`
   border-top-right-radius: 0.3125rem;
   transform: rotateZ(-17deg);
 `;
-
-export {
-  CardContainer,
-  TextCharacteristics,
-  Division,
-  FormatContainerLeft,
-  FormatContainerRight,
-};

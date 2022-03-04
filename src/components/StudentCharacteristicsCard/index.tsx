@@ -8,13 +8,13 @@ type PropsCard = {
   variation: 'left' | 'right';
 };
 
-const StudentCharacteristicsCard = ({
+export const StudentCharacteristicsCard = ({
   imageProps,
   description,
   variation,
 }: PropsCard) => {
   return (
-    <S.CardContainer>
+    <S.CardContainer variation={variation}>
       <Image {...imageProps} />
       <S.Division />
       <S.TextCharacteristics>{description}</S.TextCharacteristics>
@@ -26,5 +26,3 @@ const StudentCharacteristicsCard = ({
     </S.CardContainer>
   );
 };
-
-export { StudentCharacteristicsCard };

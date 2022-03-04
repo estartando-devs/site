@@ -1,61 +1,30 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-const HowWeDoContainer = styled.section`
-  max-width: 100%;
-  margin: 4rem 2rem 4rem 7.5rem;
-  display: flex;
+export const HowWeDoContainer = styled.section`
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+  padding: 4rem 7.5rem 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
 
-  @media (max-width: 918px) {
-    flex-direction: column;
-    margin-left: 1rem;
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: ${({ theme: { media } }) => media.tablet_landscape}) {
+    padding: 2rem 2rem 2.7rem;
+    justify-items: center;
+  }
+
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    grid-template-columns: 1fr;
   }
 `;
 
-const ExplainingHowWeDo = styled.section`
-  width: 50%;
-  margin-right: 16.5rem;
-  max-width: 28.7rem;
+export const ExplainingHowWeDo = styled.div``;
 
-  @media (max-width: 918px) {
-    margin-right: 0;
-    width: 100%;
-    max-width: 100%;
-  }
-`;
-
-const ContentHowWeDo = styled.section`
-  margin-top: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-`;
-
-const CardListContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 30%;
-  max-width: 100%;
-
-  section:nth-child(2n + 1) {
-    margin-left: 9rem;
-
-    @media (max-width: 445px) {
-      margin-left: 0;
-    }
-  }
-`;
-
-const TextHowWeDo = styled(Typography).attrs({ variant: 'body2' })`
-  color: ${({ theme }) => theme.palette.design.white};
-
-  strong {
-    color: ${({ theme }) => theme.palette.design.green};
-  }
-`;
-
-const TitleHowWeDo = styled.h1`
+export const TitleHowWeDo = styled.h1`
   color: ${({ theme }) => theme.palette.design.white};
   font-size: 2.2rem;
   span {
@@ -64,11 +33,24 @@ const TitleHowWeDo = styled.h1`
   }
 `;
 
-export {
-  HowWeDoContainer,
-  ContentHowWeDo,
-  ExplainingHowWeDo,
-  TitleHowWeDo,
-  CardListContainer,
-  TextHowWeDo,
-};
+export const ContentHowWeDo = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const TextHowWeDo = styled(Typography).attrs({ variant: 'body2' })`
+  color: ${({ theme }) => theme.palette.design.white};
+  strong {
+    color: ${({ theme }) => theme.palette.design.green};
+  }
+`;
+
+export const CardListContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24rem;
+  gap: 1.6rem;
+`;
