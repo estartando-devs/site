@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HowWeDoContainer = styled.section`
   max-width: 100%;
-  margin: 4rem 2rem 4rem 2rem;
+  margin: 4rem 2rem 4rem 7.5rem;
   display: flex;
 
   @media (max-width: 918px) {
