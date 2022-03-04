@@ -1,49 +1,44 @@
-import { Logo, Typography } from '..';
 import * as S from './styles';
-import { scheduleMock } from '../../mocks/Schedule.mock';
-export type Question = {
-  question: string;
-  answer: string;
-  key: string;
-};
+import { ScheduleSectionProps } from '../../mocks/Schedule.mock';
 
-export const SelectiveProcess = () => (
+const ScheduleDotGroup = ({ disabled }: { disabled?: boolean }) => (
+  <>
+    <S.ScheduleDot disabled={disabled}></S.ScheduleDot>
+    <S.ScheduleLittleDot></S.ScheduleLittleDot>
+    <S.ScheduleLittleDot></S.ScheduleLittleDot>
+    <S.ScheduleLittleDot></S.ScheduleLittleDot>
+    <S.ScheduleLittleDot></S.ScheduleLittleDot>
+  </>
+);
+
+export const SelectiveProcess = ({
+  title,
+  description,
+  schedule,
+}: ScheduleSectionProps) => (
   <S.Section>
-    <S.Title variant="h2">
-      Sobre o <br /> <span>processo seletivo </span>
-    </S.Title>
-    <S.Text variant="body2">
-      Acreditamos no poder de <span>transformação social</span> através da
-      Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
-      focada nas exigências do mercado de TI. Os dois cursos incluem ainda
-      conhecimentos em métodos de gestão ágil de projetos utilizados no mercado
-      para o desenvolvimento de trabalhos em equipe, além de assessoria no
-      Linkedin e direcionamento de carreira.
-    </S.Text>
+    <S.Title variant="h2" dangerouslySetInnerHTML={{ __html: title }} />
+    <S.Text variant="body2" dangerouslySetInnerHTML={{ __html: description }} />
     <S.ScheduleWrapper>
       <S.ScheduleDotsWrapper>
-        {scheduleMock.map((schedule, index) => {
-          const isTheLast = index === scheduleMock.length - 1;
+        {schedule.map(({ key, disable }, index) => {
+          const isTheLast = index === schedule.length - 1;
           return isTheLast ? (
-            <>
-              <S.ScheduleDot disabled={schedule.disable}></S.ScheduleDot>
-            </>
+            <S.ScheduleDot key={key} disabled={disable} />
           ) : (
-            <>
-              <S.ScheduleDot disabled={schedule.disable}></S.ScheduleDot>
-              <S.ScheduleLittleDot></S.ScheduleLittleDot>
-              <S.ScheduleLittleDot></S.ScheduleLittleDot>
-              <S.ScheduleLittleDot></S.ScheduleLittleDot>
-              <S.ScheduleLittleDot></S.ScheduleLittleDot>
-            </>
+            <ScheduleDotGroup key={key} disabled={disable} />
           );
         })}
       </S.ScheduleDotsWrapper>
 
       <S.ScheduleContentWrapper>
-        {scheduleMock.map((schedule) => (
-          <S.ScheduleItem variant="h3" disabled={schedule.disable}>
-            {schedule.title} - <span>{schedule.description}</span>
+        {schedule.map(({ title, description, disable, key }) => (
+          <S.ScheduleItem
+            key={`${title}-${key}`}
+            variant="h3"
+            disabled={disable}
+          >
+            {title} - <span>{description}</span>
           </S.ScheduleItem>
         ))}
       </S.ScheduleContentWrapper>

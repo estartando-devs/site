@@ -4,6 +4,13 @@ export interface ISchedule {
   disable?: boolean;
   dateEnd: string;
   friendlyDate?: string;
+  key?: string;
+}
+
+export interface ScheduleSectionProps {
+  title: string;
+  description: string;
+  schedule: ISchedule[];
 }
 
 const mock: ISchedule[] = [
@@ -43,8 +50,20 @@ const nextEvent: ISchedule | undefined =
   mock.find((current) => new Date(current.dateEnd) > new Date()) ||
   mock[mock.length - 1];
 
-export const scheduleMock: ISchedule[] = mock.map((current) => ({
+export const schedule: ISchedule[] = mock.map((current, index) => ({
   ...current,
+  key: `scheduleData-${index}`,
   disable: current.title !== nextEvent?.title,
   friendlyDate: new Date(current.dateEnd).toLocaleDateString(),
 }));
+
+export const scheduleMock: ScheduleSectionProps = {
+  title: `Sobre o <br /> <span>processo seletivo </span>`,
+  description: ` Acreditamos no poder de <span>transformação social</span> através da
+  Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
+  focada nas exigências do mercado de TI. Os dois cursos incluem ainda
+  conhecimentos em métodos de gestão ágil de projetos utilizados no mercado
+  para o desenvolvimento de trabalhos em equipe, além de assessoria no
+  Linkedin e direcionamento de carreira.`,
+  schedule,
+};
