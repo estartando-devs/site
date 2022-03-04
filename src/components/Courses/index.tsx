@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography } from '..';
-import { COURSE_DATA } from '../../mocks/course';
+import { COURSE_DATA } from '../../mocks';
 import * as S from './styles';
 
 type PropsCourse = {

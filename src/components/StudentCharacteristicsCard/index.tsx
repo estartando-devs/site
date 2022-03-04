@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import * as S from './styles';
 
@@ -14,7 +15,7 @@ const StudentCharacteristicsCard = ({
 }: PropsCard) => {
   return (
     <S.CardContainer>
-      <img
+      <Image
         src={image}
         width="46px"
         height="46px"

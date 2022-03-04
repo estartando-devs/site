@@ -2,19 +2,19 @@ import styled from 'styled-components';
 
 const HowWeDoContainer = styled.section`
   width: 100%;
-  margin: 60px 30px 60px 50px;
+  margin: 4rem 2rem 4rem 2rem;
   display: flex;
 
   @media (max-width: 918px) {
     flex-direction: column;
-    margin-left: 12px;
+    margin-left: 1rem;
   }
 `;
 
 const ExplainingHowWeDo = styled.section`
   width: 50%;
-  margin-right: 210px;
-  max-width: 500px;
+  margin-right: 16.5rem;
+  max-width: 28.7rem;
 
   @media (max-width: 918px) {
     margin-right: 0;
@@ -24,10 +24,10 @@ const ExplainingHowWeDo = styled.section`
 `;
 
 const ContentHowWeDo = styled.section`
-  margin-top: 72px;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 2rem;
 `;
 
 const CardListContainer = styled.section`
@@ -38,7 +38,7 @@ const CardListContainer = styled.section`
   max-width: 100%;
 
   section:nth-child(2n + 1) {
-    margin-left: 130px;
+    margin-left: 9rem;
 
     @media (max-width: 445px) {
       margin-left: 0;
@@ -48,6 +48,10 @@ const CardListContainer = styled.section`
 
 const TextHowWeDo = styled.p`
   color: ${({ theme }) => theme.palette.design.white};
+
+  strong {
+    color: ${({ theme }) => theme.palette.design.green};
+  }
 `;
 
 const TitleHowWeDo = styled.h1`
@@ -60,10 +64,6 @@ const SubTitleHowWeDo = styled.h2`
   font-size: 3.2rem;
 `;
 
-const TextBold = styled.span`
-  color: ${({ theme }) => theme.palette.design.green};
-`;
-
 export {
   HowWeDoContainer,
   ContentHowWeDo,
@@ -71,6 +71,5 @@ export {
   TitleHowWeDo,
   SubTitleHowWeDo,
   CardListContainer,
-  TextBold,
   TextHowWeDo,
 };

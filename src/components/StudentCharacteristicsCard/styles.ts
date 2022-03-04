@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 const CardContainer = styled.section`
-  margin: 27px 30px 0 0;
-  max-width: 320px;
-  min-width: 208px;
-  height: 100px;
-  box-shadow: 6px 6px 8px -6px rgb(0 0 0 / 98%), -2px -2px 5px -5px white;
-  padding: 5px 15px;
+  margin: 1.6rem 1.8rem 0 0;
+  max-width: 20rem;
+  min-width: 13rem;
+  height: 6.2rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem -0.3rem rgb(0 0 0 / 98%),
+    -0.1rem -0.1rem 0.3rem -0.3rem white;
+  padding: 0.3rem 0.9rem;
   position: relative;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem;
   background-color: #1e1e1e;
 `;
 
@@ -24,31 +25,31 @@ const TextCharacteristics = styled.p`
 const Division = styled.div`
   background-color: #7b7a7a;
   height: 60%;
-  width: 1px;
+  width: 0.06rem;
 `;
 const FormatContainerLeft = styled.div`
-  width: 42px;
-  height: 13px;
+  width: 2.625rem;
+  height: 0.812rem;
   background-color: #1e1e1e;
   position: absolute;
-  top: -4px;
+  top: -0.275rem;
   left: 0;
-  box-shadow: -4px -2px 5px -6px white;
-  border-top-right-radius: 22px;
-  border-top-left-radius: 5px;
+  box-shadow: -0.25rem -0.125rem 0.312rem -0.375rem white;
+  border-top-right-radius: 1.375rem;
+  border-top-left-radius: 0.312rem;
   transform: rotateZ(16deg);
 `;
 
 const FormatContainerRight = styled.div`
-  width: 42px;
-  height: 13px;
+  width: 2.625rem;
+  height: 0.81rem;
   background-color: #1e1e1e;
   position: absolute;
-  top: -5px;
-  right: 2px;
-  box-shadow: 3px -3px 3px -5px white;
-  border-top-left-radius: 22px;
-  border-top-right-radius: 5px;
+  top: -0.3125rem;
+  right: 0.125rem;
+  box-shadow: 0.1875rem -0.1875rem  0.1875rem -0.3125rem white;
+  border-top-left-radius: 1.375rem;
+  border-top-right-radius: 0.3125rem;
   transform: rotateZ(-17deg);
 }
 `;

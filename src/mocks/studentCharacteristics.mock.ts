@@ -1,22 +1,22 @@
 const characteristicsList = [
   {
-    image: '/xadrez.svg',
+    image: 'icons/protagonismo-icon',
     textCard: 'Aluno como protagonista do processo de aprendizado',
   },
   {
-    image: '/emocoes.svg',
+    image: 'icons/transparencia-icon',
     textCard: 'Transparência total nas relações',
   },
   {
-    image: '/alvo.svg',
+    image: 'icons/foco-icon',
     textCard: 'Foco na qualidade do que é desenvolvido',
   },
   {
-    image: '/gatinho.svg',
+    image: 'icons/proximidade-icon',
     textCard: 'Proximidade com os alunos',
   },
   {
-    image: '/boliche.svg',
+    image: 'icons/constancia-icon',
     textCard: 'Prática constante',
   },
 ];
