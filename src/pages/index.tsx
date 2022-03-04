@@ -14,7 +14,7 @@ import {
 const Home = () => (
   <Layout>
     <Header />
-    <WhatWeTeach {...whatWeTeachMock}/>
+    <WhatWeTeach {...whatWeTeachMock} />
     <Courses course="frontEnd" />
     <Courses course="backEnd" />
     <Courses course="design" />

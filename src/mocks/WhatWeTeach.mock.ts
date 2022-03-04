@@ -1,7 +1,7 @@
 export type WhatWeTeachProps = {
-  title: string,
-  description: string,
-}
+  title: string;
+  description: string;
+};
 
 export const whatWeTeachMock: WhatWeTeachProps = {
   title: `O que nós <span>ensinamos </span>?`,

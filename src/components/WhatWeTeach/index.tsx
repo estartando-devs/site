@@ -3,12 +3,14 @@ import { WhatWeTeachProps } from '../../mocks/WhatWeTeach.mock';
 import { Typography } from '../Typography';
 import * as S from './styles';
 
-
 const WhatWeTeach = ({ title, description }: WhatWeTeachProps) => (
   <S.Container>
     <S.HeadingSection>
-      <Typography variant="h2" dangerouslySetInnerHTML={{ __html: title}}/>
-      <Typography variant="body2" dangerouslySetInnerHTML={{ __html: description}}/>
+      <Typography variant="h2" dangerouslySetInnerHTML={{ __html: title }} />
+      <Typography
+        variant="body2"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </S.HeadingSection>
     <Image
       src="images/ensinando"

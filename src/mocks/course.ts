@@ -1,5 +1,3 @@
-import theme from '../styles/theme';
-
 const COURSE_DATA = {
   frontEnd: {
     backgroundTitle: '#0d6f61',
