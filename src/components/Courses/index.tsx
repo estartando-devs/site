@@ -30,7 +30,7 @@ const Courses = ({ course }: PropsCourse) => {
         voluptates iste error veniam at ipsum earum harum quisquam facilis vel.
         Quibusdam iusto ab sint earum voluptas, dicta laudantium illum at!
       </S.IntroText>
-      <S.ModulesTextContainer onClick={() => setExhibition(!exhibition)}>
+      <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
         <S.ModulesText>Ver módulos</S.ModulesText>
         <Eye width={24} height={24} color={white} />
       </S.ModulesTextContainer>
