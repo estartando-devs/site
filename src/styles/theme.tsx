@@ -26,6 +26,7 @@ const theme: DefaultTheme = {
       0: '#121212',
       1: '#1E1E1E',
       2: '#606062',
+      3: '#7b7a7a',
     },
     design: {
       black_transparent: 'rgba(30, 30, 30, 0.5)',
