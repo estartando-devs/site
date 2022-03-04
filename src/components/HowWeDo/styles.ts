@@ -24,9 +24,7 @@ export const HowWeDoContainer = styled.section`
 
 export const ExplainingHowWeDo = styled.div``;
 
-export const TitleHowWeDo = styled.h1`
-  color: ${({ theme }) => theme.palette.design.white};
-  font-size: 2.2rem;
+export const TitleHowWeDo = styled(Typography).attrs({ variant: 'h2' })`
   span {
     color: ${({ theme }) => theme.palette.design.green};
     font-size: 3.2rem;
