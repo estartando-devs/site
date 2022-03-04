@@ -1,23 +1,16 @@
 import Image from 'next/image';
+import { WhatWeTeachProps } from '../../mocks/WhatWeTeach.mock';
 import { Typography } from '../Typography';
 import * as S from './styles';
 
-const WhatWeTeach = () => (
+const WhatWeTeach = ({ title, description }: WhatWeTeachProps) => (
   <S.Container>
     <S.HeadingSection>
-      <Typography variant="h2">
-        O que nós <S.MarkedText>ensinamos </S.MarkedText>?
-      </Typography>
-      <Typography variant="body2">
-        Acreditamos no poder de
-        <S.MarkedText> transformação social </S.MarkedText>
-        através da Tecnologia da Informação. Por isso, oferecemos uma formação
-        objetiva e focada nas exigências do mercado de TI. Os três cursos
-        incluem ainda conhecimentos em métodos de
-        <S.MarkedText> gestão ágil </S.MarkedText>
-        de projetos utilizados no mercado para o desenvolvimento de trabalhos em
-        equipe, além de assessoria no Linkedin e direcionamento de carreira.
-      </Typography>
+      <Typography variant="h2" dangerouslySetInnerHTML={{ __html: title }} />
+      <Typography
+        variant="body2"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </S.HeadingSection>
     <Image
       src="images/ensinando"

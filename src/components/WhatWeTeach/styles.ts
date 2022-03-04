@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.main`
   display: flex;
   align-items: center;
-  gap: 9rem;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
   padding: 0 7.5rem;
@@ -28,8 +28,8 @@ export const HeadingSection = styled.section`
       text-align: center;
     }
   }
-`;
 
-export const MarkedText = styled.span`
-  color: ${({ theme }) => theme.palette.design.green};
+  span {
+    color: ${({ theme }) => theme.palette.design.green};
+  }
 `;
