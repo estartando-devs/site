@@ -71,6 +71,7 @@ const theme = {
     },
     body2: {
       fontFamily: 'Open Sans',
+      fontWeight: 600,
       fontSize: '1.125rem',
       lineHeight: '1.56rem',
     },

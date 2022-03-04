@@ -40,12 +40,8 @@ export const Text = styled(Typography)`
 `;
 
 export const ScheduleItem = styled(Typography)<{ disabled?: boolean }>`
-  color: ${({
-    theme: {
-      palette,
-    },
-    disabled,
-  }) => (disabled ? palette.gray[3] : palette.design.green)};
+  color: ${({ theme: { palette }, disabled }) =>
+    disabled ? palette.gray[3] : palette.design.green};
   span {
     font-weight: 300;
   }
@@ -57,7 +53,7 @@ export const ScheduleItem = styled(Typography)<{ disabled?: boolean }>`
 
 export const ScheduleWrapper = styled.div`
   display: flex;
-  margin-top: 70px;
+  margin-top: 2.5rem;
 `;
 
 export const ScheduleContentWrapper = styled.div`
@@ -104,10 +100,7 @@ export const ScheduleLittleDot = styled.div<{ disabled?: boolean }>`
   border-radius: 7px;
   background-color: ${({
     theme: {
-      palette: {
-        gray,
-        design: { green },
-      },
+      palette: { gray },
     },
   }) => gray[3]};
 `;
