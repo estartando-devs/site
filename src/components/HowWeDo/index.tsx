@@ -17,18 +17,13 @@ export const HowWeDo = ({
         </S.ContentHowWeDo>
       </S.ExplainingHowWeDo>
       <S.CardListContainer>
-        {characteristicsList.map(({ imageProps, description, key }, index) => {
-          const variation = index % 2 === 0 ? 'right' : 'left';
-
-          return (
-            <StudentCharacteristicsCard
-              key={key}
-              variation={variation}
-              imageProps={imageProps}
-              description={description}
-            />
-          );
-        })}
+        {characteristicsList.map(({ imageProps, description, key }) => (
+          <StudentCharacteristicsCard
+            key={key}
+            imageProps={imageProps}
+            description={description}
+          />
+        ))}
       </S.CardListContainer>
     </S.HowWeDoContainer>
   );
