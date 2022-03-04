@@ -1,28 +1,23 @@
-import Image from 'next/image';
+import Image, { ImageProps as NextImageProps } from 'next/image';
 import React from 'react';
 import * as S from './styles';
 
 type PropsCard = {
-  image: string;
-  textCard: string;
+  imageProps: NextImageProps;
+  description: string;
   variation: 'left' | 'right';
 };
 
 const StudentCharacteristicsCard = ({
-  image,
-  textCard,
+  imageProps,
+  description,
   variation,
 }: PropsCard) => {
   return (
     <S.CardContainer>
-      <Image
-        src={image}
-        width="46px"
-        height="46px"
-        alt="ícone referente as categorias do aluno"
-      />
+      <Image {...imageProps} />
       <S.Division />
-      <S.TextCharacteristics>{textCard}</S.TextCharacteristics>
+      <S.TextCharacteristics>{description}</S.TextCharacteristics>
       {variation === 'left' ? (
         <S.FormatContainerLeft />
       ) : (

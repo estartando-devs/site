@@ -1,5 +1,5 @@
 import React from 'react';
-import { studentProfileSection, whatWeTeachMock } from '../mocks';
+import { studentProfileSection, whatWeTeachMock, howWeDoMock } from '../mocks';
 import {
   Layout,
   Footer,
@@ -19,7 +19,7 @@ const Home = () => (
     <Courses course="frontEnd" />
     <Courses course="backEnd" />
     <Courses course="design" />
-    <HowWeDo />
+    <HowWeDo {...howWeDoMock} />
     <OurResults />
     <Subscribe />
     <StudentProfile {...studentProfileSection} />

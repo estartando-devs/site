@@ -1,39 +1,31 @@
 import React from 'react';
+import { HowWeDoSectionProps } from '../../mocks';
 import { StudentCharacteristicsCard } from '..';
-import { listTextHowWeDo, characteristicsList } from '../../mocks';
 import * as S from './styles';
 
-export const HowWeDo = () => {
+export const HowWeDo = ({
+  title,
+  description,
+  characteristicsList,
+}: HowWeDoSectionProps) => {
   return (
     <S.HowWeDoContainer>
       <S.ExplainingHowWeDo>
-        <S.TitleHowWeDo>Como nós</S.TitleHowWeDo>
-        <S.SubTitleHowWeDo>Fazemos</S.SubTitleHowWeDo>
+        <S.TitleHowWeDo dangerouslySetInnerHTML={{ __html: title }} />
         <S.ContentHowWeDo>
-          {listTextHowWeDo.map((item) => (
-            <S.TextHowWeDo
-              key={item}
-              dangerouslySetInnerHTML={{ __html: item }}
-            />
-          ))}
+          <S.TextHowWeDo dangerouslySetInnerHTML={{ __html: description }} />
         </S.ContentHowWeDo>
       </S.ExplainingHowWeDo>
       <S.CardListContainer>
-        {characteristicsList.map(({ ...allProps }, index) => {
-          if (index % 2 === 0) {
-            return (
-              <StudentCharacteristicsCard
-                key={index}
-                variation="right"
-                {...allProps}
-              />
-            );
-          }
+        {characteristicsList.map(({ imageProps, description, key }, index) => {
+          const variation = index % 2 === 0 ? 'right' : 'left';
+
           return (
             <StudentCharacteristicsCard
-              key={index}
-              variation="left"
-              {...allProps}
+              key={key}
+              variation={variation}
+              imageProps={imageProps}
+              description={description}
             />
           );
         })}

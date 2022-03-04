@@ -1,12 +1,10 @@
-export { ourResultsMock } from './OurResults.mock';
-export { scheduleMock } from './Schedule.mock';
+export * from './course.mock';
+export * from './DescriptionProfile.mock';
+export * from './HowWeDo.mock';
+export * from './OurResults.mock';
+export * from './Schedule.mock';
 export type { ISchedule } from './Schedule.mock';
-
-export { selectiveProcessMock } from './SelectiveProcess.mock';
+export * from './SelectiveProcess.mock';
 export type { ISelectiveProcessItem } from './SelectiveProcess.mock';
-
-export { listTextHowWeDo } from './listTextHowWeDo.mock';
-export { characteristicsList } from './studentCharacteristics.mock';
-export { COURSE_DATA } from './course.mock';
-export { whatWeTeachMock } from './WhatWeTeach.mock';
-export { studentProfileSection } from './DescriptionProfile.mock';
+export * from './studentCharacteristics.mock';
+export * from './WhatWeTeach.mock';

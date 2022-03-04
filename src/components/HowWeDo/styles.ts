@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Typography } from '../Typography';
 
 const HowWeDoContainer = styled.section`
   max-width: 100%;
@@ -46,7 +47,7 @@ const CardListContainer = styled.section`
   }
 `;
 
-const TextHowWeDo = styled.p`
+const TextHowWeDo = styled(Typography).attrs({ variant: 'body2' })`
   color: ${({ theme }) => theme.palette.design.white};
 
   strong {
@@ -57,11 +58,10 @@ const TextHowWeDo = styled.p`
 const TitleHowWeDo = styled.h1`
   color: ${({ theme }) => theme.palette.design.white};
   font-size: 2.2rem;
-`;
-
-const SubTitleHowWeDo = styled.h2`
-  color: ${({ theme }) => theme.palette.design.green};
-  font-size: 3.2rem;
+  span {
+    color: ${({ theme }) => theme.palette.design.green};
+    font-size: 3.2rem;
+  }
 `;
 
 export {
@@ -69,7 +69,6 @@ export {
   ContentHowWeDo,
   ExplainingHowWeDo,
   TitleHowWeDo,
-  SubTitleHowWeDo,
   CardListContainer,
   TextHowWeDo,
 };
