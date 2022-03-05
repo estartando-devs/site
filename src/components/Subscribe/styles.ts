@@ -1,20 +1,20 @@
 import styled from 'styled-components';
-
 import { LinkWrapper } from '../LinkWrapper';
 import { Typography } from '../Typography';
 
 export const ContainerSubscribe = styled.section`
   width: 100%;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 50px;
-  padding: 0 120px;
+  gap: 3.125rem;
+  padding: 5.4rem 7.5rem 11.8rem;
 
   @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
-    flex-direction: column;
-    padding: 48px 16px;
+    padding: 0 1rem 8.4rem;
+    img {
+      display: none !important;
+    }
   }
 `;
 
@@ -23,6 +23,10 @@ export const ContainerSubscribeContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1.5rem;
+  @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
+    align-items: center;
+  }
 `;
 
 export const ContainerSubscribeContentText = styled(Typography).attrs({
@@ -32,7 +36,7 @@ export const ContainerSubscribeContentText = styled(Typography).attrs({
 `;
 
 export const ContainerSubscribeContentButton = styled(LinkWrapper)`
-  margin: 70px 0 30px 0;
+  margin-top: 1.5rem;
   max-width: 242px;
 `;
 

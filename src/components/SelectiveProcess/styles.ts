@@ -3,7 +3,6 @@ import { Typography } from '../Typography';
 import Image from 'next/image';
 
 export const Section = styled.section`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 6.4rem 7.5rem;
