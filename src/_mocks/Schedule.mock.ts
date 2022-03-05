@@ -10,32 +10,32 @@ const mock: ISchedule[] = [
   {
     image: "subscribe",
     title: "Inscrições",
-    description: "Até o dia 28 de fevereiro",
-    dateEnd: "2021-02-28",
+    description: "Até o dia 20 de março",
+    dateEnd: "2022-03-20T12:00:00Z",
   },
   {
     image: "checklist",
-    title: "Prova Online",
-    description: "02 de março, às 19h30",
-    dateEnd: "2021-03-03",
+    title: "Prova",
+    description: "22 de março, às 19h30",
+    dateEnd: "2022-03-22T22:30:00Z",
   },
   {
     image: "encounter",
     title: "Hackathon",
-    description: "04 de março, às 19h",
-    dateEnd: "2021-03-05",
+    description: "26 de março, às 19h",
+    dateEnd: "2022-03-26T22:00:00Z",
   },
   {
     image: "support",
     title: "Bate papo com o time",
-    description: "Online, entre os dias 8 e 12 de março",
-    dateEnd: "2021-03-13",
+    description: "Online, entre os dias 28 de março e 4 de abril",
+    dateEnd: "2022-04-04T23:00:00Z",
   },
   {
     image: "onlineCourse",
     title: "Início das Aulas",
-    description: "23 de março ",
-    dateEnd: "2021-03-7",
+    description: "12 de abril ",
+    dateEnd: "2022-04-12T23:00:00Z",
   },
 ];
 

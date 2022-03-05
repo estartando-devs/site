@@ -46,7 +46,7 @@ const Schedule: React.FC<ScheduleProps> = () => {
           <S.InformationAside>
             <S.ScheduleTitle>
               Inscrições
-              <span> 2021</span>
+              <span> 2022</span>
             </S.ScheduleTitle>
 
             <S.ScheduleDescription>
