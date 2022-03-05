@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
   width: 100%;
   display: flex;
   justify-content: center;
