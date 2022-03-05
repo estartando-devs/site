@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
-import Image from 'next/image';
 
 export const CommonQuestionsSection = styled.section`
   min-height: 100vh;
@@ -11,6 +10,13 @@ export const CommonQuestionsSection = styled.section`
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     padding: 2.7rem 2rem;
   }
+
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};  
+
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+     margin: 0 auto;
+  }
+
 `;
 
 export const CommonQestionsSectionTitle = styled(Typography)`
@@ -28,27 +34,13 @@ export const CommonQestionsSectionTitle = styled(Typography)`
 `;
 
 export const QestionsContent = styled.aside`
-  display: flex;
-  justify-content: flex-end;
-
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    justify-content: flex-start;
-    img {
-      display: none !important;
-    }
-  }
-`;
-
-export const CommonQestionsIlustration = styled(Image)`
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    display: none !important;
-    width: 0 !important;
-  }
+  display: flex; 
 `;
 
 export const QuestionsWrapper = styled.div`
-  width: 50%;
+  width: 45%;
   display: grid;
+  
   gap: 3.75rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     gap: 2.75rem;

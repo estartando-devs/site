@@ -27,8 +27,8 @@ export const CommonQuestions = ({ title, questions }: CommonQuestionsProps) => (
       <S.QuestionsWrapper>
         {questions.map(({ key, question, answer }) => (
           <S.Question key={key}>
-            <Typography variant="body1">{question}</Typography>
-            <Typography variant="body2">{answer}</Typography>
+            <Typography variant="body1" weight='bold'>{question}</Typography>
+            <Typography variant="body2" weight='500'>{answer}</Typography>
           </S.Question>
         ))}
       </S.QuestionsWrapper>
