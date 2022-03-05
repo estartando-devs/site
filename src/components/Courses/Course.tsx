@@ -25,9 +25,7 @@ export const Course = ({ courseData }: PropsCourse) => {
         <Typography variant="body1">{courseData.title}</Typography>
       </S.TitleContainer>
       <S.IntroText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-        voluptates iste error veniam at ipsum earum harum quisquam facilis vel.
-        Quibusdam iusto ab sint earum voluptas, dicta laudantium illum at!
+        {courseData.coursePresentation}
       </S.IntroText>
       <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
         <S.ModulesText>Ver módulos</S.ModulesText>
