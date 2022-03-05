@@ -5,5 +5,19 @@ type studentSectionProfile = {
 
 export const studentProfileSection: studentSectionProfile = {
   title: ` Qual o perfil de aluno que <br /> <strong>buscamos?</strong>`,
-  description: `Buscamos pessoas que gostem de desafios, sejam determinadas e responsáveis. Nossa formação é totalmente <strong>gratuita.</strong> A única coisa que cobramos é <strong>dedicação.</strong> <br/><br/> Se você tem de <strong> 18 a 29 anos </strong> e mora <strong> em qualquer lugar, </strong> você pode se inscrever!<br/><br/>É legal que você saiba usar mouse e teclado e pesquisar na internet e tenha bastante disposição para estudar. Ah, é importante ter disponibilidade nas terças e quintas, de 19:30 às 21:30, pois esse será o horário das aulas.`,
+  description: `Buscamos pessoas que gostem de desafios, sejam determinadas e responsáveis. Nossa formação é totalmente <strong>gratuita.</strong> A única coisa que cobramos é <strong>dedicação.</strong><br/><br/>
+  Para se inscrever você precisa: <br/><br/>
+  <ul>
+  <li>
+  Estar cursando ou ter concluído o 3º ano do ensino médio;
+  </li>
+  <li>
+  Morar <strong> em qualquer lugar do Brasil</strong>;
+  </li>
+  <li>
+  Possuir renda familiar per capta de <strong>até meio salário mínimo </strong>(R$ 606,00 por pessoa residente na casa) ou possuir renda familiar total de <strong>até três salários mínimos</strong>;
+  </li>
+  </ul>
+  <br/><br/>
+  É legal que você saiba usar mouse e teclado, pesquisar na internet e ter bastante disposição para estudar. Ah, é importante ter disponibilidade nas terças e quintas, de 19:30 às 21:30, pois esse será o horário das aulas.`,
 };

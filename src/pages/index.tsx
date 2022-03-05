@@ -25,10 +25,10 @@ const Home = () => (
     <WhatWeTeach {...whatWeTeachMock} />
     <Courses {...cousesMock} />
     <HowWeDo {...howWeDoMock} />
-    <OurResults />
+    <StudentProfile {...studentProfileSection} />
     <SelectiveProcess {...scheduleMock} />
     <Subscribe />
-    <StudentProfile {...studentProfileSection} />
+    <OurResults />
     <Footer />
   </Layout>
 );
