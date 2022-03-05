@@ -5,18 +5,18 @@ type StyleProps = {
   width?: string;
 };
 
-const CourseContainer = styled.section`
+export const CourseContainer = styled.section`
   width: 100%;
   max-width: 1000px;
   padding: 0 120px;
   margin-top: 100px;
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+  @media (max-width: ${({ theme: { media } }) => media.tablet_landscape}) {
     padding: 2rem 2rem 2.7rem;
     margin-top: 3rem;
   }
 `;
 
-const TitleContainer = styled.div<StyleProps>`
+export const TitleContainer = styled.div<StyleProps>`
   background-color: ${({ bgColor }) => bgColor};
   max-width: ${({ width }) => width};
   height: 23px;
@@ -32,7 +32,7 @@ const TitleContainer = styled.div<StyleProps>`
   }
 `;
 
-const IntroText = styled.p`
+export const IntroText = styled.p`
   font-size: 16px;
   margin-top: 30px;
   color: ${({ theme }) => theme.palette.design.white};
@@ -40,13 +40,13 @@ const IntroText = styled.p`
   line-height: 2;
 `;
 
-const ModulesText = styled.p`
+export const ModulesText = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: ${({ theme }) => theme.palette.design.white};
 `;
 
-const ModulesTextContainer = styled.button`
+export const ModulesTextContainer = styled.button`
   display: flex;
   align-items: center;
   gap: 16px;
@@ -57,7 +57,7 @@ const ModulesTextContainer = styled.button`
   }
 `;
 
-const ListModulesContainer = styled.div`
+export const ListModulesContainer = styled.div`
   margin: 10px 0 15px 0;
 
   > p {
@@ -65,12 +65,3 @@ const ListModulesContainer = styled.div`
     line-height: 2;
   }
 `;
-
-export {
-  CourseContainer,
-  TitleContainer,
-  IntroText,
-  ModulesText,
-  ModulesTextContainer,
-  ListModulesContainer,
-};

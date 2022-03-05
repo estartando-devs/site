@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Typography } from '..';
+import { Typography } from '../Typography';
 
-export const Container = styled.main`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   padding-left: 7.5rem;
@@ -14,8 +14,8 @@ export const Container = styled.main`
 
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     flex-direction: column;
-    padding-left: 0px;
-    height: 35rem;
+    padding: 1rem 1rem 2.25rem;
+    height: auto;
     background-position: 85%;
   }
 `;
@@ -28,6 +28,7 @@ export const TextBox = styled.div`
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     width: 95%;
     justify-content: center;
+    height: 100%;
   }
 `;
 
@@ -52,6 +53,7 @@ export const DescriptionProfile = styled(Typography).attrs({
 })`
   font-weight: normal;
   line-height: 1.7rem;
+  font-size: 1.25rem;
   strong {
     color: ${({ theme }) => theme.palette.primary.main};
 

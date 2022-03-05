@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Eye } from '@styled-icons/heroicons-outline';
 import { Typography } from '..';
-import { COURSE_DATA } from '../../mocks/course';
+import { COURSE_DATA } from '../../mocks';
 import * as S from './styles';
 import { useTheme } from 'styled-components';
 
@@ -30,7 +30,7 @@ const Courses = ({ course }: PropsCourse) => {
         voluptates iste error veniam at ipsum earum harum quisquam facilis vel.
         Quibusdam iusto ab sint earum voluptas, dicta laudantium illum at!
       </S.IntroText>
-      <S.ModulesTextContainer onClick={() => setExhibition(!exhibition)}>
+      <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
         <S.ModulesText>Ver módulos</S.ModulesText>
         <Eye width={24} height={24} color={white} />
       </S.ModulesTextContainer>

@@ -26,6 +26,16 @@ const h2 = styled.h2<VariantProps>`
   color: ${({ color, theme }) => color || theme.palette.design.white};
 `;
 
+const h3 = styled.h3<VariantProps>`
+  ${({ theme: { typography }, weight }) => css`
+    font-size: ${typography.h3?.fontSize};
+    font-family: ${typography.h3?.fontFamily};
+    font-weight: ${weight || typography.h3?.fontWeight};
+    line-height: ${typography.h3?.lineHeight};
+  `}
+  color: ${({ color, theme }) => color || theme.palette.design.white};
+`;
+
 const body1 = styled.p<VariantProps>`
   ${({ theme: { typography }, weight }) => css`
     font-size: ${typography.body1?.fontSize};
@@ -59,6 +69,7 @@ const body3 = styled.p<VariantProps>`
 const Typographies = {
   h1,
   h2,
+  h3,
   body1,
   body2,
   body3,

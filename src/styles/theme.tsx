@@ -1,6 +1,4 @@
-import { DefaultTheme } from 'styled-components';
-
-const theme: DefaultTheme = {
+const theme = {
   media: {
     mobile_portrait: '320px',
     mobile_default: '360px',
@@ -26,6 +24,8 @@ const theme: DefaultTheme = {
       0: '#121212',
       1: '#1E1E1E',
       2: '#606062',
+      3: '#7B7A7A',
+      4: '#272626',
     },
     design: {
       black_transparent: 'rgba(30, 30, 30, 0.5)',
@@ -57,6 +57,12 @@ const theme: DefaultTheme = {
       fontSize: '2.25rem',
       lineHeight: '2.6rem',
     },
+    h3: {
+      fontFamily: 'Ubuntu',
+      fontWeight: 'bold',
+      fontSize: '1.75rem',
+      lineHeight: '2rem',
+    },
     body1: {
       fontFamily: 'Open Sans',
       fontWeight: 600,
@@ -65,6 +71,7 @@ const theme: DefaultTheme = {
     },
     body2: {
       fontFamily: 'Open Sans',
+      fontWeight: 600,
       fontSize: '1.125rem',
       lineHeight: '1.56rem',
     },

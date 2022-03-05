@@ -1,5 +1,10 @@
 import React from 'react';
-import { studentProfileSection } from '../mocks/DescriptionProfile.mock';
+import {
+  scheduleMock,
+  studentProfileSection,
+  whatWeTeachMock,
+  howWeDoMock,
+} from '../mocks';
 import {
   Layout,
   Footer,
@@ -7,18 +12,22 @@ import {
   OurResults,
   Courses,
   WhatWeTeach,
+  HowWeDo,
   Subscribe,
   StudentProfile,
+  SelectiveProcess,
 } from '../components';
 
 const Home = () => (
   <Layout>
     <Header />
-    <WhatWeTeach />
+    <WhatWeTeach {...whatWeTeachMock} />
     <Courses course="frontEnd" />
     <Courses course="backEnd" />
     <Courses course="design" />
+    <HowWeDo {...howWeDoMock} />
     <OurResults />
+    <SelectiveProcess {...scheduleMock} />
     <Subscribe />
     <StudentProfile {...studentProfileSection} />
     <Footer />

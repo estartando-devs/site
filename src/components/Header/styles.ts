@@ -15,16 +15,16 @@ export const ContainerHeader = styled.header`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 120px;
+  padding: 0 7.5rem;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
-    padding: 0 16px;
+    padding: 0 1rem;
   }
 `;
 
 export const SectionHeader = styled.section`
   display: flex;
-  gap: 48px;
+  gap: 3rem;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
     flex-direction: column;
@@ -34,7 +34,7 @@ export const SectionHeader = styled.section`
 `;
 
 export const ContainerImage = styled.picture`
-  margin-top: 20px;
+  margin-top: 1.25rem;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
     display: flex;
@@ -47,10 +47,10 @@ export const ContainerImage = styled.picture`
 export const ContainerHeading = styled.section`
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 31.25rem;
 
   h1 {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
       margin: 0;
     }
@@ -58,8 +58,8 @@ export const ContainerHeading = styled.section`
 `;
 
 export const ContainerButton = styled.div`
-  margin-top: 48px;
-  max-width: 241px;
+  margin-top: 3rem;
+  max-width: 15rem;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
     max-width: 100%;
