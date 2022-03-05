@@ -24,9 +24,7 @@ export const Course = ({ courseData }: PropsCourse) => {
       >
         <Typography variant="body1">{courseData.title}</Typography>
       </S.TitleContainer>
-      <S.IntroText>
-        {courseData.coursePresentation}
-      </S.IntroText>
+      <S.IntroText>{courseData.coursePresentation}</S.IntroText>
       <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
         <S.ModulesText>Ver módulos</S.ModulesText>
         <Eye width={24} height={24} color={white} />

@@ -13,7 +13,8 @@ const coursesData: Record<string, Course> = {
     backgroundTitle: '#0d6f61',
     widthContainerTitle: '300px',
     title: 'Programação Front-end',
-    coursePresentation: 'A nossa formação em Programação Front-end prepara você para atuar no desenvolvimento de aplicações web, criando interfaces e integrando com APIs. Temos como objetivo torná-lo apto a atuar nas maiores empresas de tecnologia do mercado, ensinando os principais conceitos e ferramentas exigidas, além da experiência de desenvolver uma solução real com os designers e outros devs formados pelo Estartando Devs.',
+    coursePresentation:
+      'A nossa formação em Programação Front-end prepara você para atuar no desenvolvimento de aplicações web, criando interfaces e integrando com APIs. Temos como objetivo torná-lo apto a atuar nas maiores empresas de tecnologia do mercado, ensinando os principais conceitos e ferramentas exigidas, além da experiência de desenvolver uma solução real com os designers e outros devs formados pelo Estartando Devs.',
     courseModules: [
       'Como funciona a internet',
       'O mercado de tecnologia',
@@ -30,7 +31,8 @@ const coursesData: Record<string, Course> = {
     backgroundTitle: '#1e6f7a',
     widthContainerTitle: '293px',
     title: 'Programação Back-end',
-    coursePresentation: 'A nossa formação em Programação Back-end prepara você para atuar no desenvolvimento de APIs e disponibilizar os recursos desenvolvidos em cloud. Temos como objetivo torná-lo apto a atuar nas maiores empresas de tecnologia do mercado, ensinando os principais conceitos e ferramentas exigidas, além da experiência de desenvolver uma solução real com os designers e outros devs formados pelo Estartando Devs.',
+    coursePresentation:
+      'A nossa formação em Programação Back-end prepara você para atuar no desenvolvimento de APIs e disponibilizar os recursos desenvolvidos em cloud. Temos como objetivo torná-lo apto a atuar nas maiores empresas de tecnologia do mercado, ensinando os principais conceitos e ferramentas exigidas, além da experiência de desenvolver uma solução real com os designers e outros devs formados pelo Estartando Devs.',
     courseModules: [
       'Como funciona a internet',
       'O mercado de tecnologia',
@@ -49,7 +51,8 @@ const coursesData: Record<string, Course> = {
     backgroundTitle: '#45408e',
     widthContainerTitle: '173px',
     title: 'Design UI/UX',
-    coursePresentation: 'A nossa formação em Design UI/UX prepara você para atuar de ponta a ponta na construção de um produto digital. Tendo como base a abordagem do Design Thinking, você aprenderá diversas ferramentas usadas no mercado, além da experiência de desenvolver uma solução real com os devs formados pelo Estartando Devs.',
+    coursePresentation:
+      'A nossa formação em Design UI/UX prepara você para atuar de ponta a ponta na construção de um produto digital. Tendo como base a abordagem do Design Thinking, você aprenderá diversas ferramentas usadas no mercado, além da experiência de desenvolver uma solução real com os devs formados pelo Estartando Devs.',
     courseModules: [
       'Aula Inaugural: conhecendo mercado e conceitos básicos ',
       'Métodos e processos em UX - Imersão: Qual é o problema que precisamos resolver?',
@@ -64,7 +67,5 @@ const coursesData: Record<string, Course> = {
     ],
   },
 };
-
-
 
 export const cousesMock = { coursesData };
