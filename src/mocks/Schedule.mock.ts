@@ -59,7 +59,7 @@ export const schedule: ISchedule[] = mock.map((current, index) => ({
 
 export const scheduleMock: ScheduleSectionProps = {
   title: `Sobre o <br /> <span>processo seletivo </span>`,
-  description: ` Acreditamos no poder de <span>transformação social</span> através da
+  description: ` Acreditamos no poder da <span>transformação social</span> através da
   Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
   focada nas exigências do mercado de TI. Os dois cursos incluem ainda
   conhecimentos em métodos de gestão ágil de projetos utilizados no mercado
