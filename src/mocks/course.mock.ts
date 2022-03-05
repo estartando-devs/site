@@ -1,4 +1,14 @@
-const COURSE_DATA = {
+export type Course = {
+  backgroundTitle: string;
+  widthContainerTitle: string;
+  title: string;
+  coursePresentation: string;
+  courseModules: string[];
+};
+
+export type CourseData = Record<string, Course>;
+
+const coursesData: Record<string, Course> = {
   frontEnd: {
     backgroundTitle: '#0d6f61',
     widthContainerTitle: '300px',
@@ -26,4 +36,4 @@ const COURSE_DATA = {
   },
 };
 
-export { COURSE_DATA };
+export const cousesMock = { coursesData };

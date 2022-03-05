@@ -4,6 +4,7 @@ import {
   studentProfileSection,
   whatWeTeachMock,
   howWeDoMock,
+  cousesMock,
 } from '../mocks';
 import {
   Layout,
@@ -22,9 +23,7 @@ const Home = () => (
   <Layout>
     <Header />
     <WhatWeTeach {...whatWeTeachMock} />
-    <Courses course="frontEnd" />
-    <Courses course="backEnd" />
-    <Courses course="design" />
+    <Courses {...cousesMock} />
     <HowWeDo {...howWeDoMock} />
     <OurResults />
     <SelectiveProcess {...scheduleMock} />
