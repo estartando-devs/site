@@ -11,12 +11,11 @@ export const CommonQuestionsSection = styled.section`
     padding: 2.7rem 2rem;
   }
 
-  max-width: ${({ theme: { media } }) => media.desktop_fullhd};  
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
 
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
-     margin: 0 auto;
+    margin: 0 auto;
   }
-
 `;
 
 export const CommonQestionsSectionTitle = styled(Typography)`
@@ -34,13 +33,13 @@ export const CommonQestionsSectionTitle = styled(Typography)`
 `;
 
 export const QestionsContent = styled.aside`
-  display: flex; 
+  display: flex;
 `;
 
 export const QuestionsWrapper = styled.div`
   width: 45%;
   display: grid;
-  
+
   gap: 3.75rem;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     gap: 2.75rem;
