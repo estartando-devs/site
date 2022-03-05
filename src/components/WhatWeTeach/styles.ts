@@ -5,12 +5,14 @@ export const Container = styled.main`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  margin-top: 4rem;
   padding: 0 7.5rem;
 
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+  @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
     flex-direction: column;
-    margin-top: 4rem;
+    justify-content: flex-start;
+    gap: 3rem;
     padding: 0 2rem;
   }
 `;
