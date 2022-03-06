@@ -54,6 +54,12 @@ export const DescriptionProfile = styled(Typography).attrs({
   font-weight: normal;
   line-height: 1.7rem;
   font-size: 1.25rem;
+  color: ${({ theme }) => theme.palette.design.white};
+
+  ul {
+    padding-left: 2rem;
+  }
+
   strong {
     color: ${({ theme }) => theme.palette.primary.main};
 
