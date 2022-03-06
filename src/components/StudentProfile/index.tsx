@@ -10,7 +10,7 @@ export const StudentProfile = ({ title }: StudentProfileProps) => {
     <S.Container>
       <S.TextBox>
         <S.TitleProfile dangerouslySetInnerHTML={{ __html: title }} />
-        <S.DescriptionProfile>
+        <S.DescriptionProfile as="span">
           Buscamos pessoas que gostem de desafios, sejam determinadas e
           responsáveis. Nossa formação é totalmente <strong>gratuita.</strong> A
           única coisa que cobramos é <strong>dedicação.</strong>
