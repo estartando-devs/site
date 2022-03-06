@@ -10,6 +10,10 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>Estartando Devs</title>
+        <meta
+          name="google-site-verification"
+          content="8kDtWUmUQEh7QXoj_shRaxcgYAVpHs_YQ7TeniN0kmI"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#81CAA8" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#81CAA8" />
