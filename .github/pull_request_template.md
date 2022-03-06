@@ -1,5 +1,3 @@
-<!--- auto assigne the PR --->
-
 ### [Ticket]() | [Mocks]()
 
 ## Description
