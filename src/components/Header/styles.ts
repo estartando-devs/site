@@ -15,21 +15,25 @@ export const ContainerHeader = styled.header`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 7.5rem;
-
-  @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
-    padding: 0 1rem;
-  }
 `;
 
 export const SectionHeader = styled.section`
   display: flex;
   gap: 3rem;
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+  width: 100%;
+  padding: 0 7.5rem;
+
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 0 auto;
+    padding: 0 7.5rem;
+  }
 
   @media (max-width: ${({ theme: { media } }) => media.tablet_portrait}) {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding: 0 2rem;
   }
 `;
 

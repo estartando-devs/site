@@ -7,12 +7,17 @@ type StyleProps = {
 
 export const CourseContainer = styled.section`
   width: 100%;
-  max-width: 1000px;
-  padding: 0 120px;
-  margin-top: 100px;
+  padding: 0 7.5rem;
+  margin-top: 6.25rem;
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+
   @media (max-width: ${({ theme: { media } }) => media.tablet_landscape}) {
     padding: 2rem 2rem 2.7rem;
     margin-top: 3rem;
+  }
+
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 6.25rem auto 0;
   }
 `;
 
