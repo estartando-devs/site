@@ -47,7 +47,7 @@ jobs:
           gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
           prCommentEnabled: true
           prCommentSaveOld: true
-          urls: 'http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/perguntas-frequentes/'
+          urls: 'http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/,http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/perguntas-frequentes/'
       - name: Verify Lighthouse Check results
         uses: foo-software/lighthouse-check-status-action@master
         with:
