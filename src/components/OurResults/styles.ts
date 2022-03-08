@@ -7,7 +7,7 @@ export const OurResultsContainer = styled.section`
       ${({ theme: { palette } }) => palette.design.black_transparent},
       ${({ theme: { palette } }) => palette.design.black_transparent}
     ),
-    url('https://res.cloudinary.com/estartando-devs/image/upload/v1645815667/images/nossos-resultados-bg');
+    url('https://res.cloudinary.com/estartando-devs/image/upload/c_scale,w_1920/v1645815667/images/nossos-resultados-bg');
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
