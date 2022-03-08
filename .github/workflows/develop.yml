@@ -56,7 +56,7 @@ jobs:
           minBestPracticesScore: '80'
           minPerformanceScore: '80'
           minSeoScore: '90'
-          progressiveWebApp: '10'
+          # progressiveWebApp: '10'
   lighthouse-ci:
     needs: [build-deploy]
     runs-on: ubuntu-latest
