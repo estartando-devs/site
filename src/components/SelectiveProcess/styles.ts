@@ -11,6 +11,11 @@ export const Section = styled.section`
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     padding: 2.7rem 2rem;
   }
+
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 4rem auto 0;
+  }
 `;
 
 export const Title = styled(Typography)`

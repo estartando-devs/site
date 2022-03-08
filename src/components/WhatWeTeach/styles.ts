@@ -8,6 +8,12 @@ export const Container = styled.main`
   height: 100%;
   margin-top: 4rem;
   padding: 0 7.5rem;
+  gap: 5rem;
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 4rem auto 0;
+  }
 
   @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
     flex-direction: column;
