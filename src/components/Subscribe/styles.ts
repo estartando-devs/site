@@ -16,6 +16,11 @@ export const ContainerSubscribe = styled.section`
       display: none !important;
     }
   }
+
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 4rem auto 0;
+  }
 `;
 
 export const ContainerSubscribeContent = styled.div`
