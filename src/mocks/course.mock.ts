@@ -8,7 +8,7 @@ export type Course = {
 
 export type CourseData = Record<string, Course>;
 
-const coursesData: Record<string, Course> = {
+const coursesData: CourseData = {
   frontEnd: {
     backgroundTitle: '#0d6f61',
     widthContainerTitle: '300px',
