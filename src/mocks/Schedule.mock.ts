@@ -31,8 +31,8 @@ const mock: ISchedule[] = [
   },
   {
     title: 'Hackathon',
-    description: '26 de março, às 19h',
-    dateEnd: '2022-03-26T22:00:00Z',
+    description: '26 de março, às 10h',
+    dateEnd: '2022-03-26T12:30:00Z',
   },
   {
     title: 'Bate papo com o time',
