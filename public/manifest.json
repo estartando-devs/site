@@ -1,0 +1,16 @@
+{
+  "name": "Estartando Devs",
+  "short_name": "ED",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "background_color": "#1E1E1E",
+  "description": "Acreditamos no poder de transformação social através da tecnologia",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#81CAA8"
+}
