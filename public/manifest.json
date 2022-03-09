@@ -5,7 +5,7 @@
     {
       "src": "/favicon.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "64x64"
     }
   ],
   "background_color": "#1E1E1E",
