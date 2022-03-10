@@ -23,6 +23,10 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="msapplication-navbutton-color" content="#81CAA8" />
         <link rel="manifest" href="/manifest.json" />
         <meta
+          name="description"
+          content="Acreditamos no poder de transformação social através da tecnologia."
+        />
+        <meta
           property="og:image"
           content="https://media-exp1.licdn.com/dms/image/C4D0BAQEp4FVZvqZz2Q/company-logo_200_200/0?e=2159024400&v=beta&t=7u2-5asQNxjGYAgF18kGeHiIc-WXNIqwNscWXhuRzoY"
         />
