@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   height: 100vh;
