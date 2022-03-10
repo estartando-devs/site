@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import React from 'react';
 import {
   Layout,
@@ -44,9 +44,17 @@ export const getStaticProps: GetStaticProps<
 export default function PerguntasFrequentes(props: CommonQuestionsProps) {
   return (
     <Layout>
-      <Head>
-        <title>Estartando Devs | Perguntas Frequentes</title>
-      </Head>
+      <NextSeo
+        title="Estartando Devs | Perguntas Frequentes"
+        description="Tire suas dúvidas sobre nosso processo seletivo."
+        openGraph={{
+          type: 'website',
+          locale: 'pt_BR',
+          url: 'https://estartandodevs.com.br',
+          site_name: 'Estartando Devs',
+          title: 'Estartando Devs',
+        }}
+      />
       <CommonQuestions {...props} />
       <Footer />
     </Layout>
