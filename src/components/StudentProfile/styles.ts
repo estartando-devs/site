@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-export const Container = styled.section`
+export const Container = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 7.5rem;
   height: 100vh;
   width: 100%;
   background-image: url('https://res.cloudinary.com/estartando-devs/image/upload/c_scale,w_1780/v1645818507/images/perfil-aluno-bg');
@@ -12,11 +11,30 @@ export const Container = styled.section`
   background-repeat: no-repeat;
   background-attachment: local;
 
+  @media (max-width: ${({ theme: { media } }) => media.desktop_hd}) {
+    height: 100%;
+  }
+
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    background-position: 85%;
+    height: auto;
+  }
+`;
+
+export const ContentStudentProfile = styled.div`
+  display: flex;
+  align-items: center;
+
+  padding-left: 7.5rem;
+  width: 100%;
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    margin: 0 auto;
+  }
+
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     flex-direction: column;
     padding: 1rem 1rem 2.25rem;
-    height: auto;
-    background-position: 85%;
   }
 `;
 

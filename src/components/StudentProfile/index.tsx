@@ -7,6 +7,7 @@ type StudentProfileProps = {
 
 export const StudentProfile = ({ title }: StudentProfileProps) => (
   <S.Container>
+    <S.ContentStudentProfile>
     <S.TextBox>
       <S.TitleProfile dangerouslySetInnerHTML={{ __html: title }} />
       <S.DescriptionProfile as="span">
@@ -36,5 +37,6 @@ export const StudentProfile = ({ title }: StudentProfileProps) => (
         o horário das aulas.
       </S.DescriptionProfile>
     </S.TextBox>
+    </S.ContentStudentProfile>
   </S.Container>
 );
