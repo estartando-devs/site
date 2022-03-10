@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import * as gtag from '../lib/gtag';
 import { AppProps } from 'next/app';
 import { GlobalStyles } from '../styles/global';
 import { ThemeProvider } from 'styled-components';
@@ -8,21 +7,8 @@ import theme from '../styles/theme';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 import NextNProgress from 'nextjs-progressbar';
-import { useRouter } from 'next/router';
 
 function App({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url: string) => {
-      gtag.pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router.events]);
-
   return (
     <ThemeProvider theme={theme}>
       <Head>
