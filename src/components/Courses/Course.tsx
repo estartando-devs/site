@@ -32,7 +32,7 @@ export const Course = ({ courseData }: PropsCourse) => {
       <S.ListModulesContainer>
         {exhibition &&
           courseData.courseModules.map((item, index) => (
-            <p key={index}>- {item}</p>
+            <li key={index}> {item}</li>
           ))}
       </S.ListModulesContainer>
     </S.CourseContainer>
