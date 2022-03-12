@@ -1,6 +1,8 @@
 import Image from 'next/image';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { Typography } from '../Typography';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 import * as S from './styles';
 
@@ -14,18 +16,34 @@ const OurResultsIcon = ({
   image,
   title,
   value,
-}: PropsWithChildren<OurResultsIconProp>) => (
-  <S.OurResultsIconContainer>
-    <Image
-      src={`icons/${image}`}
-      width={60}
-      height={60}
-      alt={`Icone ${title}`}
-      title={`Icone ${title}`}
-    />
-    <S.OurResultsIconContainerValue>{`${value}`}</S.OurResultsIconContainerValue>
-    <Typography weight="700" variant="body1">{`${title}`}</Typography>
-  </S.OurResultsIconContainer>
-);
+}: PropsWithChildren<OurResultsIconProp>) => {
+  useEffect(() => {
+    Aos.init({
+      delay: 50,
+      offset: 200,
+      once: false,
+      mirror: true,
+      duration: 800,
+    });
+  }, []);
+
+  return (
+    <S.OurResultsIconContainer
+      data-aos="zoom-in"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+    >
+      <Image
+        src={`icons/${image}`}
+        width={60}
+        height={60}
+        alt={`Icone ${title}`}
+        title={`Icone ${title}`}
+      />
+      <S.OurResultsIconContainerValue>{`${value}`}</S.OurResultsIconContainerValue>
+      <Typography weight="700" variant="body1">{`${title}`}</Typography>
+    </S.OurResultsIconContainer>
+  );
+};
 
 export { OurResultsIcon };
