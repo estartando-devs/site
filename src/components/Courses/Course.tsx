@@ -19,21 +19,11 @@ export const Course = ({ courseData }: PropsCourse) => {
     },
   } = useTheme();
 
-  useEffect(() => {
-    Aos.init({
-      delay: 50,
-      offset: 200,
-      once: false,
-      mirror: true,
-      duration: 1000,
-    });
-  }, []);
-
   return (
     <S.CourseContainer
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
-      data-aos-anchor-placement="top-center"
+      data-aos={courseData.dataAos}
+      data-aos-easing={courseData.dataAosEasing}
+      data-aos-anchor-placement={courseData.dataAosAnchorPlacement}
     >
       <S.TitleContainer
         width={courseData.widthContainerTitle}

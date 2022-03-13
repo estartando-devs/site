@@ -1,28 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
 import config from '../../config/constants';
 import { Typography } from '../Typography';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import { animateProps } from '../../mocks/animate.mock';
 
 import * as S from './styles';
 
-export const Subscribe = () => {
-  useEffect(() => {
-    Aos.init({
-      delay: 50,
-      offset: 200,
-      once: false,
-      mirror: true,
-      duration: 1000,
-    });
-  }, []);
+export const Subscribe = ({
+  dataAos,
+  dataAosEasing,
+  dataAosAnchorPlacement,
+}: animateProps) => {
   return (
     <S.ContainerSubscribe
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
-      data-aos-anchor-placement="top-center"
+      data-aos={dataAos}
+      data-aos-easing={dataAosEasing}
+      data-aos-anchor-placement={dataAosAnchorPlacement}
     >
       <Image
         src="/images/inscricao-check"
