@@ -1,6 +1,9 @@
 export type WhatWeTeachProps = {
   title: string;
   description: string;
+  dataAos: string;
+  dataAosEasing: string;
+  dataAosAnchorPlacement: string;
 };
 
 export const whatWeTeachMock: WhatWeTeachProps = {
@@ -11,4 +14,7 @@ export const whatWeTeachMock: WhatWeTeachProps = {
   incluem ainda conhecimentos em métodos de <span> gestão ágil </span>
   de projetos utilizados no mercado para o desenvolvimento de trabalhos em
   equipe, além de assessoria no Linkedin e direcionamento de carreira.`,
+  dataAos: 'fade-up',
+  dataAosEasing: 'ease-in-out',
+  dataAosAnchorPlacement: 'top-center',
 };
