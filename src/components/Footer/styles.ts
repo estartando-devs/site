@@ -1,7 +1,11 @@
 import styled from 'styled-components';
-import { Typography } from '../Typography';
 
-export const FooterContainer = styled.footer`
+export const FooterWrapper = styled.footer`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FooterContainer = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,6 +25,7 @@ export const FooterContent = styled.div`
   gap: 16px;
 `;
 
-export const FooterTitle = styled(Typography)`
-  color: ${({ theme }) => theme.palette.design.white};
+export const CopyContainer = styled.section`
+  text-align: center;
+  margin: 0.625rem 0;
 `;
