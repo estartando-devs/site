@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body::after{
    position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-   content:url("https://res.cloudinary.com/estartando-devs/image/upload/c_scale,w_1920/v1645815667/images/header-bg.png") ;
+   content:url("header-bg.png") ;
 }
 
   html {
