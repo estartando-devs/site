@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url('https://res.cloudinary.com/estartando-devs/image/upload/c_scale,w_1780/v1645818507/images/perfil-aluno-bg');
+  background-image: url('perfil-aluno-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;

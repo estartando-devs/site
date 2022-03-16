@@ -10,7 +10,7 @@ export const ContainerHeader = styled.header`
       rgba(30, 30, 30, 0.8),
       rgba(30, 30, 30, 0.8)
     ),
-    url('https://res.cloudinary.com/estartando-devs/image/upload/c_scale,w_1920/v1645815667/images/header-bg');
+    url('header-bg.png');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

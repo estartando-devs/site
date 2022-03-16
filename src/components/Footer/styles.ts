@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-export const FooterContainer = styled.footer`
+export const FooterWrapper = styled.footer`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FooterContainer = styled.section`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -21,6 +26,17 @@ export const FooterContent = styled.div`
   gap: 16px;
 `;
 
-export const FooterTitle = styled(Typography)`
-  color: ${({ theme }) => theme.palette.design.white};
+export const CopyContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem 0;
+`;
+
+export const CopyText = styled(Typography)`
+  &::before {
+    content: '•';
+    display: inline-block;
+    margin: 0px 0.4rem;
+  }
 `;
