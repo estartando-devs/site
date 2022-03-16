@@ -45,7 +45,7 @@ export const TextHowWeDo = styled(Typography).attrs({ variant: 'body2' })`
   }
 `;
 
-export const CardListContainer = styled.section`
+export const CardListContainer = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
