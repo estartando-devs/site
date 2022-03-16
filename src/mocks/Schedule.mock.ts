@@ -1,3 +1,10 @@
+export type Stages = {
+  stage: {
+    title: string;
+    description: string;
+  };
+  key: string;
+};
 export interface ISchedule {
   title: string;
   description: string;
@@ -10,6 +17,7 @@ export interface ISchedule {
 export interface ScheduleSectionProps {
   title: string;
   description: string;
+  stagesList: Stages[];
   schedule: ISchedule[];
 }
 
@@ -57,13 +65,41 @@ export const schedule: ISchedule[] = mock.map((current, index) => ({
   friendlyDate: new Date(current.dateEnd).toLocaleDateString(),
 }));
 
+const stagesList: Stages[] = [
+  {
+    stage: {
+      title: 'TESTE DE CLASSIFICAÇÃO',
+      description:
+        'Uma prova de raciocínio lógico. Simples e objetiva. Funciona como uma classificação de acordo com o número de vagas.',
+    },
+    key: 'stage-1',
+  },
+  {
+    stage: {
+      title: 'BATE-PAPO COM O TIME',
+      description:
+        'Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam melhor com o nosso perfil.',
+    },
+    key: 'stage-2',
+  },
+  {
+    stage: {
+      title: 'НАСКАТНОN',
+      description:
+        'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
+    },
+    key: 'stage-3',
+  },
+];
+
 export const scheduleMock: ScheduleSectionProps = {
-  title: `Sobre o <br /> <span>processo seletivo </span>`,
+  title: `Nosso processo seletivo tem 3 etapas:`,
   description: ` Acreditamos no poder da <span>transformação social</span> através da
   Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
   focada nas exigências do mercado de TI. Os dois cursos incluem ainda
   conhecimentos em métodos de gestão ágil de projetos utilizados no mercado
   para o desenvolvimento de trabalhos em equipe, além de assessoria no
   Linkedin e direcionamento de carreira.`,
+  stagesList,
   schedule,
 };
