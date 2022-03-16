@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Eye } from '@styled-icons/heroicons-outline';
 import { Typography } from '..';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import { Course as ICourse } from '../../mocks';
 import * as S from './styles';
 import { useTheme } from 'styled-components';
@@ -16,8 +18,13 @@ export const Course = ({ courseData }: PropsCourse) => {
       design: { white },
     },
   } = useTheme();
+
   return (
-    <S.CourseContainer>
+    <S.CourseContainer
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+    >
       <S.TitleContainer
         width={courseData.widthContainerTitle}
         bgColor={courseData.backgroundTitle}
