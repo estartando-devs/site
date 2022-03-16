@@ -17,12 +17,12 @@ export const Footer = () => (
       </S.FooterContent>
     </S.FooterContainer>
     <S.CopyContainer>
-      <Typography variant="body3" weight="500">
-        Estartando Devs 2022
+      <Typography variant="body3" weight="400">
+        © Estartando Devs 2022
       </Typography>
-      <Typography variant="body3" weight="500">
+      <S.CopyText variant="body3" weight="400">
         Todos os direitos reservados.
-      </Typography>
+      </S.CopyText>
     </S.CopyContainer>
   </S.FooterWrapper>
 );

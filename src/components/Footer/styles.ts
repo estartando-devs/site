@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Typography } from '../Typography';
 
 export const FooterWrapper = styled.footer`
   display: flex;
@@ -26,6 +27,16 @@ export const FooterContent = styled.div`
 `;
 
 export const CopyContainer = styled.section`
-  text-align: center;
-  margin: 0.625rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem 0;
+`;
+
+export const CopyText = styled(Typography)`
+  &::before {
+    content: '•';
+    display: inline-block;
+    margin: 0px 0.4rem;
+  }
 `;
