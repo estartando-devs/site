@@ -19,6 +19,7 @@ export const Section = styled.section`
 `;
 
 export const Title = styled(Typography)`
+  font-weight: 500;
   span {
     font-size: 3rem;
     line-height: 3.6rem;
@@ -30,6 +31,18 @@ export const Title = styled(Typography)`
       },
     }) => green};
   }
+`;
+
+export const StageTitle = styled(Typography)`
+  color: #00bfa6;
+`;
+
+export const ContentStages = styled.div`
+  display: flex;
+  gap: 15px;
+  /* color: #00bfa6; */
+  /* margin-top: 2.5rem; */
+  flex-direction: column;
 `;
 
 export const Text = styled(Typography)`

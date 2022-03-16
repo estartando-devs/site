@@ -13,12 +13,19 @@ const ScheduleDotGroup = ({ disabled }: { disabled?: boolean }) => (
 
 export const SelectiveProcess = ({
   title,
-  description,
   schedule,
+  stagesList,
 }: ScheduleSectionProps) => (
   <S.Section>
     <S.Title variant="h2" dangerouslySetInnerHTML={{ __html: title }} />
-    <S.Text variant="body2" dangerouslySetInnerHTML={{ __html: description }} />
+
+    {stagesList.map(({ key, stage }) => (
+      <S.ContentStages key={key}>
+        <S.StageTitle variant="h3">{stage.title}</S.StageTitle>
+        <S.Text variant="body2">{stage.description}</S.Text>
+      </S.ContentStages>
+    ))}
+
     <S.ScheduleWrapper>
       <S.ScheduleDotsWrapper>
         {schedule.map(({ key, disable }, index) => {
