@@ -41,8 +41,8 @@ const Home = () => {
       <HowWeDo {...howWeDoMock} />
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
-      <Subscribe {...animateMock} />
-      <OurResults {...animateMock} />
+      <Subscribe />
+      <OurResults />
       <Footer />
     </Layout>
   );
