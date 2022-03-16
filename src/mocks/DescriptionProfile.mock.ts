@@ -1,9 +1,6 @@
 export type studentSectionProfile = {
   title: string;
   description: string;
-  dataAos: string;
-  dataAosEasing: string;
-  dataAosAnchorPlacement: string;
 };
 
 export const studentProfileSection: studentSectionProfile = {
@@ -32,8 +29,4 @@ export const studentProfileSection: studentSectionProfile = {
   e ter bastante disposição para estudar. Ah, é importante ter
   disponibilidade nas terças e quintas, de 19:30 às 21:30, pois esse será
   o horário das aulas.`,
-
-  dataAos: 'fade-up',
-  dataAosEasing: 'ease-in-out',
-  dataAosAnchorPlacement: 'top-center',
 };

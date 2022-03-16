@@ -21,9 +21,9 @@ export const Course = ({ courseData }: PropsCourse) => {
 
   return (
     <S.CourseContainer
-      data-aos={courseData.dataAos}
-      data-aos-easing={courseData.dataAosEasing}
-      data-aos-anchor-placement={courseData.dataAosAnchorPlacement}
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
     >
       <S.TitleContainer
         width={courseData.widthContainerTitle}
