@@ -2,18 +2,12 @@ import Image from 'next/image';
 import { WhatWeTeachProps } from '../../mocks/WhatWeTeach.mock';
 import { Typography } from '../Typography';
 import * as S from './styles';
-const WhatWeTeach = ({
-  title,
-  description,
-  dataAos,
-  dataAosEasing,
-  dataAosAnchorPlacement,
-}: WhatWeTeachProps) => {
+const WhatWeTeach = ({ title, description }: WhatWeTeachProps) => {
   return (
     <S.Container
-      data-aos={dataAos}
-      data-aos-easing={dataAosEasing}
-      data-aos-anchor-placement={dataAosAnchorPlacement}
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
     >
       <S.HeadingSection>
         <Typography variant="h2" dangerouslySetInnerHTML={{ __html: title }} />

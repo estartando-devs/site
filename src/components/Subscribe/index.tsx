@@ -6,16 +6,12 @@ import { animateProps } from '../../mocks/animate.mock';
 
 import * as S from './styles';
 
-export const Subscribe = ({
-  dataAos,
-  dataAosEasing,
-  dataAosAnchorPlacement,
-}: animateProps) => {
+export const Subscribe = () => {
   return (
     <S.ContainerSubscribe
-      data-aos={dataAos}
-      data-aos-easing={dataAosEasing}
-      data-aos-anchor-placement={dataAosAnchorPlacement}
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
     >
       <Image
         src="/images/inscricao-check"

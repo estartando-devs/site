@@ -1,20 +1,16 @@
 import { OurResultsIcon } from '../OurResultsIcon';
-import { animateProps, ourResultsMock } from '../../mocks';
+import { ourResultsMock } from '../../mocks';
 import { Typography } from '../Typography';
 
 import * as S from './styles';
 
-const OurResults = ({
-  dataAos,
-  dataAosEasing,
-  dataAosAnchorPlacement,
-}: animateProps) => {
+const OurResults = () => {
   return (
     <S.OurResultsContainer>
       <S.OurResultsContainerTitle
-        data-aos={dataAos}
-        data-aos-easing={dataAosEasing}
-        data-aos-anchor-placement={dataAosAnchorPlacement}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
       >
         <Typography variant="h2">Nossos</Typography>
         <S.OurResultsContainerTitleResults>

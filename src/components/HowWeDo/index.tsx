@@ -5,18 +5,15 @@ import * as S from './styles';
 
 export const HowWeDo = ({
   title,
-  dataAos,
   description,
-  dataAosEasing,
   characteristicsList,
-  dataAosAnchorPlacement,
 }: HowWeDoSectionProps) => {
   return (
     <S.HowWeDoContainer>
       <S.ExplainingHowWeDo
-        data-aos={dataAos}
-        data-aos-easing={dataAosEasing}
-        data-aos-anchor-placement={dataAosAnchorPlacement}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
       >
         <S.TitleHowWeDo dangerouslySetInnerHTML={{ __html: title }} />
         <S.ContentHowWeDo>
@@ -24,9 +21,9 @@ export const HowWeDo = ({
         </S.ContentHowWeDo>
       </S.ExplainingHowWeDo>
       <S.CardListContainer
-        data-aos={dataAos}
-        data-aos-easing={dataAosEasing}
-        data-aos-anchor-placement={dataAosAnchorPlacement}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
       >
         {characteristicsList.map(({ imageProps, description, key }) => (
           <StudentCharacteristicsCard

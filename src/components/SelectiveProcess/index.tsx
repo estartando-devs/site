@@ -13,32 +13,29 @@ const ScheduleDotGroup = ({ disabled }: { disabled?: boolean }) => (
 
 export const SelectiveProcess = ({
   title,
-  dataAos,
   schedule,
   description,
-  dataAosEasing,
-  dataAosAnchorPlacement,
 }: ScheduleSectionProps) => (
   <S.Section>
     <S.Title
       variant="h2"
-      data-aos={dataAos}
-      data-aos-easing={dataAosEasing}
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
       dangerouslySetInnerHTML={{ __html: title }}
-      data-aos-anchor-placement={dataAosAnchorPlacement}
     />
     <S.Text
-      data-aos={dataAos}
-      data-aos-easing={dataAosEasing}
-      data-aos-anchor-placement={dataAosAnchorPlacement}
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
       variant="body2"
       dangerouslySetInnerHTML={{ __html: description }}
     />
     <S.ScheduleWrapper>
       <S.ScheduleDotsWrapper
-        data-aos={dataAos}
-        data-aos-easing={dataAosEasing}
-        data-aos-anchor-placement={dataAosAnchorPlacement}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
       >
         {schedule.map(({ key, disable }, index) => {
           const isTheLast = index === schedule.length - 1;
@@ -53,9 +50,9 @@ export const SelectiveProcess = ({
       <S.ScheduleContentWrapper>
         {schedule.map(({ title, description, disable, key }) => (
           <S.ScheduleItem
-            data-aos={dataAos}
-            data-aos-easing={dataAosEasing}
-            data-aos-anchor-placement={dataAosAnchorPlacement}
+            data-aos="fade-up"
+            data-aos-easing="ease-in-out"
+            data-aos-anchor-placement="top-center"
             key={`${title}-${key}`}
             variant="h3"
             disabled={disable}

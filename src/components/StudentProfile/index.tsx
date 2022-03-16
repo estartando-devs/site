@@ -3,17 +3,14 @@ import { studentSectionProfile } from '../../mocks/DescriptionProfile.mock';
 
 export const StudentProfile = ({
   title,
-  dataAos,
   description,
-  dataAosEasing,
-  dataAosAnchorPlacement,
 }: studentSectionProfile) => (
   <S.Container>
     <S.ContentStudentProfile>
       <S.TextBox
-        data-aos={dataAos}
-        data-aos-easing={dataAosEasing}
-        data-aos-anchor-placement={dataAosAnchorPlacement}
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
       >
         <S.TitleProfile dangerouslySetInnerHTML={{ __html: title }} />
         <S.DescriptionProfile

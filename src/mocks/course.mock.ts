@@ -4,9 +4,6 @@ export type Course = {
   title: string;
   coursePresentation: string;
   courseModules: string[];
-  dataAos: string;
-  dataAosEasing: string;
-  dataAosAnchorPlacement: string;
 };
 
 export type CourseData = Record<string, Course>;
@@ -29,9 +26,6 @@ const coursesData: CourseData = {
       'Scrum',
       'React Js',
     ],
-    dataAos: 'fade-up',
-    dataAosEasing: 'ease-in-out',
-    dataAosAnchorPlacement: 'top-center',
   },
   backEnd: {
     backgroundTitle: '#1e6f7a',
@@ -53,9 +47,6 @@ const coursesData: CourseData = {
       'SOLID',
     ],
 
-    dataAos: 'fade-up',
-    dataAosEasing: 'ease-in-out',
-    dataAosAnchorPlacement: 'top-center',
   },
   design: {
     backgroundTitle: '#45408e',
@@ -75,9 +66,6 @@ const coursesData: CourseData = {
       'Métricas em UX',
       'Projeto Final: designers e devs criando soluções inovadoras',
     ],
-    dataAos: 'fade-up',
-    dataAosEasing: 'ease-in-out',
-    dataAosAnchorPlacement: 'top-center',
   },
 };
 

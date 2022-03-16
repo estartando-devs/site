@@ -9,11 +9,8 @@ export interface ISchedule {
 
 export interface ScheduleSectionProps {
   title: string;
-  dataAos: string;
   description: string;
   schedule: ISchedule[];
-  dataAosEasing: string;
-  dataAosAnchorPlacement: string;
 }
 
 const mock: ISchedule[] = [
@@ -69,7 +66,4 @@ export const scheduleMock: ScheduleSectionProps = {
   para o desenvolvimento de trabalhos em equipe, além de assessoria no
   Linkedin e direcionamento de carreira.`,
   schedule,
-  dataAos: 'fade-up',
-  dataAosEasing: 'ease-in-out',
-  dataAosAnchorPlacement: 'top-center',
 };
