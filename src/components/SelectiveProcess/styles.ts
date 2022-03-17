@@ -38,10 +38,8 @@ export const StageTitle = styled(Typography)`
 `;
 
 export const ContentStages = styled.div`
-  display: flex;
   gap: 15px;
-  /* color: #00bfa6; */
-  /* margin-top: 2.5rem; */
+  display: flex;
   flex-direction: column;
 `;
 
