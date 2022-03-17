@@ -17,16 +17,6 @@ const OurResultsIcon = ({
   title,
   value,
 }: PropsWithChildren<OurResultsIconProp>) => {
-  useEffect(() => {
-    Aos.init({
-      delay: 50,
-      offset: 200,
-      once: false,
-      mirror: true,
-      duration: 800,
-    });
-  }, []);
-
   return (
     <S.OurResultsIconContainer
       data-aos="zoom-in"
