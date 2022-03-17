@@ -7,7 +7,6 @@ import {
   whatWeTeachMock,
   howWeDoMock,
   cousesMock,
-  animateMock,
 } from '../mocks';
 import {
   Layout,
@@ -41,8 +40,8 @@ const Home = () => {
       <HowWeDo {...howWeDoMock} />
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
-      <Subscribe {...animateMock} />
-      <OurResults {...animateMock} />
+      <Subscribe />
+      <OurResults />
       <Footer />
     </Layout>
   );

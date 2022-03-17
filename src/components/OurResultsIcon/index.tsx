@@ -1,9 +1,6 @@
 import Image from 'next/image';
-import { PropsWithChildren, useEffect } from 'react';
+import { PropsWithChildren } from 'react';
 import { Typography } from '../Typography';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-
 import * as S from './styles';
 
 type OurResultsIconProp = {
