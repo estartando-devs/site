@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Eye } from '@styled-icons/heroicons-outline';
 import { Typography } from '..';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 import { Course as ICourse } from '../../mocks';
 import * as S from './styles';
 import { useTheme } from 'styled-components';
