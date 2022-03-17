@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import {
   scheduleMock,
   studentProfileSection,
@@ -10,27 +12,38 @@ import {
   Layout,
   Footer,
   Header,
-  OurResults,
   Courses,
-  WhatWeTeach,
   HowWeDo,
   Subscribe,
+  OurResults,
+  WhatWeTeach,
   StudentProfile,
   SelectiveProcess,
 } from '../components';
 
-const Home = () => (
-  <Layout>
-    <Header />
-    <WhatWeTeach {...whatWeTeachMock} />
-    <Courses {...cousesMock} />
-    <HowWeDo {...howWeDoMock} />
-    <StudentProfile {...studentProfileSection} />
-    <SelectiveProcess {...scheduleMock} />
-    <Subscribe />
-    <OurResults />
-    <Footer />
-  </Layout>
-);
+const Home = () => {
+  useEffect(() => {
+    Aos.init({
+      delay: 50,
+      offset: 200,
+      once: false,
+      mirror: true,
+      duration: 1000,
+    });
+  }, []);
 
+  return (
+    <Layout>
+      <Header />
+      <WhatWeTeach {...whatWeTeachMock} />
+      <Courses {...cousesMock} />
+      <HowWeDo {...howWeDoMock} />
+      <StudentProfile {...studentProfileSection} />
+      <SelectiveProcess {...scheduleMock} />
+      <Subscribe />
+      <OurResults />
+      <Footer />
+    </Layout>
+  );
+};
 export default Home;

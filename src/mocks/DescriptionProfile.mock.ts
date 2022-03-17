@@ -1,4 +1,4 @@
-type studentSectionProfile = {
+export type studentSectionProfile = {
   title: string;
   description: string;
 };

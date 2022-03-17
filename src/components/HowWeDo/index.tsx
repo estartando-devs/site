@@ -10,13 +10,21 @@ export const HowWeDo = ({
 }: HowWeDoSectionProps) => {
   return (
     <S.HowWeDoContainer>
-      <S.ExplainingHowWeDo>
+      <S.ExplainingHowWeDo
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
+      >
         <S.TitleHowWeDo dangerouslySetInnerHTML={{ __html: title }} />
         <S.ContentHowWeDo>
           <S.TextHowWeDo dangerouslySetInnerHTML={{ __html: description }} />
         </S.ContentHowWeDo>
       </S.ExplainingHowWeDo>
-      <S.CardListContainer>
+      <S.CardListContainer
+        data-aos="fade-up"
+        data-aos-easing="ease-in-out"
+        data-aos-anchor-placement="top-center"
+      >
         {characteristicsList.map(({ imageProps, description, key }) => (
           <StudentCharacteristicsCard
             key={key}

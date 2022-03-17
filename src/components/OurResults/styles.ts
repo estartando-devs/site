@@ -52,13 +52,15 @@ export const OurResultsContainerTitleResults = styled(Typography)`
 
 export const OurResultsContainerContent = styled.div`
   width: 100%;
-  margin: 0 120px;
   display: flex;
-  justify-content: space-evenly;
+  margin: 0 120px;
   max-width: 1116px;
+  justify-content: space-evenly;
 
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    flex-direction: column;
     gap: 50px;
+    margin-top: -50px;
+    margin: 0 0 70px 0;
+    flex-direction: column;
   }
 `;
