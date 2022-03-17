@@ -18,8 +18,7 @@ export const Section = styled.section`
   }
 `;
 
-export const Title = styled(Typography)`
-  font-weight: 500;
+export const Title = styled(Typography).attrs({ weigth: 500 })`
   span {
     font-size: 3rem;
     line-height: 3.6rem;

@@ -93,7 +93,7 @@ const stagesList: Stages[] = [
 ];
 
 export const scheduleMock: ScheduleSectionProps = {
-  title: `Nosso processo seletivo tem 3 etapas:`,
+  title: `Nosso <span>processo seletivo</span> tem 3 etapas:`,
   description: ` Acreditamos no poder da <span>transformação social</span> através da
   Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
   focada nas exigências do mercado de TI. Os dois cursos incluem ainda
