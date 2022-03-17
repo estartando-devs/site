@@ -5,6 +5,8 @@
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.38.0",
     "@styled-icons/heroicons-outline": "^10.36.0",
+    "@types/aos": "^3.0.4",
+    "aos": "^2.3.4",
     "axios": "^0.25.0",
     "commitizen": "^4.2.4",
     "next": "^12.1.0",

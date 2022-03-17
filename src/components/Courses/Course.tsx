@@ -16,8 +16,13 @@ export const Course = ({ courseData }: PropsCourse) => {
       design: { white },
     },
   } = useTheme();
+
   return (
-    <S.CourseContainer>
+    <S.CourseContainer
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+    >
       <S.TitleContainer
         width={courseData.widthContainerTitle}
         bgColor={courseData.backgroundTitle}
