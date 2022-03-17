@@ -34,14 +34,12 @@ export const Title = styled(Typography)`
 `;
 
 export const StageTitle = styled(Typography)`
-  color: #00bfa6;
+  color: ${(props) => props.theme.palette.design.green};
 `;
 
 export const ContentStages = styled.div`
   display: flex;
   gap: 15px;
-  /* color: #00bfa6; */
-  /* margin-top: 2.5rem; */
   flex-direction: column;
 `;
 
