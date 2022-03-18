@@ -1,7 +1,18 @@
 {
-  "name": "inscricao",
-  "version": "1.0.0",
+  "name": "site",
+  "version": "2.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:exp": "next build && next export",
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "eslint src  --max-warnings=0",
+    "lint:css": "stylelint './src/**/*.ts'",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "commit": "cz"
+  },
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.38.0",
     "@styled-icons/heroicons-outline": "^10.36.0",
@@ -43,6 +54,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "prettier": "2.5.1",
     "stylelint": "^14.1.0",
     "stylelint-config-recommended": "^6.0.0",
@@ -51,18 +64,10 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.5.5"
   },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:exp": "next build && next export",
-    "start": "next start",
-    "lint": "eslint src",
-    "lint:css": "stylelint './src/**/*.ts'",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
-    "commit": "cz"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ]
   },
   "browserslist": {
     "production": [
@@ -76,6 +81,11 @@
       "last 1 safari version"
     ]
   },
+  "keywords": [
+    "estartandos-devs",
+    "frontend",
+    "site"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
