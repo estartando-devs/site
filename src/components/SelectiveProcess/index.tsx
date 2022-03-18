@@ -17,7 +17,13 @@ export const SelectiveProcess = ({
   stagesList,
 }: ScheduleSectionProps) => (
   <S.Section>
-    <S.Title variant="h2" dangerouslySetInnerHTML={{ __html: title }} />
+    <S.Title
+      variant="h2"
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+      dangerouslySetInnerHTML={{ __html: title }}
+    />
 
     {stagesList.map(({ key, stage }) => (
       <S.ContentStages
