@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import config from '../../config/constants';
 import { Typography } from '../Typography';
-import { animateProps } from '../../mocks/animate.mock';
 
 import * as S from './styles';
 
