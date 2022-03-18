@@ -35,8 +35,6 @@
   "devDependencies": {
     "@types/aos": "^3.0.4",
     "@babel/core": "^7.17.5",
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
     "@babel/preset-typescript": "^7.16.7",
@@ -88,13 +86,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
