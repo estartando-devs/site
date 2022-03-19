@@ -76,17 +76,17 @@ const stagesList: Stages[] = [
   },
   {
     stage: {
-      title: 'BATE-PAPO COM O TIME',
+      title: 'НАСКАТНОN',
       description:
-        'Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam melhor com o nosso perfil.',
+        'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
     },
     key: 'stage-2',
   },
   {
     stage: {
-      title: 'НАСКАТНОN',
+      title: 'BATE-PAPO COM O TIME',
       description:
-        'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
+        'Aqui a gente se conhece melhor e seleciona os candidatos que se encaixam melhor com o nosso perfil.',
     },
     key: 'stage-3',
   },
