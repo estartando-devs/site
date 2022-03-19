@@ -18,5 +18,9 @@ export const Analytics = () => (
           `,
       }}
     />
+    <script
+      async
+      src={`https://www.googleoptimize.com/optimize.js?id=${process.env.NEXT_PUBLIC_OPT_ID}`}
+    />
   </>
 );
