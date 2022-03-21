@@ -11,10 +11,10 @@
     "lint": "eslint src  --max-warnings=0",
     "lint:css": "stylelint './src/**/*.ts'",
     "generate": "yarn plop --plopfile generators/plopfile.js",
-    "commit": "cz && lint-staged"
+    "commit": "cz"
   },
   "lint-staged": {
-    "src/**/*": [
+    "*.${ts,tsx}": [
       "yarn lint --fix"
     ]
   },
