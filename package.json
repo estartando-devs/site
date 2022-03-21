@@ -1,27 +1,42 @@
 {
-  "name": "inscricao",
-  "version": "1.0.0",
+  "name": "site",
+  "version": "2.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:exp": "next build && next export",
+    "start": "next start",
+    "postinstall": "husky install",
+    "lint": "eslint src  --max-warnings=0",
+    "lint:css": "stylelint './src/**/*.ts'",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
+    "commit": "cz && lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ]
+  },
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.38.0",
     "@styled-icons/heroicons-outline": "^10.36.0",
-    "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
     "axios": "^0.25.0",
-    "commitizen": "^4.2.4",
     "next": "^12.1.0",
     "next-seo": "^5.1.0",
     "nextjs-progressbar": "^0.0.14",
     "plop": "^3.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-loading": "^2.0.3",
     "styled-components": "^5.3.3",
-    "vanilla-masker": "^1.2.0",
-    "yup": "^0.32.11"
+    "vanilla-masker": "^1.2.0"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@babel/core": "^7.17.5",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.14",
@@ -29,12 +44,10 @@
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.21",
     "@types/vanilla-masker": "^1.2.1",
-    "@types/yup": "^0.29.13",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.12.0",
     "babel-plugin-styled-components": "^2.0.6",
     "eslint": "^8.9.0",
-    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "^12.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.5.0",
@@ -43,6 +56,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
     "prettier": "2.5.1",
     "stylelint": "^14.1.0",
     "stylelint-config-recommended": "^6.0.0",
@@ -50,19 +65,6 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.5.5"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:exp": "next build && next export",
-    "start": "next start",
-    "lint": "eslint src",
-    "lint:css": "stylelint './src/**/*.ts'",
-    "generate": "yarn plop --plopfile generators/plopfile.js",
-    "commit": "cz"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -76,6 +78,11 @@
       "last 1 safari version"
     ]
   },
+  "keywords": [
+    "estartandos-devs",
+    "frontend",
+    "site"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

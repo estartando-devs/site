@@ -46,7 +46,6 @@ const coursesData: CourseData = {
       'API REST / GraphQL',
       'SOLID',
     ],
-
   },
   design: {
     backgroundTitle: '#45408e',
