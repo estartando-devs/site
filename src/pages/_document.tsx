@@ -59,11 +59,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
+          <Analytics />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <Analytics />
         </body>
       </Html>
     );
