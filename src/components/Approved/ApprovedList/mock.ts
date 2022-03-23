@@ -10,13 +10,13 @@ export type Course = {
 
 export type CourseData = Record<string, Course>;
 
-export const coursesData = {
+export const coursesData: Record<string, Course> = {
   frontEnd: {
     backgroundTitle: '#0d6f61',
     widthContainerTitle: '300px',
     title: 'Front-end',
     coursePresentation: '',
-    courseModules: approvedListMock.fontend.sort(),
+    courseModules: approvedListMock.frontend.sort(),
   },
   backEnd: {
     backgroundTitle: '#1e6f7a',
