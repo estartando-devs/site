@@ -20,6 +20,7 @@ import {
   StudentProfile,
   SelectiveProcess,
 } from '../components';
+import { BannerApproved, ApprovedList } from '../components/Approved';
 
 const Home = () => {
   useEffect(() => {
@@ -35,6 +36,7 @@ const Home = () => {
   return (
     <Layout>
       <Header />
+      <BannerApproved />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <HowWeDo {...howWeDoMock} />
@@ -42,6 +44,7 @@ const Home = () => {
       <SelectiveProcess {...scheduleMock} />
       <Subscribe />
       <OurResults />
+      <ApprovedList />
       <Footer />
     </Layout>
   );
