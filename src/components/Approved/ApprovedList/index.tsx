@@ -7,21 +7,14 @@ export const ApprovedList = () => {
     <S.ApprovedListContainer id="Resultado">
       <S.ApprovedTitle>Lista de aprovados</S.ApprovedTitle>
       <S.Lists>
-        <S.CourseData
-          acordionTitle="Ver Lista"
-          withAnimation={false}
-          courseData={coursesData.frontEnd}
-        />
-        <S.CourseData
-          acordionTitle="Ver Lista"
-          withAnimation={false}
-          courseData={coursesData.backEnd}
-        />
-        <S.CourseData
-          acordionTitle="Ver Lista"
-          withAnimation={false}
-          courseData={coursesData.design}
-        />
+        {Object.keys(coursesData).map((key: string) => (
+          <S.CourseData
+            key={key}
+            acordionTitle="Ver Lista"
+            withAnimation={false}
+            courseData={coursesData[key]}
+          />
+        ))}
       </S.Lists>
     </S.ApprovedListContainer>
   );
