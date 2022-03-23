@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { useSocialButtons } from './useSocialButtons';
-import * as S from './SocialShareButtonsStyled';
+import { useSocialButtons } from '../../../hooks/useSocialButtons';
+import * as S from './styles';
 
 export const SocialShareButtons = () => {
   const { socialLinks } = useSocialButtons();
