@@ -46,4 +46,7 @@ export const Lists = styled.div`
 export const CourseData = styled(Course)`
   margin-top: 0rem;
   padding-bottom: 3.75rem;
+  li {
+    text-transform: uppercase;
+  }
 `;
