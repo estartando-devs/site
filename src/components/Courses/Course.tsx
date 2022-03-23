@@ -7,9 +7,16 @@ import { useTheme } from 'styled-components';
 
 type PropsCourse = {
   courseData: ICourse;
+  acordionTitle?: string;
+  withAnimation?: boolean;
 };
 
-export const Course = ({ courseData }: PropsCourse) => {
+export const Course = ({
+  courseData,
+  acordionTitle = 'Ver módulos',
+  withAnimation = true,
+  ...rest
+}: PropsCourse) => {
   const [exhibition, setExhibition] = useState(false);
   const {
     palette: {
@@ -17,12 +24,16 @@ export const Course = ({ courseData }: PropsCourse) => {
     },
   } = useTheme();
 
+  const animation = {
+    'data-aos': 'fade-up',
+    'data-aos-easing': 'ease-in-out',
+    'data-aos-anchor-placement': 'top-center',
+  };
+
+  const animationProps = withAnimation ? animation : {};
+
   return (
-    <S.CourseContainer
-      data-aos="fade-up"
-      data-aos-easing="ease-in-out"
-      data-aos-anchor-placement="top-center"
-    >
+    <S.CourseContainer {...animationProps} {...rest}>
       <S.TitleContainer
         width={courseData.widthContainerTitle}
         bgColor={courseData.backgroundTitle}
@@ -31,7 +42,7 @@ export const Course = ({ courseData }: PropsCourse) => {
       </S.TitleContainer>
       <S.IntroText>{courseData.coursePresentation}</S.IntroText>
       <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
-        <S.ModulesText>Ver módulos</S.ModulesText>
+        <S.ModulesText>{acordionTitle}</S.ModulesText>
         <Eye width={24} height={24} color={white} />
       </S.ModulesTextContainer>
       <S.ListModulesContainer>

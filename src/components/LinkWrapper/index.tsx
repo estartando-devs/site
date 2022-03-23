@@ -3,7 +3,7 @@ import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 
 type LinkProps = {
-  color?: 'primary' | 'purple';
+  color?: 'primary' | 'purple' | 'white';
   href: string;
 };
 

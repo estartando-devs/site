@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 type ColorProps = {
-  color?: 'primary' | 'purple';
+  color?: 'primary' | 'purple' | 'white';
 };
 
 export const ContainerLink = styled.div<ColorProps>`
@@ -18,6 +18,7 @@ export const ContainerLink = styled.div<ColorProps>`
   ${({ color, theme }) => css`
     background-color: ${color === 'primary' && theme.palette.primary.main};
     background-color: ${color === 'purple' && theme.palette.design.purple};
+    background-color: ${color === 'white' && theme.palette.design.white};
   `}
 
   box-shadow: ${({ theme }) => theme.shadows[3]};
