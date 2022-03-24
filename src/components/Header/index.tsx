@@ -17,7 +17,9 @@ const Header = () => (
         </Typography>
         <S.ContainerButton>
           <LinkWrapper href={config.INSCRICOES_URL}>
-            <a target="_blank">Faça parte!</a>
+            <a target="_blank" rel="noopener">
+              Faça parte!
+            </a>
           </LinkWrapper>
         </S.ContainerButton>
       </S.ContainerHeading>
