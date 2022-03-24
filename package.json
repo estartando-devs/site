@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:exp": "next build && next export",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src  --max-warnings=0",
     "lint:css": "stylelint './src/**/*.ts'",
