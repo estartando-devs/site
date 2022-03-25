@@ -14,6 +14,7 @@ env:
   AWS_S3_CONFIG: --acl public-read
 
 jobs:
+  runs-on: ubuntu-latest
   build-deploy:
     steps:
       - uses: actions/checkout@v2
