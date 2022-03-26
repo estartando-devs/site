@@ -6,7 +6,7 @@ export const Container = styled.section`
   align-items: center;
   height: 100vh;
   width: 100%;
-  background-image: url('perfil-aluno-bg.png');
+  background-image: url('perfil-aluno-bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: local;
