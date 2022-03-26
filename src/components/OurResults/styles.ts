@@ -7,7 +7,7 @@ export const OurResultsContainer = styled.section`
       ${({ theme: { palette } }) => palette.design.black_transparent},
       ${({ theme: { palette } }) => palette.design.black_transparent}
     ),
-    url('nossos-resultados-bg.png');
+    url('nossos-resultados-bg.webp');
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
