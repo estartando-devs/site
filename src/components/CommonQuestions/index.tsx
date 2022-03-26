@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Logo, Typography } from '..';
 import * as S from './styles';
 
@@ -15,7 +16,11 @@ export type CommonQuestionsProps = {
 export const CommonQuestions = ({ title, questions }: CommonQuestionsProps) => (
   <S.CommonQuestionsSection>
     <header>
-      <Logo width={48} height={68} priority quality={30} />
+      <Link href="/">
+        <a>
+          <Logo width={48} height={68} priority quality={30} />
+        </a>
+      </Link>
     </header>
 
     <S.CommonQestionsSectionTitle

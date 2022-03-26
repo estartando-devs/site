@@ -4,11 +4,16 @@ import * as S from './styles';
 import { Typography } from '../Typography';
 
 import { Logo } from '../Logo';
+import Link from 'next/link';
 
 export const Footer = () => (
   <S.FooterWrapper>
     <S.FooterContainer>
-      <Logo width={65} height={94} />
+      <Link href="/">
+        <a>
+          <Logo width={65} height={94} />
+        </a>
+      </Link>
       <S.FooterContent>
         <Typography variant="body1" weight="700">
           Estartando Devs
@@ -16,6 +21,12 @@ export const Footer = () => (
         <SocialShareButtons />
       </S.FooterContent>
     </S.FooterContainer>
+    <S.DoubtsLinkWrapper>
+      <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
+      <S.DoubtsLink>
+        <Link href="/perguntas-frequentes">{`perguntas mais frequentes`}</Link>
+      </S.DoubtsLink>
+    </S.DoubtsLinkWrapper>
     <S.CopyContainer>
       <Typography variant="body3" weight="400">
         © Estartando Devs 2022
