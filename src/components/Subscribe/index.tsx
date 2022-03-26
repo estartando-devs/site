@@ -27,7 +27,7 @@ export const Subscribe = () => {
           color="purple"
           href={config.INSCRICOES_URL}
         >
-          <a target="_blank" rel="noopener">{`Faça parte!`}</a>
+          <a target="_blank" rel="noreferrer noopener">{`Faça parte!`}</a>
         </S.ContainerSubscribeContentButton>
         <S.ContainerSubscribeContentDoubts>
           <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
