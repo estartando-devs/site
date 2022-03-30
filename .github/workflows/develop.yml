@@ -68,6 +68,12 @@ jobs:
           minPerformanceScore: '80'
           minSeoScore: '90'
           # progressiveWebApp: '10'
+  check-size:
+    needs: [build-deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: compressed-size-action
+      - uses: preactjs/compressed-size-action@2.5.0
   lighthouse-ci:
     needs: [build-deploy]
     runs-on: ubuntu-latest
