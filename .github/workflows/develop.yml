@@ -68,6 +68,14 @@ jobs:
           minPerformanceScore: '80'
           minSeoScore: '90'
           # progressiveWebApp: '10'
+  check-size:
+    needs: [build-deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: preactjs/compressed-size-action@v2
+        with:
+          repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
   lighthouse-ci:
     needs: [build-deploy]
     runs-on: ubuntu-latest
