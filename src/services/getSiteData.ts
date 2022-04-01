@@ -14,7 +14,7 @@ type SiteDataQueryParams = {
 export const getSiteData = async <T>({
   path,
 }: SiteDataQueryParams): Promise<SiteData<T> | undefined> => {
-  const siteData = await fetch(config.SITE_DATA_URL).then((data) =>
+  const siteData = await fetch(`${config.ADMIN_URL}/sitedata`).then((data) =>
     data.json()
   );
 
@@ -23,4 +23,12 @@ export const getSiteData = async <T>({
   );
 
   return data;
+};
+
+export const getApprovedList = async () => {
+  const response = await fetch(`${config.ADMIN_URL}/platform/approved`).then(
+    (data) => data.json()
+  );
+
+  return response;
 };
