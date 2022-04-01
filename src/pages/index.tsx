@@ -21,8 +21,29 @@ import {
   SelectiveProcess,
 } from '../components';
 import { BannerApproved, ApprovedList } from '../components/Approved';
+import { GetStaticProps } from 'next';
+import { getApprovedList } from '../services';
 
-const Home = () => {
+export type ApprovedListCourse = {
+  course: string;
+  students: string[];
+};
+
+type HomeProps = {
+  approvedList: Array<ApprovedListCourse>;
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const approvedList = await getApprovedList();
+
+  return {
+    props: { approvedList },
+  };
+};
+
+const Home = (props: HomeProps) => {
+  console.log(props);
+
   useEffect(() => {
     Aos.init({
       delay: 50,
