@@ -12,11 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${(props) => props.theme.typography.fontFamily};
   }
 
-  body::after{
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-   content:url("header-bg.png") ;
-}
-
   html {
     font-size: ${(props) => props.theme.typography.htmlFontSize}px;
     scroll-behavior: smooth;
