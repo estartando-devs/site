@@ -15,7 +15,7 @@ const Header = () => (
           Transformando o mundo através da tecnologia
         </Typography>
         <S.ContainerButton>
-          <LinkWrapper href={process.env.NEXT_PUBLIC_INSCRICOES_URL || '/'}>
+          <LinkWrapper href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}>
             <a target="_blank" rel="noreferrer noopener">
               Faça parte!
             </a>

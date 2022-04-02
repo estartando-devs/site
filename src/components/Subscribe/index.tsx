@@ -24,7 +24,7 @@ export const Subscribe = () => {
         </S.ContainerSubscribeContentText>
         <S.ContainerSubscribeContentButton
           color="purple"
-          href={process.env.NEXT_PUBLIC_INSCRICOES_URL || '/'}
+          href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
         >
           <a target="_blank" rel="noreferrer noopener">{`Faça parte!`}</a>
         </S.ContainerSubscribeContentButton>
