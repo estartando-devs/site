@@ -29,10 +29,6 @@ export type ApprovedListCourse = {
   students: string[];
 };
 
-type HomeProps = {
-  approvedList: Array<ApprovedListCourse>;
-};
-
 export const getStaticProps: GetStaticProps = async () => {
   const approvedList = await getApprovedList();
 
@@ -41,7 +37,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Home = (props: HomeProps) => {
+const Home = () => {
   useEffect(() => {
     Aos.init({
       delay: 50,
