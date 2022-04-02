@@ -14,7 +14,7 @@ type SiteDataQueryParams = {
 export const getSiteData = async <T>({
   path,
 }: SiteDataQueryParams): Promise<SiteData<T> | undefined> => {
-  const siteData = await fetch(`${config.ADMIN_URL}/sitedata`).then((data) =>
+  const siteData = await fetch(`${config.ADMIN_URL}/siteData`).then((data) =>
     data.json()
   );
 
