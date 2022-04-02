@@ -21,6 +21,21 @@ import {
   SelectiveProcess,
 } from '../components';
 import { BannerApproved, ApprovedList } from '../components/Approved';
+import { GetStaticProps } from 'next';
+import { getApprovedList } from '../services';
+
+export type ApprovedListCourse = {
+  course: string;
+  students: string[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const approvedList = await getApprovedList();
+
+  return {
+    props: { approvedList },
+  };
+};
 
 const Home = () => {
   useEffect(() => {
