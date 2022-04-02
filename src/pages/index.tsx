@@ -42,8 +42,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Home = (props: HomeProps) => {
-  console.log(props);
-
   useEffect(() => {
     Aos.init({
       delay: 50,
