@@ -33,6 +33,8 @@ const theme = {
       orange: '#FF6A2B',
       green: '#00BFA6',
       white: '#FFFFFF',
+      green_dark: '#0d6f61',
+      blue_dark: '#1e6f7a',
     },
     background: {
       default: '#1E1E1E',
