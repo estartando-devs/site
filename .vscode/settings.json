@@ -1,0 +1,15 @@
+{
+  "editor.wordWrap": "on",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 20,
+  "terminal.integrated.fontSize": 12,
+  "editor.tabSize": 2,
+  "editor.renderLineHighlight": "gutter",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs":"active",
+  "editor.rulers": [80, 120],
+  "editor.parameterHints.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+}
