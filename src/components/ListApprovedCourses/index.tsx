@@ -16,7 +16,7 @@ export type ApprovedListCourseType = {
 export const ListApprovedCourses = ({
   approvedListCourse,
 }: ApprovedListCourseType) => (
-  <S.ListApprovedContainer id="approved-list">
+  <S.ListApprovedContainer id="resultado">
     <S.Title>
       <S.TitleCheckout>Confira a lista de</S.TitleCheckout>
       <S.TitleApproved> aprovados :D</S.TitleApproved>

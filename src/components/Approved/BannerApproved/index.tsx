@@ -9,7 +9,7 @@ export const BannerApproved = () => (
         A lista de aprovados para o curso já está disponível!
       </S.BannerTitle>
       <S.ContainerButton>
-        <LinkWrapper color="white" href="#approved-list">
+        <LinkWrapper color="white" href="#resultado">
           <S.BannerButton>Quero ver o resultado</S.BannerButton>
         </LinkWrapper>
       </S.ContainerButton>
