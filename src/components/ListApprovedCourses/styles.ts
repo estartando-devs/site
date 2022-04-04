@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Typography } from '../Typography';
 
 type StyleProps = {
-  bgColor: 'green_dark' | 'blue_dark' | 'purple';
+  color: 'green_dark' | 'blue_dark' | 'purple';
   width?: string;
 };
 
@@ -23,7 +23,7 @@ export const CourseContainer = styled.section`
 `;
 
 export const TitleContainer = styled.div<StyleProps>`
-  background-color: ${({ theme, bgColor }) => theme.palette.design[bgColor]};
+  background-color: ${({ theme, color }) => theme.palette.design[color]};
   max-width: ${({ width }) => width || '350px'};
   height: 1.4rem;
   position: relative;
@@ -70,7 +70,7 @@ export const Title = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.265rem;
 `;
 
 export const TitleCheckout = styled(Typography).attrs({
@@ -84,4 +84,4 @@ export const TitleApproved = styled(Typography).attrs({
   color: ${({ theme }) => theme.palette.design.purple};
 `;
 
-export const ListApprovedContainer = styled.div``;
+export const ListApprovedContainer = styled.section``;

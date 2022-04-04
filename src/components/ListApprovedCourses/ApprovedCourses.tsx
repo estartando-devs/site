@@ -34,8 +34,8 @@ export const ApprovedCourses = ({
 
   return (
     <S.CourseContainer {...animationProps} {...rest}>
-      <S.TitleContainer bgColor={approvedCourse?.color}>
-        <Typography variant="body1">{approvedCourse.course}</Typography>
+      <S.TitleContainer color={approvedCourse?.color}>
+        <Typography variant="body1">{approvedCourse?.course}</Typography>
       </S.TitleContainer>
       <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
         <S.ModulesText>{acordionTitle}</S.ModulesText>
