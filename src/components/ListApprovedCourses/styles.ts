@@ -20,6 +20,8 @@ export const CourseContainer = styled.div`
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
     margin: 6.25rem auto 0;
   }
+
+  margin-bottom: 2rem;
 `;
 
 export const TitleContainer = styled.div<StyleProps>`
