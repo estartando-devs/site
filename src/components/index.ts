@@ -15,3 +15,4 @@ export { StudentProfile } from './StudentProfile';
 export { Subscribe } from './Subscribe';
 export { Typography } from './Typography';
 export { WhatWeTeach } from './WhatWeTeach';
+export * from './ListApprovedCourses';
