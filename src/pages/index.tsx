@@ -14,7 +14,6 @@ import {
   Header,
   Courses,
   HowWeDo,
-  Subscribe,
   OurResults,
   WhatWeTeach,
   StudentProfile,
@@ -55,7 +54,6 @@ const Home = (props: ApprovedListCourseType) => {
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <ListApprovedCourses approvedListCourse={props.approvedListCourse} />
-      <Subscribe />
       <OurResults />
       <Footer />
     </Layout>
