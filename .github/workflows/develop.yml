@@ -12,6 +12,11 @@ env:
   AWS_REGION: us-east-1
   AWS_S3: s3://estartandodevs-site
   AWS_S3_CONFIG: --acl public-read
+  NEXT_PUBLIC_GA_TRACKING_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_DEVS }}
+  NEXT_PUBLIC_GA_TRACKING_ID_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID_DEVS }}
+  NEXT_PUBLIC_OPT_ID_DEVS: ${{ secrets.NEXT_PUBLIC_OPT_ID_DEVS }}
+  NEXT_PUBLIC_INSCRICOES_URL: ${{ secrets.NEXT_PUBLIC_INSCRICOES_URL }}
+  NEXT_PUBLIC_ADMIN_URL: ${{ secrets.NEXT_PUBLIC_ADMIN_URL }}
 
 jobs:
   build-deploy:
