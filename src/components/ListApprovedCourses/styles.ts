@@ -6,7 +6,7 @@ type StyleProps = {
   width?: string;
 };
 
-export const CourseContainer = styled.section`
+export const CourseContainer = styled.div`
   width: 100%;
   padding: 0 7.5rem;
   margin-top: 6.25rem;
