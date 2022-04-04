@@ -34,7 +34,6 @@ export const BannerDescription = styled(Typography).attrs({
   variant: 'body1',
   weight: '400',
 })`
-  max-width: 500px;
   margin-bottom: 30px;
 `;
 
