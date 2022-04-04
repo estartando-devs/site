@@ -3,6 +3,7 @@ import {
   DiscordAlt,
   InstagramAlt,
   LinkedinSquare,
+  Github,
 } from '@styled-icons/boxicons-logos';
 import { useTheme } from 'styled-components';
 
@@ -58,6 +59,17 @@ export const useSocialButtons = () => {
         title: 'Acessar comunidade no discord.',
         href: '#',
         icon: DiscordAlt,
+      },
+      {
+        iconProps: {
+          width: 24,
+          height: 24,
+          alt: 'Logo github',
+          color: theme.palette.design.white,
+        },
+        title: 'Acessar repositório no github.',
+        href: 'https://github.com/estartando-devs',
+        icon: Github,
       },
     ],
     [theme]
