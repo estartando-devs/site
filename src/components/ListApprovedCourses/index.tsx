@@ -4,7 +4,7 @@ import { ApprovedCourses } from './ApprovedCourses';
 import * as S from './styles';
 
 export type ObjectCourseType = {
-  color: string;
+  color: 'green_dark' | 'blue_dark' | 'purple';
   course: string;
   students: string[];
 };
@@ -23,7 +23,7 @@ export const ListApprovedCourses = ({
     </S.Title>
     {approvedListCourse?.map((objectCourse: ObjectCourseType) => (
       <ApprovedCourses
-        key={objectCourse.course}
+        key={objectCourse?.course}
         approvedCourse={objectCourse}
       />
     ))}
