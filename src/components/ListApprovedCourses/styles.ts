@@ -86,4 +86,6 @@ export const TitleApproved = styled(Typography).attrs({
   color: ${({ theme }) => theme.palette.design.purple};
 `;
 
-export const ListApprovedContainer = styled.section``;
+export const ListApprovedContainer = styled.section`
+  padding: 6.25rem 0;
+`;
