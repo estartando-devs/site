@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import config from '../../config/constants';
 import { Typography } from '../Typography';
 
 import * as S from './styles';
@@ -25,7 +24,7 @@ export const Subscribe = () => {
         </S.ContainerSubscribeContentText>
         <S.ContainerSubscribeContentButton
           color="purple"
-          href={config.INSCRICOES_URL}
+          href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
         >
           <a target="_blank" rel="noreferrer noopener">{`Faça parte!`}</a>
         </S.ContainerSubscribeContentButton>
