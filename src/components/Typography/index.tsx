@@ -5,6 +5,8 @@ type TypographyProps = {
   variant: 'h1' | 'h2' | 'h3' | 'body1' | 'body2' | 'body3';
   color?: string;
   weight?: string;
+  lineHeight?: string;
+  fontSize?: string;
 } & HTMLAttributes<HTMLHeadingElement>;
 
 const TypographyDefaultProps: TypographyProps = {
