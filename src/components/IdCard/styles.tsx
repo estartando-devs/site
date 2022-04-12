@@ -13,7 +13,7 @@ export const CardBackground = styled.div`
   margin: 60px 30px;
   height: 720px;
   width: 1290px;
-  background-image: url('bg-card-back.jpg');
+  background-image: url('/bg-card-back.jpg');
   background-size: cover;
   padding: 50px 92px;
 `;
@@ -41,7 +41,7 @@ export const PhotoContainer = styled.div`
 export const PinImage = styled.div`
   width: 16px;
   height: 20px;
-  background-image: url('pin.svg');
+  background-image: url('/pin.svg');
   background-size: cover;
 `;
 
@@ -54,7 +54,7 @@ export const LocalContainer = styled.div`
 export const Logo = styled.div`
   width: 215px;
   height: 64px;
-  background-image: url('logoCard.svg');
+  background-image: url('/logoCard.svg');
   background-size: cover;
 `;
 
@@ -80,7 +80,8 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-export const Image = styled.div`
+
+export const Image = styled.div<{ src: string; alt: string }>`
   -webkit-clip-path: polygon(
     50% 0%,
     100% 25%,
@@ -92,6 +93,6 @@ export const Image = styled.div`
   clip-path: url(#hexagon);
   width: 390px;
   height: 420px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozE1WoHB6vkSlXGVb5n0S9F8OCGRZ4N9rpQ&usqp=CAU');
+  background-image: url(${({ src }) => src});
   background-size: cover;
 `;
