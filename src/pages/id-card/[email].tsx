@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const profile = {
     name: subscribe?.data?.fullName,
     image: {
-      src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozE1WoHB6vkSlXGVb5n0S9F8OCGRZ4N9rpQ&usqp=CAU',
+      src: 'https://res.cloudinary.com/elite-devs/images/logo',
       alt: `imagem aluno(a) ${subscribe?.data.fullName}`,
     },
     course: subscribe?.data?.course,
