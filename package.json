@@ -23,10 +23,14 @@
     ]
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@styled-icons/boxicons-logos": "^10.38.0",
     "@styled-icons/heroicons-outline": "^10.36.0",
     "aos": "^2.3.4",
     "axios": "^0.25.0",
+    "framer-motion": "^6",
     "next": "^12.1.0",
     "next-seo": "^5.1.0",
     "nextjs-progressbar": "^0.0.14",
