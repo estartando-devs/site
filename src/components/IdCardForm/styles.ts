@@ -1,23 +1,43 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import { Typography } from '../Typography';
 
-export const Container = styled.main`
-  padding-top: 2rem;
+export const Container = styled.section`
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    padding: 2rem 15rem 0;
+  }
+  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
   height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 3rem 2rem 2rem;
+  margin: 0 auto;
 
   form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
-    padding: 0 30rem;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
+`;
 
-  h2 {
-    font-size: 1.5rem;
-    text-align: center;
+export const IdCardSectionTitle = styled(Typography)`
+  span {
+    font-size: 2.75rem;
+    line-height: 3.5rem;
+    color: ${({
+      theme: {
+        palette: {
+          design: { purple },
+        },
+      },
+    }) => purple};
   }
 `;
 
@@ -60,11 +80,9 @@ export const FileInputLabel = styled.label`
 
 export const ImagePreviewContainer = styled.div`
   background: url('/EDcard.jpeg') no-repeat;
-  padding: 0 2rem;
   background-size: contain;
-  margin: 0 auto;
   width: 100%;
   height: 100%;
-  max-width: 30rem;
-  max-height: 30rem;
+  max-width: 40rem;
+  max-height: 20rem;
 `;

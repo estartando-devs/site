@@ -1,33 +1,58 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-height: 60vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
+    padding: 3.75rem 1.875rem;
+  }
 `;
 
 export const CardBackground = styled.div`
   display: flex;
-  margin: 60px 30px;
-  height: 720px;
-  width: 1290px;
+  max-width: 1290px;
+  max-height: 720px;
+  height: 100%;
+  width: 100%;
   background-image: url('/bg-card-back.jpg');
   background-size: cover;
-  padding: 50px 92px;
+  padding: 3.125rem 5.75rem;
 `;
 
 export const InfoContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1.25rem;
+`;
+
+export const Logo = styled.div`
+  width: 13.4375rem;
+  height: 4rem;
+  background-image: url('/logoCard.svg');
+  background-size: cover;
 `;
 
 export const CourseContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const PinImage = styled.div`
+  width: 1rem;
+  height: 1.25rem;
+  background-image: url('/pin.svg');
+  background-size: cover;
+`;
+
+export const LocalContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5625rem;
 `;
 
 export const PhotoContainer = styled.div`
@@ -36,26 +61,7 @@ export const PhotoContainer = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-`;
-
-export const PinImage = styled.div`
-  width: 16px;
-  height: 20px;
-  background-image: url('/pin.svg');
-  background-size: cover;
-`;
-
-export const LocalContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 9px;
-`;
-
-export const Logo = styled.div`
-  width: 215px;
-  height: 64px;
-  background-image: url('/logoCard.svg');
-  background-size: cover;
+  gap: 0.5625rem;
 `;
 
 export const ImageContainer = styled.div`
@@ -73,9 +79,8 @@ export const ImageContainer = styled.div`
     rgba(108, 99, 255, 0.61) -0.15%,
     rgba(0, 191, 166, 0.61) 97.5%
   );
-  /* background-color: #fff; */
-  width: 396px;
-  height: 425px;
+  width: 18.75rem;
+  height: 20.5625rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +96,8 @@ export const Image = styled.div<{ src: string; alt: string }>`
     0% 25%
   );
   clip-path: url(#hexagon);
-  width: 390px;
-  height: 420px;
+  width: 18.375rem;
+  height: 20.25rem;
   background-image: url(${({ src }) => src});
   background-size: cover;
 `;

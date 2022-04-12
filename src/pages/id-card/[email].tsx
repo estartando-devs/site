@@ -1,7 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
-import React from 'react';
-import { Layout, Footer } from '../../components';
+import { Layout } from '../../components';
 import {
   IdCard as IdCardComponent,
   IdCardProps,
@@ -23,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const address = await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode));
 
   const profile = {
-    name: subscribe?.data?.fullName,
+    name: query?.name || subscribe?.data?.fullName,
     image: {
       src: 'https://res.cloudinary.com/elite-devs/images/logo',
       alt: `imagem aluno(a) ${subscribe?.data.fullName}`,
@@ -55,8 +54,18 @@ export default function MyIdCard({ profile }: { profile: IdCardProps }) {
           title: 'Estartando Devs',
         }}
       />
-      <IdCardComponent {...profile} />
-      <Footer />
+      <section
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          padding: '2rem',
+        }}
+      >
+        <IdCardComponent {...profile} />
+      </section>
     </Layout>
   );
 }
