@@ -1,9 +1,8 @@
 import { NextSeo } from 'next-seo';
 import React from 'react';
-import { Layout, Footer, CommonQuestionsProps } from '../components';
-import { IdCard } from '../components/IdCard';
+import { Layout, Footer, IdCardForm } from '../../components';
 
-export default function PerguntasFrequentes(props: CommonQuestionsProps) {
+export default function IdCard() {
   return (
     <Layout>
       <NextSeo
@@ -17,7 +16,7 @@ export default function PerguntasFrequentes(props: CommonQuestionsProps) {
           title: 'Estartando Devs',
         }}
       />
-      <IdCard />
+      <IdCardForm />
       <Footer />
     </Layout>
   );
