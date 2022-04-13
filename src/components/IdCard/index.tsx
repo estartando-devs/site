@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import ReactToPrint, { PrintContextConsumer } from 'react-to-print';
-// import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas';
 import { Typography } from '../Typography';
 import PolygonBox from './components/PolygonBox';
 import * as S from './styles';
 import { Button } from '@chakra-ui/react';
 import { useTheme } from 'styled-components';
+import { capitalize } from '../../utils/capitalize';
 
 export type IdCardProps = {
   name?: string;
@@ -36,6 +36,8 @@ export const IdCard = ({
     src: string;
     alt: string;
   }>(image);
+  const ref = useRef(null);
+  const theme = useTheme();
 
   useEffect(() => {
     const imageUploaded = JSON.parse(
@@ -47,31 +49,31 @@ export const IdCard = ({
     }
   }, []);
 
-  const ref = useRef(null);
+  const handleDownloadImage = async () => {
+    const element = ref?.current;
 
-  const theme = useTheme();
+    if (!element) {
+      return;
+    }
+    const canvas = await html2canvas(element, {
+      backgroundColor: null,
+      allowTaint: true,
+      foreignObjectRendering: true,
+    });
+    const data = canvas.toDataURL('image/jpg');
+    const link = document.createElement('a');
 
-  // const handleDownloadImage = async () => {
-  //   const element = ref?.current;
+    if (typeof link.download === 'string') {
+      link.href = data;
+      link.download = 'image.jpg';
 
-  //   if (!element) {
-  //     return;
-  //   }
-  //   const canvas = await html2canvas(element);
-  //   const data = canvas.toDataURL('image/png');
-  //   const link = document.createElement('a');
-
-  //   if (typeof link.download === 'string') {
-  //     link.href = data;
-  //     link.download = 'image.png';
-
-  //     document.body.appendChild(link);
-  //     link.click();
-  //     document.body.removeChild(link);
-  //   } else {
-  //     window.open(data);
-  //   }
-  // };
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(data);
+    }
+  };
 
   return (
     <>
@@ -80,21 +82,25 @@ export const IdCard = ({
         <S.CardBackground>
           <S.InfoContainer>
             <S.Logo />
-            <Typography fontSize="4rem" variant="h1" color="#fff">
-              {name}
-            </Typography>
-            <S.LocalContainer>
-              <S.PinImage />
-              <Typography variant="body1">{`${address?.city} - ${address?.state}`}</Typography>
-            </S.LocalContainer>
-            <S.CourseContainer>
-              <Typography weight="400" variant="body1" color="#b3b3b3">
-                Curso no Estartando Devs
+            <div>
+              <Typography fontSize="5rem" variant="h1" color="#fff">
+                {capitalize(name)}
               </Typography>
-              <Typography weight="700" variant="h2" color="#1EC0D6">
-                {course}
-              </Typography>
-            </S.CourseContainer>
+              <S.LocalContainer>
+                <S.PinImage />
+                <Typography variant="body1">{`${capitalize(
+                  address?.city
+                )} - ${address?.state.toUpperCase()}`}</Typography>
+              </S.LocalContainer>
+              <S.CourseContainer>
+                <Typography weight="400" variant="body1" color="#b3b3b3">
+                  Curso no Estartando Devs
+                </Typography>
+                <Typography weight="700" variant="h2" color="#1EC0D6">
+                  {capitalize(course)}
+                </Typography>
+              </S.CourseContainer>
+            </div>
             <Typography weight="500" variant="body2">
               {'< nós estamos transformando o mundo através da tecnologia >'}
             </Typography>
@@ -109,22 +115,16 @@ export const IdCard = ({
           </S.PhotoContainer>
         </S.CardBackground>
       </S.Container>
-      <ReactToPrint content={() => ref.current}>
-        <PrintContextConsumer>
-          {({ handlePrint }) => (
-            <Button
-              background={theme.palette.primary.main}
-              width={230}
-              onClick={handlePrint}
-            >
-              Exportar
-            </Button>
-          )}
-        </PrintContextConsumer>
-      </ReactToPrint>
-      {/* <Button width={200} onClick={handleDownloadImage}>
+      <Button
+        background={theme.palette.design.purple}
+        color={theme.palette.design.white}
+        width={230}
+        padding="1"
+        marginTop="2"
+        onClick={handleDownloadImage}
+      >
         Exportar
-      </Button> */}
+      </Button>
     </>
   );
 };

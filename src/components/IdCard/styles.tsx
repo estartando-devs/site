@@ -7,16 +7,14 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
-    padding: 3.75rem 1.875rem;
+    padding: 1.75rem 1.875rem;
   }
 `;
 
 export const CardBackground = styled.div`
   display: flex;
-  max-width: 1290px;
-  max-height: 720px;
-  height: 100%;
-  width: 100%;
+  width: 1290px;
+  height: 720px;
   background-image: url('/bg-card-back.jpg');
   background-size: cover;
   padding: 3.125rem 5.75rem;
@@ -26,8 +24,7 @@ export const InfoContainer = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.25rem;
+  justify-content: space-between;
 `;
 
 export const Logo = styled.div`
@@ -53,6 +50,7 @@ export const LocalContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5625rem;
+  margin: 2rem 0 2.8125rem;
 `;
 
 export const PhotoContainer = styled.div`
@@ -79,11 +77,12 @@ export const ImageContainer = styled.div`
     rgba(108, 99, 255, 0.61) -0.15%,
     rgba(0, 191, 166, 0.61) 97.5%
   );
-  width: 18.75rem;
-  height: 20.5625rem;
+  width: 24.75rem;
+  height: 26.5625rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4.9375rem;
 `;
 
 export const Image = styled.div<{ src: string; alt: string }>`
@@ -96,8 +95,8 @@ export const Image = styled.div<{ src: string; alt: string }>`
     0% 25%
   );
   clip-path: url(#hexagon);
-  width: 18.375rem;
-  height: 20.25rem;
+  width: 24.375rem;
+  height: 26.25rem;
   background-image: url(${({ src }) => src});
   background-size: cover;
 `;
