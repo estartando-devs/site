@@ -16,8 +16,17 @@ export default function IdCard() {
           title: 'Estartando Devs',
         }}
       />
-      <IdCardForm />
-      <Footer />
+      <section
+        style={{
+          minHeight: '100vh',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <IdCardForm />
+        <Footer />
+      </section>
     </Layout>
   );
 }

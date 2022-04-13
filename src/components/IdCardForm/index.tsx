@@ -127,7 +127,7 @@ export const IdCardForm = () => {
           Criar
         </Button>
       </form>
-      <S.ImagePreviewContainer />
+      {/* <S.ImagePreviewContainer /> */}
     </S.Container>
   );
 };

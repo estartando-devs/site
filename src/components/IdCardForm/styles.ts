@@ -2,15 +2,15 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { Typography } from '../Typography';
 
-export const Container = styled.section`
+export const Container = styled.div`
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
-    padding: 2rem 15rem 0;
+    padding: 2rem 15rem 2rem;
   }
-  max-width: ${({ theme: { media } }) => media.desktop_fullhd};
-  height: 100vh;
+  max-width: ${({ theme: { media } }) => media.laptops_landscape};
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
+  flex: 1;
   padding: 3rem 2rem 2rem;
   margin: 0 auto;
 
@@ -28,6 +28,7 @@ export const Container = styled.section`
 `;
 
 export const IdCardSectionTitle = styled(Typography)`
+  margin-bottom: 1rem;
   span {
     font-size: 2.75rem;
     line-height: 3.5rem;
