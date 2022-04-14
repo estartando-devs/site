@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
 import { Typography } from '../Typography';
-import PolygonBox from './components/PolygonBox';
 import * as S from './styles';
 import { Button } from '@chakra-ui/react';
 import { useTheme } from 'styled-components';
@@ -78,9 +77,8 @@ export const IdCard = ({
 
   return (
     <>
-      <S.Container ref={ref}>
-        <PolygonBox />
-        <S.CardBackground>
+      <S.Container>
+        <S.CardBackground ref={ref}>
           <S.InfoContainer>
             <S.Logo />
             <div>

@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: max-content;
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
     padding: 1.75rem 1.875rem;
   }
@@ -13,8 +13,8 @@ export const Container = styled.div`
 
 export const CardBackground = styled.div`
   display: flex;
-  width: 1290px;
-  height: 720px;
+  width: max-content;
+  height: max-content;
   background-image: url('/bg-card-back.jpg');
   background-size: cover;
   padding: 3.125rem 5.75rem;
