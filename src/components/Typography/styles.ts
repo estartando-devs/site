@@ -3,15 +3,17 @@ import styled, { css } from 'styled-components';
 type VariantProps = {
   color?: string;
   weight?: string;
+  lineHeight?: string;
+  fontSize?: string;
 };
 
 const h1 = styled.h1<VariantProps>`
-  ${({ theme: { typography }, weight }) => css`
-    font-size: ${typography.h1?.fontSize};
+  ${({ theme: { typography }, weight, lineHeight, fontSize }) => css`
+    font-size: ${fontSize || typography.h1?.fontSize};
     font-family: ${typography.h1?.fontFamily};
     font-weight: ${weight || typography.h1?.fontWeight};
     letter-spacing: ${typography.h1?.letterSpacing};
-    line-height: ${typography.h1?.lineHeight};
+    line-height: ${lineHeight || typography.h1?.lineHeight};
   `}
   color: ${({ color, theme }) => color || theme.palette.primary.main};
 `;

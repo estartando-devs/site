@@ -7,6 +7,7 @@ import theme from '../styles/theme';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../../next-seo.config';
 import NextNProgress from 'nextjs-progressbar';
+import { ChakraProvider } from '@chakra-ui/react';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -39,7 +40,9 @@ function App({ Component, pageProps }: AppProps) {
         stopDelayMs={200}
         height={3}
       />
-      <Component {...pageProps} />
+      <ChakraProvider>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </ThemeProvider>
   );
 }
