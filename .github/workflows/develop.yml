@@ -1,93 +1,93 @@
-name: Deploy DEV
-on:
-  workflow_dispatch:
-  push:
-    branches: [develop]
-  pull_request:
-    branches: [develop]
+# name: Deploy DEV
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches: [develop]
+#   pull_request:
+#     branches: [develop]
 
-env:
-  AWS_DEV_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
-  AWS_DEV_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
-  AWS_REGION: us-east-1
-  AWS_S3: s3://estartandodevs-site
-  AWS_S3_CONFIG: --acl public-read
-  NEXT_PUBLIC_GA_TRACKING_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_DEVS }}
-  NEXT_PUBLIC_GA_TRACKING_ID_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID_DEVS }}
-  NEXT_PUBLIC_OPT_ID_DEVS: ${{ secrets.NEXT_PUBLIC_OPT_ID_DEVS }}
-  NEXT_PUBLIC_INSCRICOES_URL: ${{ secrets.NEXT_PUBLIC_INSCRICOES_URL }}
-  NEXT_PUBLIC_ADMIN_URL: ${{ secrets.NEXT_PUBLIC_ADMIN_URL }}
+# env:
+#   AWS_DEV_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
+#   AWS_DEV_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
+#   AWS_REGION: us-east-1
+#   AWS_S3: s3://estartandodevs-site
+#   AWS_S3_CONFIG: --acl public-read
+#   NEXT_PUBLIC_GA_TRACKING_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_DEVS }}
+#   NEXT_PUBLIC_GA_TRACKING_ID_DEVS: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID_DEVS }}
+#   NEXT_PUBLIC_OPT_ID_DEVS: ${{ secrets.NEXT_PUBLIC_OPT_ID_DEVS }}
+#   NEXT_PUBLIC_INSCRICOES_URL: ${{ secrets.NEXT_PUBLIC_INSCRICOES_URL }}
+#   NEXT_PUBLIC_ADMIN_URL: ${{ secrets.NEXT_PUBLIC_ADMIN_URL }}
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - name: Install yarn
-        run: npm install -g yarn
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - name: Cache node_modules
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Build
-        run: yarn build:exp
-      - uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ env.AWS_DEV_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ env.AWS_DEV_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
-      - name: Deploy
-        run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
-  lighthouse-check:
-    needs: [build-deploy]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@master
-        id: lighthouseCheck
-        with:
-          device: all
-          gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          prCommentEnabled: true
-          prCommentSaveOld: true
-          urls: 'http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
-      - name: Verify Lighthouse Check results
-        uses: foo-software/lighthouse-check-status-action@master
-        with:
-          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
-          minAccessibilityScore: '90'
-          minBestPracticesScore: '80'
-          minPerformanceScore: '80'
-          minSeoScore: '90'
-          # progressiveWebApp: '10'
-  check-size:
-    needs: [build-deploy]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: preactjs/compressed-size-action@v2
-        with:
-          repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-  lighthouse-ci:
-    needs: [build-deploy]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: Run Lighthouse
-        uses: alk831/lighthouse-ci@refactor-lighthouse-thresholds
-        with:
-          repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
-          urls: 'https://www.estartandodevs.com.br/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
+# jobs:
+#   build-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v1
+#         with:
+#           node-version: '14.x'
+#       - name: Install yarn
+#         run: npm install -g yarn
+#       - name: Get yarn cache directory path
+#         id: yarn-cache-dir-path
+#         run: echo "::set-output name=dir::$(yarn cache dir)"
+#       - name: Cache node_modules
+#         uses: actions/cache@v2
+#         id: yarn-cache
+#         with:
+#           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+#           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+#           restore-keys: |
+#             ${{ runner.os }}-yarn-
+#       - name: Install dependencies
+#         run: yarn install --frozen-lockfile
+#       - name: Build
+#         run: yarn build:exp
+#       - uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           aws-access-key-id: ${{ env.AWS_DEV_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ env.AWS_DEV_SECRET_ACCESS_KEY }}
+#           aws-region: ${{ env.AWS_REGION }}
+#       - name: Deploy
+#         run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
+#   lighthouse-check:
+#     needs: [build-deploy]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Lighthouse
+#         uses: foo-software/lighthouse-check-action@master
+#         id: lighthouseCheck
+#         with:
+#           device: all
+#           gitHubAccessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+#           prCommentEnabled: true
+#           prCommentSaveOld: true
+#           urls: 'http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
+#       - name: Verify Lighthouse Check results
+#         uses: foo-software/lighthouse-check-status-action@master
+#         with:
+#           lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+#           minAccessibilityScore: '90'
+#           minBestPracticesScore: '80'
+#           minPerformanceScore: '80'
+#           minSeoScore: '90'
+#           # progressiveWebApp: '10'
+#   check-size:
+#     needs: [build-deploy]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: preactjs/compressed-size-action@v2
+#         with:
+#           repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+#   lighthouse-ci:
+#     needs: [build-deploy]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@master
+#       - name: Run Lighthouse
+#         uses: alk831/lighthouse-ci@refactor-lighthouse-thresholds
+#         with:
+#           repo-token: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+#           urls: 'https://www.estartandodevs.com.br/, http://estartandodevs-site.s3-website-sa-east-1.amazonaws.com/'
