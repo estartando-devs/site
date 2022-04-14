@@ -63,22 +63,14 @@ export const PhotoContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-  clip-path: url(#hexagon);
+  border-radius: 50%;
   background-image: linear-gradient(
     272.22deg,
     rgba(108, 99, 255, 0.61) -0.15%,
     rgba(0, 191, 166, 0.61) 97.5%
   );
-  width: 24.75rem;
-  height: 26.5625rem;
+  width: 26rem;
+  height: 26rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,17 +78,9 @@ export const ImageContainer = styled.div`
 `;
 
 export const Image = styled.div<{ src: string; alt: string }>`
-  -webkit-clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-  clip-path: url(#hexagon);
-  width: 24.375rem;
-  height: 26.25rem;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
   background-image: url(${({ src }) => src});
   background-size: cover;
 `;

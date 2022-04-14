@@ -36,7 +36,7 @@ export const IdCard = ({
     src: string;
     alt: string;
   }>(image);
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const theme = useTheme();
 
   useEffect(() => {
@@ -58,7 +58,8 @@ export const IdCard = ({
     const canvas = await html2canvas(element, {
       backgroundColor: null,
       allowTaint: true,
-      foreignObjectRendering: true,
+      height: element.clientHeight,
+      width: element.clientWidth,
     });
     const data = canvas.toDataURL('image/jpg');
     const link = document.createElement('a');
@@ -120,7 +121,7 @@ export const IdCard = ({
         color={theme.palette.design.white}
         width={230}
         padding="1"
-        marginTop="2"
+        marginBottom="4"
         onClick={handleDownloadImage}
       >
         Exportar
