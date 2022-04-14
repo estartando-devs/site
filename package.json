@@ -27,6 +27,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@styled-icons/boxicons-logos": "^10.38.0",
+    "@styled-icons/boxicons-regular": "^10.38.0",
     "@styled-icons/heroicons-outline": "^10.36.0",
     "aos": "^2.3.4",
     "axios": "^0.25.0",

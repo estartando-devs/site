@@ -5,6 +5,7 @@ import {
   IdCard as IdCardComponent,
   IdCardProps,
 } from '../../components/IdCard';
+import { NotFound } from '../../components/NotFound';
 import { getAddressByCep, cleanZipcode, http } from '../../services';
 import { SubscriptionData } from '../../types/Subscription';
 
@@ -18,6 +19,14 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const subscribe = subscribers.find(
     ({ data: { email } }) => email === query?.email
   );
+
+  if (!subscribe) {
+    return {
+      props: {
+        error: 'Subscriber not found',
+      },
+    };
+  }
 
   const address = await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode));
 
@@ -40,7 +49,20 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   };
 };
 
-export default function MyIdCard({ profile }: { profile: IdCardProps }) {
+export default function MyIdCard({
+  profile,
+  error,
+}: {
+  profile: IdCardProps;
+  error?: string;
+}) {
+  if (error) {
+    return (
+      <Layout>
+        <NotFound />;
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <NextSeo
