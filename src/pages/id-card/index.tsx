@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import React from 'react';
+import { Box } from '@chakra-ui/react';
 import { Layout, Footer, IdCardForm } from '../../components';
 
 export default function IdCard() {
@@ -16,17 +17,15 @@ export default function IdCard() {
           title: 'Estartando Devs',
         }}
       />
-      <section
-        style={{
-          minHeight: '100vh',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
+      <Box
+        minHeight="100vh"
+        height="100%"
+        display="flex"
+        flexDirection="column"
       >
         <IdCardForm />
         <Footer />
-      </section>
+      </Box>
     </Layout>
   );
 }
