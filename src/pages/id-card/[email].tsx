@@ -60,7 +60,7 @@ export default function MyIdCard({ profile }: { profile: IdCardProps }) {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh',
+          height: '100%',
           padding: '2rem',
         }}
       >
