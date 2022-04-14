@@ -8,11 +8,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.palette.background.default};
     font-family: ${(props) => props.theme.typography.fontFamily};
   }
 
   html {
+    background-color: ${({ theme }) => theme.palette.background.default};
     font-size: ${(props) => props.theme.typography.htmlFontSize}px;
     scroll-behavior: smooth;
   }

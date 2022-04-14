@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Typography } from '../Typography';
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ export const Container = styled.div`
 
 export const CardBackground = styled.div`
   display: flex;
+  gap: 8rem;
   width: max-content;
   height: max-content;
   background-image: url('/bg-card-back.jpg');
@@ -83,4 +85,9 @@ export const Image = styled.div<{ src: string; alt: string }>`
   height: 25rem;
   background-image: url(${({ src }) => src});
   background-size: cover;
+  background-position: center;
+`;
+
+export const Text = styled(Typography)`
+  white-space: nowrap;
 `;

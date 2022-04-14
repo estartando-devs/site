@@ -100,17 +100,17 @@ export const IdCard = ({
                 </Typography>
               </S.CourseContainer>
             </div>
-            <Typography weight="500" variant="body2">
+            <S.Text weight="500" variant="body2">
               {'< nós estamos transformando o mundo através da tecnologia >'}
-            </Typography>
+            </S.Text>
           </S.InfoContainer>
           <S.PhotoContainer>
             <S.ImageContainer>
               <S.Image {...imageSrc} />
             </S.ImageContainer>
-            <Typography weight="500" variant="body2">
+            <S.Text weight="500" variant="body2">
               Estudante 2022 @ <strong>estartandodevs</strong>.com.br
-            </Typography>
+            </S.Text>
           </S.PhotoContainer>
         </S.CardBackground>
       </S.Container>
@@ -119,7 +119,7 @@ export const IdCard = ({
         color={theme.palette.design.white}
         width={230}
         padding="1"
-        marginBottom="4"
+        marginTop="4"
         onClick={handleDownloadImage}
       >
         Exportar
