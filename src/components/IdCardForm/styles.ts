@@ -87,3 +87,33 @@ export const ImagePreviewContainer = styled.div`
   max-width: 40rem;
   max-height: 20rem;
 `;
+
+export const ContainerCropper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  background-color: ${({ theme }) => theme.palette.background.default};
+  padding-top: 3rem;
+`;
+
+export const CropperWrapper = styled.div`
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+`;
+
+export const CropperActionsContainer = styled.div`
+  height: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+`;
