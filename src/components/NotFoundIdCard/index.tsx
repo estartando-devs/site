@@ -5,7 +5,7 @@ import { useTheme } from 'styled-components';
 import Router from 'next/router';
 import { Button } from '@chakra-ui/react';
 
-export const NotFound = () => {
+export const NotFoundIdCard = () => {
   const theme = useTheme();
 
   const { push } = Router;

@@ -5,7 +5,7 @@ import {
   IdCard as IdCardComponent,
   IdCardProps,
 } from '../../components/IdCard';
-import { NotFound } from '../../components/NotFound';
+import { NotFoundIdCard } from '../../components/NotFoundIdCard';
 import { getAddressByCep, cleanZipcode, http } from '../../services';
 import { SubscriptionData } from '../../types/Subscription';
 
@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     ({ data: { email } }) => email === query?.email
   );
 
-  if (!subscribe) {
+  if (!subscribe || !subscribe.data.approved) {
     return {
       props: {
         error: 'Subscriber not found',
@@ -59,7 +59,7 @@ export default function MyIdCard({
   if (error) {
     return (
       <Layout>
-        <NotFound />;
+        <NotFoundIdCard />;
       </Layout>
     );
   }
