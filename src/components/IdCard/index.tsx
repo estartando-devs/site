@@ -57,8 +57,6 @@ export const IdCard = ({
     const canvas = await html2canvas(element, {
       backgroundColor: null,
       allowTaint: true,
-      height: element.clientHeight,
-      width: element.clientWidth,
     });
     const data = canvas.toDataURL('image/jpg');
     const link = document.createElement('a');
