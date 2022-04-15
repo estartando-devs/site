@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import {
   Box,
   Button,
@@ -7,52 +8,84 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { ChangeEvent, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTheme } from 'styled-components';
+import Cropper from 'react-easy-crop';
+import { useCropImage } from '../../hooks/useCropImage';
+import { getCroppedImg } from '../../utils/cropImage';
 import { Logo } from '../Logo';
 import { FileIcon } from './components/FileIcon';
 import * as S from './styles';
+import { Status } from '../../types';
 
 export const IdCardForm = () => {
+  const router = useRouter();
+  const theme = useTheme();
+  const [imagePreview, setImagePreview] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState<Status>('idle');
   const {
     register,
     handleSubmit: onSubmit,
     formState: { errors, isSubmitting },
   } = useForm();
-  const [imagePreview, setImagePreview] = useState<Blob | MediaSource>();
-  const router = useRouter();
-  const theme = useTheme();
+  const {
+    crop,
+    setCrop,
+    zoom,
+    setZoom,
+    onCropComplete,
+    onSelectFile,
+    image,
+    showCopper,
+    setShowCopper,
+    croppedArea,
+  } = useCropImage();
 
   const handleSubmit = ({ email, name }: Record<string, string>) => {
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
   };
 
-  const handleUpload = (event: ChangeEvent<HTMLInputElement>) => {
+  const hanldeUpload = async () => {
+    setUploadStatus('loading');
+    const canvas = await getCroppedImg(image, croppedArea);
     const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      const uploaded_image = reader.result;
-      sessionStorage.setItem(
-        'id-card-image',
-        JSON.stringify({
-          image: {
-            src: uploaded_image,
-          },
-        })
-      );
+    canvas?.toBlob((blob) => {
+      reader.readAsDataURL(blob as Blob);
+      reader.onloadend = () => {
+        const uploaded_image = reader.result;
+        try {
+          sessionStorage.setItem(
+            'id-card-image',
+            JSON.stringify({
+              image: {
+                src: uploaded_image,
+              },
+            })
+          );
+          setShowCopper(false);
+          setUploadStatus('success');
+        } catch (error) {
+          setUploadStatus('error');
+          console.log('hanldeUpload ~ error', error);
+        }
+      };
     });
-    if (
-      event.target.files &&
-      event.target.files[0] &&
-      event.target.files[0].size > 80000
-    ) {
-      return alert('O arquivo é muito grande');
-    }
-    if (event.target.files && event.target.files[0]) {
-      reader.readAsDataURL(event.target.files[0]);
-      setImagePreview(event.target.files[0]);
-    }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const storageImage = sessionStorage.getItem('id-card-image');
+
+      if (storageImage) {
+        const value = JSON.parse(storageImage);
+        setImagePreview(value.image.src);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <S.Container>
@@ -96,7 +129,7 @@ export const IdCardForm = () => {
         <S.FileInput
           type="file"
           max-file-size="1024"
-          onChange={handleUpload}
+          onChange={onSelectFile}
           id="file-input"
         />
         <S.FileInputLabel htmlFor="file-input">
@@ -107,7 +140,7 @@ export const IdCardForm = () => {
           {imagePreview && (
             <S.ImagePreview
               layout="fixed"
-              src={URL.createObjectURL(imagePreview)}
+              src={imagePreview}
               alt="Preview"
               width="100%"
               height="100%"
@@ -127,7 +160,33 @@ export const IdCardForm = () => {
           Criar
         </Button>
       </form>
-      {/* <S.ImagePreviewContainer /> */}
+
+      {showCopper && (
+        <S.ContainerCropper>
+          <S.CropperWrapper>
+            <Cropper
+              image={image as string}
+              crop={crop}
+              zoom={zoom}
+              aspect={1}
+              onCropChange={setCrop}
+              onCropComplete={onCropComplete}
+              onZoomChange={setZoom}
+              cropShape="round"
+            />
+          </S.CropperWrapper>
+          <S.CropperActionsContainer>
+            <Button
+              color={theme.palette.design.white}
+              backgroundColor={theme.palette.design.purple}
+              isLoading={uploadStatus === 'loading'}
+              onClick={() => hanldeUpload()}
+            >
+              Salvar
+            </Button>
+          </S.CropperActionsContainer>
+        </S.ContainerCropper>
+      )}
     </S.Container>
   );
 };
