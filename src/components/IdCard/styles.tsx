@@ -6,20 +6,38 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: max-content;
+  width: 100%;
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
     padding: 1.75rem 1.875rem;
+  }
+  @media (max-width: ${({ theme: { media } }) => media.mobile_landscape}) {
+    height: auto;
   }
 `;
 
 export const CardBackground = styled.div`
   display: flex;
   gap: 8rem;
-  width: max-content;
-  height: max-content;
+  width: 1290px;
+  height: 720px;
   background-image: url('/bg-card-back.jpg');
   background-size: cover;
   padding: 3.125rem 5.75rem;
+  @media (max-width: ${({ theme: { media } }) => media.desktop_hd}) {
+    width: auto;
+    height: 100%;
+    transform: scale(0.9);
+  }
+  @media (max-width: ${({ theme: { media } }) => media.laptops_landscape}) {
+    transform: scale(0.7);
+  }
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    transform: scale(0.5);
+  }
+  @media (max-width: ${({ theme: { media } }) => media.mobile_landscape}) {
+    transform: scale(0.4);
+    gap: 6rem;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -34,6 +52,7 @@ export const Logo = styled.div`
   height: 4rem;
   background-image: url('/logoCard.svg');
   background-size: cover;
+  margin-bottom: 1rem;
 `;
 
 export const CourseContainer = styled.div`
@@ -77,12 +96,16 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 4.9375rem;
+  @media (max-width: ${({ theme: { media } }) => media.desktop_hd}) {
+    width: 18rem;
+    height: 18rem;
+  }
 `;
 
 export const Image = styled.div<{ src: string; alt: string }>`
   border-radius: 50%;
-  width: 25rem;
-  height: 25rem;
+  width: 96%;
+  height: 96%;
   background-image: url(${({ src }) => src});
   background-size: cover;
   background-position: center;
