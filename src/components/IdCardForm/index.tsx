@@ -80,7 +80,8 @@ export const IdCardForm = () => {
           toast({
             position: 'top',
             title: 'Imagem maior que 1MB!',
-            description: 'A imagem é muito grande, tente novamente!',
+            description:
+              'A imagem é muito grande, aplique zoom ou tente novamente com outra imagem! ',
             status: 'error',
             duration: 5000,
             isClosable: true,

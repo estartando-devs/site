@@ -19,6 +19,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
     div {
       display: flex;
       flex-direction: column;
