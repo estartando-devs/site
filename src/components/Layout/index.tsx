@@ -1,11 +1,12 @@
 import { HTMLAttributes, PropsWithChildren } from 'react';
 import * as S from './styles';
 
-const Layout = ({
+export const Layout = ({
   children,
+  full = false,
   ...props
-}: PropsWithChildren<HTMLAttributes<HTMLDivElement>>) => (
-  <S.Container {...props}>{children}</S.Container>
+}: { full?: boolean } & PropsWithChildren<HTMLAttributes<HTMLDivElement>>) => (
+  <S.Container full={full} {...props}>
+    {children}
+  </S.Container>
 );
-
-export { Layout };
