@@ -45,7 +45,7 @@ export const IdCardForm = () => {
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
   };
 
-  const hanldeUpload = async () => {
+  const handldeUpload = async () => {
     setUploadStatus('loading');
     const canvas = await getCroppedImg(image, croppedArea);
     const reader = new FileReader();
@@ -66,7 +66,7 @@ export const IdCardForm = () => {
           setUploadStatus('success');
         } catch (error) {
           setUploadStatus('error');
-          console.log('hanldeUpload ~ error', error);
+          console.log('handldeUpload ~ error', error);
         }
       };
     });
@@ -180,11 +180,11 @@ export const IdCardForm = () => {
               color={theme.palette.design.white}
               backgroundColor={theme.palette.design.purple}
               isLoading={uploadStatus === 'loading'}
-              onClick={() => hanldeUpload()}
+              onClick={() => handldeUpload()}
             >
               Salvar
             </Button>
-            <Button onClick={() => setShowCopper(false)}>Calcelar</Button>
+            <Button onClick={() => setShowCopper(false)}>Cancelar</Button>
           </S.CropperActionsContainer>
         </S.ContainerCropper>
       )}
