@@ -5,6 +5,7 @@ import {
   FormErrorMessage,
   FormControl,
   Input,
+  useToast,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -45,6 +46,8 @@ export const IdCardForm = () => {
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
   };
 
+  const toast = useToast();
+
   const handldeUpload = async () => {
     setUploadStatus('loading');
     const canvas = await getCroppedImg(image, croppedArea);
@@ -64,9 +67,24 @@ export const IdCardForm = () => {
           );
           setShowCopper(false);
           setUploadStatus('success');
+          toast({
+            position: 'top',
+            title: 'Succeso!',
+            description: 'A imagem foi carregada com sucesso!',
+            status: 'success',
+            duration: 5000,
+            isClosable: true,
+          });
         } catch (error) {
           setUploadStatus('error');
-          console.log('handldeUpload ~ error', error);
+          toast({
+            position: 'top',
+            title: 'Imagem maior que 1MB!',
+            description: 'A imagem é muito grande, tente novamente!',
+            status: 'error',
+            duration: 5000,
+            isClosable: true,
+          });
         }
       };
     });
