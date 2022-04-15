@@ -184,6 +184,7 @@ export const IdCardForm = () => {
             >
               Salvar
             </Button>
+            <Button onClick={() => setShowCopper(false)}>Calcelar</Button>
           </S.CropperActionsContainer>
         </S.ContainerCropper>
       )}
