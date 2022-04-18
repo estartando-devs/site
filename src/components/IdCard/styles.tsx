@@ -1,5 +1,26 @@
 import styled from 'styled-components';
+import { CourseKey } from '../../mocks';
 import { Typography } from '../Typography';
+
+type CourseStyle = {
+  colorTitle: string;
+  backgroundSrc: string;
+};
+
+const styleByCourse: Record<CourseKey, CourseStyle> = {
+  frontend: {
+    colorTitle: '#81CAA8',
+    backgroundSrc: '/bg-card-front.jpg',
+  },
+  backend: {
+    colorTitle: '#1EC0D6',
+    backgroundSrc: '/bg-card-back.jpg',
+  },
+  desing: {
+    colorTitle: '#6C63FF',
+    backgroundSrc: '/bg-card-desing.png',
+  },
+};
 
 export const Container = styled.div`
   display: flex;
@@ -15,12 +36,12 @@ export const Container = styled.div`
   }
 `;
 
-export const CardBackground = styled.div`
+export const CardBackground = styled.div<{ course: CourseKey }>`
+  background-image: url(${({ course }) => styleByCourse[course].backgroundSrc});
   display: flex;
   gap: 8rem;
   width: 1290px;
   height: 720px;
-  background-image: url('/bg-card-back.jpg');
   background-size: cover;
   padding: 3.125rem 5.75rem;
   @media (max-width: ${({ theme: { media } }) => media.desktop_hd}) {
@@ -58,6 +79,12 @@ export const Logo = styled.div`
 export const CourseContainer = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const CourseTitle = styled(Typography)<{
+  course: CourseKey;
+}>`
+  color: ${({ course }) => styleByCourse[course].colorTitle};
 `;
 
 export const PinImage = styled.div`

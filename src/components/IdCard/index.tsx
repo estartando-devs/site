@@ -1,10 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
-import html2canvas from 'html2canvas';
-import { Typography } from '../Typography';
-import * as S from './styles';
 import { Button } from '@chakra-ui/react';
 import { useTheme } from 'styled-components';
-import { capitalize } from '../../utils/capitalize';
+import { capitalize } from '../../utils';
+import { Typography } from '../Typography';
+import { useIdCardHandlers } from './idCardHandlers';
+import * as S from './styles';
 
 export type IdCardProps = {
   name?: string;
@@ -31,54 +30,17 @@ export const IdCard = ({
     alt: 'imagem aluno(a)',
   },
 }: IdCardProps) => {
-  const [imageSrc, setimageSrc] = useState<{
-    src: string;
-    alt: string;
-  }>(image);
-  const ref = useRef<HTMLDivElement>(null);
   const theme = useTheme();
 
-  useEffect(() => {
-    const imageUploaded = JSON.parse(
-      sessionStorage.getItem('id-card-image') || '{}'
-    );
-
-    if (imageUploaded) {
-      setimageSrc((prev) => ({ ...prev, ...imageUploaded.image }));
-    }
-  }, []);
-
-  const handleDownloadImage = async () => {
-    const element = ref?.current;
-
-    if (!element) {
-      return;
-    }
-    const canvas = await html2canvas(element, {
-      backgroundColor: null,
-      allowTaint: true,
-      height: element.clientHeight,
-      width: element.clientWidth,
-    });
-    const data = canvas.toDataURL('image/jpg');
-    const link = document.createElement('a');
-
-    if (typeof link.download === 'string') {
-      link.href = data;
-      link.download = 'image.jpg';
-
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      window.open(data);
-    }
-  };
+  const { imageSrc, courseKey, ref, handleDownloadImage } = useIdCardHandlers({
+    image,
+    course,
+  });
 
   return (
     <>
       <S.Container>
-        <S.CardBackground ref={ref}>
+        <S.CardBackground ref={ref} course={courseKey}>
           <S.InfoContainer>
             <S.Logo />
             <div>
@@ -95,9 +57,14 @@ export const IdCard = ({
                 <Typography weight="400" variant="body1" color="#b3b3b3">
                   Curso no Estartando Devs
                 </Typography>
-                <Typography weight="700" variant="h2" color="#1EC0D6">
+                <S.CourseTitle
+                  course={courseKey}
+                  weight="700"
+                  variant="h2"
+                  color="#1EC0D6"
+                >
                   {capitalize(course)}
-                </Typography>
+                </S.CourseTitle>
               </S.CourseContainer>
             </div>
             <S.Text weight="500" variant="body2">
