@@ -1,5 +1,4 @@
 name: Deploy DEV
-description: 'test description deploy workflow'
 on:
   workflow_dispatch:
   push:
