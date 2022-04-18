@@ -18,22 +18,9 @@ import {
   WhatWeTeach,
   StudentProfile,
   SelectiveProcess,
-  ListApprovedCourses,
-  ApprovedListCourseType,
 } from '../components';
-import { BannerApproved } from '../components/Approved';
-import { GetStaticProps } from 'next';
-import { getApprovedList } from '../services';
 
-export const getStaticProps: GetStaticProps = async () => {
-  const approvedListCourse = await getApprovedList();
-
-  return {
-    props: { approvedListCourse },
-  };
-};
-
-const Home = (props: ApprovedListCourseType) => {
+const Home = () => {
   useEffect(() => {
     Aos.init({
       delay: 50,
@@ -47,13 +34,11 @@ const Home = (props: ApprovedListCourseType) => {
   return (
     <Layout>
       <Header />
-      <BannerApproved />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <HowWeDo {...howWeDoMock} />
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
-      <ListApprovedCourses approvedListCourse={props.approvedListCourse} />
       <OurResults />
       <Footer />
     </Layout>
