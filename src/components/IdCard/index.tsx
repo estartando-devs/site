@@ -5,6 +5,7 @@ import * as S from './styles';
 import { Button } from '@chakra-ui/react';
 import { useTheme } from 'styled-components';
 import { capitalize } from '../../utils/capitalize';
+import { getKeyByCourse } from './utils';
 
 export type IdCardProps = {
   name?: string;
@@ -37,6 +38,7 @@ export const IdCard = ({
   }>(image);
   const ref = useRef<HTMLDivElement>(null);
   const theme = useTheme();
+  const courseKey = getKeyByCourse(course);
 
   useEffect(() => {
     const imageUploaded = JSON.parse(
@@ -76,7 +78,7 @@ export const IdCard = ({
   return (
     <>
       <S.Container>
-        <S.CardBackground ref={ref}>
+        <S.CardBackground ref={ref} course={courseKey}>
           <S.InfoContainer>
             <S.Logo />
             <div>
@@ -93,9 +95,14 @@ export const IdCard = ({
                 <Typography weight="400" variant="body1" color="#b3b3b3">
                   Curso no Estartando Devs
                 </Typography>
-                <Typography weight="700" variant="h2" color="#1EC0D6">
+                <S.CourseTitle
+                  course={courseKey}
+                  weight="700"
+                  variant="h2"
+                  color="#1EC0D6"
+                >
                   {capitalize(course)}
-                </Typography>
+                </S.CourseTitle>
               </S.CourseContainer>
             </div>
             <S.Text weight="500" variant="body2">

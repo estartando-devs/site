@@ -1,3 +1,5 @@
+export type CourseKey = 'frontend' | 'backend' | 'desing';
+
 export type Course = {
   backgroundTitle: string;
   widthContainerTitle: string;
@@ -6,10 +8,10 @@ export type Course = {
   courseModules: string[];
 };
 
-export type CourseData = Record<string, Course>;
+export type CourseData = Record<CourseKey, Course>;
 
 const coursesData: CourseData = {
-  frontEnd: {
+  frontend: {
     backgroundTitle: '#0d6f61',
     widthContainerTitle: '300px',
     title: 'Programação Front-end',
@@ -27,7 +29,7 @@ const coursesData: CourseData = {
       'React Js',
     ],
   },
-  backEnd: {
+  backend: {
     backgroundTitle: '#1e6f7a',
     widthContainerTitle: '293px',
     title: 'Programação Back-end',
@@ -47,7 +49,7 @@ const coursesData: CourseData = {
       'SOLID',
     ],
   },
-  design: {
+  desing: {
     backgroundTitle: '#45408e',
     widthContainerTitle: '173px',
     title: 'Design UI/UX',
