@@ -9,15 +9,15 @@ type CourseStyle = {
 
 const styleByCourse: Record<CourseKey, CourseStyle> = {
   frontend: {
-    colorTitle: '#0d6f61',
+    colorTitle: '#81CAA8',
     backgroundSrc: '/bg-card-front.jpg',
   },
   backend: {
-    colorTitle: '#1e6f7a',
+    colorTitle: '#1EC0D6',
     backgroundSrc: '/bg-card-back.jpg',
   },
   desing: {
-    colorTitle: '#45408e',
+    colorTitle: '#6C63FF',
     backgroundSrc: '/bg-card-desing.png',
   },
 };
