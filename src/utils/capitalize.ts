@@ -36,6 +36,11 @@ const shouldKeepLowerCase = (wordLowerCase: string) =>
 
 const shouldKeepUpperCase = (word: string) => keepUppercase.includes(word);
 
+/**
+ * @description: Capitalize first letter of each word
+ * @param {string} word: word to be capitalized
+ * @returns {string}
+ */
 export function capitalize(children: string): string {
   if (!children || typeof children !== 'string') return '';
 

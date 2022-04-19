@@ -1,3 +1,4 @@
+import { Box, useToast } from '@chakra-ui/react';
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
 import { Layout } from '../../components';
@@ -6,7 +7,7 @@ import {
   IdCardProps,
 } from '../../components/IdCard';
 import { NotFoundIdCard } from '../../components/NotFoundIdCard';
-import { getAddressByCep, cleanZipcode, http } from '../../services';
+import { cleanZipcode, getAddressByCep, http } from '../../services';
 import { SubscriptionData } from '../../types/Subscription';
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
@@ -16,8 +17,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     ).then((data) => resolve(data.parsedBody as SubscriptionData[]));
   });
 
+  const userEmail = query.email as string;
+
   const subscribe = subscribers.find(
-    ({ data: { email } }) => email === query?.email
+    ({ data: { email } }) => email?.toLowerCase() === userEmail.toLowerCase()
   );
 
   if (!subscribe || !subscribe.data.approved) {
@@ -56,6 +59,8 @@ export default function MyIdCard({
   profile: IdCardProps;
   error?: string;
 }) {
+  const toast = useToast();
+
   if (error) {
     return (
       <Layout>
@@ -63,6 +68,17 @@ export default function MyIdCard({
       </Layout>
     );
   }
+
+  toast({
+    position: 'top',
+    title: 'Tudo pronto!',
+    description:
+      'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
+    status: 'success',
+    duration: 5000,
+    isClosable: true,
+  });
+
   return (
     <Layout>
       <NextSeo
@@ -76,18 +92,16 @@ export default function MyIdCard({
           title: 'Estartando Devs',
         }}
       />
-      <section
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-          padding: '2rem',
-        }}
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+        height="100%"
+        padding="2rem"
       >
         <IdCardComponent {...profile} />
-      </section>
+      </Box>
     </Layout>
   );
 }

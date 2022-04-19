@@ -1,4 +1,5 @@
-import { Button } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
 import { capitalize } from '../../utils';
 import { Typography } from '../Typography';
@@ -37,6 +38,8 @@ export const IdCard = ({
     course,
   });
 
+  const { back } = useRouter();
+
   return (
     <>
       <S.Container>
@@ -63,7 +66,7 @@ export const IdCard = ({
                   variant="h2"
                   color="#1EC0D6"
                 >
-                  {capitalize(course)}
+                  {course}
                 </S.CourseTitle>
               </S.CourseContainer>
             </div>
@@ -81,16 +84,38 @@ export const IdCard = ({
           </S.PhotoContainer>
         </S.CardBackground>
       </S.Container>
-      <Button
-        background={theme.palette.design.purple}
-        color={theme.palette.design.white}
-        width={230}
-        padding="1"
-        marginTop="4"
-        onClick={handleDownloadImage}
+      <Box
+        display="flex"
+        flexDirection={{ base: 'column', sm: 'row' }}
+        gap="16px"
       >
-        Exportar
-      </Button>
+        <Button
+          color={theme.palette.design.white}
+          width={230}
+          padding="1"
+          marginTop="4"
+          variant="outline"
+          onClick={() => back()}
+          _hover={{
+            opacity: 0.9,
+          }}
+        >
+          Voltar
+        </Button>
+        <Button
+          background={theme.palette.design.purple}
+          color={theme.palette.design.white}
+          width={230}
+          padding="1"
+          marginTop="4"
+          onClick={handleDownloadImage}
+          _hover={{
+            opacity: 0.9,
+          }}
+        >
+          Baixar ID Card
+        </Button>
+      </Box>
     </>
   );
 };
