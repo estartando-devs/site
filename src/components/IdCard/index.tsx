@@ -1,4 +1,5 @@
-import { Button } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
 import { capitalize } from '../../utils';
 import { Typography } from '../Typography';
@@ -36,6 +37,8 @@ export const IdCard = ({
     image,
     course,
   });
+
+  const { back } = useRouter();
 
   return (
     <>
@@ -81,16 +84,34 @@ export const IdCard = ({
           </S.PhotoContainer>
         </S.CardBackground>
       </S.Container>
-      <Button
-        background={theme.palette.design.purple}
-        color={theme.palette.design.white}
-        width={230}
-        padding="1"
-        marginTop="4"
-        onClick={handleDownloadImage}
-      >
-        Baixar ID Card
-      </Button>
+      <Box display="flex" gap="16px">
+        <Button
+          color={theme.palette.design.white}
+          width={230}
+          padding="1"
+          marginTop="4"
+          variant="outline"
+          onClick={() => back()}
+          _hover={{
+            opacity: 0.9,
+          }}
+        >
+          Voltar
+        </Button>
+        <Button
+          background={theme.palette.design.purple}
+          color={theme.palette.design.white}
+          width={230}
+          padding="1"
+          marginTop="4"
+          onClick={handleDownloadImage}
+          _hover={{
+            opacity: 0.9,
+          }}
+        >
+          Baixar ID Card
+        </Button>
+      </Box>
     </>
   );
 };

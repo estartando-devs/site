@@ -1,26 +1,26 @@
-import { useEffect, useState } from 'react';
 import { Box, Button, useToast } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import Cropper from 'react-easy-crop';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTheme } from 'styled-components';
-import Cropper from 'react-easy-crop';
 import { useCropImage } from '../../hooks/useCropImage';
+import { Status } from '../../types';
 import { getCroppedImg } from '../../utils/cropImage';
+import { Input } from '../Input';
 import { Logo } from '../Logo';
+import { Typography } from '../Typography';
 import { FileIcon } from './components/FileIcon';
 import * as S from './styles';
-import { Status } from '../../types';
-import { Typography } from '../Typography';
-import { Input } from '../Input';
 
 export const IdCardForm = () => {
   const router = useRouter();
   const theme = useTheme();
   const [imagePreview, setImagePreview] = useState(null);
   const [uploadStatus, setUploadStatus] = useState<Status>('idle');
-
   const methods = useForm();
+
   const {
     crop,
     setCrop,
@@ -36,9 +36,16 @@ export const IdCardForm = () => {
 
   const handleSubmit = ({ email, name }: Record<string, string>) => {
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('name', name);
   };
 
   const toast = useToast();
+
+  useEffect(() => {
+    methods.setValue('email', sessionStorage.getItem('email') || '');
+    methods.setValue('name', sessionStorage.getItem('name') || '');
+  }, [methods]);
 
   const handleUpload = async () => {
     setUploadStatus('loading');
@@ -174,7 +181,6 @@ export const IdCardForm = () => {
           </Button>
         </S.Form>
       </FormProvider>
-
       {showCopper && (
         <S.ContainerCropper>
           <S.CropperWrapper>
