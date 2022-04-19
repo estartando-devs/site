@@ -17,8 +17,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     ).then((data) => resolve(data.parsedBody as SubscriptionData[]));
   });
 
+  const userEmail = query.email as string;
+
   const subscribe = subscribers.find(
-    ({ data: { email } }) => email === query?.email
+    ({ data: { email } }) => email?.toLowerCase() === userEmail.toLowerCase()
   );
 
   if (!subscribe || !subscribe.data.approved) {
