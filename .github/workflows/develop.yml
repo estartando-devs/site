@@ -1,4 +1,4 @@
-name: Deploy DEV
+name: Build
 on:
   workflow_dispatch:
   push:
@@ -19,7 +19,7 @@ env:
   NEXT_PUBLIC_ADMIN_URL: ${{ secrets.NEXT_PUBLIC_ADMIN_URL }}
 
 jobs:
-  build-deploy:
+  build-app:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
