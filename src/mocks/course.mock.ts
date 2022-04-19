@@ -1,4 +1,4 @@
-export type CourseKey = 'frontend' | 'backend' | 'desing';
+export type CourseKey = 'frontend' | 'backend' | 'design';
 
 export type Course = {
   backgroundTitle: string;
@@ -49,7 +49,7 @@ const coursesData: CourseData = {
       'SOLID',
     ],
   },
-  desing: {
+  design: {
     backgroundTitle: '#45408e',
     widthContainerTitle: '173px',
     title: 'Design UI/UX',
