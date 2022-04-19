@@ -30,6 +30,6 @@ export const coursesData: Record<string, Course> = {
     widthContainerTitle: '173px',
     title: 'Design UI/UX',
     coursePresentation: '',
-    courseModules: approvedListMock.desing.sort(),
+    courseModules: approvedListMock.design.sort(),
   },
 };

@@ -1,34 +1,26 @@
-import { useEffect, useState } from 'react';
-import {
-  Box,
-  Button,
-  FormErrorMessage,
-  FormControl,
-  Input,
-  useToast,
-} from '@chakra-ui/react';
+import { Box, Button, useToast } from '@chakra-ui/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useForm } from 'react-hook-form';
-import { useTheme } from 'styled-components';
+import { useEffect, useState } from 'react';
 import Cropper from 'react-easy-crop';
+import { FormProvider, useForm } from 'react-hook-form';
+import { useTheme } from 'styled-components';
 import { useCropImage } from '../../hooks/useCropImage';
+import { Status } from '../../types';
 import { getCroppedImg } from '../../utils/cropImage';
+import { Input } from '../Input';
 import { Logo } from '../Logo';
+import { Typography } from '../Typography';
 import { FileIcon } from './components/FileIcon';
 import * as S from './styles';
-import { Status } from '../../types';
 
 export const IdCardForm = () => {
   const router = useRouter();
   const theme = useTheme();
   const [imagePreview, setImagePreview] = useState(null);
   const [uploadStatus, setUploadStatus] = useState<Status>('idle');
-  const {
-    register,
-    handleSubmit: onSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm();
+  const methods = useForm();
+
   const {
     crop,
     setCrop,
@@ -44,11 +36,18 @@ export const IdCardForm = () => {
 
   const handleSubmit = ({ email, name }: Record<string, string>) => {
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
+    sessionStorage.setItem('email', email);
+    sessionStorage.setItem('name', name);
   };
 
   const toast = useToast();
 
-  const handldeUpload = async () => {
+  useEffect(() => {
+    methods.setValue('email', sessionStorage.getItem('email') || '');
+    methods.setValue('name', sessionStorage.getItem('name') || '');
+  }, [methods]);
+
+  const handleUpload = async () => {
     setUploadStatus('loading');
     const canvas = await getCroppedImg(image, croppedArea);
     const reader = new FileReader();
@@ -108,78 +107,85 @@ export const IdCardForm = () => {
 
   return (
     <S.Container>
-      <header>
+      <S.Header>
         <Link href="/">
           <a>
-            <Logo width={48} height={68} priority quality={30} />
+            <Logo width={91} height={138} priority quality={30} />
           </a>
         </Link>
-      </header>
-      <form onSubmit={onSubmit(handleSubmit)}>
-        <S.IdCardSectionTitle variant="h2" color="white">
-          Crie seu ID Card personalizado e divulge nas suas redes.
-          <br /> <span>Não esqueça de nos marcar \o/</span>
-        </S.IdCardSectionTitle>
-        <FormControl isInvalid={errors.email}>
-          <Input
-            placeholder="Nome"
-            type="text"
-            id="name"
-            {...register('name')}
-            textColor="white"
-          />
+        <S.ContainerHeading>
+          <Typography variant="h1">Estartando Devs</Typography>
+          <Typography variant="h2">
+            ID CARD <span>2022</span>
+          </Typography>
+        </S.ContainerHeading>
+      </S.Header>
+      <FormProvider {...methods}>
+        <S.Form onSubmit={methods.handleSubmit(handleSubmit)}>
+          <S.IdCardSectionTitle variant="h2" color="white">
+            Crie seu ID Card personalizado e divulge nas suas redes.
+          </S.IdCardSectionTitle>
+          <Input placeholder="Nome" type="text" id="name" name="name" />
           <Input
             placeholder="E-mail"
             type="text"
             id="email"
-            {...register('email', {
+            name="email"
+            validation={{
               required: 'E-mail é obrigatório',
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: 'Insira um e-mail válido',
               },
-            })}
-            textColor="white"
+            }}
           />
-          <FormErrorMessage>
-            {errors.email && errors.email.message}
-          </FormErrorMessage>
-        </FormControl>
-        <S.FileInput
-          type="file"
-          max-file-size="1024"
-          onChange={onSelectFile}
-          id="file-input"
-        />
-        <S.FileInputLabel htmlFor="file-input">
-          <FileIcon />
-          <span>Carregar foto</span>
-        </S.FileInputLabel>
-        <Box margin="0 auto">
-          {imagePreview && (
-            <S.ImagePreview
-              layout="fixed"
-              src={imagePreview}
-              alt="Preview"
-              width="100%"
-              height="100%"
-              objectFit="contain"
-            />
-          )}
-        </Box>
-        <Button
-          type="submit"
-          color={theme.palette.design.white}
-          backgroundColor={theme.palette.primary.main}
-          isLoading={isSubmitting}
-          _hover={{
-            backgroundColor: theme.palette.design.green_dark,
-          }}
-        >
-          Criar
-        </Button>
-      </form>
-
+          <S.FileInput
+            type="file"
+            max-file-size="1024"
+            onChange={onSelectFile}
+            id="file-input"
+          />
+          <S.FileInputLabel htmlFor="file-input">
+            <S.ContainerInputFileContent>
+              <Typography
+                variant="body3"
+                color={theme.palette.primary.main}
+                weight="bold"
+              >
+                Enviar foto
+              </Typography>
+              <FileIcon />
+            </S.ContainerInputFileContent>
+          </S.FileInputLabel>
+          <Box margin="0 auto">
+            {imagePreview && (
+              <S.ImagePreview
+                layout="fixed"
+                src={imagePreview}
+                alt="Preview"
+                width="100%"
+                height="100%"
+                objectFit="contain"
+              />
+            )}
+          </Box>
+          <Button
+            type="submit"
+            color={theme.palette.design.white}
+            backgroundColor={theme.palette.design.purple}
+            _hover={
+              imagePreview
+                ? {
+                    opacity: 0.9,
+                  }
+                : {}
+            }
+            disabled={!imagePreview}
+          >
+            Criar ID Card
+          </Button>
+        </S.Form>
+      </FormProvider>
       {showCopper && (
         <S.ContainerCropper>
           <S.CropperWrapper>
@@ -199,7 +205,7 @@ export const IdCardForm = () => {
               color={theme.palette.design.white}
               backgroundColor={theme.palette.design.purple}
               isLoading={uploadStatus === 'loading'}
-              onClick={() => handldeUpload()}
+              onClick={handleUpload}
             >
               Salvar
             </Button>
