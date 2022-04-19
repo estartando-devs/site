@@ -63,7 +63,7 @@ export const IdCard = ({
                   variant="h2"
                   color="#1EC0D6"
                 >
-                  {capitalize(course)}
+                  {course}
                 </S.CourseTitle>
               </S.CourseContainer>
             </div>
@@ -89,7 +89,7 @@ export const IdCard = ({
         marginTop="4"
         onClick={handleDownloadImage}
       >
-        Exportar
+        Baixar ID Card
       </Button>
     </>
   );
