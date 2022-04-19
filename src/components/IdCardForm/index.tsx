@@ -173,9 +173,14 @@ export const IdCardForm = () => {
             type="submit"
             color={theme.palette.design.white}
             backgroundColor={theme.palette.design.purple}
-            _hover={{
-              opacity: 0.9,
-            }}
+            _hover={
+              imagePreview
+                ? {
+                    opacity: 0.9,
+                  }
+                : {}
+            }
+            disabled={!imagePreview}
           >
             Criar ID Card
           </Button>
