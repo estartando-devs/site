@@ -4,7 +4,7 @@ import { Typography } from '../Typography';
 
 export const Container = styled.div`
   @media (min-width: ${({ theme: { media } }) => media.desktop_fullhd}) {
-    padding: 2rem 15rem 2rem;
+    padding: 2rem 10rem 2rem;
   }
   max-width: ${({ theme: { media } }) => media.laptops_landscape};
   display: flex;
@@ -12,6 +12,7 @@ export const Container = styled.div`
   gap: 1rem;
   flex: 1;
   padding: 3rem 2rem 2rem;
+  align-items: center;
   margin: 0 auto;
 
   form {
@@ -28,19 +29,41 @@ export const Container = styled.div`
   }
 `;
 
-export const IdCardSectionTitle = styled(Typography)`
-  margin-bottom: 1rem;
-  span {
-    font-size: 2.75rem;
-    line-height: 3.5rem;
-    color: ${({
-      theme: {
-        palette: {
-          design: { purple },
-        },
-      },
-    }) => purple};
+export const ContainerHeading = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    span {
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: ${({ theme: { palette } }) =>
+        palette.design.white};
+      color: transparent;
+    }
   }
+`;
+
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  gap: 2.625rem;
+`;
+
+export const IdCardSectionTitle = styled(Typography)`
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+`;
+
+export const Form = styled.form`
+  padding: 0 1rem;
+`;
+
+export const ContainerInputFileContent = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row !important;
+  align-items: center;
 `;
 
 export const ImagePreview = styled(Image)`
@@ -67,11 +90,12 @@ export const FileInputLabel = styled.label`
   color: #fff;
   font-size: 0.875rem;
   padding: 0.625rem 0.75rem;
-  background-color: ${({ theme }) => theme.palette.primary.main};
+  border: 2px solid #81caa8;
+  background-color: transparent;
   box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.25);
-  transition: background-color 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   &:hover {
-    background-color: ${({ theme }) => theme.palette.design.green_dark};
+    opacity: 0.8;
   }
 
   svg {

@@ -16,9 +16,9 @@ const styleByCourse: Record<CourseKey, CourseStyle> = {
     colorTitle: '#1EC0D6',
     backgroundSrc: '/bg-card-back.jpg',
   },
-  desing: {
+  design: {
     colorTitle: '#6C63FF',
-    backgroundSrc: '/bg-card-desing.png',
+    backgroundSrc: '/bg-card-design.png',
   },
 };
 

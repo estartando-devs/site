@@ -11,10 +11,11 @@ const LinkWrapper = ({
   color = 'primary',
   children,
   href,
+  target,
   ...props
-}: PropsWithChildren<LinkProps>) => (
+}: PropsWithChildren<LinkProps> & { target?: string }) => (
   <S.ContainerLink color={color} {...props}>
-    <Link href={href}>{children}</Link>
+    <Link href={href}>{target && <a target={target}>{children}</a>}</Link>
   </S.ContainerLink>
 );
 

@@ -40,10 +40,6 @@ export const BannerDescription = styled(Typography).attrs({
 export const BannerButton = styled.a`
   color: ${(props) => props.theme.palette?.design?.purple} !important;
   max-width: 470px;
-
-  /* &:hover {
-    color: ${(props) => props.theme.palette?.design?.white};
-  } */
 `;
 
 export const ContainerButton = styled.div`
