@@ -84,7 +84,11 @@ export const IdCard = ({
           </S.PhotoContainer>
         </S.CardBackground>
       </S.Container>
-      <Box display="flex" gap="16px">
+      <Box
+        display="flex"
+        flexDirection={{ base: 'column', sm: 'row' }}
+        gap="16px"
+      >
         <Button
           color={theme.palette.design.white}
           width={230}
