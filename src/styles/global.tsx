@@ -8,16 +8,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.palette.background.default};
     font-family: ${(props) => props.theme.typography.fontFamily};
   }
 
-  body::after{
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-   content:url("header-bg.png") ;
-}
-
   html {
+    background-color: ${({ theme }) => theme.palette.background.default};
     font-size: ${(props) => props.theme.typography.htmlFontSize}px;
     scroll-behavior: smooth;
   }

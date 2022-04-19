@@ -14,13 +14,11 @@ import {
   Header,
   Courses,
   HowWeDo,
-  Subscribe,
   OurResults,
   WhatWeTeach,
   StudentProfile,
   SelectiveProcess,
 } from '../components';
-import { BannerApproved, ApprovedList } from '../components/Approved';
 
 const Home = () => {
   useEffect(() => {
@@ -36,15 +34,12 @@ const Home = () => {
   return (
     <Layout>
       <Header />
-      <BannerApproved />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <HowWeDo {...howWeDoMock} />
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
-      <Subscribe />
       <OurResults />
-      <ApprovedList />
       <Footer />
     </Layout>
   );
