@@ -91,7 +91,7 @@ const frontend = [
   'Amanda Lopes Braga Pereira',
 ];
 
-const desing = [
+const design = [
   'Dalila Neves de Azevedo',
   'Mariana de Souza Maia',
   'Filipe de Oliveira Mariano',
@@ -138,5 +138,5 @@ const desing = [
 export const approvedListMock = {
   frontend,
   backend,
-  desing,
+  design,
 };
