@@ -30,10 +30,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
       },
     };
   }
-  console.log(
-    'constgetServerSideProps:GetServerSideProps= ~ subscribe',
-    subscribe
-  );
 
   const address = subscribe?.data?.zipcode
     ? await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode))
