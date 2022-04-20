@@ -30,8 +30,14 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
       },
     };
   }
+  console.log(
+    'constgetServerSideProps:GetServerSideProps= ~ subscribe',
+    subscribe
+  );
 
-  const address = await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode));
+  const address = subscribe?.data?.zipcode
+    ? await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode))
+    : { localidade: subscribe?.data.city, uf: '' };
 
   const profile = {
     name: query?.name || subscribe?.data?.fullName,
