@@ -29,7 +29,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <meta
           property="og:image"
-          content="https://media-exp1.licdn.com/dms/image/C4D0BAQEp4FVZvqZz2Q/company-logo_200_200/0?e=2159024400&v=beta&t=7u2-5asQNxjGYAgF18kGeHiIc-WXNIqwNscWXhuRzoY"
+          content="https://media-exp1.licdn.com/dms/image/C4E0BAQHRvyVjtJ8VOQ/company-logo_200_200/0/1647105778991?e=2147483647&v=beta&t=cIgrEVmzAxgN5k4CQnCTNKBgXkJDOIufdqTeHcWzsHk"
         />
       </Head>
       <GlobalStyles />
