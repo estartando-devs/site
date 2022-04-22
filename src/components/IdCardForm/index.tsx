@@ -144,10 +144,11 @@ export const IdCardForm = (props: { team?: boolean }) => {
                 {...methods.register('course')}
                 placeholder="Selecione"
                 name="course"
+                id="course"
                 color={theme.palette.design.white}
               >
                 {Object.entries(CourseNameByKey).map(([key, value]) => (
-                  <option key={key} value={key}>
+                  <option key={key} value={value}>
                     {value}
                   </option>
                 ))}
