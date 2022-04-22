@@ -135,8 +135,8 @@ export const IdCardForm = (props: { team?: boolean }) => {
           {props.team && (
             <>
               <Input
-                placeholder="Cep"
-                type="number"
+                placeholder="CEP"
+                type="text"
                 id="zipcode"
                 name="zipcode"
               />
@@ -144,16 +144,13 @@ export const IdCardForm = (props: { team?: boolean }) => {
                 {...methods.register('course')}
                 placeholder="Selecione"
                 name="course"
+                color={theme.palette.design.white}
               >
-                <option value={CourseNameByKey.frontend}>
-                  {CourseNameByKey.frontend}
-                </option>
-                <option value={CourseNameByKey.backend}>
-                  {CourseNameByKey.backend}
-                </option>
-                <option value={CourseNameByKey.design}>
-                  {CourseNameByKey.design}
-                </option>
+                {Object.entries(CourseNameByKey).map(([key, value]) => (
+                  <option key={key} value={key}>
+                    {value}
+                  </option>
+                ))}
               </Select>
             </>
           )}
