@@ -24,6 +24,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   const profile = {
     name: query?.name,
+    team: true,
     image: {
       src: 'https://res.cloudinary.com/elite-devs/images/logo',
       alt: `imagem monitor(a) ${query?.name}`,
