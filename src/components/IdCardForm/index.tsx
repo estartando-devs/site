@@ -1,4 +1,5 @@
-import { Box, Button, useToast } from '@chakra-ui/react';
+import { Box, Button, Select, useToast } from '@chakra-ui/react';
+import { setCookies } from 'cookies-next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -6,7 +7,7 @@ import Cropper from 'react-easy-crop';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTheme } from 'styled-components';
 import { useCropImage } from '../../hooks/useCropImage';
-import { Status } from '../../types';
+import { CourseNameByKey, Status } from '../../types';
 import { getCroppedImg } from '../../utils/cropImage';
 import { Input } from '../Input';
 import { Logo } from '../Logo';
@@ -14,7 +15,7 @@ import { Typography } from '../Typography';
 import { FileIcon } from './components/FileIcon';
 import * as S from './styles';
 
-export const IdCardForm = () => {
+export const IdCardForm = (props: { team?: boolean }) => {
   const router = useRouter();
   const theme = useTheme();
   const [imagePreview, setImagePreview] = useState(null);
@@ -34,7 +35,12 @@ export const IdCardForm = () => {
     croppedArea,
   } = useCropImage();
 
-  const handleSubmit = ({ email, name }: Record<string, string>) => {
+  const handleSubmit = ({ email, name, ...rest }: Record<string, string>) => {
+    if (props.team) {
+      setCookies('nagato', JSON.stringify({ ...rest }));
+      router.push(`/id-card/time/${name}`);
+      return;
+    }
     router.push({ pathname: '/id-card/[email]', query: { email, name } });
     sessionStorage.setItem('email', email);
     sessionStorage.setItem('name', name);
@@ -126,19 +132,44 @@ export const IdCardForm = () => {
             Crie seu ID Card personalizado e divulge nas suas redes.
           </S.IdCardSectionTitle>
           <Input placeholder="Nome" type="text" id="name" name="name" />
-          <Input
-            placeholder="E-mail"
-            type="text"
-            id="email"
-            name="email"
-            validation={{
-              required: 'E-mail é obrigatório',
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Insira um e-mail válido',
-              },
-            }}
-          />
+          {props.team && (
+            <>
+              <Input
+                placeholder="CEP"
+                type="text"
+                id="zipcode"
+                name="zipcode"
+              />
+              <Select
+                {...methods.register('course')}
+                placeholder="Selecione"
+                name="course"
+                id="course"
+                color={theme.palette.design.white}
+              >
+                {Object.entries(CourseNameByKey).map(([key, value]) => (
+                  <option key={key} value={value}>
+                    {value}
+                  </option>
+                ))}
+              </Select>
+            </>
+          )}
+          {!props.team && (
+            <Input
+              placeholder="E-mail"
+              type="text"
+              id="email"
+              name="email"
+              validation={{
+                required: 'E-mail é obrigatório',
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: 'Insira um e-mail válido',
+                },
+              }}
+            />
+          )}
           <S.FileInput
             type="file"
             max-file-size="1024"
