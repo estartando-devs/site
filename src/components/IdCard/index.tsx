@@ -8,6 +8,7 @@ import * as S from './styles';
 
 export type IdCardProps = {
   name?: string;
+  team?: boolean;
   image?: {
     src: string;
     alt: string;
@@ -21,6 +22,7 @@ export type IdCardProps = {
 
 export const IdCard = ({
   name = 'estartando devs',
+  team,
   course = 'dev backend',
   address = {
     city: 'rio de janeiro',
@@ -54,11 +56,11 @@ export const IdCard = ({
                 <S.PinImage />
                 <Typography variant="body1">{`${capitalize(
                   address?.city
-                )} - ${address?.state.toUpperCase()}`}</Typography>
+                )} - ${address?.state?.toUpperCase()}`}</Typography>
               </S.LocalContainer>
               <S.CourseContainer>
                 <Typography weight="400" variant="body1" color="#b3b3b3">
-                  Curso no Estartando Devs
+                  {team ? 'Monitoria no Curso' : 'Curso no Estartando Devs'}
                 </Typography>
                 <S.CourseTitle
                   course={courseKey}
@@ -79,7 +81,8 @@ export const IdCard = ({
               <S.Image {...imageSrc} />
             </S.ImageContainer>
             <S.Text weight="500" variant="body2">
-              Estudante 2022 @ <strong>estartandodevs</strong>.com.br
+              {team ? 'Equipe' : 'Estudante'} 2022 @{' '}
+              <strong>estartandodevs</strong>.com.br
             </S.Text>
           </S.PhotoContainer>
         </S.CardBackground>

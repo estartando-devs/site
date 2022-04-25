@@ -14,6 +14,9 @@ interface IViaCep {
 
 export const getAddressByCep = async (cep?: string): Promise<IViaCep> =>
   new Promise((resolve) => {
+    if (!cep) {
+      return resolve({} as IViaCep);
+    }
     http<IViaCep>(`https://viacep.com.br/ws/${cep}/json/`).then((response) => {
       return resolve(response.parsedBody as IViaCep);
     });
