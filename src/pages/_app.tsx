@@ -13,7 +13,6 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Estartando Devs</title>
         <meta
           name="google-site-verification"
           content="8kDtWUmUQEh7QXoj_shRaxcgYAVpHs_YQ7TeniN0kmI"
@@ -23,14 +22,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="apple-mobile-web-app-status-bar-style" content="#81CAA8" />
         <meta name="msapplication-navbutton-color" content="#81CAA8" />
         <link rel="manifest" href="/manifest.json" />
-        <meta
-          name="description"
-          content="Acreditamos no poder de transformação social através da tecnologia."
-        />
-        <meta
-          property="og:image"
-          content="https://media-exp1.licdn.com/dms/image/C4E0BAQHRvyVjtJ8VOQ/company-logo_200_200/0/1647105778991?e=2147483647&v=beta&t=cIgrEVmzAxgN5k4CQnCTNKBgXkJDOIufdqTeHcWzsHk"
-        />
       </Head>
       <GlobalStyles />
       <DefaultSeo {...SEO} />
