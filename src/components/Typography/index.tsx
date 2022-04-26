@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import { HTMLAttributes, PropsWithChildren } from 'react';
 import Typographies from './styles';
 
 type TypographyProps = {
@@ -7,6 +7,7 @@ type TypographyProps = {
   weight?: string;
   lineHeight?: string;
   fontSize?: string;
+  as?: keyof JSX.IntrinsicElements;
 } & HTMLAttributes<HTMLHeadingElement>;
 
 const TypographyDefaultProps: TypographyProps = {
@@ -19,7 +20,7 @@ const Typography = ({
   weight,
   children,
   ...props
-}: PropsWithChildren<TypographyProps>) => {
+}: Omit<PropsWithChildren<TypographyProps>, 'as'>) => {
   const Element = Typographies[variant];
 
   return (

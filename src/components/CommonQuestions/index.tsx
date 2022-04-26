@@ -24,17 +24,14 @@ export const CommonQuestions = ({ title, questions }: CommonQuestionsProps) => (
     </header>
 
     <S.CommonQestionsSectionTitle
-      variant="h1"
-      color="white"
+      as="h1"
       dangerouslySetInnerHTML={{ __html: title }}
     />
     <S.QestionsContent>
       <S.QuestionsWrapper>
         {questions.map(({ key, question, answer }) => (
           <S.Question key={key}>
-            <S.QuestionTitle variant="h3" weight="700">
-              {question}
-            </S.QuestionTitle>
+            <S.QuestionTitle as="h3">{question}</S.QuestionTitle>
             <Typography variant="body2" weight="500">
               {answer}
             </Typography>

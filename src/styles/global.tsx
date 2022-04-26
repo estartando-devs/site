@@ -7,6 +7,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: ${({ theme }) => theme.palette.design.white}
+  }
+
   body {
     font-family: ${(props) => props.theme.typography.fontFamily};
   }

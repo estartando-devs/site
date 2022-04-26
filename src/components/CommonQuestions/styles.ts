@@ -62,10 +62,10 @@ export const Question = styled.div`
 `;
 
 export const QuestionTitle = styled(Typography)`
-  ${({ theme: { typography }, weight }) => css`
+  ${({ theme: { typography } }) => css`
     font-size: ${typography.body1?.fontSize};
     font-family: ${typography.body1?.fontFamily};
-    font-weight: ${weight || typography.body1?.fontWeight};
+    font-weight: 700;
     line-height: ${typography.body1?.lineHeight};
   `}
 `;
