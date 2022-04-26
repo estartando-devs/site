@@ -72,14 +72,10 @@ export default function MyIdCard({
   return (
     <Layout>
       <NextSeo
-        title="Estartando Devs | Id Card"
-        description="Crie seu ID Card personalizado e divulge nas suas redes. Não esqueça de nos marcar."
+        title={`Id Card - @${profile.name}`}
+        description="Agora você pode compartilhar seu id card. Não esqueça de nos marcar."
         openGraph={{
-          type: 'website',
-          locale: 'pt_BR',
-          url: 'https://estartandodevs.com.br',
-          site_name: 'Estartando Devs',
-          title: 'Estartando Devs',
+          url: 'https://estartandodevs.com.br/id-card/time',
         }}
       />
       <Box
