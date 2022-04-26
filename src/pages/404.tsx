@@ -1,23 +1,13 @@
+import React from 'react';
+import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import Link from 'next/link';
-import React from 'react';
 import { Footer, Layout, Logo, Typography } from '../components';
 
 export default function NotfoundPage() {
   return (
     <Layout full>
-      <NextSeo
-        title="Estartando Devs | 404"
-        description="Tire suas dúvidas sobre nosso processo seletivo."
-        openGraph={{
-          type: 'website',
-          locale: 'pt_BR',
-          url: 'https://estartandodevs.com.br',
-          site_name: 'Estartando Devs',
-          title: 'Estartando Devs',
-        }}
-      />
+      <NextSeo title="404" description="Oops! Página não encontrada.." />
       <Box height="100%" display="flex" flexDirection="column" gap="2rem">
         <Box padding="2.5rem">
           <header>
