@@ -43,6 +43,27 @@ export const IntroText = styled.p`
   color: ${({ theme }) => theme.palette.design.white};
   line-height: 2;
 `;
+export const ModulesTextContainer = styled.details`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3.125rem;
+  cursor: pointer;
+  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
+    margin-top: 1.3rem;
+  }
+
+  &[open] {
+    summary {
+      svg:first-child {
+        display: initial;
+      }
+      svg:last-child {
+        display: none;
+      }
+    }
+  }
+`;
 
 export const ModulesText = styled.summary`
   font-size: 1.125rem;
@@ -54,19 +75,11 @@ export const ModulesText = styled.summary`
     display: none;
   }
 
+  svg:first-child {
+    display: none;
+  }
   svg {
     margin-left: 1rem;
-  }
-`;
-
-export const ModulesTextContainer = styled.details`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 3.125rem;
-  cursor: pointer;
-  @media (max-width: ${({ theme: { media } }) => media.tablet}) {
-    margin-top: 1.3rem;
   }
 `;
 

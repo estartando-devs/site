@@ -1,4 +1,4 @@
-import { Eye } from '@styled-icons/heroicons-outline';
+import { Eye, EyeOff } from '@styled-icons/heroicons-outline';
 import { useTheme } from 'styled-components';
 import { Typography } from '..';
 import { useAnimation } from '../../hooks/useAnimation';
@@ -37,7 +37,8 @@ export const Course = ({
       <S.ModulesTextContainer>
         <S.ModulesText>
           {acordionTitle}
-          <Eye width={24} height={24} color={white} />
+          <EyeOff aria-label="Fechar" width={24} height={24} color={white} />
+          <Eye aria-label="Abrir" width={24} height={24} color={white} />
         </S.ModulesText>
         <S.ListModulesContainer>
           {courseData.courseModules.map((item, index) => (
