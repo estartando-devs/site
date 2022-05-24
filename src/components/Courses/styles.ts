@@ -44,13 +44,22 @@ export const IntroText = styled.p`
   line-height: 2;
 `;
 
-export const ModulesText = styled.p`
+export const ModulesText = styled.summary`
   font-size: 1.125rem;
   font-weight: 500;
   color: ${({ theme }) => theme.palette.design.white};
+  list-style: none;
+  &::marker,
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  svg {
+    margin-left: 1rem;
+  }
 `;
 
-export const ModulesTextContainer = styled.button`
+export const ModulesTextContainer = styled.details`
   display: flex;
   align-items: center;
   gap: 1rem;
