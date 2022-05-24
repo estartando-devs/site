@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
 import { Eye } from '@styled-icons/heroicons-outline';
+import { useTheme } from 'styled-components';
 import { Typography } from '..';
+import { useAnimation } from '../../hooks/useAnimation';
 import { Course as ICourse } from '../../mocks';
 import * as S from './styles';
-import { useTheme } from 'styled-components';
 
 type PropsCourse = {
   courseData: ICourse;
@@ -23,16 +23,7 @@ export const Course = ({
     },
   } = useTheme();
 
-  const animation = useMemo(
-    () => ({
-      'data-aos': 'fade-up',
-      'data-aos-easing': 'ease-in-out',
-      'data-aos-anchor-placement': 'top-center',
-    }),
-    []
-  );
-
-  const animationProps = withAnimation ? animation : {};
+  const animationProps = useAnimation({ withAnimation });
 
   return (
     <S.CourseContainer {...animationProps} {...rest}>
