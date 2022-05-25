@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
 import { Eye } from '@styled-icons/heroicons-outline';
-import { Typography } from '..';
-import { ObjectCourseType } from '.';
-import * as S from './styles';
+import { useState } from 'react';
 import { useTheme } from 'styled-components';
+import { ObjectCourseType } from '.';
+import { Typography } from '..';
+import { useAnimation } from '../../hooks/useAnimation';
+import * as S from './styles';
 
 type PropsCourse = {
   approvedCourse: ObjectCourseType;
@@ -24,13 +25,7 @@ export const ApprovedCourses = ({
     },
   } = useTheme();
 
-  const animation = {
-    'data-aos': 'fade-up',
-    'data-aos-easing': 'ease-in-out',
-    'data-aos-anchor-placement': 'top-center',
-  };
-
-  const animationProps = withAnimation ? animation : {};
+  const animationProps = useAnimation({ withAnimation });
 
   return (
     <S.CourseContainer {...animationProps} {...rest}>
