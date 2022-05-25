@@ -1,6 +1,6 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
-import React from 'react';
 import {
   Layout,
   Footer,
@@ -45,14 +45,10 @@ export default function PerguntasFrequentes(props: CommonQuestionsProps) {
   return (
     <Layout>
       <NextSeo
-        title="Estartando Devs | Perguntas Frequentes"
+        title="Perguntas Frequentes"
         description="Tire suas dúvidas sobre nosso processo seletivo."
         openGraph={{
-          type: 'website',
-          locale: 'pt_BR',
-          url: 'https://estartandodevs.com.br',
-          site_name: 'Estartando Devs',
-          title: 'Estartando Devs',
+          url: 'https://estartandodevs.com.br/perguntas-frequentes',
         }}
       />
       <CommonQuestions {...props} />

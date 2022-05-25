@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Typography } from '../Typography';
 
 export const CommonQuestionsSection = styled.section`
@@ -19,6 +19,12 @@ export const CommonQuestionsSection = styled.section`
 `;
 
 export const CommonQestionsSectionTitle = styled(Typography)`
+  ${({ theme: { typography }, weight }) => css`
+    font-size: ${typography.h2?.fontSize};
+    font-family: ${typography.h2?.fontFamily};
+    font-weight: ${weight || typography.h2?.fontWeight};
+    line-height: ${typography.h2?.lineHeight};
+  `}
   span {
     font-size: 3rem;
     line-height: 3.5rem;
@@ -53,4 +59,13 @@ export const Question = styled.div`
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     gap: 1rem;
   }
+`;
+
+export const QuestionTitle = styled(Typography)`
+  ${({ theme: { typography }, weight }) => css`
+    font-size: ${typography.body1?.fontSize};
+    font-family: ${typography.body1?.fontFamily};
+    font-weight: ${weight || typography.body1?.fontWeight};
+    line-height: ${typography.body1?.lineHeight};
+  `}
 `;

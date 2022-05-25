@@ -43,14 +43,7 @@ export const IntroText = styled.p`
   color: ${({ theme }) => theme.palette.design.white};
   line-height: 2;
 `;
-
-export const ModulesText = styled.p`
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: ${({ theme }) => theme.palette.design.white};
-`;
-
-export const ModulesTextContainer = styled.button`
+export const ModulesTextContainer = styled.details`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -58,6 +51,35 @@ export const ModulesTextContainer = styled.button`
   cursor: pointer;
   @media (max-width: ${({ theme: { media } }) => media.tablet}) {
     margin-top: 1.3rem;
+  }
+
+  &[open] {
+    summary {
+      svg:first-child {
+        display: initial;
+      }
+      svg:last-child {
+        display: none;
+      }
+    }
+  }
+`;
+
+export const ModulesText = styled.summary`
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: ${({ theme }) => theme.palette.design.white};
+  list-style: none;
+  &::marker,
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  svg:first-child {
+    display: none;
+  }
+  svg {
+    margin-left: 1rem;
   }
 `;
 

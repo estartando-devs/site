@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Eye } from '@styled-icons/heroicons-outline';
+import { Eye, EyeOff } from '@styled-icons/heroicons-outline';
+import { useTheme } from 'styled-components';
 import { Typography } from '..';
+import { useAnimation } from '../../hooks/useAnimation';
 import { Course as ICourse } from '../../mocks';
 import * as S from './styles';
-import { useTheme } from 'styled-components';
 
 type PropsCourse = {
   courseData: ICourse;
@@ -17,20 +17,13 @@ export const Course = ({
   withAnimation = true,
   ...rest
 }: PropsCourse) => {
-  const [exhibition, setExhibition] = useState(false);
   const {
     palette: {
       design: { white },
     },
   } = useTheme();
 
-  const animation = {
-    'data-aos': 'fade-up',
-    'data-aos-easing': 'ease-in-out',
-    'data-aos-anchor-placement': 'top-center',
-  };
-
-  const animationProps = withAnimation ? animation : {};
+  const animationProps = useAnimation({ withAnimation });
 
   return (
     <S.CourseContainer {...animationProps} {...rest}>
@@ -41,16 +34,18 @@ export const Course = ({
         <Typography variant="body1">{courseData.title}</Typography>
       </S.TitleContainer>
       <S.IntroText>{courseData.coursePresentation}</S.IntroText>
-      <S.ModulesTextContainer onClick={() => setExhibition((prev) => !prev)}>
-        <S.ModulesText>{acordionTitle}</S.ModulesText>
-        <Eye width={24} height={24} color={white} />
-      </S.ModulesTextContainer>
-      <S.ListModulesContainer>
-        {exhibition &&
-          courseData.courseModules.map((item, index) => (
+      <S.ModulesTextContainer>
+        <S.ModulesText>
+          {acordionTitle}
+          <EyeOff aria-label="Fechar" width={24} height={24} color={white} />
+          <Eye aria-label="Abrir" width={24} height={24} color={white} />
+        </S.ModulesText>
+        <S.ListModulesContainer>
+          {courseData.courseModules.map((item, index) => (
             <li key={index}> {item}</li>
           ))}
-      </S.ListModulesContainer>
+        </S.ListModulesContainer>
+      </S.ModulesTextContainer>
     </S.CourseContainer>
   );
 };
