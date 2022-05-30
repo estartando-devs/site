@@ -1,13 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
-import { GlobalStyles } from '../styles/global';
-import { ThemeProvider } from 'styled-components';
-import theme from '../styles/theme';
-import { DefaultSeo } from 'next-seo';
-import SEO from '../../next-seo.config';
-import NextNProgress from 'nextjs-progressbar';
 import { ChakraProvider } from '@chakra-ui/react';
+import { DefaultSeo } from 'next-seo';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import NextNProgress from 'nextjs-progressbar';
+import { ThemeProvider } from 'styled-components';
+import SEO from '../../next-seo.config';
+import { GlobalStyles } from '../styles/global';
+import theme from '../styles/theme';
 
 function App({ Component, pageProps }: AppProps) {
   return (

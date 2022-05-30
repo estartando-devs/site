@@ -19,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async ({
   const nagatoCookie = getCookie('nagato', { req, res }) || '{}';
   const { zipcode, course } = JSON.parse(nagatoCookie as string);
   const { localidade = null, uf = null } = await getAddressByCep(
-    cleanZipcode(zipcode)
+    cleanZipcode(zipcode),
   );
 
   const profile = {

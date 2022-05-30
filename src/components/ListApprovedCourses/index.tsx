@@ -1,6 +1,4 @@
-import React from 'react';
 import { ApprovedCourses } from './ApprovedCourses';
-
 import * as S from './styles';
 
 export type ObjectCourseType = {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { LinkWrapper } from '../../LinkWrapper';
 import * as S from './BannerApprovedStyled';
 

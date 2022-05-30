@@ -1,4 +1,4 @@
-const title = 'Estartando devs';
+const title = 'Estartando Devs';
 const description =
   'Acreditamos no poder de transformação social através da tecnologia';
 

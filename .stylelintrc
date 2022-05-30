@@ -1,5 +1,5 @@
 {
-  "processors": [["stylelint-processor-styled-components"]],
+  "processors": ["stylelint-processor-styled-components"],
   "extends": [
     "stylelint-config-recommended",
     "stylelint-config-styled-components"
@@ -13,5 +13,6 @@
     ],
     "max-empty-lines": 2,
     "max-line-length": 90
+
   }
 }

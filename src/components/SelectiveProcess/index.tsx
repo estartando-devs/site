@@ -1,5 +1,5 @@
-import * as S from './styles';
 import { ScheduleSectionProps } from '../../mocks/Schedule.mock';
+import * as S from './styles';
 
 const ScheduleDotGroup = ({ disabled }: { disabled?: boolean }) => (
   <>

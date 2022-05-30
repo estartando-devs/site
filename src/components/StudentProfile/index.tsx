@@ -1,5 +1,5 @@
-import * as S from './styles';
 import { studentSectionProfile } from '../../mocks/DescriptionProfile.mock';
+import * as S from './styles';
 
 export const StudentProfile = ({
   title,

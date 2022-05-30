@@ -68,7 +68,7 @@ export const IdCardForm = (props: { team?: boolean }) => {
               image: {
                 src: uploaded_image,
               },
-            })
+            }),
           );
           setShowCopper(false);
           setUploadStatus('success');

@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import { Typography } from '../Typography';
-import Image from 'next/image';
 
 export const Section = styled.section`
   display: flex;
