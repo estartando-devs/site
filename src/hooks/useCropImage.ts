@@ -23,9 +23,12 @@ export const useCropImage = () => {
     }
   };
 
-  const onCropComplete = useCallback((_, croppedAreaPixels) => {
-    setCroppedArea(croppedAreaPixels);
-  }, []);
+  const onCropComplete = useCallback(
+    (_: unknown, croppedAreaPixels: CroppedArea) => {
+      setCroppedArea(croppedAreaPixels);
+    },
+    [],
+  );
 
   return {
     crop,
