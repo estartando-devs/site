@@ -1,7 +1,7 @@
 import html2canvas from 'html2canvas';
 import { useEffect, useRef, useState } from 'react';
-import { getKeyByCourse } from './utils';
 import { IdCardProps } from '.';
+import { getKeyByCourse } from './utils';
 
 export const useIdCardHandlers = ({
   course,
@@ -16,7 +16,7 @@ export const useIdCardHandlers = ({
 
   useEffect(() => {
     const imageUploaded = JSON.parse(
-      sessionStorage.getItem('id-card-image') || '{}'
+      sessionStorage.getItem('id-card-image') || '{}',
     );
 
     if (imageUploaded) {

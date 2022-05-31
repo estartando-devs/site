@@ -1,7 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 import { Footer, Layout, Logo, Typography } from '../components';
 
 export default function NotfoundPage() {

@@ -13,14 +13,14 @@ import { SubscriptionData } from '../../types/Subscription';
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const subscribers = await new Promise<SubscriptionData[]>((resolve) => {
     http<Array<SubscriptionData>>(
-      `${process.env.NEXT_PUBLIC_ADMIN_URL}/platform/subscribe`
+      `${process.env.NEXT_PUBLIC_ADMIN_URL}/platform/subscribe`,
     ).then((data) => resolve(data.parsedBody as SubscriptionData[]));
   });
 
   const userEmail = query.email as string;
 
   const subscribe = subscribers.find(
-    ({ data: { email } }) => email?.toLowerCase() === userEmail.toLowerCase()
+    ({ data: { email } }) => email?.toLowerCase() === userEmail.toLowerCase(),
   );
 
   if (!subscribe || !subscribe.data.approved) {

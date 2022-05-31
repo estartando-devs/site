@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import {
+  Courses,
+  Footer,
+  Header,
+  HowWeDo,
+  Layout,
+  OurResults,
+  SelectiveProcess,
+  StudentProfile,
+  WhatWeTeach,
+} from '../components';
+import {
+  cousesMock,
+  howWeDoMock,
   scheduleMock,
   studentProfileSection,
   whatWeTeachMock,
-  howWeDoMock,
-  cousesMock,
 } from '../mocks';
-import {
-  Layout,
-  Footer,
-  Header,
-  Courses,
-  HowWeDo,
-  OurResults,
-  WhatWeTeach,
-  StudentProfile,
-  SelectiveProcess,
-} from '../components';
 
 const Home = () => {
   useEffect(() => {

@@ -55,7 +55,7 @@ export const IdCard = ({
               <S.LocalContainer>
                 <S.PinImage />
                 <Typography variant="body1">{`${capitalize(
-                  address?.city
+                  address?.city,
                 )} - ${address?.state?.toUpperCase()}`}</Typography>
               </S.LocalContainer>
               <S.CourseContainer>

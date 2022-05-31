@@ -1,11 +1,10 @@
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from 'next/document';
-import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 import { Analytics } from '../components/Analytics';
 

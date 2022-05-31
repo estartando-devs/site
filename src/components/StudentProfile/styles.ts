@@ -59,7 +59,7 @@ export const TitleProfile = styled(Typography).attrs({
 
   strong {
     color: ${({ theme }) => theme.palette.design.green};
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 800;
     font-size: 3rem;
     line-height: 4rem;

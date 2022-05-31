@@ -1,9 +1,9 @@
+import { Button } from '@chakra-ui/react';
+import { Error } from '@styled-icons/boxicons-regular';
+import Router from 'next/router';
+import { useTheme } from 'styled-components';
 import { Typography } from '../Typography';
 import * as S from './styles';
-import { Error } from '@styled-icons/boxicons-regular';
-import { useTheme } from 'styled-components';
-import Router from 'next/router';
-import { Button } from '@chakra-ui/react';
 
 export const NotFoundIdCard = () => {
   const theme = useTheme();
