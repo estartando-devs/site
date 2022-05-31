@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function PolygonBox() {
   return (
     <svg width="0" height="0">

@@ -4,7 +4,7 @@ export interface HttpResponse<T> extends Response {
 
 export async function http<T>(
   request: RequestInfo,
-  config?: RequestInit
+  config?: RequestInit,
 ): Promise<HttpResponse<T>> {
   const response: HttpResponse<T> = await fetch(request, config);
   response.parsedBody = await response.json();

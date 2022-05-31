@@ -10,7 +10,7 @@ export type CroppedArea = {
  * @param {string} url: url image to be cropped
  */
 const createImage = (
-  url: string | ArrayBuffer | undefined
+  url: string | ArrayBuffer | undefined,
 ): Promise<CanvasImageSource> =>
   new Promise((resolve, reject) => {
     const image = new Image();
@@ -39,7 +39,7 @@ function getRadianAngle(degreeValue: number): number {
 export async function getCroppedImg(
   imageSrc: string | ArrayBuffer | undefined,
   pixelCrop: CroppedArea,
-  rotation = 0
+  rotation = 0,
 ): Promise<HTMLCanvasElement> {
   const image = await createImage(imageSrc);
   const canvas = document.createElement('canvas');
@@ -58,7 +58,7 @@ export async function getCroppedImg(
   canvasCtx?.drawImage(
     image,
     safeArea / 2 - Number(image.width) * 0.5,
-    safeArea / 2 - Number(image.height) * 0.5
+    safeArea / 2 - Number(image.height) * 0.5,
   );
 
   const data = canvasCtx?.getImageData(0, 0, safeArea, safeArea);
@@ -69,7 +69,7 @@ export async function getCroppedImg(
   canvasCtx?.putImageData(
     data as ImageData,
     0 - safeArea / 2 + Number(image.width) * 0.5 - pixelCrop.x,
-    0 - safeArea / 2 + Number(image.height) * 0.5 - pixelCrop.y
+    0 - safeArea / 2 + Number(image.height) * 0.5 - pixelCrop.y,
   );
 
   return canvas;

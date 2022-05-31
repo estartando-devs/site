@@ -3,12 +3,12 @@ import { CroppedArea } from '../utils/cropImage';
 
 export const useCropImage = () => {
   const [croppedArea, setCroppedArea] = useState<CroppedArea>(
-    {} as CroppedArea
+    {} as CroppedArea,
   );
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [image, setImage] = useState<string | ArrayBuffer | undefined>(
-    undefined
+    undefined,
   );
   const [showCopper, setShowCopper] = useState(false);
 
@@ -23,9 +23,12 @@ export const useCropImage = () => {
     }
   };
 
-  const onCropComplete = useCallback((_, croppedAreaPixels) => {
-    setCroppedArea(croppedAreaPixels);
-  }, []);
+  const onCropComplete = useCallback(
+    (_: unknown, croppedAreaPixels: CroppedArea) => {
+      setCroppedArea(croppedAreaPixels);
+    },
+    [],
+  );
 
   return {
     crop,

@@ -1,6 +1,5 @@
-import React from 'react';
-import { HowWeDoSectionProps } from '../../mocks';
 import { StudentCharacteristicsCard } from '..';
+import { HowWeDoSectionProps } from '../../mocks';
 import * as S from './styles';
 
 export const HowWeDo = ({

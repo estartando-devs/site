@@ -1,5 +1,5 @@
-export * from './course.mock';
 export * from './animate.mock';
+export * from './course.mock';
 export * from './DescriptionProfile.mock';
 export * from './HowWeDo.mock';
 export * from './OurResults.mock';

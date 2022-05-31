@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { useSocialButtons } from '../../../hooks/useSocialButtons';
 import * as S from './styles';

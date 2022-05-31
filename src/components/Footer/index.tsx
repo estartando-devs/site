@@ -1,10 +1,8 @@
-import React from 'react';
+import Link from 'next/link';
+import { Logo } from '../Logo';
+import { Typography } from '../Typography';
 import { SocialShareButtons } from './SocialShareButtons';
 import * as S from './styles';
-import { Typography } from '../Typography';
-
-import { Logo } from '../Logo';
-import Link from 'next/link';
 
 export const Footer = () => (
   <S.FooterWrapper>

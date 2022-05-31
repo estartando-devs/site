@@ -1,7 +1,6 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
 import { Box } from '@chakra-ui/react';
-import { Layout, Footer, IdCardForm } from '../../../components';
+import { NextSeo } from 'next-seo';
+import { Footer, IdCardForm, Layout } from '../../../components';
 
 export default function IdCardTeam() {
   return (

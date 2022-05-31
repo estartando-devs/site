@@ -1,11 +1,10 @@
-import React from 'react';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import {
-  Layout,
-  Footer,
-  CommonQuestionsProps,
   CommonQuestions,
+  CommonQuestionsProps,
+  Footer,
+  Layout,
 } from '../components';
 import { getSiteData } from '../services';
 

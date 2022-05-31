@@ -1,6 +1,6 @@
-import * as S from './styles';
-import { PropsWithChildren } from 'react';
 import Link from 'next/link';
+import { PropsWithChildren } from 'react';
+import * as S from './styles';
 
 type LinkProps = {
   color?: 'primary' | 'purple' | 'white';

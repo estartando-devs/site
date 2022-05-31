@@ -1,22 +1,22 @@
-### [Ticket]() | [Mocks]()
+### [ISSUE]()
 
 ## Description
 
-Provide a description of what was changed and why it was implemented this way.
+<!-- Provide a description of what was changed and why it was implemented this way. -->
 
 ## Dev Notes
 
-- If any developer notes are required, list them here. If not, remove the 'Notes' section.
+<!-- - If any developer notes are required, list them here. If not, remove the 'Notes' section. -->
 
 ## Testing
 
 ### Steps
 
-1. List all steps in a numbered list
+<!-- 1. List all steps in a numbered list -->
 
 ## Screenshots / Videos
 
-Add any relevant screenshots or videos. Any video should be added to the Jira ticket and linked here.
+<!-- Add any relevant screenshots or videos. Any video should be added to the Jira ticket and linked here. -->
 
 ## Developer Checks
 

@@ -1,10 +1,10 @@
-import { useMemo } from 'react';
 import {
   DiscordAlt,
+  Github,
   InstagramAlt,
   LinkedinSquare,
-  Github,
 } from '@styled-icons/boxicons-logos';
+import { useMemo } from 'react';
 import { useTheme } from 'styled-components';
 
 type SocialIconProps = {
@@ -72,7 +72,7 @@ export const useSocialButtons = () => {
         icon: Github,
       },
     ],
-    [theme]
+    [theme],
   );
 
   return {
