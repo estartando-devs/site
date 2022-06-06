@@ -1,4 +1,3 @@
-import { Partytown } from '@builder.io/partytown/react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
@@ -22,7 +21,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="apple-mobile-web-app-status-bar-style" content="#81CAA8" />
         <meta name="msapplication-navbutton-color" content="#81CAA8" />
         <link rel="manifest" href="/manifest.json" />
-        <Partytown debug={true} forward={['dataLayer.push']} />
       </Head>
       <GlobalStyles />
       <DefaultSeo {...SEO} />
