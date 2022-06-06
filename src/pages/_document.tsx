@@ -6,6 +6,7 @@ import Document, {
   NextScript,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import { Analytics } from '../components/Analytics';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -57,6 +58,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
             rel="stylesheet"
           />
+          <Analytics />
         </Head>
         <body>
           <Main />

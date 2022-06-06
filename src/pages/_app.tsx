@@ -6,7 +6,6 @@ import Head from 'next/head';
 import NextNProgress from 'nextjs-progressbar';
 import { ThemeProvider } from 'styled-components';
 import SEO from '../../next-seo.config';
-import { Analytics } from '../components/Analytics';
 import { GlobalStyles } from '../styles/global';
 import theme from '../styles/theme';
 
@@ -24,7 +23,6 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="msapplication-navbutton-color" content="#81CAA8" />
         <link rel="manifest" href="/manifest.json" />
         <Partytown debug={true} forward={['dataLayer.push']} />
-        <Analytics />
       </Head>
       <GlobalStyles />
       <DefaultSeo {...SEO} />
