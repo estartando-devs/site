@@ -9,6 +9,19 @@ const nextConfig = {
     loader: 'cloudinary',
     path: 'https://res.cloudinary.com/elite-devs/',
   },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://res.cloudinary.com/elite-devs>; rel="preconnect"',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
