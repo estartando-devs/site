@@ -10,7 +10,7 @@ export const ContainerHeader = styled.header`
       rgba(30, 30, 30, 0.8),
       rgba(30, 30, 30, 0.8)
     ),
-    url('header-bg.webp');
+    url('https://res.cloudinary.com/elite-devs/image/upload/q_auto:best/images/header-bg.webp');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
