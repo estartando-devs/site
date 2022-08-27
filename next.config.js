@@ -18,6 +18,10 @@ const nextConfig = {
             key: 'Link',
             value: '<https://res.cloudinary.com/elite-devs>; rel="preconnect"',
           },
+          {
+            key: 'Link',
+            value: '<https://fonts.googleapis.com>; rel="preconnect"',
+          },
         ],
       },
     ];
