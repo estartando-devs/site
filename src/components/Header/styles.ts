@@ -6,16 +6,6 @@ export const ContainerHeader = styled.header`
   width: 100%;
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(
-      0deg,
-      rgba(30, 30, 30, 0.8),
-      rgba(30, 30, 30, 0.8)
-    ),
-    url('https://res.cloudinary.com/elite-devs/image/upload/q_auto:best/images/header-bg.webp');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 `;
 
 export const BackgroundHeader = styled.div`
