@@ -1,17 +1,21 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import { Logo } from '../Logo';
 import { Typography } from '../Typography';
 import * as S from './styles';
 
 export const Header = () => (
   <S.ContainerHeader>
-    <Head>
-      <link
-        rel="preload"
-        as="image"
-        href="https://res.cloudinary.com/elite-devs/image/upload/q_auto:best/images/header-bg.webp"
+    <S.BackgroundHeader>
+      <Image
+        priority
+        alt="Banner mãos estartando devs"
+        title="Banner mãos estartando devs."
+        layout="fill"
+        objectFit="cover"
+        src="/images/header-bg.webp"
       />
-    </Head>
+    </S.BackgroundHeader>
+
     <S.SectionHeader>
       <S.ContainerImage>
         <Logo width={91} height={132} priority />
