@@ -1,6 +1,5 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import Head from 'next/head';
 import { useEffect } from 'react';
 import {
   Courses,
@@ -34,13 +33,6 @@ const Home = () => {
 
   return (
     <Layout>
-      <Head>
-        <link
-          rel="preload"
-          as="image"
-          imageSrcSet="https://res.cloudinary.com/elite-devs/image/upload/q_auto:best/images/header-bg.webp"
-        />
-      </Head>
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
