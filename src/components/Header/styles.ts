@@ -5,20 +5,26 @@ export const ContainerHeader = styled.header`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(30, 30, 30, 0.8),
-      rgba(30, 30, 30, 0.8)
-    ),
-    url('header-bg.webp');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+`;
+
+export const BackgroundHeader = styled.div`
+  position: 'absolute';
+  height: '100%';
+  width: '100%';
+  &::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(30, 30, 30, 0.7);
+  }
 `;
 
 export const SectionHeader = styled.section`
   display: flex;
+  z-index: 1;
   gap: 3rem;
   max-width: ${({ theme: { media } }) => media.desktop_fullhd};
   width: 100%;
