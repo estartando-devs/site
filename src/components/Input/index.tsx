@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { useFormContext } from 'react-hook-form';
 import * as S from './styles';
 import { InputProps } from './types/InputProps';
@@ -22,7 +23,9 @@ export const Input = ({
         {...restProps}
       />
       <S.Label htmlFor={id}>{placeholder}</S.Label>
-      {isError && <S.Error>{errors[id as string]?.message}</S.Error>}
+      {isError && (
+        <S.Error>{errors[id as string]?.message as ReactNode}</S.Error>
+      )}
     </S.ContainerField>
   );
 };
