@@ -22,7 +22,10 @@ import {
 
 const Home = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (
+      typeof window !== 'undefined' &&
+      window.navigator.userAgent !== 'googlebot'
+    ) {
       Aos.init({
         delay: 50,
         offset: 200,
