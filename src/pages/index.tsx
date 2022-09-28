@@ -22,13 +22,18 @@ import {
 
 const Home = () => {
   useEffect(() => {
-    Aos.init({
-      delay: 50,
-      offset: 200,
-      once: false,
-      mirror: true,
-      duration: 1000,
-    });
+    if (
+      typeof window !== 'undefined' &&
+      window.navigator.userAgent !== 'googlebot'
+    ) {
+      Aos.init({
+        delay: 50,
+        offset: 200,
+        once: false,
+        mirror: true,
+        duration: 1000,
+      });
+    }
   }, []);
 
   return (
