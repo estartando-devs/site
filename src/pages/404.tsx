@@ -11,9 +11,7 @@ export default function NotfoundPage() {
         <Box padding="2.5rem">
           <header>
             <Link href="/">
-              <a>
-                <Logo width={48} height={68} priority quality={30} />
-              </a>
+              <Logo width={48} height={68} priority quality={30} />
             </Link>
           </header>
         </Box>

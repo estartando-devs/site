@@ -15,7 +15,9 @@ const LinkWrapper = ({
   ...props
 }: PropsWithChildren<LinkProps> & { target?: string }) => (
   <S.ContainerLink color={color} {...props}>
-    <Link href={href}>{target && <a target={target}>{children}</a>}</Link>
+    <Link href={href} legacyBehavior>
+      {target && <a target={target}>{children}</a>}
+    </Link>
   </S.ContainerLink>
 );
 

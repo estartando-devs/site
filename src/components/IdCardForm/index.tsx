@@ -115,9 +115,7 @@ export const IdCardForm = (props: { team?: boolean }) => {
     <S.Container>
       <S.Header>
         <Link href="/">
-          <a>
-            <Logo width={91} height={138} priority quality={30} />
-          </a>
+          <Logo width={91} height={138} priority quality={30} />
         </Link>
         <S.ContainerHeading>
           <Typography variant="h1">Estartando Devs</Typography>

@@ -29,7 +29,10 @@ export const Subscribe = () => (
       <S.ContainerSubscribeContentDoubts>
         <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
         <S.ContainerSubscribeContentDoubtsLink>
-          <Link href="/perguntas-frequentes">{`perguntas mais frequentes`}</Link>
+          <Link
+            href="/perguntas-frequentes"
+            legacyBehavior
+          >{`perguntas mais frequentes`}</Link>
         </S.ContainerSubscribeContentDoubtsLink>
       </S.ContainerSubscribeContentDoubts>
     </S.ContainerSubscribeContent>
