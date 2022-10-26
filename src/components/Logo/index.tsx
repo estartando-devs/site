@@ -1,4 +1,4 @@
-import Image, { ImageProps as NextImageProps } from 'next/image';
+import Image, { ImageProps as NextImageProps } from 'next/legacy/image';
 
 type ImageProps = {
   width?: number;
