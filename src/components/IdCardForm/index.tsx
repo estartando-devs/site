@@ -192,8 +192,6 @@ export const IdCardForm = (props: { team?: boolean }) => {
                 layout="fixed"
                 src={imagePreview}
                 alt="Preview"
-                width="100%"
-                height="100%"
                 objectFit="contain"
               />
             )}
