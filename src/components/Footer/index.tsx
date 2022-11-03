@@ -8,9 +8,7 @@ export const Footer = () => (
   <S.FooterWrapper>
     <S.FooterContainer>
       <Link href="/">
-        <a>
-          <Logo width={65} height={94} />
-        </a>
+        <Logo width={65} height={94} />
       </Link>
       <S.FooterContent>
         <Typography variant="body1" weight="700">
@@ -22,7 +20,10 @@ export const Footer = () => (
     <S.DoubtsLinkWrapper>
       <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
       <S.DoubtsLink>
-        <Link href="/perguntas-frequentes">{`perguntas mais frequentes`}</Link>
+        <Link
+          href="/perguntas-frequentes"
+          legacyBehavior
+        >{`perguntas mais frequentes`}</Link>
       </S.DoubtsLink>
     </S.DoubtsLinkWrapper>
     <S.CopyContainer>

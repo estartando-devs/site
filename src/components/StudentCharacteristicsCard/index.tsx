@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Image, { ImageProps as NextImageProps } from 'next/image';
+import Image, { ImageProps as NextImageProps } from 'next/legacy/image';
 import * as S from './styles';
 
 type PropsCard = {

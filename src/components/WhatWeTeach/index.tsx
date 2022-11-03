@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { WhatWeTeachProps } from '../../mocks/WhatWeTeach.mock';
 import { Typography } from '../Typography';
 import * as S from './styles';

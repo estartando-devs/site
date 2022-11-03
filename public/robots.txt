@@ -1,3 +1,9 @@
-# robotstxt.org/
-
+# *
 User-agent: *
+Allow: /
+
+# Host
+Host: https://estartandodevs.com.br
+
+# Sitemaps
+Sitemap: https://estartandodevs.com.br/sitemap.xml
