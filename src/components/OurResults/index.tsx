@@ -8,6 +8,7 @@ const OurResults = () => (
     <S.OurResultsContainerTitle
       data-aos="fade-up"
       data-aos-easing="ease-in"
+      data-aos-offset="-300"
       data-aos-anchor-placement="top-center"
     >
       <Typography variant="h2">Nossos</Typography>
