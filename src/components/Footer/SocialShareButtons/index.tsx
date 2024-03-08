@@ -8,12 +8,10 @@ export const SocialShareButtons = () => {
   return (
     <S.SocialShareContainer>
       {socialLinks.map(({ title, href, iconProps, icon: Icon }) => (
-        <Link key={title} href={href}>
-          <a target="_blank" rel="noreferrer noopener">
-            <S.SocialShareContent title={title}>
-              <Icon {...iconProps} />
-            </S.SocialShareContent>
-          </a>
+        <Link key={title} href={href} target="_blank" rel="noreferrer noopener">
+          <S.SocialShareContent title={title}>
+            <Icon {...iconProps} />
+          </S.SocialShareContent>
         </Link>
       ))}
     </S.SocialShareContainer>
