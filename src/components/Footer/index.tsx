@@ -28,7 +28,7 @@ export const Footer = () => (
     </S.DoubtsLinkWrapper>
     <S.CopyContainer>
       <Typography variant="body3" weight="400">
-        © Estartando Devs 2022
+        {`© Estartando Devs ${new Date().getFullYear()}`}
       </Typography>
       <S.CopyText variant="body3" weight="400">
         Todos os direitos reservados.
