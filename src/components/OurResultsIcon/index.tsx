@@ -17,7 +17,7 @@ const OurResultsIcon = ({
   <S.OurResultsIconContainer
     data-aos="zoom-in"
     data-aos-easing="ease-in-out"
-    data-aos-anchor-placement="top-center"
+    data-aos-anchor-placement="center-bottom"
   >
     <Image
       src={`icons/${image}`}
