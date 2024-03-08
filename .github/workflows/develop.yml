@@ -1,10 +1,8 @@
-name: Build
+name: Build/Deploy
 on:
   workflow_dispatch:
   push:
-    branches: [develop]
-  pull_request:
-    branches: [develop]
+    branches: [main]
 
 env:
   AWS_DEV_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
@@ -43,13 +41,13 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
-  #     - uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ env.AWS_DEV_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ env.AWS_DEV_SECRET_ACCESS_KEY }}
-  #         aws-region: ${{ env.AWS_REGION }}
-  #     - name: Deploy
-  #       run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ env.AWS_DEV_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_DEV_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+      - name: Deploy
+        run: aws s3 sync ./out ${{ env.AWS_S3 }} ${{ env.AWS_S3_CONFIG }}
   # lighthouse-check:
   #   needs: [build-deploy]
   #   runs-on: ubuntu-latest
@@ -74,7 +72,7 @@ jobs:
   #         minSeoScore: '90'
   #         # progressiveWebApp: '10'
   # check-size:
-  #   needs: [build-deploy]
+  #   needs: [build-app]
   #   runs-on: ubuntu-latest
   #   steps:
   #     - uses: actions/checkout@v2
