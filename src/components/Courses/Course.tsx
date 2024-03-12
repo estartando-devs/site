@@ -1,4 +1,4 @@
-import { Eye, EyeOff } from '@styled-icons/heroicons-outline';
+import { Eye, EyeSlash } from '@styled-icons/heroicons-outline';
 import { useTheme } from 'styled-components';
 import { Typography } from '..';
 import { useAnimation } from '../../hooks/useAnimation';
@@ -37,7 +37,7 @@ export const Course = ({
       <S.ModulesTextContainer>
         <S.ModulesText>
           {acordionTitle}
-          <EyeOff aria-label="Fechar" width={24} height={24} color={white} />
+          <EyeSlash aria-label="Fechar" width={24} height={24} color={white} />
           <Eye aria-label="Abrir" width={24} height={24} color={white} />
         </S.ModulesText>
         <S.ListModulesContainer>
