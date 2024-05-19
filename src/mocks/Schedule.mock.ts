@@ -24,33 +24,33 @@ export interface ScheduleSectionProps {
 const mock: ISchedule[] = [
   {
     title: 'Inscrições',
-    description: 'Até o dia 20 de março',
-    dateEnd: '2022-03-20T12:00:00Z',
+    description: 'Até o dia 02 de junho',
+    dateEnd: '2024-06-02T12:00:00Z',
   },
   {
     title: 'Prova',
-    description: '22 de março, às 19h30',
-    dateEnd: '2022-03-22T22:30:00Z',
+    description: '03 de junho',
+    dateEnd: '2024-06-03T22:30:00Z',
   },
   {
     title: 'Resultado da Prova',
-    description: '23 de março',
+    description: '06 de junho',
     dateEnd: '2022-03-23T23:00:00Z',
   },
-  {
-    title: 'Hackathon',
-    description: '26 de março, às 10h',
-    dateEnd: '2022-03-26T12:30:00Z',
-  },
+  // {
+  //   title: 'Hackathon',
+  //   description: '26 de março, às 10h',
+  //   dateEnd: '2022-03-26T12:30:00Z',
+  // },
   {
     title: 'Bate papo com o time',
-    description: 'Online, entre os dias 28 de março e 4 de abril',
-    dateEnd: '2022-04-04T23:00:00Z',
+    description: 'Online, entre os dias 07 de junho e 14 de junho',
+    dateEnd: '2024-06-14T23:00:00Z',
   },
   {
     title: 'Início das Aulas',
-    description: '12 de abril ',
-    dateEnd: '2022-04-12T23:00:00Z',
+    description: '18 de junho',
+    dateEnd: '2024-06-18T23:00:00Z',
   },
 ];
 
@@ -74,14 +74,14 @@ const stagesList: Stages[] = [
     },
     key: 'stage-1',
   },
-  {
-    stage: {
-      title: 'НАСКАТНОN',
-      description:
-        'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
-    },
-    key: 'stage-2',
-  },
+  // {
+  //   stage: {
+  //     title: 'НАСКАТНОN',
+  //     description:
+  //       'Como você trabalha em equipe? Além de conhecermos melhor suas habilidades, você já se prepara para as ferramentas que serão usadas ao longo do curso.',
+  //   },
+  //   key: 'stage-2',
+  // },
   {
     stage: {
       title: 'BATE-PAPO COM O TIME',
@@ -93,7 +93,7 @@ const stagesList: Stages[] = [
 ];
 
 export const scheduleMock: ScheduleSectionProps = {
-  title: `Nosso <span>processo seletivo</span> tem 3 etapas:`,
+  title: `Nosso <span>processo seletivo</span> tem 2 etapas:`,
   description: ` Acreditamos no poder da <span>transformação social</span> através da
   Tecnologia da Informação. Por isso, oferecemos uma formação objetiva e
   focada nas exigências do mercado de TI. Os dois cursos incluem ainda
