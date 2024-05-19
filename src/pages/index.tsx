@@ -10,8 +10,10 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
+  Subscribe,
   WhatWeTeach,
 } from '../components';
+import { BannerSubscribe } from '../components/Subscribe/BannerSubscribe';
 import {
   cousesMock,
   howWeDoMock,
@@ -38,6 +40,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <BannerSubscribe />
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
@@ -45,6 +48,7 @@ const Home = () => {
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
+      <Subscribe />
       <Footer />
     </Layout>
   );
