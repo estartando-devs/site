@@ -5,18 +5,19 @@ import * as S from './styles';
 type LinkProps = {
   color?: 'primary' | 'purple' | 'white';
   href: string;
+  legacyBehavior?: boolean;
 };
 
 const LinkWrapper = ({
   color = 'primary',
   children,
   href,
-  target,
+  legacyBehavior,
   ...props
-}: PropsWithChildren<LinkProps> & { target?: string }) => (
+}: PropsWithChildren<LinkProps>) => (
   <S.ContainerLink color={color} {...props}>
-    <Link href={href} legacyBehavior>
-      {target && <a target={target}>{children}</a>}
+    <Link href={href} legacyBehavior={legacyBehavior}>
+      {children}
     </Link>
   </S.ContainerLink>
 );
