@@ -13,7 +13,6 @@ import {
   Subscribe,
   WhatWeTeach,
 } from '../components';
-import { BannerSubscribe } from '../components/Subscribe/BannerSubscribe';
 import {
   cousesMock,
   howWeDoMock,
@@ -40,7 +39,6 @@ const Home = () => {
 
   return (
     <Layout>
-      <BannerSubscribe />
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
