@@ -34,7 +34,7 @@ const mock: ISchedule[] = [
   },
   {
     title: 'Resultado da Prova',
-    description: '06 de junho',
+    description: '04 de junho',
     dateEnd: '2022-03-23T23:00:00Z',
   },
   // {
@@ -46,6 +46,11 @@ const mock: ISchedule[] = [
     title: 'Bate papo com o time',
     description: 'Online, entre os dias 07 de junho e 14 de junho',
     dateEnd: '2024-06-14T23:00:00Z',
+  },
+  {
+    title: 'Resultado Final',
+    description: '16 de junho',
+    dateEnd: '2024-06-16T23:00:00Z',
   },
   {
     title: 'Início das Aulas',
