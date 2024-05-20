@@ -8,21 +8,21 @@ export const ourResultsMock: OurResultsMock[] = [
   {
     image: 'foco-icon',
     title: 'Aulas aplicadas',
-    value: '+500',
+    value: '+700',
   },
   {
     image: 'alunos-formados-icon',
     title: 'Alunos formados',
-    value: '+140',
+    value: '+180',
   },
   {
     image: 'horas-curso-icon',
     title: 'Horas de curso',
-    value: '+1000',
+    value: '+1500',
   },
   {
     image: 'vidas-transformadas-icon',
     title: 'Vidas transformadas',
-    value: '+200',
+    value: '+270',
   },
 ];
