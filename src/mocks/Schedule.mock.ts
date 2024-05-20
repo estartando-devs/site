@@ -44,7 +44,7 @@ const mock: ISchedule[] = [
   // },
   {
     title: 'Bate papo com o time',
-    description: 'Online, entre os dias 07 de junho e 14 de junho',
+    description: 'Online, entre os dias 06 de junho e 14 de junho',
     dateEnd: '2024-06-14T23:00:00Z',
   },
   {
