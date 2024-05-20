@@ -49,8 +49,8 @@ const mock: ISchedule[] = [
   },
   {
     title: 'Resultado Final',
-    description: '16 de junho',
-    dateEnd: '2024-06-16T23:00:00Z',
+    description: '15 de junho',
+    dateEnd: '2024-06-15T23:00:00Z',
   },
   {
     title: 'Início das Aulas',
