@@ -75,3 +75,12 @@ export const ContainerButton = styled.div`
     max-width: 100%;
   }
 `;
+
+export const BannerButton = styled.a`
+  color: ${({ theme }) => theme.palette.design.white} !important;
+  max-width: 150px;
+  padding: 14px 24px !important;
+  display: flex;
+  background: ${({ theme }) => theme.palette.primary.main};
+  border-radius: 4px;
+`;

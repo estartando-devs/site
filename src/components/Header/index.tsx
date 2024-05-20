@@ -1,4 +1,5 @@
 import Image from 'next/legacy/image';
+import { LinkWrapper } from '../LinkWrapper';
 import { Logo } from '../Logo';
 import { Typography } from '../Typography';
 import * as S from './styles';
@@ -25,6 +26,14 @@ export const Header = () => (
         <Typography weight="400">
           Transformando o mundo através da tecnologia
         </Typography>
+        <S.ContainerButton>
+          <LinkWrapper
+            href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
+            legacyBehavior
+          >
+            <S.BannerButton>Inscreva-se!</S.BannerButton>
+          </LinkWrapper>
+        </S.ContainerButton>
       </S.ContainerHeading>
     </S.SectionHeader>
   </S.ContainerHeader>
