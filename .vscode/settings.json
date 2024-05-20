@@ -8,6 +8,6 @@
   "editor.rulers": [80, 120],
   "editor.parameterHints.enabled": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
 }

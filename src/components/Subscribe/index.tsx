@@ -1,6 +1,4 @@
 import Image from 'next/legacy/image';
-import Link from 'next/link';
-import { Typography } from '../Typography';
 import * as S from './styles';
 
 export const Subscribe = () => (
@@ -23,18 +21,10 @@ export const Subscribe = () => (
       <S.ContainerSubscribeContentButton
         color="purple"
         href={process.env.NEXT_PUBLIC_INSCRICOES_URL || ''}
+        legacyBehavior
       >
         <a target="_blank" rel="noreferrer noopener">{`Faça parte!`}</a>
       </S.ContainerSubscribeContentButton>
-      <S.ContainerSubscribeContentDoubts>
-        <Typography variant="body3">{`Dúvidas? Veja as`}</Typography>
-        <S.ContainerSubscribeContentDoubtsLink>
-          <Link
-            href="/perguntas-frequentes"
-            legacyBehavior
-          >{`perguntas mais frequentes`}</Link>
-        </S.ContainerSubscribeContentDoubtsLink>
-      </S.ContainerSubscribeContentDoubts>
     </S.ContainerSubscribeContent>
     <Image
       src="/images/inscricao-calendar"
