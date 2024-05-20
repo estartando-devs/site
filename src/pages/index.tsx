@@ -10,10 +10,10 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
-  // Subscribe,
+  Subscribe,
   WhatWeTeach,
 } from '../components';
-// import { BannerSubscribe } from '../components/Subscribe/BannerSubscribe';
+import { BannerSubscribe } from '../components/Subscribe/BannerSubscribe';
 import {
   cousesMock,
   howWeDoMock,
@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <Layout>
-      {/* <BannerSubscribe /> */}
+      <BannerSubscribe />
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
@@ -48,7 +48,7 @@ const Home = () => {
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
-      {/* <Subscribe /> */}
+      <Subscribe />
       <Footer />
     </Layout>
   );
