@@ -24,18 +24,18 @@ export interface ScheduleSectionProps {
 const mock: ISchedule[] = [
   {
     title: 'Inscrições',
-    description: 'Até o dia 31 de maio',
-    dateEnd: '2024-05-31T12:00:00Z',
+    description: 'Até o dia 02 de junho',
+    dateEnd: '2024-06-02T23:59:00Z',
   },
   {
     title: 'Prova',
-    description: '03 de junho',
-    dateEnd: '2024-06-03T22:30:00Z',
+    description: '05 de junho',
+    dateEnd: '2024-06-05T22:30:00Z',
   },
   {
     title: 'Resultado da Prova',
-    description: '04 de junho',
-    dateEnd: '2022-03-23T23:00:00Z',
+    description: '06 de junho',
+    dateEnd: '2024-06-06T23:00:00Z',
   },
   // {
   //   title: 'Hackathon',
@@ -44,18 +44,18 @@ const mock: ISchedule[] = [
   // },
   {
     title: 'Bate papo com o time',
-    description: 'Online, entre os dias 06 de junho e 14 de junho',
-    dateEnd: '2024-06-14T23:00:00Z',
+    description: 'Online, entre os dias 08 de junho e 16 de junho',
+    dateEnd: '2024-06-16T23:59:00Z',
   },
   {
     title: 'Resultado Final',
-    description: '15 de junho',
-    dateEnd: '2024-06-15T23:00:00Z',
+    description: '17 de junho',
+    dateEnd: '2024-06-17T23:00:00Z',
   },
   {
     title: 'Início das Aulas',
-    description: '18 de junho',
-    dateEnd: '2024-06-18T23:00:00Z',
+    description: '19 de junho',
+    dateEnd: '2024-06-19T23:00:00Z',
   },
 ];
 
