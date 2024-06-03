@@ -10,7 +10,6 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
-  Subscribe,
   WhatWeTeach,
 } from '../components';
 import {
@@ -46,7 +45,7 @@ const Home = () => {
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
-      <Subscribe />
+      {/* <Subscribe /> */}
       <Footer />
     </Layout>
   );

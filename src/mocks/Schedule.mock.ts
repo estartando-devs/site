@@ -29,13 +29,13 @@ const mock: ISchedule[] = [
   },
   {
     title: 'Prova',
-    description: '05 de junho',
-    dateEnd: '2024-06-05T22:30:00Z',
+    description: '03 de junho',
+    dateEnd: '2024-06-03T23:59:00Z',
   },
   {
     title: 'Resultado da Prova',
-    description: '06 de junho',
-    dateEnd: '2024-06-06T23:00:00Z',
+    description: '04 de junho',
+    dateEnd: '2024-06-04T23:59:00Z',
   },
   // {
   //   title: 'Hackathon',
@@ -44,18 +44,18 @@ const mock: ISchedule[] = [
   // },
   {
     title: 'Bate papo com o time',
-    description: 'Online, entre os dias 08 de junho e 16 de junho',
-    dateEnd: '2024-06-16T23:59:00Z',
+    description: 'Online, entre os dias 06 de junho e 14 de junho',
+    dateEnd: '2024-06-14T23:59:00Z',
   },
   {
     title: 'Resultado Final',
-    description: '17 de junho',
-    dateEnd: '2024-06-17T23:00:00Z',
+    description: '15 de junho',
+    dateEnd: '2024-06-16T23:59:00Z',
   },
   {
     title: 'Início das Aulas',
-    description: '19 de junho',
-    dateEnd: '2024-06-19T23:00:00Z',
+    description: '18 de junho',
+    dateEnd: '2024-06-19T23:59:00Z',
   },
 ];
 
