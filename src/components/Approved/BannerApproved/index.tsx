@@ -4,7 +4,7 @@ export const BannerApproved = () => (
   <S.BannerApprovedContainer>
     <S.BannerContent>
       <S.BannerTitle variant="h2">
-        A lista de aprovados da primeira etapa já está disponível!
+        A lista final de aprovados já está disponível!
       </S.BannerTitle>
       {/* <S.ContainerButton>
         <LinkWrapper color="white" href="#resultado" legacyBehavior>
