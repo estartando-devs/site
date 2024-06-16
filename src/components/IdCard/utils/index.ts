@@ -1,5 +1,5 @@
 import { CourseKey } from '../../../mocks';
-import { CourseKeyByName } from '../../../types';
+import { CourseKeyByName, CourseKeyByNameTeam } from '../../../types';
 
 export const getKeyByCourse = (course: string) => {
   if (!course) {
@@ -9,6 +9,7 @@ export const getKeyByCourse = (course: string) => {
     'Desenvolvimento Web': CourseKeyByName['Desenvolvimento Web'],
     'Desenvolvimento Backend': CourseKeyByName['Desenvolvimento Backend'],
     'Design UI/UX': CourseKeyByName['Design UI/UX'],
+    'Soft Skills': CourseKeyByNameTeam['Soft Skills'],
   };
   return dict[course] as CourseKey;
 };

@@ -12,6 +12,7 @@ export const useIdCardHandlers = ({
     src: string;
     alt: string;
   }>(image);
+
   const courseKey = getKeyByCourse(course);
 
   useEffect(() => {
