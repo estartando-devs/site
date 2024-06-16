@@ -18,7 +18,7 @@ export default function IdCardTeam() {
         display="flex"
         flexDirection="column"
       >
-        <IdCardForm team />
+        <IdCardForm />
         <Footer />
       </Box>
     </Layout>
