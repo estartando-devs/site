@@ -7,7 +7,7 @@ import Cropper from 'react-easy-crop';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTheme } from 'styled-components';
 import { useCropImage } from '../../hooks/useCropImage';
-import { CourseNameByKey, Status } from '../../types';
+import { CourseNameByKey, CourseNameByKeyTeam, Status } from '../../types';
 import { getCroppedImg } from '../../utils/cropImage';
 import { Input } from '../Input';
 import { Logo } from '../Logo';
@@ -15,7 +15,7 @@ import { Typography } from '../Typography';
 import { FileIcon } from './components/FileIcon';
 import * as S from './styles';
 
-export const IdCardForm = () => {
+export const IdCardForm = (props: { team?: boolean }) => {
   const router = useRouter();
   const theme = useTheme();
   const [imagePreview, setImagePreview] = useState(null);
@@ -37,6 +37,12 @@ export const IdCardForm = () => {
 
   const handleSubmit = ({ email, ...rest }: Record<string, string>) => {
     setCookies('nagato', JSON.stringify({ ...rest }));
+
+    if (props.team) {
+      router.push(`/id-card/time/${rest.name}`);
+      return;
+    }
+
     router.push(`/id-card/${email}`);
     return;
 
@@ -150,11 +156,23 @@ export const IdCardForm = () => {
               id="course"
               color={theme.palette.design.white}
             >
-              {Object.entries(CourseNameByKey).map(([key, value]) => (
-                <option key={key} value={value}>
-                  {value}
-                </option>
-              ))}
+              {props.team ? (
+                <>
+                  {Object.entries(CourseNameByKeyTeam).map(([key, value]) => (
+                    <option key={key} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {Object.entries(CourseNameByKey).map(([key, value]) => (
+                    <option key={key} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </>
+              )}
             </Select>
           </>
           <Input
