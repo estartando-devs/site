@@ -1,6 +1,8 @@
 import { Box, useToast } from '@chakra-ui/react';
+import { getCookie } from 'cookies-next';
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
+import { useEffect } from 'react';
 import { Layout } from '../../components';
 import {
   IdCard as IdCardComponent,
@@ -8,22 +10,26 @@ import {
 } from '../../components/IdCard';
 import { NotFoundIdCard } from '../../components/NotFoundIdCard';
 import { cleanZipcode, getAddressByCep, http } from '../../services';
-import { SubscriptionData } from '../../types/Subscription';
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const subscribers = await new Promise<SubscriptionData[]>((resolve) => {
-    http<Array<SubscriptionData>>(
-      `${process.env.NEXT_PUBLIC_ADMIN_URL}/platform/subscribe`,
-    ).then((data) => resolve(data.parsedBody as SubscriptionData[]));
+export const getServerSideProps: GetServerSideProps = async ({
+  query,
+  req,
+  res,
+}) => {
+  const subscribers = await new Promise<string[]>((resolve) => {
+    http<string[]>(`${process.env.NEXT_PUBLIC_GET_EMAILS}`).then((data) =>
+      resolve(data.parsedBody as string[]),
+    );
   });
 
   const userEmail = query.email as string;
 
   const subscribe = subscribers.find(
-    ({ data: { email } }) => email?.toLowerCase() === userEmail.toLowerCase(),
+    (subscribeEmail) =>
+      subscribeEmail?.toLowerCase() === userEmail.toLowerCase(),
   );
 
-  if (!subscribe || !subscribe.data.approved) {
+  if (!subscribe) {
     return {
       props: {
         error: 'Subscriber not found',
@@ -31,20 +37,22 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
   }
 
-  const address = subscribe?.data?.zipcode
-    ? await getAddressByCep(cleanZipcode(subscribe?.data?.zipcode))
-    : { localidade: subscribe?.data.city, uf: '' };
+  const nagatoCookie = getCookie('nagato', { req, res }) || '{}';
+  const { zipcode, course, name } = JSON.parse(nagatoCookie as string);
+  const { localidade = null, uf = null } = await getAddressByCep(
+    cleanZipcode(zipcode),
+  );
 
   const profile = {
-    name: query?.name || subscribe?.data?.fullName,
+    name: name,
     image: {
       src: 'https://res.cloudinary.com/elite-devs/images/logo',
-      alt: `imagem aluno(a) ${subscribe?.data.fullName}`,
+      alt: `imagem aluno(a) ${name}`,
     },
-    course: subscribe?.data?.course,
+    course: course,
     address: {
-      city: address.localidade,
-      state: address.uf,
+      city: localidade,
+      state: uf,
     },
   };
   return {
@@ -63,6 +71,21 @@ export default function MyIdCard({
 }) {
   const toast = useToast();
 
+  useEffect(() => {
+    if (!error) {
+      toast({
+        position: 'top',
+        title: 'Tudo pronto!',
+        description:
+          'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
+        status: 'success',
+        duration: 5000,
+        isClosable: true,
+      });
+    }
+    // eslint-disable-next-line
+  }, []);
+
   if (error) {
     return (
       <Layout>
@@ -70,16 +93,6 @@ export default function MyIdCard({
       </Layout>
     );
   }
-
-  toast({
-    position: 'top',
-    title: 'Tudo pronto!',
-    description:
-      'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
-    status: 'success',
-    duration: 5000,
-    isClosable: true,
-  });
 
   return (
     <Layout>
