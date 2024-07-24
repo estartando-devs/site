@@ -1,12 +1,12 @@
 import Image from 'next/legacy/image';
-import { BannerApproved } from '../Approved';
+// import { BannerApproved } from '../Approved';
 import { Logo } from '../Logo';
 import { Typography } from '../Typography';
 import * as S from './styles';
 
 export const Header = () => (
   <>
-    <BannerApproved />
+    {/* <BannerApproved /> */}
     <S.ContainerHeader>
       <S.BackgroundHeader>
         <Image
