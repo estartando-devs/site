@@ -77,6 +77,8 @@ export default function MyIdCard({
         openGraph={{
           url: 'https://estartandodevs.com.br/id-card/time',
         }}
+        nofollow
+        noindex
       />
       <Box
         display="flex"

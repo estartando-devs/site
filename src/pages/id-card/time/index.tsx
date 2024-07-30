@@ -11,6 +11,8 @@ export default function IdCardTeam() {
         openGraph={{
           url: 'https://estartandodevs.com.br/id-card/time',
         }}
+        noindex
+        nofollow
       />
       <Box
         minHeight="100vh"
