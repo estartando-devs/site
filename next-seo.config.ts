@@ -23,4 +23,11 @@ export default {
       },
     ],
   },
+  additionalMetaTags: [
+    {
+      name: 'keywords',
+      content:
+        'javascript, frontend, backend, ux/ui, programação, desenvolvimento, desenvolvimento web, jovens, transformação social, tecnologia, cursos, mentoria',
+    },
+  ],
 };
