@@ -45,10 +45,11 @@ export default function PerguntasFrequentes(props: CommonQuestionsProps) {
     <Layout>
       <NextSeo
         title="Perguntas Frequentes"
-        description="Tire suas dúvidas sobre nosso processo seletivo."
+        description="Encontre respostas para as perguntas mais frequentes sobre o Estartando Devs. Saiba mais sobre nossos cursos, inscrições, mentores e como transformar sua carreira com tecnologia."
         openGraph={{
           url: 'https://estartandodevs.com.br/perguntas-frequentes',
         }}
+        canonical="https://www.estartandodevs.com.br/perguntas-frequentes"
       />
       <CommonQuestions {...props} />
       <Footer />

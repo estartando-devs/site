@@ -102,6 +102,8 @@ export default function MyIdCard({
         openGraph={{
           url: 'https://estartandodevs.com.br/id-card',
         }}
+        nofollow
+        noindex
       />
       <Box
         display="flex"

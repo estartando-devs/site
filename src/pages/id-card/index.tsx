@@ -11,6 +11,8 @@ export default function IdCard() {
         openGraph={{
           url: 'https://estartandodevs.com.br/id-card',
         }}
+        nofollow
+        noindex
       />
       <Box
         minHeight="100vh"
