@@ -1,9 +1,9 @@
-const title = 'Estartando Devs';
+const title = 'Estartando Devs | Transformação Social pela Tecnologia';
 const description =
-  'Acreditamos no poder de transformação social através da tecnologia';
+  'Transformamos vidas com tecnologia. Cursos de programação e desenvolvimento para jovens. Junte-se ao Estartando Devs e faça parte da mudança social!';
 
 export default {
-  titleTemplate: `${title} | %s`,
+  titleTemplate: `%s | Estartando Devs`,
   defaultTitle: title,
   description,
   canonical: 'https://estartandodevs.com.br/',
