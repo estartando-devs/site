@@ -16,20 +16,20 @@ export const coursesData: Record<string, Course> = {
     widthContainerTitle: '300px',
     title: 'Front-end',
     coursePresentation: '',
-    courseModules: approvedListMock.frontend.sort(),
+    courseModules: approvedListMock.frontend.sort((a, b) => a.localeCompare(b)),
   },
   backEnd: {
     backgroundTitle: '#1e6f7a',
     widthContainerTitle: '293px',
     title: 'Back-end',
     coursePresentation: '',
-    courseModules: approvedListMock.backend.sort(),
+    courseModules: approvedListMock.backend.sort((a, b) => a.localeCompare(b)),
   },
   design: {
     backgroundTitle: '#45408e',
     widthContainerTitle: '173px',
     title: 'Design UI/UX',
     coursePresentation: '',
-    courseModules: approvedListMock.design.sort(),
+    courseModules: approvedListMock.design.sort((a, b) => a.localeCompare(b)),
   },
 };

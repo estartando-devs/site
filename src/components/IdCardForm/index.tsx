@@ -1,4 +1,4 @@
-import { Box, Button, Select, useToast } from '@chakra-ui/react';
+import { Button, Select, useToast } from '@chakra-ui/react';
 import { setCookies } from 'cookies-next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -7,7 +7,7 @@ import Cropper from 'react-easy-crop';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTheme } from 'styled-components';
 import { useCropImage } from '../../hooks/useCropImage';
-import { CourseNameByKey, Status } from '../../types';
+import { CourseNameByKey, CourseNameByKeyTeam, Status } from '../../types';
 import { getCroppedImg } from '../../utils/cropImage';
 import { Input } from '../Input';
 import { Logo } from '../Logo';
@@ -35,15 +35,20 @@ export const IdCardForm = (props: { team?: boolean }) => {
     croppedArea,
   } = useCropImage();
 
-  const handleSubmit = ({ email, name, ...rest }: Record<string, string>) => {
+  const handleSubmit = ({ email, ...rest }: Record<string, string>) => {
+    setCookies('nagato', JSON.stringify({ ...rest }));
+
     if (props.team) {
-      setCookies('nagato', JSON.stringify({ ...rest }));
-      router.push(`/id-card/time/${name}`);
+      router.push(`/id-card/time/${rest.name}`);
       return;
     }
-    router.push({ pathname: '/id-card/[email]', query: { email, name } });
-    sessionStorage.setItem('email', email);
-    sessionStorage.setItem('name', name);
+
+    router.push(`/id-card/${email}`);
+    return;
+
+    // router.push({ pathname: '/id-card/[email]', query: { email, name } });
+    // sessionStorage.setItem('email', email);
+    // sessionStorage.setItem('name', name);
   };
 
   const toast = useToast();
@@ -120,7 +125,7 @@ export const IdCardForm = (props: { team?: boolean }) => {
         <S.ContainerHeading>
           <Typography variant="h1">Estartando Devs</Typography>
           <Typography variant="h2">
-            ID CARD <span>2022</span>
+            ID CARD <span>2024</span>
           </Typography>
         </S.ContainerHeading>
       </S.Header>
@@ -129,45 +134,60 @@ export const IdCardForm = (props: { team?: boolean }) => {
           <S.IdCardSectionTitle variant="h2" color="white">
             Crie seu ID Card personalizado e divulge nas suas redes.
           </S.IdCardSectionTitle>
-          <Input placeholder="Nome" type="text" id="name" name="name" />
-          {props.team && (
-            <>
-              <Input
-                placeholder="CEP"
-                type="text"
-                id="zipcode"
-                name="zipcode"
-              />
-              <Select
-                {...methods.register('course')}
-                placeholder="Selecione"
-                name="course"
-                id="course"
-                color={theme.palette.design.white}
-              >
-                {Object.entries(CourseNameByKey).map(([key, value]) => (
-                  <option key={key} value={value}>
-                    {value}
-                  </option>
-                ))}
-              </Select>
-            </>
-          )}
-          {!props.team && (
+          <Input
+            placeholder="Nome"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
+          <>
             <Input
-              placeholder="E-mail"
+              placeholder="CEP"
               type="text"
-              id="email"
-              name="email"
-              validation={{
-                required: 'E-mail é obrigatório',
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Insira um e-mail válido',
-                },
-              }}
+              id="zipcode"
+              name="zipcode"
+              required
             />
-          )}
+            <Select
+              {...methods.register('course', { required: true })}
+              placeholder="Selecione"
+              name="course"
+              id="course"
+              color={theme.palette.design.white}
+            >
+              {props.team ? (
+                <>
+                  {Object.entries(CourseNameByKeyTeam).map(([key, value]) => (
+                    <option key={key} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </>
+              ) : (
+                <>
+                  {Object.entries(CourseNameByKey).map(([key, value]) => (
+                    <option key={key} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </>
+              )}
+            </Select>
+          </>
+          <Input
+            placeholder="E-mail"
+            type="text"
+            id="email"
+            name="email"
+            validation={{
+              required: 'E-mail é obrigatório',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Insira um e-mail válido',
+              },
+            }}
+          />
           <S.FileInput
             type="file"
             max-file-size="1024"
@@ -186,16 +206,6 @@ export const IdCardForm = (props: { team?: boolean }) => {
               <FileIcon />
             </S.ContainerInputFileContent>
           </S.FileInputLabel>
-          <Box margin="0 auto">
-            {imagePreview && (
-              <S.ImagePreview
-                layout="fixed"
-                src={imagePreview}
-                alt="Preview"
-                objectFit="contain"
-              />
-            )}
-          </Box>
           <Button
             type="submit"
             color={theme.palette.design.white}

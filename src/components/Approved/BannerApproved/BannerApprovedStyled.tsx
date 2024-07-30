@@ -21,12 +21,14 @@ export const BannerContent = styled.div`
   max-width: 1028px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const BannerTitle = styled(Typography).attrs({
   variant: 'h2',
   weight: 'bold',
 })`
+  text-align: center;
   margin-bottom: 15px;
 `;
 

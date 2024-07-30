@@ -81,7 +81,7 @@ export const IdCard = ({
               <S.Image {...imageSrc} />
             </S.ImageContainer>
             <S.Text weight="500" variant="body2">
-              {team ? 'Equipe' : 'Estudante'} 2022 @{' '}
+              {team ? 'Equipe' : 'Estudante'} 2024 @{' '}
               <strong>estartandodevs</strong>.com.br
             </S.Text>
           </S.PhotoContainer>

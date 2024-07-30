@@ -1,4 +1,4 @@
-import { Box, useToast } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { getCookie } from 'cookies-next';
 import { GetServerSideProps } from 'next';
 import { NextSeo } from 'next-seo';
@@ -49,7 +49,7 @@ export default function MyIdCard({
   profile: IdCardProps;
   error?: string;
 }) {
-  const toast = useToast();
+  // const toast = useToast();
 
   if (error) {
     return (
@@ -59,15 +59,15 @@ export default function MyIdCard({
     );
   }
 
-  toast({
-    position: 'top',
-    title: 'Tudo pronto!',
-    description:
-      'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
-    status: 'success',
-    duration: 5000,
-    isClosable: true,
-  });
+  // toast({
+  //   position: 'top',
+  //   title: 'Tudo pronto!',
+  //   description:
+  //     'Agora você pode compartilhar seu id card. Não esqueça de nos marcar.',
+  //   status: 'success',
+  //   duration: 5000,
+  //   isClosable: true,
+  // });
 
   return (
     <Layout>
@@ -77,6 +77,8 @@ export default function MyIdCard({
         openGraph={{
           url: 'https://estartandodevs.com.br/id-card/time',
         }}
+        nofollow
+        noindex
       />
       <Box
         display="flex"

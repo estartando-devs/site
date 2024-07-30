@@ -20,6 +20,12 @@ const styleByCourse: Record<CourseKey, CourseStyle> = {
     colorTitle: '#6C63FF',
     backgroundSrc: '/bg-card-design.png',
   },
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  softskills: {
+    colorTitle: '##F76B15',
+    backgroundSrc: '/bg-card-design.png',
+  },
 };
 
 export const Container = styled.div`
