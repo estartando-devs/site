@@ -6,17 +6,19 @@ import {
   Footer,
   Layout,
 } from '../components';
-import { getSiteData } from '../services';
+import { frequentlyAskedQuestions } from '../mocks/frequentlyAskedQuestions.mock';
+// import { getSiteData } from '../services';
 
 type CommonQuestions = Omit<CommonQuestionsProps, 'title'>;
 
 export const getStaticProps: GetStaticProps<
   CommonQuestionsProps
 > = async () => {
-  const response = await getSiteData<CommonQuestions>({
-    path: 'perguntas-frequentes',
-  });
+  // const response = await getSiteData<CommonQuestions>({
+  //   path: 'perguntas-frequentes',
+  // });
 
+  const response = frequentlyAskedQuestions;
   const {
     title,
     data: { questions },
