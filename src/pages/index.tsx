@@ -1,6 +1,6 @@
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Courses,
   Footer,
@@ -12,7 +12,7 @@ import {
   StudentProfile,
   WhatWeTeach,
 } from '../components';
-import { BannerSoon } from '../components/Approved';
+import { Typography } from '../components/Typography';
 import {
   cousesMock,
   howWeDoMock,
@@ -37,9 +37,40 @@ const Home = () => {
     }
   }, []);
 
+  // Overlay de aviso
+  const [showOverlay] = useState(true); // Troque para false para remover o overlay
+
   return (
     <Layout>
-      <BannerSoon />
+      {showOverlay && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            background: 'rgba(0,0,0,0.85)',
+            zIndex: 9999,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography
+            variant="h2"
+            style={{ marginBottom: 16, textAlign: 'center' }}
+          >
+            🚧 Mais informações em breve!
+          </Typography>
+          <Typography variant="body1" style={{ textAlign: 'center' }}>
+            Fique ligado, em breve divulgaremos novidades sobre o processo
+            seletivo.
+          </Typography>
+        </div>
+      )}
+      {/* <BannerSoon /> */}
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />

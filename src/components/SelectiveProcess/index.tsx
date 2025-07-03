@@ -16,22 +16,6 @@ export const SelectiveProcess = ({
   stagesList,
   schedule,
 }: ScheduleSectionProps) => {
-  const isDisabled = true;
-
-  if (isDisabled) {
-    return (
-      <S.Section>
-        <S.Title variant="h2" style={{ textAlign: 'center', marginTop: 40 }}>
-          🚧 Mais informações em breve!
-        </S.Title>
-        <S.Text variant="body1" style={{ textAlign: 'center', marginTop: 16 }}>
-          Fique ligado, em breve divulgaremos novidades sobre o processo
-          seletivo.
-        </S.Text>
-      </S.Section>
-    );
-  }
-
   return (
     <S.Section>
       <S.Title
