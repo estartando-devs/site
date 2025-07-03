@@ -12,6 +12,7 @@ import {
   StudentProfile,
   WhatWeTeach,
 } from '../components';
+import { BannerSoon } from '../components/Approved';
 import {
   cousesMock,
   howWeDoMock,
@@ -38,6 +39,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <BannerSoon />
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
