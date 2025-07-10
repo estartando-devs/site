@@ -29,22 +29,22 @@ const mock: ISchedule[] = [
   },
   {
     title: 'Divulgação do resultado',
-    description: '28/07',
+    description: '28 de julho',
     dateEnd: '2025-07-28T23:59:00Z',
   },
   {
     title: 'Entrevistas',
-    description: '29/07 a 02/08',
+    description: 'Online, entre os dias 29 de julho e 02 de agosto',
     dateEnd: '2025-08-02T23:59:00Z',
   },
   {
     title: 'Resultado final',
-    description: '04/08',
+    description: '04 de agosto',
     dateEnd: '2025-08-04T23:59:00Z',
   },
   {
     title: 'Aula inaugural',
-    description: '05/08',
+    description: '05 de agosto',
     dateEnd: '2025-08-05T23:59:00Z',
   },
 ];
