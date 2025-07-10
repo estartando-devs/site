@@ -10,9 +10,10 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
+  Typography,
   WhatWeTeach,
 } from '../components';
-import { Typography } from '../components/Typography';
+import { Modalities } from '../components/Modalities';
 import {
   cousesMock,
   howWeDoMock,
@@ -72,6 +73,7 @@ const Home = () => {
       )}
       {/* <BannerSoon /> */}
       <Header />
+      <Modalities />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />
       <HowWeDo {...howWeDoMock} />
