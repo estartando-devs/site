@@ -40,16 +40,15 @@ const modalities = [
 
 export const Modalities = () => {
   return (
-    <S.ModalitiesSection>
+    <S.ModalitiesSection
+      data-aos="fade-up"
+      data-aos-easing="ease-in-out"
+      data-aos-anchor-placement="top-center"
+    >
       <S.Title>Modalidades</S.Title>
       <S.CardsWrapper>
         {modalities.map((modality) => (
-          <S.Card
-            key={modality.title}
-            data-aos="fade-up"
-            data-aos-easing="ease-in-out"
-            data-aos-anchor-placement="top-center"
-          >
+          <S.Card key={modality.title}>
             <S.CardImage src={modality.bg} alt={modality.title} />
             <S.Badge>{modality.badge}</S.Badge>
             <S.CardContent>
