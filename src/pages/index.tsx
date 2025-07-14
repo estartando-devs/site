@@ -10,6 +10,7 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
+  Subscribe,
   WhatWeTeach,
 } from '../components';
 import { Modalities } from '../components/Modalities';
@@ -47,6 +48,7 @@ const Home = () => {
       <StudentProfile {...studentProfileSection} />
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
+      <Subscribe />
       <Footer />
     </Layout>
   );
