@@ -4,6 +4,7 @@ import {
   ApprovedSubscriptionsResponse,
   getApprovedSubscriptions,
 } from '../services/approvedSubscriptions';
+import { sortNamesAlphabetically } from '../utils/nameFormatter';
 
 type CourseConfig = {
   name: string;
@@ -12,7 +13,6 @@ type CourseConfig = {
 };
 
 const COURSES_CONFIG: CourseConfig[] = [
-  { name: 'javascript', displayName: 'JavaScript', color: 'green_dark' },
   {
     name: 'Desenvolvimento Web',
     displayName: 'Desenvolvimento Web',
@@ -58,7 +58,9 @@ export const useMultipleApprovedSubscriptions = (
             return {
               course: courseConfig.displayName,
               color: courseConfig.color,
-              students: response.subscriptions.map((sub) => sub.fullName),
+              students: sortNamesAlphabetically(
+                response.subscriptions.map((sub) => sub.fullName),
+              ),
             } as ObjectCourseType;
           }
           return null;

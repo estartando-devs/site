@@ -14,6 +14,7 @@ import {
   Subscribe,
   WhatWeTeach,
 } from '../components';
+import { BannerApproved } from '../components/Approved';
 import { Modalities } from '../components/Modalities';
 import {
   cousesMock,
@@ -41,6 +42,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <BannerApproved />
       <Header />
       <WhatWeTeach {...whatWeTeachMock} />
       <Courses {...cousesMock} />

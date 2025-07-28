@@ -4,6 +4,7 @@ import {
   ApprovedSubscriptionsResponse,
   getApprovedSubscriptions,
 } from '../services/approvedSubscriptions';
+import { sortNamesAlphabetically } from '../utils/nameFormatter';
 
 type UseApprovedSubscriptionsParams = {
   course?: string;
@@ -35,6 +36,9 @@ export const useApprovedSubscriptions = ({
         backend: 'blue_dark',
         design: 'purple',
         'ui/ux': 'purple',
+        'desenvolvimento web': 'green_dark',
+        'desenvolvimento backend': 'blue_dark',
+        'design ui/ux': 'purple',
       };
 
     const normalizedCourse = courseName.toLowerCase();
@@ -61,7 +65,9 @@ export const useApprovedSubscriptions = ({
       const transformedData: ObjectCourseType = {
         course: response.course,
         color: getCourseColor(response.course),
-        students: response.subscriptions.map((sub) => sub.fullName),
+        students: sortNamesAlphabetically(
+          response.subscriptions.map((sub) => sub.fullName),
+        ),
       };
 
       setApprovedData([transformedData]);
