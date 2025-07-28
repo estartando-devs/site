@@ -32,7 +32,7 @@ const modalities = [
     ],
     button: {
       text: 'Quero me inscrever!',
-      disabled: false,
+      disabled: true,
       href: 'https://inscricao.estartandodevs.com.br',
     },
   },

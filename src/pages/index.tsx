@@ -11,7 +11,6 @@ import {
   OurResults,
   SelectiveProcess,
   StudentProfile,
-  Subscribe,
   WhatWeTeach,
 } from '../components';
 import { BannerApproved } from '../components/Approved';
@@ -52,7 +51,7 @@ const Home = () => {
       <SelectiveProcess {...scheduleMock} />
       <OurResults />
       <ApprovedSection />
-      <Subscribe />
+      {/* <Subscribe /> */}
       <Footer />
     </Layout>
   );
