@@ -72,7 +72,7 @@ export const useApprovedSubscriptions = ({
 
       setApprovedData([transformedData]);
     } catch (err) {
-      setError('Erro ao carregar a lista de aprovados');
+      setError('Erro ao carregar a lista de aprovados pro curso');
       console.error('Error fetching approved data:', err);
     } finally {
       setLoading(false);

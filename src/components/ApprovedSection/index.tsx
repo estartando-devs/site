@@ -12,7 +12,9 @@ const ApprovedSection = () => {
   };
 
   if (loading) {
-    return <LoadingState message="Carregando lista de aprovados..." />;
+    return (
+      <LoadingState message="Carregando lista de aprovados pro curso..." />
+    );
   }
 
   if (error) {
