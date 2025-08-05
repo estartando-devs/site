@@ -15,12 +15,12 @@ const modalities = [
       '1 ano de acesso para os três cursos (Front, Back e Design).',
     ],
     button: {
-      text: 'Quero me inscrever!',
+      text: 'Quero me inscrever',
       disabled: true,
     },
   },
   {
-    badge: 'Inscrições abertas!',
+    badge: 'Finalizado!',
     title: 'Impulso',
     bg: '/impulso.png',
     description:
@@ -33,7 +33,6 @@ const modalities = [
     button: {
       text: 'Quero me inscrever!',
       disabled: true,
-      href: 'https://inscricao.estartandodevs.com.br',
     },
   },
 ];
