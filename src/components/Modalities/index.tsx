@@ -33,6 +33,7 @@ const modalities = [
     button: {
       text: 'Quero me inscrever!',
       disabled: true,
+      href: '/',
     },
   },
 ];
